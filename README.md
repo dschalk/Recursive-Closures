@@ -1,2 +1,3 @@
 RECURSIVE CLOSURES
-More to come.
+
+These are the coolest darn things. RCF Recursive Fucking Closures
