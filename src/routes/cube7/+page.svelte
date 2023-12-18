@@ -107,7 +107,7 @@ var ww = ["w0","w1","w2","w3","w4","w5","w6","w7","w8"]; */
   }
 
   function M2(x, ar = []) {
-    return function go(func) {
+    return function go(func) {  
       if (func === dF3x) return x;
       else x = func(x);
       return go;
@@ -2294,7 +2294,6 @@ const orangeSide = `<div class="face front">
       }`
   var Mend =     
     `    }
-
     const dF3x = () => {}; `; // Triggers return of x;
 
   var demoButtons = `<div >
@@ -3399,14 +3398,11 @@ const orangeSide = `<div class="face front">
   <div style="width: 70%">
 <p id = "cow8"> Continued from the <a href="./#cow7"> previous page </a>   </p>
 <p> Clicking one of the buttons (below) causes the code on its face to execute. For example, clicking on the m = m(L) button causes <br>&#160;&#160;&#160; (1) m(L) to execute, which causes <br> &#160;&#160;&#160; (2) x in the m-M(x) closure to mutate into L(x). </p>
-<p> The value of x is exposed in the three buttons, where the statements "style="background-color:{m(dF3x)[3][0]}", "style="background-color:{m(dF3x)[3][1]}", and "style="background-color:{m(dF3x)[3][2]}" determine the background colors of the buttons. It is also exposed in the definition of the cube, where x specifies the CSS classes of 54 divs. These classes have the names "blue", "green", "red", "orange", "yellow", and "white", and these classes have "background-color" elements corresponding to their class names.</p>
 
-<p>m(dF3x)[3] is x's nine-element array that starts with all-orange background colors. The three buttons have the colors of the first three elements of the third element of x, exposed in the buttons as m(dF3x)[0][0], m(dF3x)[0][1], and m(dF3x)[0][2]. Notice how the colors of the buttons correspond to those of the top row of the Rubik's cube representation's face.   </p>
-  
-  
-  <p>have no effect other than what is displayed on them; namely, "m = m(F)," "m = m(Cx)," and "m = m(L). Providing them as arguments for m causes them to operate on x, the array of six nine-member arrays of references to strings in the m-M(x) closure. "F(x)" mutates x, rearranging references to strings so as to simulate rotating the front of the cube in the browser display, "M(x)" mutates x in a way that simulates rotating the middle section, and the rearrangement of references to strings in x by "L(x)" simulates clockwise rotation of the left face of the cube displayed in the browser. </p>
-<p> As discussed above, rearranging the references to strings in the x-M(x) closure automatically rearranges the classes assigned to the 54 divs and their internal buttons in the DOM, and automatically determines the background colors of the buttons below. Clicking "Scramble" demonstrates this. </p>
+<p> For the sake of clarity, I'll spell this out in more than the usual amount of detail: The background color of a button or div can be set with x in the m-M(x) closure in these two ways: background-color = m(dF3x)[a][b] or class = m(df3x)[a][b] where a is 0, 1, 2, 3, 4, or 5 and b is 0 or 8, or any number between 0 and 8. When a and b are in these ranges, the expression m(dF3x)[a][b] resolves to one of these strings: "blue", "green", "red", "orange", "yellow", or "white". The classes blue, green, red, orange, yellow, and white have "background-color" elements corresponding to their names. So, for example, on the starting (solved) cube, the expression m(dF3x)[0][0] resolves to the string "blue" causing the statements "style = 'background-color: m(dF3x)[0][0]' and "class = 'm(dF3x)[0][0]'" to result in blue backgrounds. </p>
 
+<p>m(dF3x)[3] is x's nine-element array that, when the cube is solved, has all-orange background colors. The three buttons below have the colors of the first three elements of the third element of x because the buttons contain the statements "style = 'm(dF3x)[3][0], m(dF3x)[3][1], and m(dF3x)[3][2]. Notice how the colors of the buttons correspond to those of the top row of the front face of the Rubik's cube representation. Repeatedly pressing "Scramble" illustrates this.    </p>
+  
     <div >
           <button style="background-color:{m(dF3x)[3][0]}; color: black; font-size:30px"   on:click = {() => {m = m(F)}}>m = m(F) </button>  
           <button style="background-color:{m(dF3x)[3][1]}; color: black; font-size:30px"   on:click = {() => {m = m(Cx)}}>m = m(Cx) </button>  
@@ -3418,9 +3414,9 @@ const orangeSide = `<div class="face front">
 <p> The left, back, and bottom faces can be turned clockwise by pressing L, B, and D, respectively. Hold down the SHIFT key for counterclockwise rotation. </p>
 <p> METHOD TWO -- Rotate, click, and rotate back:</p>
 
-<p>The left face can be rotated by clicking on the top center square three times, clicking on the upper or lower right squares of the white side for a clockwise turn, clicking on the upper and lower left side squares to turn counterclockwise, and finally clicking the top center once. </p>
-<p> The back can be rotated clockwise by clicking the right middle square two times, clicking the upper or lower right squares, then clicking the middle right square two more times. After bringing the back face forward by clicking the right center square twice, click the upper or lower left squares followed by two more clicks on the right center square for counterclockwise rotation.</p>
-<p> The bottom can be rotated by clicking the right center square once, clicking the right or left upper or lower squares for clockwise or counterclockwise rotation respectively, and then clicking the right center square three times.  </p>
+<p>The left face can be rotated by clicking on the top center square three times, clicking on the upper or lower right squares of the white side for a clockwise turn, clicking on the upper and lower left side squares to turn counterclockwise, and finally clicking the top center once if you want to return to the starting orientation. </p>
+<p> The back face can be rotated by clicking the right middle square two times and then clicking left or right upper or lower squares, depending on which way you want it to turn.</p>
+<p> The bottom can be rotated by clicking the right center square once, clicking the right or left upper or lower squares for clockwise or counterclockwise rotation respectively. Clicking the right center square three more times returns the cube to its starting orientation..  </p>
 
     <pre>  
 

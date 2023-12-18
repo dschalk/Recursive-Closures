@@ -10,29 +10,30 @@ return {
 	assets: new Set(["favicon.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.4998a032.js","app":"_app/immutable/entry/app.6e4ba7c6.js","imports":["_app/immutable/entry/start.4998a032.js","_app/immutable/chunks/scheduler.1f6706a1.js","_app/immutable/chunks/singletons.f7531428.js","_app/immutable/chunks/index.b16b216b.js","_app/immutable/entry/app.6e4ba7c6.js","_app/immutable/chunks/scheduler.1f6706a1.js","_app/immutable/chunks/index.2d48075f.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.2f345359.js","app":"_app/immutable/entry/app.14f6dcc3.js","imports":["_app/immutable/entry/start.2f345359.js","_app/immutable/chunks/scheduler.1f6706a1.js","_app/immutable/chunks/singletons.a5a51231.js","_app/immutable/chunks/index.b16b216b.js","_app/immutable/entry/app.14f6dcc3.js","_app/immutable/chunks/scheduler.1f6706a1.js","_app/immutable/chunks/index.2d48075f.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
-			__memo(() => import('./chunks/0-bd197106.js')),
-			__memo(() => import('./chunks/1-c999962b.js')),
-			__memo(() => import('./chunks/2-22f943b0.js')),
-			__memo(() => import('./chunks/3-704eac90.js')),
-			__memo(() => import('./chunks/4-6fdb816d.js')),
-			__memo(() => import('./chunks/5-bc41da44.js')),
-			__memo(() => import('./chunks/6-16cf5fdf.js')),
-			__memo(() => import('./chunks/7-0e46096b.js')),
-			__memo(() => import('./chunks/8-32307cc1.js')),
-			__memo(() => import('./chunks/9-6f0b2e62.js')),
-			__memo(() => import('./chunks/10-33db2da3.js')),
-			__memo(() => import('./chunks/11-c81da57c.js')),
-			__memo(() => import('./chunks/12-d8d0150f.js')),
-			__memo(() => import('./chunks/13-9775da99.js')),
-			__memo(() => import('./chunks/14-6416c11c.js')),
-			__memo(() => import('./chunks/15-75307a43.js')),
-			__memo(() => import('./chunks/16-a52b0a68.js')),
-			__memo(() => import('./chunks/17-08d064f8.js')),
-			__memo(() => import('./chunks/18-9a068262.js')),
-			__memo(() => import('./chunks/19-04d1d014.js')),
-			__memo(() => import('./chunks/20-fbf0d53d.js'))
+			__memo(() => import('./chunks/0-e282ac38.js')),
+			__memo(() => import('./chunks/1-6423e09e.js')),
+			__memo(() => import('./chunks/2-96f7ab32.js')),
+			__memo(() => import('./chunks/3-898ecda0.js')),
+			__memo(() => import('./chunks/4-a82cb753.js')),
+			__memo(() => import('./chunks/5-416c6100.js')),
+			__memo(() => import('./chunks/6-2262430c.js')),
+			__memo(() => import('./chunks/7-cc8a242b.js')),
+			__memo(() => import('./chunks/8-44ae08e3.js')),
+			__memo(() => import('./chunks/9-816fa35e.js')),
+			__memo(() => import('./chunks/10-9acd3452.js')),
+			__memo(() => import('./chunks/11-a28eb342.js')),
+			__memo(() => import('./chunks/12-c7610078.js')),
+			__memo(() => import('./chunks/13-a4db0307.js')),
+			__memo(() => import('./chunks/14-21b34547.js')),
+			__memo(() => import('./chunks/15-42f32fbc.js')),
+			__memo(() => import('./chunks/16-a7c00364.js')),
+			__memo(() => import('./chunks/17-96e5f41f.js')),
+			__memo(() => import('./chunks/18-268b3427.js')),
+			__memo(() => import('./chunks/19-f0dd8163.js')),
+			__memo(() => import('./chunks/20-54c905aa.js')),
+			__memo(() => import('./chunks/21-ef73e867.js'))
 		],
 		routes: [
 			{
@@ -134,38 +135,45 @@ return {
 				endpoint: null
 			},
 			{
+				id: "/cube9",
+				pattern: /^\/cube9\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 16 },
+				endpoint: null
+			},
+			{
 				id: "/functional",
 				pattern: /^\/functional\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 16 },
+				page: { layouts: [0,], errors: [1,], leaf: 17 },
 				endpoint: null
 			},
 			{
 				id: "/rc1",
 				pattern: /^\/rc1\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 17 },
+				page: { layouts: [0,], errors: [1,], leaf: 18 },
 				endpoint: null
 			},
 			{
 				id: "/rc2",
 				pattern: /^\/rc2\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 18 },
+				page: { layouts: [0,], errors: [1,], leaf: 19 },
 				endpoint: null
 			},
 			{
 				id: "/score",
 				pattern: /^\/score\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 19 },
+				page: { layouts: [0,], errors: [1,], leaf: 20 },
 				endpoint: null
 			},
 			{
 				id: "/trash",
 				pattern: /^\/trash\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 20 },
+				page: { layouts: [0,], errors: [1,], leaf: 21 },
 				endpoint: null
 			}
 		],
