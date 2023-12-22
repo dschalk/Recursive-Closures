@@ -3,7 +3,7 @@ const passBy = "/_app/immutable/assets/passBy.52308f62.png";
 const object = "/_app/immutable/assets/object.b2d12053.png";
 const _page_svelte_svelte_type_style_lang = "";
 const css$1 = {
-  code: ".teaser.svelte-o3odnn{font-style:italic;font-size:32px;color:#ffccaa}h3.svelte-o3odnn{color:turquoise}img.svelte-o3odnn{display:block;margin:0 auto;width:100%}.O.svelte-o3odnn{color:orange}.dis.svelte-o3odnn{color:#fe0374;font-weight:bold;font-size:28px}.play.svelte-o3odnn{color:yellow;font-weight:bold;font-size:28px}.light.svelte-o3odnn{color:#ffeeaa;font-size:28px}",
+  code: ".teaser.svelte-7c47tb{font-style:italic;font-size:32px;color:#ffccaa}h3.svelte-7c47tb{color:turquoise}img.svelte-7c47tb{display:block;margin:0 auto;width:100%}.O.svelte-7c47tb{color:orange}.dis.svelte-7c47tb{color:#fe0374;font-weight:bold;font-size:28px}.play.svelte-7c47tb{color:yellow;font-weight:bold;font-size:28px}.light.svelte-7c47tb{color:#ffeeaa;font-size:28px}",
   map: null
 };
 var v5 = "m(dF3x)  // 3";
@@ -507,188 +507,221 @@ log(M(2)(add(4))(mult(7))(dF3x))`;
     m = m;  // In Svelte, this updates the DOM
   }`;
   $$result.css.add(css$1);
-  return `<div style="margin-left: 8%; margin-right: 8%"><h1 style="text-align: center" data-svelte-h="svelte-mpxol8">Recursive Closures</h1> <span class="light svelte-o3odnn" data-svelte-h="svelte-u5vrx4">Closures defined by letting m = M(x) for some variable &quot;m&quot; and any value &quot;x&quot; (see below)  are recursive in the sense that: <br>
+  return `<div style="margin-left: 8%; margin-right: 8%"><h1 style="text-align: center" data-svelte-h="svelte-mpxol8">Recursive Closures</h1> <span class="light svelte-7c47tb" data-svelte-h="svelte-43ixzb">Closures defined by letting m = M(x) for some variable &quot;m&quot; and any value &quot;x&quot;
+    (see below) are recursive in the sense that: <br>
     (A) the inner function, named &quot;go&quot;, repeatedly calls itself, and <br>
     (B) go repeatedly modifies &quot;x&quot; by means of varying functions &quot;func&quot; which are:<br>
-        (1) currently queued in front of the copy of go named &quot;m&quot;, <br>
+        (1) currently queued in front of the copy of go named &quot;m&quot;,
+    <br>
         (2) provided later if the current value of &quot;x&quot; is still alive
-    in memory; i.e., if the program in which &quot;m&quot; is defined is still running. or <br>
-        (3) the current value of x is preserved in permanent storage.</span> <p data-svelte-h="svelte-1dhkfnv">Regarding the last item and x retrieved from storage: If m is defined, then <span>\`m(()=&gt;x)(newFunc1)(newFunc2)</span> ... Otherwise, redefine m with &quot;m = M(x) using the most recent value of x.</p> <pre class="dis svelte-o3odnn">${escape(Mdis)}</pre> <pre class="play svelte-o3odnn">${escape(Mplay)}</pre> <pre class="dis svelte-o3odnn">${escape(Mend)}</pre> <dist class="light svelte-o3odnn" data-svelte-h="svelte-1mq2aot">Anonymous Computation:</dist> <pre>${escape(v3)}</pre> <br> <div class="light svelte-o3odnn"><span data-svelte-h="svelte-1xp33cu">Encapsulated State:</span> <pre>${escape(v4)}</pre> <pre>${escape(v5)}</pre> <span data-svelte-h="svelte-krlx4g">Sometime later (the garbage collector ignores closures):</span> <pre>${escape(v6)}</pre> <pre>${escape(v7)}</pre> <pre>${escape(v8)}</pre> <pre>${escape(v9)}</pre></div> <span class="teaser svelte-o3odnn" data-svelte-h="svelte-1kemneu">Rubik&#39;s Cube Simulation</span> <span class="teaser svelte-o3odnn" data-svelte-h="svelte-1sr0i8d">***********************************************************************
-    <br> 
-    Case 1 -- Clicking on the three visible sides of the cube.</span> <p data-svelte-h="svelte-19ei5s9">The visible cube interface gives access to all six sides. Clicking the center of each face causes rotation of the whole cube around the axis perpendicular to that center. Everything moves except for clicked center and its counterpart on the opposite side</p> <p data-svelte-h="svelte-c99tkb">x in the Rubik&#39;s cube application is an array of six nine-member arrays of references to the strings &quot;blue, green, red, orange, yellow, and white.&quot; These strings correspond to the names of CSS selectors, and the &quot;background-color&quot; properties of each. Here&#39;s what I mean:
-    
-</p><pre>${escape(css)}</pre> <p data-svelte-h="svelte-m9uii0">The 54 divs that combine to represent the cube in the DOM are shown below. The visual representation that appears in the browser is on the next page, <a href="./cube7">Rubik&#39;s cube</a></p> <p data-svelte-h="svelte-udd6qf">Notice that the front, top, and right side representations contain buttons. Go to <a href="./cube7">Rubik&#39;s cube</a>, click the &quot;Start&quot; button or press the &#39;V&#39; key to restore the cube to it to the &quot;solved&quot; configuration, then click the upper left corner of the right side of the cube. The right face rotates counterclockwise 90 degrees pursuant to the &quot;on:click&quot; instruction seen in the DOM representation (below). &quot;m = m(Rz)&quot; executes. &quot;m(Rz)&quot; updates x in the m-M(x) closure; the &quot;m =&quot; part triggers reactivity, causing the update to immediately appear in the browser.&quot;</p> <p data-svelte-h="svelte-1pphbh7">Now click on the top center three times. The right side should be green now. Rotate the right side counterclockwise by clicking on its upper left corner. Now click the top center once to restore the cube to its original orientation.</p> <span style>Digression: <p data-svelte-h="svelte-1mbpdc0">This section is about clicking on cube image, but when we get to it later, you will see that pressing the &quot;R&quot; key or clicking the button labeled &quot;R&quot; rotates whatever face happens to be on the right when the &quot;R&quot; key is pressed.or the &quot;R&quot; button is clicked.</p> <p data-svelte-h="svelte-1cfqa3s"></p> <pre>${escape(dom)}</pre> <span class="teaser svelte-o3odnn" data-svelte-h="svelte-1nmr6k4">***********************************************************************
-    <br> 
-    Case 2 -- Clicking on the buttons.</span> <p data-svelte-h="svelte-1wavtu7">Similar to clicking on parts of the cube, the callback specified in buttons that rotate faces, middle sections, and the entire cube do so by calling m(func) for some function &quot;func&quot; that rearranges arrays of six nine-element arrays. This results in x mutating into fu on  the same functions that are invoked when the the click is on a section of the cube. For example,</p> <pre>${escape(example3)}</pre> <span class="teaser svelte-o3odnn" data-svelte-h="svelte-7xc3x6">***********************************************************************
-    <br> 
-    Case 3 -- Key presses.</span> <p data-svelte-h="svelte-1wvqrjo">Pressing keys invokes eventHandler(e) where &quot;e&quot; is the key-press event and eventHandler is defined as follows:</p> <pre>${escape(handleEventCode)}</pre> <p data-svelte-h="svelte-k2cbfw">&quot;svelte:window on:keypress =  {  handleEvent } &quot; routes keyPress event objects to handleEvent.</p> <p data-svelte-h="svelte-5xte7n">The <a href="./cube7">Rubik&#39;s Cube simulation</a> features a m-M(x) closure
-    whose x values are always arrays of six nine-member arrays of the strings
-    &quot;blue, green, red, orange, yellow, and white&quot;. Callbacks stemming from mouse
-    clicks have the form &quot;m = m(Foo),  where Foo is one of several functions that
-    use the elements of x to construct and return new arrays of six nine-member arrays.
-    The resulting transformation of x in the m-M(x) closure automatically
-    transforms the cube displayed in the browser because x&#39;s elements (references to strings) are references to classes in the DOM. m(dF3x)[0] is always the first element of m(dF3x). In the solved cube, it&#39;s a nine-member array, each element of which is corresponds to a CSS class with the element &quot;background-color: blue&quot;. m(dF3x)[0][0] === &quot;blue&quot; returns &quot;true&quot;, as do m(dF3x)[0][v] for the other eight elements of m(dF3x)[0]. 
-    
-    
-    
-    automatically responds
-    because to arrays to and return create arrays of six nine-member arrays that
-    &quot; are operated upon by m that respond only to DOM events, and whose side
-    effects are felt only in the DOM rearrangements of six CSS classes on the 54
-    divs of the cube. Other than background colors, those classes are all
-    identical. modifications of the DOM, encapsulate transformations of x in a
-    manner reminiscent of Haskel monads. <a href="./cube7">Here</a>, you can
-    click on an edge or corner of the upper cube and see it rotate. The
-    JavaScript in the script section provides function definitions, and nothing
-    more.</p> <span class="teaser svelte-o3odnn" data-svelte-h="svelte-1dwc765">***********************************************************************</span> <div class="background"><p style="color: lightgreen; font-size: 28px; font-weight: bold " data-svelte-h="svelte-iarnj8">Background:</p> <p style="color: lightgreen;" data-svelte-h="svelte-2qwheb">Indiana University awarded me a bachelor of science degree in chemistry, a
-      master&#39;s degree in mathematics, and a doctor of jurisprudence degree in
-      law. Sun Microsysystems certified me as a Java Programmer and Java Website
-      Developer, which qualified me for a job I took at Indiana University,
-      working on a project as a Programmer/Systems Analyst. I had been told I
-      needed the insurance I.U. provided to cover an expensive operation. I
-      didn&#39;t know about Indiana&#39;s high risk insurance program, which I could
-      afford and which provided, essentially, universal health care for the
-      middle class and people with benefactors to pay the premiums.</p> <p style="color: lightgreen;" data-svelte-h="svelte-16r78o3">I&#39;ll never again get involved in a Java project and I can&#39;t imagine ever
-      again needing React. After developing an elaborate online multi-player
-      game in the Haskel programming language, still using React for the user
-      interface, I decided to stick with JavaScript and simple frameworks. This
-      is a SvelteKit application.</p> <p style="color: lightgreen;" data-svelte-h="svelte-t7bt27">While it makes sense to develop web applications with a few elaborate
-      functions in conjunction with reusable small ones, I decided to try the
-      opposite approach. What I discovered is worth sharing, to say the least,
-      so here it is.</p> <p data-svelte-h="svelte-1qpiqg5">The code samples at the top of this page shows that function composition
-      using M can&#39;t be more transparent, concise, and maintainable. Going beyond
-      numerical computations, M holds the ever-changing state of play in the<a href="./score">Game of Score</a>, but that application relies too heavily on the functions that transform
-      x in the m-M(x) closure. A modified version of M will make the code more
-      efficient and understandable after I refactor the application.</p> <p data-svelte-h="svelte-vdewvm">A few additional lines of code in M can facilitate nesting of mixed
-      synchronous and asynchronous functions handled by m, and can help avoid
-      mutations by providing an array, let&#39;s call it &quot;ar&quot;, into which f(x)
-      (which runds after m(f)) can be pushed, and having dF3x prompt the return
-      of ar.slice(-1)[0] when f === dF3x. But enough of the small stuff, now
-      it&#39;s time to show m-M(x) closures in all their glory, deftly making
-      complex applications work while they do nothing but allow the function m
-      to transform them by means of the functions m fetches. The <a href="./cube7">Simulated Rubik&#39;s cube</a> is a case in point.</p> <p data-svelte-h="svelte-1g63h9e">The array x in the m-M(x) Rubik&#39;s cube array is an array consisting of six
-      nine-member arrays of references to the strings &quot;blue, green, red, orange,
-      yellow and white.&quot; Functions called in response to DOM key presses and
-      mouse clicks rearrange these strings, which are the names of CSS classes
-      whose &quot;background-color&quot; properties match the names of the selectors that
-      contain them. For example, the CSS class &quot;blue&quot; contains the line,
-      &quot;background-color: &quot;blue&quot;.</p> <p id="cow7" data-svelte-h="svelte-ramrkb">To understand the interface between the m-M(x) representation of the cube
-      with the 54 colored divs in the DOM, we first need to know how x in the
-      closure is defined. Here it is:</p> <pre>${escape(classCode2)}</pre> <p data-svelte-h="svelte-1x0koyy">m(dF3x)[0][0] on the solved cube representation in the DOM is a div with
-      class = &quot;blue&quot;. Here&#39;s blue&#39;s definition:</p> <pre>${escape(showBlue)}</pre> <p data-svelte-h="svelte-1sf3ic2">Below is the cube representation in the DOM. Notice how the colors
-      corresponds with the image in the monitor -- orange in front m(dF3x)[3],
-      blue on the side m(dF3x)[0], and yellow on top (m(dF3x)[4]).</p> <pre>${escape(dom)}</pre> <p data-svelte-h="svelte-1e81lm3"><a href="./cube7#cow8">This link</a> takes you to a demonstration driving home the point that the mere rearrangement of x in the m-M(x) closure, along with a self-reference of m to m, is sufficient to trigger reactivity in Svelte. It also shows that the only heavy lifting, such that it is, consists of rearranging references to strings. The 54 divs that constitute the DOM representation remain stationary.       
-    </p><p data-svelte-h="svelte-1c4e03k">When you press &quot;r&quot;, click the &quot;R&quot; button, or click the upper leift corner
-      of the right side of the cube representation, the function &#39;R&#39; is called
-      on the array of six arrays of references to strings in the m-M(x) closure.
-      The current configuration of x in the closure is of no concern to &#39;R&#39;. It
-      rearranges the strings based solely on their positions -- 54 positions,
-      ranging from m(dF3x)[0][0] to m(dF3)[5][8].</p> <p data-svelte-h="svelte-csqzbd">R specifies that whatever string reference happens to be in position
-      m(dF3x)[3][2] changes to whatever string reference happens to be in
-      position m(dF3x)[5][2]. If the cube is in its starting configuration
-      (solved, prior to scrambling), the upper right front corner will go from
-      orange to white. Beyond that, we know nothing about the color of the front
-      upper right corner before or after m(R) runs. The class will change to the
-      whatever the class of the div in the front upper right corner
-      (m(dF3x)(5)(2)) happens to be, but the background-color of that class
-      might be whatever the background color of m(dF3x)(3)(2) happens to be.
-      Here&#39;s the definition of R:</p> <pre>${escape(Rcode)}</pre> <p data-svelte-h="svelte-152w053">When R returns temp, the transformation of x completes. It&#39;s new value is temp since x = Func(x) and Func is R in this instance.</p> <h1 data-svelte-h="svelte-squptw">STOP</h1> <p data-svelte-h="svelte-1wdccrv">This is where the revision ends.</p>
-paypal card denominations
+    in memory; i.e., if the program in which &quot;m&quot; is defined is still running. or
+    <br>
+        (3) the current value of x is preserved in permanent storage.</span> <p data-svelte-h="svelte-1rd48nt">Regarding the last item and x retrieved from storage: If m is defined, then <span>\`m(()=&gt;x)(newFunc1)(newFunc2)</span> ... Otherwise, redefine m with &quot;m = M(x) using the most recent value of x.</p> <pre class="dis svelte-7c47tb">${escape(Mdis)}</pre> <pre class="play svelte-7c47tb">${escape(Mplay)}</pre> <pre class="dis svelte-7c47tb">${escape(Mend)}</pre> <dist class="light svelte-7c47tb" data-svelte-h="svelte-1mq2aot">Anonymous Computation:</dist> <pre>${escape(v3)}</pre> <br> <div class="light svelte-7c47tb"><span data-svelte-h="svelte-1xp33cu">Encapsulated State:</span> <pre>${escape(v4)}</pre> <pre>${escape(v5)}</pre> <span data-svelte-h="svelte-krlx4g">Sometime later (the garbage collector ignores closures):</span> <pre>${escape(v6)}</pre> <pre>${escape(v7)}</pre> <pre>${escape(v8)}</pre> <pre>${escape(v9)}</pre></div> <span class="teaser svelte-7c47tb" data-svelte-h="svelte-1kemneu">Rubik&#39;s Cube Simulation</span> <span class="teaser svelte-7c47tb" data-svelte-h="svelte-1m5xeh6">***********************************************************************
+    <br>
+    Case 1 -- Clicking on the three visible sides of the cube.</span> <p data-svelte-h="svelte-15jm8w5">The visible cube interface gives access to all six sides. Clicking the
+    center of each face causes rotation of the whole cube around the axis
+    perpendicular to that center. Everything moves except for clicked center and
+    its counterpart on the opposite side</p> <p data-svelte-h="svelte-1dvpdqe">x in the Rubik&#39;s cube application is an array of six nine-member arrays of
+    references to the strings &quot;blue, green, red, orange, yellow, and white.&quot;
+    These strings correspond to the names of CSS selectors, and the
+    &quot;background-color&quot; properties of each. Here&#39;s what I mean:</p> <pre>${escape(css)}</pre> <p data-svelte-h="svelte-8cvcfg">The 54 divs that combine to represent the cube in the DOM are shown below.
+    The visual representation that appears in the browser is on the next page, <a href="./cube7">Rubik&#39;s cube</a></p> <p data-svelte-h="svelte-8tet7v">Notice that the front, top, and right side representations contain buttons.
+    Go to <a href="./cube7">Rubik&#39;s cube</a>, click the &quot;Start&quot; button or press
+    the &#39;V&#39; key to restore the cube to it to the &quot;solved&quot; configuration, then
+    click the upper left corner of the right side of the cube. The right face
+    rotates counterclockwise 90 degrees pursuant to the &quot;on:click&quot; instruction
+    seen in the DOM representation (below). &quot;m = m(Rz)&quot; executes. &quot;m(Rz)&quot;
+    updates x in the m-M(x) closure; the &quot;m =&quot; part triggers reactivity, causing
+    the update to immediately appear in the browser.&quot;</p> <p data-svelte-h="svelte-1jp8yo9">Now click on the top center three times. The right side should be green now.
+    Rotate the right side counterclockwise by clicking on its upper left corner.
+    Now click the top center once to restore the cube to its original
+    orientation.</p> <span style>Digression: <p data-svelte-h="svelte-1jsuhqy">This section is about clicking on cube image, but when we get to it later,
+      you will see that pressing the &quot;R&quot; key or clicking the button labeled &quot;R&quot;
+      rotates whatever face happens to be on the right when the &quot;R&quot; key is
+      pressed.or the &quot;R&quot; button is clicked.</p> <p></p> <pre>${escape(dom)}</pre> <span class="teaser svelte-7c47tb" data-svelte-h="svelte-7v2gj1">***********************************************************************
+      <br>
+      Case 2 -- Clicking on the buttons.</span> <p data-svelte-h="svelte-d2x6fh">Similar to clicking on parts of the cube, the callback specified in
+      buttons that rotate faces, middle sections, and the entire cube do so by
+      calling m(func) for some function &quot;func&quot; that rearranges arrays of six
+      nine-element arrays. This results in x mutating into fu on the same
+      functions that are invoked when the the click is on a section of the cube.
+      For example,</p> <pre>${escape(example3)}</pre> <span class="teaser svelte-7c47tb" data-svelte-h="svelte-kozoi1">***********************************************************************
+      <br>
+      Case 3 -- Key presses.</span> <p data-svelte-h="svelte-115h0va">Pressing keys invokes eventHandler(e) where &quot;e&quot; is the key-press event and
+      eventHandler is defined as follows:</p> <pre>${escape(handleEventCode)}</pre> <p data-svelte-h="svelte-16gky82">&quot;svelte:window on:keypress = { handleEvent } &quot; routes keyPress
+      event objects to handleEvent.</p> <p data-svelte-h="svelte-zzj0dz">The <a href="./cube7">Rubik&#39;s Cube simulation</a> features a m-M(x)
+      closure whose x values are always arrays of six nine-member arrays of the
+      strings &quot;blue, green, red, orange, yellow, and white&quot;. Callbacks stemming
+      from mouse clicks have the form &quot;m = m(Foo), where Foo is one of several
+      functions that use the elements of x to construct and return new arrays of
+      six nine-member arrays. The resulting transformation of x in the m-M(x)
+      closure automatically transforms the cube displayed in the browser because
+      x&#39;s elements (references to strings) are references to classes in the DOM.
+      m(dF3x)[0] is always the first element of m(dF3x). In the solved cube,
+      it&#39;s a nine-member array, each element of which is corresponds to a CSS
+      class with the element &quot;background-color: blue&quot;. m(dF3x)[0][0] === &quot;blue&quot;
+      returns &quot;true&quot;, as do m(dF3x)[0][v] for the other eight elements of
+      m(dF3x)[0]. automatically responds because to arrays to and return create
+      arrays of six nine-member arrays that &quot; are operated upon by m that
+      respond only to DOM events, and whose side effects are felt only in the
+      DOM rearrangements of six CSS classes on the 54 divs of the cube. Other
+      than background colors, those classes are all identical. modifications of
+      the DOM, encapsulate transformations of x in a manner reminiscent of
+      Haskel monads. <a href="./cube7">Here</a>, you can click on an edge or
+      corner of the upper cube and see it rotate. The JavaScript in the script
+      section provides function definitions, and nothing more.</p> <span class="teaser svelte-7c47tb" data-svelte-h="svelte-1a8jbkd">***********************************************************************</span> <div class="background"><p style="color: lightgreen; font-size: 28px; font-weight: bold " data-svelte-h="svelte-deyoys">Background:</p> <p style="color: lightgreen;" data-svelte-h="svelte-19kfnrq">Indiana University awarded me a bachelor of science degree in chemistry,
+        a master&#39;s degree in mathematics, and a doctor of jurisprudence degree
+        in law. Sun Microsysystems certified me as a Java Programmer and Java
+        Website Developer, which qualified me for a job I took at Indiana
+        University, working on a project as a Programmer/Systems Analyst. I got the certifications and entry-level position at I.U. because I believed my doctor when he told me he couldn&#39;t refer me to the liver transplant clinic in Indianapolis unless I got &quot;good&quot; insurance coverage, the kind provided by Indiana University to its employees. I didn&#39;t know about Indiana&#39;s high risk insurance program, which I could have afforded continuing to practice law. The cost was around $1000.00 per month. It was Indiana&#39;s way of guaranteeing health care for the middle class and less affluent people with benefactors willing to pay their premiums.</p> <p style="color: lightgreen;" data-svelte-h="svelte-1kc4x8w">Back in the 1980s, I learned to contact online bulletin boards over the telephone. In 1995, I learned some JavaScript playing around with the amazing Netscape Navigator browser. Then I learned to use some web application frameworks for my law practice website. Programming fascinated me, and over the years I learned to write simple programs in numerous languages. My very first language was Fortran, which I learned in college while working on my bachelor&#39;s degree in chemistry.</p> <p style="color: lightgreen;" data-svelte-h="svelte-17nb89f">My son, Alexander, enjoyed a dice game called &quot;score&quot; that he learned in school, so I developed an online, multi-player version in the Haskell programming language. Users can modify the game and prompt it to display any and all possible solutions. I found a binary version I compiled with the Glasgow Haskell Compiler (GHC) in 2014. It runs online at http://schalk2:3055. There isn&#39;t a working secure version. https://score.schalk2.com loads the login screen, but goes no further than that. Here&#39;s a link: <a href="http://schalk2.com:3055" target="_blank">Game of score</a>. The code is at <a href="https://github.com/dschalk/score2">https://github.com/dschalk/score2</a></p> <p style="color: lightgreen;" data-svelte-h="svelte-13i7vub">I&#39;ll never again get involved in a Java project and I can&#39;t imagine ever
+        again needing React. After developing an elaborate online multi-player
+        game in the Haskel programming language, still using React for the user
+        interface, I decided to stick with JavaScript and simple frameworks.
+        This is a SvelteKit application.</p> <p style="color: lightgreen;" data-svelte-h="svelte-1n4pi73">While it makes sense to develop web applications with a few elaborate
+        functions in conjunction with reusable small ones, I decided to try the
+        opposite approach. What I discovered is worth sharing, to say the least,
+        so here it is.</p> <p data-svelte-h="svelte-11qf2a9">The code samples at the top of this page shows that function composition
+        using M can&#39;t be more transparent, concise, and maintainable. Going
+        beyond numerical computations, M holds the ever-changing state of play
+        in the<a href="./score">Game of Score</a>, but that application relies
+        too heavily on the functions that transform x in the m-M(x) closure. A
+        modified version of M will make the code more efficient and
+        understandable after I refactor the application.</p> <p data-svelte-h="svelte-2y9he2">A few additional lines of code in M can facilitate nesting of mixed
+        synchronous and asynchronous functions handled by m, and can help avoid
+        mutations by providing an array, let&#39;s call it &quot;ar&quot;, into which f(x)
+        (which runds after m(f)) can be pushed, and having dF3x prompt the
+        return of ar.slice(-1)[0] when f === dF3x. But enough of the small
+        stuff, now it&#39;s time to show m-M(x) closures in all their glory, deftly
+        making complex applications work while they do nothing but allow the
+        function m to transform them by means of the functions m fetches. The <a href="./cube7">Simulated Rubik&#39;s cube</a> is a case in point.</p> <p data-svelte-h="svelte-14wboki">The array x in the m-M(x) Rubik&#39;s cube array is an array consisting of
+        six nine-member arrays of references to the strings &quot;blue, green, red,
+        orange, yellow and white.&quot; Functions called in response to DOM key
+        presses and mouse clicks rearrange these strings, which are the names of
+        CSS classes whose &quot;background-color&quot; properties match the names of the
+        selectors that contain them. For example, the CSS class &quot;blue&quot; contains
+        the line, &quot;background-color: &quot;blue&quot;.</p> <p id="cow7" data-svelte-h="svelte-1jc3qmd">To understand the interface between the m-M(x) representation of the
+        cube with the 54 colored divs in the DOM, we first need to know how x in
+        the closure is defined. Here it is:</p> <pre>${escape(classCode2)}</pre> <p data-svelte-h="svelte-r2a6lm">m(dF3x)[0][0] on the solved cube representation in the DOM is a div with
+        class = &quot;blue&quot;. Here&#39;s blue&#39;s definition:</p> <pre>${escape(showBlue)}</pre> <p data-svelte-h="svelte-1n05fgy">Below is the cube representation in the DOM. Notice how the colors
+        corresponds with the image in the monitor -- orange in front m(dF3x)[3],
+        blue on the side m(dF3x)[0], and yellow on top (m(dF3x)[4]).</p> <pre>${escape(dom)}</pre> <p data-svelte-h="svelte-10k2eny"><a href="./cube7#cow8">This link</a> takes you to a demonstration driving
+        home the point that the mere rearrangement of x in the m-M(x) closure, along
+        with a self-reference of m to m, is sufficient to trigger reactivity in Svelte.
+        It also shows that the only heavy lifting, such that it is, consists of rearranging
+        references to strings. The 54 divs that constitute the DOM representation
+        remain stationary.</p> <p data-svelte-h="svelte-yp0kv4">When you press &quot;r&quot;, click the &quot;R&quot; button, or click the upper leift
+        corner of the right side of the cube representation, the function &#39;R&#39; is
+        called on the array of six arrays of references to strings in the m-M(x)
+        closure. The current configuration of x in the closure is of no concern
+        to &#39;R&#39;. It rearranges the strings based solely on their positions -- 54
+        positions, ranging from m(dF3x)[0][0] to m(dF3)[5][8].</p> <p data-svelte-h="svelte-1cuf12l">R specifies that whatever string reference happens to be in position
+        m(dF3x)[3][2] changes to whatever string reference happens to be in
+        position m(dF3x)[5][2]. If the cube is in its starting configuration
+        (solved, prior to scrambling), the upper right front corner will go from
+        orange to white. Beyond that, we know nothing about the color of the
+        front upper right corner before or after m(R) runs. The class will
+        change to the whatever the class of the div in the front upper right
+        corner (m(dF3x)(5)(2)) happens to be, but the background-color of that
+        class might be whatever the background color of m(dF3x)(3)(2) happens to
+        be. Here&#39;s the definition of R:</p> <pre>${escape(Rcode)}</pre> <p data-svelte-h="svelte-1n96bqf">When R returns temp, the transformation of x completes. It&#39;s new value
+        is temp since x = Func(x) and Func is R in this instance.</p> <h1 data-svelte-h="svelte-squptw">STOP</h1> <p data-svelte-h="svelte-1wdccrv">This is where the revision ends.</p>
+      paypal card denominations
 
-    <p data-svelte-h="svelte-xy1izh">The <a href="./cube7">Simulated Rubik&#39;s cube</a> page has gone through improvements,
-      including code refactoring, that render much of its text incorrect -- but the
-      cube itself works like a charm. Here&#39;s an explanation of the code, beginning
-      with the interface between the closure holding the array of six nine-member
-      arrays of references to the strings &quot;blue, green, red, orange, yellow, and
-      white&quot; and the div containing six nine-member arrays of divs. The strings in
-      the representation are the names of CSS classes with background-color entries
-      corresponding to their names.</p> <p data-svelte-h="svelte-1dn2a6g">The code samples at the top of this page show that function composition
-      using M can&#39;t be more transparent, concise, and maintainable. When I get
-      around to it, I&#39;ll show how slight modification of M facilitate nesting of
-      mixed synchronous and asynchronous handled by m, and how, when x is an
-      array, pushing modifications onto it can avoid mutations. The code is
-      tested and good to to, but it&#39;s time now to show m-M(x) closures handling
-      larger applications. There&#39;s the <a href="./score">Game of Score</a> and
-      my current project, <a href="./cube7">Simulated Rubik&#39;s cube</a>.</p> <p data-svelte-h="svelte-xrgggz">Key press and mouse click events call eventHandler(e) where e is an object
-      containing an integer named keyCode. If eventHandler contains an object
-      with a keyCode number matching keyCode in e, m(f) is called where f is a
-      function that rearranges resides response to events initiated in the DOM.</p> <p data-svelte-h="svelte-ml65fe">Events initiated by user key presses and clicks cause eventHandler() to
-      call m on functions that operate on arrays of six nine-member arrays.</p></div> <p data-svelte-h="svelte-n2nco">The following discussion centers around the function M (defined below),
-    along with closures of the form m-M(x), where m = M(x) and x can be any
-    JavaScript value.</p> <p data-svelte-h="svelte-1tk6gl2">M can, of course, be modified to include try-catch blocks, objects, or
-    anything else. Modification of M in this presentation are small. The
-    functions provided to m are responsible for turning the six sides and three
-    middle sections of the cube.</p> <p data-svelte-h="svelte-1joi75d">The simulated Rubik&#39;s cube example follows the convention of creating an
-    application&#39;s main closure by calling &quot;m = M(x)&quot;, where x can be any value,
-    and r-erring to the result as &quot;the m-M(x) closure.&quot; &quot;x&quot; is encapsulated,
-    sequestered from everything outside the closure&#39;s scope. As is apparent from
-    the definition of M (below_), &#39;x&#39; can be modified by calling m(func) for
-    some function &quot;func&quot;. In the simplest version of &quot;M&quot;, calling m(func)
-    mutates &quot;x,&quot; changing it from x to func(x).</p> <p data-svelte-h="svelte-jkay3e"><span style="color:yellow; font-weight:bold">CAUTION</span> as will be
-    extensively discussed on this page, m(dF3x) is a reference to &#39;x&#39; in the
-    closure unless the line in M,
-    <span class="O svelte-o3odnn">if (func === dF3x) return x;</span>
-    is changed to <span class="O svelte-o3odnn">if (func === dF3x) return clone(x)</span> for some
-    function &quot;clone&quot; that returns a perfect duplicate of &#39;x&#39; with an address in memory
-    different from that of &#39;x&#39;. More about that later. First, here&#39;s the definition
-    M and some examples of m-M(x) closures:</p> <p data-svelte-h="svelte-1oped0i">The <a href="./score#mDef">Solitaire Game of Score</a> involves using two six-sided,
-    one twelve-sided, and one twenty-sided die along with arithmetic and concatenation
-    to arrive at the number 20 in two or more moves. The initial value of &quot;x&quot; in
-    the m-M(x) closure is shown in the definition of m2:</p> <pre data-svelte-h="svelte-1fbr1ln">m2 = M([ 
+      <p data-svelte-h="svelte-tojbup">The <a href="./cube7">Simulated Rubik&#39;s cube</a> page has gone through improvements,
+        including code refactoring, that render much of its text incorrect -- but
+        the cube itself works like a charm. Here&#39;s an explanation of the code, beginning
+        with the interface between the closure holding the array of six nine-member
+        arrays of references to the strings &quot;blue, green, red, orange, yellow, and
+        white&quot; and the div containing six nine-member arrays of divs. The strings
+        in the representation are the names of CSS classes with background-color
+        entries corresponding to their names.</p> <p data-svelte-h="svelte-15772xe">The code samples at the top of this page show that function composition
+        using M can&#39;t be more transparent, concise, and maintainable. When I get
+        around to it, I&#39;ll show how slight modification of M facilitate nesting
+        of mixed synchronous and asynchronous handled by m, and how, when x is
+        an array, pushing modifications onto it can avoid mutations. The code is
+        tested and good to to, but it&#39;s time now to show m-M(x) closures
+        handling larger applications. There&#39;s the <a href="./score">Game of Score</a>
+        and my current project, <a href="./cube7">Simulated Rubik&#39;s cube</a>.</p> <p data-svelte-h="svelte-1mcz7i1">Key press and mouse click events call eventHandler(e) where e is an
+        object containing an integer named keyCode. If eventHandler contains an
+        object with a keyCode number matching keyCode in e, m(f) is called where
+        f is a function that rearranges resides response to events initiated in
+        the DOM.</p> <p data-svelte-h="svelte-1mggid6">Events initiated by user key presses and clicks cause eventHandler() to
+        call m on functions that operate on arrays of six nine-member arrays.</p></div> <p data-svelte-h="svelte-1bedmew">The following discussion centers around the function M (defined below),
+      along with closures of the form m-M(x), where m = M(x) and x can be any
+      JavaScript value.</p> <p data-svelte-h="svelte-o0dycy">M can, of course, be modified to include try-catch blocks, objects, or
+      anything else. Modification of M in this presentation are small. The
+      functions provided to m are responsible for turning the six sides and
+      three middle sections of the cube.</p> <p data-svelte-h="svelte-wxrfoh">The simulated Rubik&#39;s cube example follows the convention of creating an
+      application&#39;s main closure by calling &quot;m = M(x)&quot;, where x can be any
+      value, and r-erring to the result as &quot;the m-M(x) closure.&quot; &quot;x&quot; is
+      encapsulated, sequestered from everything outside the closure&#39;s scope. As
+      is apparent from the definition of M (below_), &#39;x&#39; can be modified by
+      calling m(func) for some function &quot;func&quot;. In the simplest version of &quot;M&quot;,
+      calling m(func) mutates &quot;x,&quot; changing it from x to func(x).</p> <p data-svelte-h="svelte-nio40q"><span style="color:yellow; font-weight:bold">CAUTION</span> as will be
+      extensively discussed on this page, m(dF3x) is a reference to &#39;x&#39; in the
+      closure unless the line in M,
+      <span class="O svelte-7c47tb">if (func === dF3x) return x;</span>
+      is changed to <span class="O svelte-7c47tb">if (func === dF3x) return clone(x)</span> for
+      some function &quot;clone&quot; that returns a perfect duplicate of &#39;x&#39; with an address
+      in memory different from that of &#39;x&#39;. More about that later. First, here&#39;s
+      the definition M and some examples of m-M(x) closures:</p> <p data-svelte-h="svelte-sknn1e">The <a href="./score#mDef">Solitaire Game of Score</a> involves using two six-sided,
+      one twelve-sided, and one twenty-sided die along with arithmetic and concatenation
+      to arrive at the number 20 in two or more moves. The initial value of &quot;x&quot; in
+      the m-M(x) closure is shown in the definition of m2:</p> <pre data-svelte-h="svelte-1fbr1ln">m2 = M([ 
     [Math.floor(Math.random() * 6)   + 1, Math.floor(Math.random() * 6) + 1,
      Math.floor(Math.random() * 12) + 1, Math.floor(Math.random() * 20) + 1], 
      [], [&#39;+&#39;], [], [0], [], [0], [] 
-]);</pre> <h2 data-svelte-h="svelte-ej0cvp">The Simulated Rubik&#39;s Cube</h2> <p data-svelte-h="svelte-138e9lf">The <a href="./cube7">simulated Rubik&#39;s cube</a> is another example of a fairly
-    complex application whose state is maintained in a tiny closure. The bare bones
-    M shown above can handle the transformations of the cube, from keystroke or button
-    click to the result seen in the browser. But, in order to facilitate taking back
-    a series of moves, an array of references to every argument provided to m was
-    added.</p> <h3 class="svelte-o3odnn" data-svelte-h="svelte-1we8piy">The Code Directly Responsible for the Browser Display</h3> <p data-svelte-h="svelte-7ps1qz">In the DOM, the simulated Rubik&#39;s cube consists of 6 groups of 9 Div
-    elements. User moves rearrange classes. Cubies change color when they are
-    assigned a class with a different background</p> <p data-svelte-h="svelte-jdvg52">Those arguments are functions that operate on x in the m-M(x) closure; i.e.,
-    that operate on <span style="color: orange">[ bb, gg, rr, oo, yy, ww ]</span>, the array that determines the background colors of the 54 divs in the
-    DOM, thereby controling the configuration of the cube displayed in the
-    browser. When an array was added to the definition of M, the original M was
-    renamed M2. Here&#39;s the complete definition of m in the m-M(x) closure,
-    beginning with the revised definition of M:</p> <pre>${escape(Mcode)}</pre> <pre>${escape(classCode2)}</pre> <p data-svelte-h="svelte-1xk0402">As the line &quot;else x = func(x);&quot; in the definition of M indicates, m(func)
-    causes func(x) to replace x in the m-M(x) closure unless func is dF3x or
-    dF3ar. Pressing the &quot;r&quot; key or clicking on the &quot;R&quot; rotates the right side of
-    the cube clockwise a quarter turn. See how it uses the elements of the
-    current configuration (named &quot;ar&quot;) of <span style="color: orange">[ bb, gg, rr, oo, yy, ww ]</span> as a source of building blocks to assemble the updated configuration, named
-    &quot;temp.&quot;</p> <pre>${escape(Rcode)}</pre> <p data-svelte-h="svelte-rcfcmp">The functions that manipulate the cube have numerous lines of code, but they
-    are as simple as they could possibly be. They don&#39;t rely on procedures to
-    determine what goes where during the construction of &quot;temp&quot;, they are just
-    instructions specifying the new locations of the elements of the array held
-    in the m-M(x) closure. While not organized in tabular form, they are
-    essentially items in a lookup table.</p> <p data-svelte-h="svelte-kq7rna">If the meanings of passing by value and passing by reference is clear, as
-    I&#39;m sure it is for many of you, reading the rest of this section on the
-    Rubik&#39;s cube simulator might be tedious. For those who are still a little
-    unsure, I hope reading this will be the breakthrough that clarifies it once
-    and for all.</p> <p data-svelte-h="svelte-1n2vlow">With moves stored in ar, setting the cube configuration back to where it was
-    prior to the most recent move requires nothing more than the three short
-    lines of code in the function &quot;reverse&quot;. When m(dF3ar) is modified in
-    reverse, &#39;x&#39; is simultaneously modified in the m-M(x) closure. This is
-    because both &#39;x&#39; and m(dF3ar) are references to the same address in memory.
-    Change what is stored at that address with either one, and that will be the
-    value of both &#39;x&#39; and &#39;m(dF3ar) and any other variable that happens to point
-    to that location.</p> <pre>${escape(reverseShow)}</pre> <p data-svelte-h="svelte-34qah4">m(dF3ar) is a reference to ar in the m-M(x) closure, so reverse() shortens
-    the length of ar inside the closure. Very little browser memory is needed to
-    store the information necessary to reverse hundreds of moves. Making moves
-    is not resource intensive either. A move doesn&#39;t rearrange the div elements
-    of the cube or rotate numerous little cubits, as is the case with many
-    Rubik&#39;s cube simulators. All it does is rearrange the placement of the
-    strings (names of colors) referring to some CSS classes.</p> <p data-svelte-h="svelte-1uj0cdu">The reverse function is oblivious to precisely which functions were
-    responsible for the transformations being reversed. Whatever the function at
-    the top of the list happens to be, it runs three more times. After foo
-    executes, it and the function that was reversed are discarded, making the
-    list one item shorter than it was.</p> <div style="margin-left:2%; margin-right: 2%;" data-svelte-h="svelte-9bb2pd"><img class="display_image svelte-o3odnn"${add_attribute("src", passBy, 0)}></div> <div style="margin-left:12%; margin-right: 12%;" data-svelte-h="svelte-2ppmia"><p>Distinguishing between passing by value (primitives) and passing by
-      reference (objects) is a stumbling block for people new to JavaScript.
-      It&#39;s important to know that string, number, bigint, boolean, undefined,
-      symbol, and null are the primitive values. All other values are down the
-      prototype chain from Object and are, therefore, objects. Here&#39;s
-      verification that a simple function is an object:</p></div> <div style="margin-left:2%; margin-right: 2%;" data-svelte-h="svelte-mbtod2"><img class="display_image svelte-o3odnn"${add_attribute("src", object, 0)}></div> <div style="margin-left:12%; margin-right: 12%;"><p data-svelte-h="svelte-1gtcic2">See &quot;prototype: Object&quot; at the bottom of the right side.</p> <a id="examples"></a> <h1 data-svelte-h="svelte-12xuzxf">Elementary Facts and Examples</h1> <p data-svelte-h="svelte-c7e6gl">M can serve as the outer scope for multiple orthogonal (non-interacting)
-      functions, with structures identical to M&#39;s &quot;go()&quot;. For example:</p> <pre>${escape(orthoganal)}</pre> <h3 class="svelte-o3odnn" data-svelte-h="svelte-1kuwr40">&quot;M&quot; facilitates function composition.</h3> <p data-svelte-h="svelte-1wgygkn">Garbage collectors should delete this.</p> <pre>${escape(compose1)}</pre> <p data-svelte-h="svelte-mb1d5t">The value &quot;x&quot; in the m-M(x) closure persists until m is redefined or
-      deleted.</p> <pre>${escape(compose2)}</pre> <p data-svelte-h="svelte-1n49deb">Recommended Reading: <a href="https://www.youtube.com/playlist?list=PLillGF-Rfqbars4vKNtpcWVDUpVOVTlgB">Javascript Under the Hood</a></p></div></span></div> <a href="#cow7" data-svelte-h="svelte-z78alu">Go to cow7</a> ${slots.default ? slots.default({}) : ``}`;
+]);</pre> <h2 data-svelte-h="svelte-ej0cvp">The Simulated Rubik&#39;s Cube</h2> <p data-svelte-h="svelte-1u4ms8j">The <a href="./cube7">simulated Rubik&#39;s cube</a> is another example of a fairly
+      complex application whose state is maintained in a tiny closure. The bare bones
+      M shown above can handle the transformations of the cube, from keystroke or
+      button click to the result seen in the browser. But, in order to facilitate
+      taking back a series of moves, an array of references to every argument provided
+      to m was added.</p> <h3 class="svelte-7c47tb" data-svelte-h="svelte-1we8piy">The Code Directly Responsible for the Browser Display</h3> <p data-svelte-h="svelte-1io4wrf">In the DOM, the simulated Rubik&#39;s cube consists of 6 groups of 9 Div
+      elements. User moves rearrange classes. Cubies change color when they are
+      assigned a class with a different background</p> <p data-svelte-h="svelte-p7wnbe">Those arguments are functions that operate on x in the m-M(x) closure;
+      i.e., that operate on <span style="color: orange">[ bb, gg, rr, oo, yy, ww ]</span>, the array that determines the background colors of the 54 divs in the
+      DOM, thereby controling the configuration of the cube displayed in the
+      browser. When an array was added to the definition of M, the original M
+      was renamed M2. Here&#39;s the complete definition of m in the m-M(x) closure,
+      beginning with the revised definition of M:</p> <pre>${escape(Mcode)}</pre> <pre>${escape(classCode2)}</pre> <p data-svelte-h="svelte-19ldkaq">As the line &quot;else x = func(x);&quot; in the definition of M indicates, m(func)
+      causes func(x) to replace x in the m-M(x) closure unless func is dF3x or
+      dF3ar. Pressing the &quot;r&quot; key or clicking on the &quot;R&quot; rotates the right side
+      of the cube clockwise a quarter turn. See how it uses the elements of the
+      current configuration (named &quot;ar&quot;) of <span style="color: orange">[ bb, gg, rr, oo, yy, ww ]</span> as a source of building blocks to assemble the updated configuration, named
+      &quot;temp.&quot;</p> <pre>${escape(Rcode)}</pre> <p data-svelte-h="svelte-fome7h">The functions that manipulate the cube have numerous lines of code, but
+      they are as simple as they could possibly be. They don&#39;t rely on
+      procedures to determine what goes where during the construction of &quot;temp&quot;,
+      they are just instructions specifying the new locations of the elements of
+      the array held in the m-M(x) closure. While not organized in tabular form,
+      they are essentially items in a lookup table.</p> <p data-svelte-h="svelte-bzxsym">If the meanings of passing by value and passing by reference is clear, as
+      I&#39;m sure it is for many of you, reading the rest of this section on the
+      Rubik&#39;s cube simulator might be tedious. For those who are still a little
+      unsure, I hope reading this will be the breakthrough that clarifies it
+      once and for all.</p> <p data-svelte-h="svelte-1cs8rkg">With moves stored in ar, setting the cube configuration back to where it
+      was prior to the most recent move requires nothing more than the three
+      short lines of code in the function &quot;reverse&quot;. When m(dF3ar) is modified
+      in reverse, &#39;x&#39; is simultaneously modified in the m-M(x) closure. This is
+      because both &#39;x&#39; and m(dF3ar) are references to the same address in
+      memory. Change what is stored at that address with either one, and that
+      will be the value of both &#39;x&#39; and &#39;m(dF3ar) and any other variable that
+      happens to point to that location.</p> <pre>${escape(reverseShow)}</pre> <p data-svelte-h="svelte-1odqlsk">m(dF3ar) is a reference to ar in the m-M(x) closure, so reverse() shortens
+      the length of ar inside the closure. Very little browser memory is needed
+      to store the information necessary to reverse hundreds of moves. Making
+      moves is not resource intensive either. A move doesn&#39;t rearrange the div
+      elements of the cube or rotate numerous little cubits, as is the case with
+      many Rubik&#39;s cube simulators. All it does is rearrange the placement of
+      the strings (names of colors) referring to some CSS classes.</p> <p data-svelte-h="svelte-zonyi">The reverse function is oblivious to precisely which functions were
+      responsible for the transformations being reversed. Whatever the function
+      at the top of the list happens to be, it runs three more times. After foo
+      executes, it and the function that was reversed are discarded, making the
+      list one item shorter than it was.</p> <div style="margin-left:2%; margin-right: 2%;" data-svelte-h="svelte-oza92p"><img class="display_image svelte-7c47tb"${add_attribute("src", passBy, 0)}></div> <div style="margin-left:12%; margin-right: 12%;" data-svelte-h="svelte-1i0xasy"><p>Distinguishing between passing by value (primitives) and passing by
+        reference (objects) is a stumbling block for people new to JavaScript.
+        It&#39;s important to know that string, number, bigint, boolean, undefined,
+        symbol, and null are the primitive values. All other values are down the
+        prototype chain from Object and are, therefore, objects. Here&#39;s
+        verification that a simple function is an object:</p></div> <div style="margin-left:2%; margin-right: 2%;" data-svelte-h="svelte-d1vbti"><img class="display_image svelte-7c47tb"${add_attribute("src", object, 0)}></div> <div style="margin-left:12%; margin-right: 12%;"><p data-svelte-h="svelte-1gtcic2">See &quot;prototype: Object&quot; at the bottom of the right side.</p> <a id="examples"></a> <h1 data-svelte-h="svelte-12xuzxf">Elementary Facts and Examples</h1> <p data-svelte-h="svelte-wi399x">M can serve as the outer scope for multiple orthogonal (non-interacting)
+        functions, with structures identical to M&#39;s &quot;go()&quot;. For example:</p> <pre>${escape(orthoganal)}</pre> <h3 class="svelte-7c47tb" data-svelte-h="svelte-1kuwr40">&quot;M&quot; facilitates function composition.</h3> <p data-svelte-h="svelte-1wgygkn">Garbage collectors should delete this.</p> <pre>${escape(compose1)}</pre> <p data-svelte-h="svelte-1co65ep">The value &quot;x&quot; in the m-M(x) closure persists until m is redefined or
+        deleted.</p> <pre>${escape(compose2)}</pre> <p data-svelte-h="svelte-16900b7">Recommended Reading: <a href="https://www.youtube.com/playlist?list=PLillGF-Rfqbars4vKNtpcWVDUpVOVTlgB">Javascript Under the Hood</a></p></div></span></div> <a href="#cow7" data-svelte-h="svelte-z78alu">Go to cow7</a> ${slots.default ? slots.default({}) : ``}`;
 });
 export {
   Page as default

@@ -38,11 +38,7 @@ rotateCube();
 
         <a href="./cube7">Rubik's Cube</a>
 
-        <a href="./cube9">Test</a>
-
         <a href="./score">Game of Score</a>
-
-        <a href="./cube8">cube8</a>
 
         <a href="./async">Async</a>
 

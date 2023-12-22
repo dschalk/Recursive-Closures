@@ -106,6 +106,10 @@ var ww = ["w0","w1","w2","w3","w4","w5","w6","w7","w8"]; */
     JSON.parse(JSON.stringify(ar));
   }
 
+  var cloneCode = `function clone (ar) {
+    JSON.parse(JSON.stringify(ar));
+  }`
+
   function M2(x, ar = []) {
     return function go(func) {  
       if (func === dF3x) return x;
@@ -113,8 +117,8 @@ var ww = ["w0","w1","w2","w3","w4","w5","w6","w7","w8"]; */
       return go;
     };
   };
-
-  function M(x, ar = []) {
+  
+function M(x, ar = []) {
     return function go(func) {
       if (func === dF3x) return x;
       if (func === dF3ar) return ar;
@@ -123,6 +127,17 @@ var ww = ["w0","w1","w2","w3","w4","w5","w6","w7","w8"]; */
       return go;
     };
   };
+
+var test7 = `function M(x, ar = []) {
+    return function go(func) {
+      if (func === dF3x) return x;
+      if (func === dF3ar) return ar;
+      else x = func(x);
+      ar.push(func);
+        console.log(m(dF3ar) === ar); // true
+      return go;
+    };
+  };`
 
   var Start = () => {
     index = 1;
@@ -133,24 +148,35 @@ $: Sally = m(dF3ar).length;
 
 function reverse () { 
     let fu = m(dF3ar).pop(); 
-    // discards the function being reversed.
-    let foo = x => fu(fu(fu(x))); 
-    // Three more turns reverses the first one.
+    // Removes the function being reversed from x.
+    let foo = v => fu(fu(fu(v))); 
+    // foo is the inverse of fu.
     m(foo)(dF3ar).pop();     
+    // After x = foo(x) reverses fu, foo is popped off of ar.
     m = m;
-    // uses foo, then discards it.
 };
 
 var reverseCode = `function reverse () { 
-  let fu = m(dF3ar).pop(); 
-  // discards the function being reversed.
+    let fu = m(dF3ar).pop(); 
+    // Removes the function being reversed from x.
+    let foo = v => fu(fu(fu(v))); 
+    // foo is the inverse of fu.
+    m(foo)(dF3ar).pop();     
+    // After x = foo(x) reverses fu, foo is popped off of ar.
+    m = m;
+};`;
+
+var newMcode = `  function M(x, ar = []) {
+      return function go(func) {
+        if (func === dF3x) return x;
+        if (func === dF3ar) return ar;
+        else x = func(x);
+        ar.push(func);
+        return go;
+      };
+    }; 
     
-  let foo = x => fu(fu(fu(x))); 
-  // Three more turns reverses the first one.
-    
-  m(foo)(dF3ar).pop();     
-  // uses foo, then discards it.
-}; `;
+    let m = M(x)`
 
   var classCode2 = `const b0 = 'blue';
   const b1 = 'blue';
@@ -3078,6 +3104,9 @@ const orangeSide = `<div class="face front">
 /* *********************************************************** */
 /* *************************************************************** */
 /* *************************************************************** */
+
+
+
 </style>
 
 
@@ -3139,9 +3168,9 @@ const orangeSide = `<div class="face front">
     <button on:click={() => m = m(Czr)}>S'</button>
     <div style="margin-left: 1px">
       <p> Pressing the u, d, r, l, f, b,  m, e, s, x, y, and z keys has the same effect as clicking the corresponding (capitalized) buttons. Holding down the "Shift" key (or activating "CapsLock") while pressing the keys causes the reverse effect. Pressing v, w, and q is equivalent to clicking on Start, Scramble, and Reverse, respectively. </p>
-      <p> Clicking on either of two left corners of each face of the cube causes that face to rotate counterclockwise 90 degrees. Clicking on either of two right corners of each face of the cube causes that face to rotate clockwise 90 degrees. Clicking on edges rotates the centers rather than faces. Clicking on the centers of the right, top, and front rotates the entire cube on the X, Y and Z axes, respectively.
-      <p>The lower cube image in the center of this page gives eight distinct views of the Rubik's cube image above it. One use that occurs frequently for some users occurs after the white cross is finished and the cube flipped over, putting the yellow face on top. Identifying corners with white sides is important since they can be brought to the top to form pairs for insertion on the bottom. White on the bottom facing down can be seen by pressing the "X" key, clicking on the "X-Rotate" button, or just looking down at the reference cube. </p>
-      <p>There's more discussion at <a href="./">Home</a>
+      <p> Clicking on either of two left corners of each face of the cube causes that face to rotate counterclockwise 90 degrees. Clicking on either of two right corners of each face of the cube causes that face to rotate clockwise 90 degrees. Clicking on edges rotates the centers rather than faces. Clicking on the centers of the right, top, and front rotates the entire cube on the X, Y and Z axes, respectively. Clicking the center of any face makes it rotate clockwise.</p>
+      <p> Of course, nothing actually rotates. Rearranging references to strings in the m-M(x) closure creates the illusion in the browser that part or all of the cube rotated. </p>
+      
         
       <h2 style = "text-align: center;">Some Algorithm Shortcuts</h2><p></p>
       <button on:click={corners}>PLL Corners: R' F R' B2 R F' R' B2 R2</button>
@@ -3191,7 +3220,7 @@ const orangeSide = `<div class="face front">
   <p>Press the "v" key or click <button on:click={Start}>Start</button> to see each face of the cube with 9 identically colored divs. Click on the <button on:click={Xrotate}>X rotate</button>, <button on:click={Yrotate}>Y rotate</button>, and <button on:click={Zrotate}>Z rotate</button> buttons to see the main cube from various angles, or click on the <button on:click={rotate9}>Rotate A</button> and <button on:click={tilt9}>Rotate B</button> buttons to turn the alternate-view cube. The alternate-view cube (center bottom) can be returned to its starting orientation only be rotations or re-loading this page. <button on:click={Start}>Start</button> will give the sides of the alternate-view cube uniform colors (like the main cube), but its orientation relateve to the main cube doesn't change. This is by design. Click
   <button on:click={rotate9}>Rotate A</button>, then <button on:click={shu}>Scramble</button>, and finally, <button on:click={Start}>Start</button>.</p>
 
-  <p> Definitions of M, the array used in the definition of the Rubik's cube closure <span style = "color: #ffaacc">[bb, gg, rr, oo, yy, ww]; </span>, the classes blue, green, red, orange, yellow,and white, and more are on the <a href = "./">previous page</a>.  </p>
+  <p> See the <a href = "./">previous page</a> for detailed definitions. This page shows how images in the DOM are made to react to rearrangements of the elements of a six nine-member arrays of strings in the script, User mouse clicks and key presses call m(func), where func is some function and m is defined as m = M(x) where x is the array of six nine-member arrays of strings mentioned above. </p>
     
     </div>
   </div>
@@ -3273,15 +3302,15 @@ const orangeSide = `<div class="face front">
 
       <div class="face bottom">
         <div class="grid">
-          <div><button class={m(dF3x)[5][0]} on:click = {() => {m = m(Dz)}} /> </div> 
-          <div><button class={m(dF3x)[5][1]} on:click = {() => {m = m(Cx)}} /> </div> 
-          <div><button class={m(dF3x)[5][2]} on:click = {() => {m = m(D)}}  /> </div>
-          <div><button class={m(dF3x)[5][3]} on:click = {() => {m = m(Cz)}} /> </div> 
-          <div><button class={m(dF3x)[5][4]} on:click = {() => {m = m(Yro)}} /> </div>
-          <div><button class={m(dF3x)[5][5]} on:click = {() => {m = m(Czr)}} /> </div> 
-          <div><button class={m(dF3x)[5][6]} on:click = {() => {m = m(Dz)}}/> </div> 
-          <div><button class={m(dF3x)[5][7]} on:click = {() => {m = m(Cxr)}} /> </div> 
-          <div><button class={m(dF3x)[5][8]} on:click = {() => {m = m(D)}}> </div> 
+          <div><button class={m(dF3x)[5][0]} /> </div> 
+          <div><button class={m(dF3x)[5][1]} /> </div> 
+          <div><button class={m(dF3x)[5][2]} /> </div>
+          <div><button class={m(dF3x)[5][3]} /> </div> 
+          <div><button class={m(dF3x)[5][4]} /> </div>
+          <div><button class={m(dF3x)[5][5]} /> </div> 
+          <div><button class={m(dF3x)[5][6]} /> </div> 
+          <div><button class={m(dF3x)[5][7]} /> </div> 
+          <div><button class={m(dF3x)[5][8]} /> </div> 
         </div>
       </div>
     </div>
@@ -3416,9 +3445,38 @@ const orangeSide = `<div class="face front">
 
 <p>The left face can be rotated by clicking on the top center square three times, clicking on the upper or lower right squares of the white side for a clockwise turn, clicking on the upper and lower left side squares to turn counterclockwise, and finally clicking the top center once if you want to return to the starting orientation. </p>
 <p> The back face can be rotated by clicking the right middle square two times and then clicking left or right upper or lower squares, depending on which way you want it to turn.</p>
-<p> The bottom can be rotated by clicking the right center square once, clicking the right or left upper or lower squares for clockwise or counterclockwise rotation respectively. Clicking the right center square three more times returns the cube to its starting orientation..  </p>
+<p> The bottom can be rotated by clicking the right center square once, clicking the right or left upper or lower squares for clockwise or counterclockwise rotation respectively. Clicking the right center square three more times returns the cube to its starting orientation.p.  </p>
+<h2> The Amazing Reverse Function </h2>
+<p> The value held n the closure m-M(x) is transformed whenever a user presses certain keys or mouse-clicks on certain parts of the browser display. These actions call m(func), automatically resulting in the mutation of x into func(x). Such mutations automatically change parts of the DOM where x, exposed as m(dF3x), determines the CSS background-color of elements. This is done directly as "background-color = 'm(dF3x)[j][k]" or indirectly as "class = 'm(dF3x)[j][k]" for integers j and k in the ranges of 0,6 for j and 0,8 for k. </p>
+ <p> The definitions of "func" in m(func), as described above, can be found selectively at <a href = "./">Home</a> and comprehensively in the <a href = "https://github.com/dschalk/Recursive-Closures">Github repository</a>. "reverse" works differently. It works with this modified version of M:</p>
+<pre>{newMcode}</pre>
+ 
+ <p> Clicking the "Reverse" button or pressing the Q key does not directly cause m to run; they just cause "reverse()" to run. m is called twice inside of reverse. </p>
+ 
+<pre>{reverseCode}</pre>
+<p> The function reverse works because m(dF3ar) passes ar by reference, not value. m(dF3ar) in the "reverse" function refers to the same location in memory as ar in the m-M(x) closure. Logging "m(dF3ar) while running this application illustrates this.   </p>
 
-    <pre>  
+<pre>{test7}</pre>
+
+  <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
