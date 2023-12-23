@@ -1,9 +1,7 @@
 <script>
-  import Firefox_1 from "$lib/Firefox_test.png";
-  import Firefox_2 from "$lib/Firefox_test_2.png";
-  import Firefox_3 from "$lib/Composition.png";
-  import passBy from "$lib/passBy.png";
-  import object from "$lib/object.png";
+  import Cubeshot from "$lib/Cubeshot.png"
+
+
 
   var Mdisplay = `function M (x) {
     return function</span> go (func) {
@@ -370,6 +368,75 @@ m(dF3x);     // 42`;
   }
 
 `;
+
+let Fcode = `  function F(ar) {
+    let temp = [];
+    temp[0] = [
+      ar[4][6],
+      ar[0][1],
+      ar[0][2],
+      ar[4][7],
+      ar[0][4],
+      ar[0][5],
+      ar[4][8],
+      ar[0][7],
+      ar[0][8],
+    ];
+
+    temp[1] = [
+      ar[1][0],
+      ar[1][1],
+      ar[5][0],
+      ar[1][3],
+      ar[1][4],
+      ar[5][1],
+      ar[1][6],
+      ar[1][7],
+      ar[5][2],
+    ];
+
+    temp[2] = ar[2];
+
+    temp[3] = [
+      ar[3][6],
+      ar[3][3],
+      ar[3][0],
+      ar[3][7],
+      ar[3][4],
+      ar[3][1],
+      ar[3][8],
+      ar[3][5],
+      ar[3][2],
+    ];
+
+    temp[4] = [
+      ar[4][0],
+      ar[4][1],
+      ar[4][2],
+      ar[4][3],
+      ar[4][4],
+      ar[4][5],
+      ar[1][8],
+      ar[1][5],
+      ar[1][2],
+    ];
+
+    temp[5] = [
+      ar[0][6],
+      ar[0][3],
+      ar[0][0],
+      ar[5][3],
+      ar[5][4],
+      ar[5][5],
+      ar[5][6],
+      ar[5][7],
+      ar[5][8],
+    ];
+    return temp;
+  } `
+
+
+
   var reverseShow = `function reverse () { 
   let fu = m(dF3ar).pop(); 
   // discards the function being reversed.
@@ -477,6 +544,20 @@ m(rd)(dF3x);   // 42 `;
           <div class={m(dF3x)[0][6]} />
           <div class={m(dF3x)[0][7]} />
           <div class={m(dF3x)[0][8]} />
+        </div>
+      </div>`;
+
+  const DOMfront = `      <div class="face front">
+        <div class="grid" >
+          <div> <button class={m(dF3x)[3][0]} on:click = {() => {m = m(Fz)}} /> </div> 
+          <div> <button class={m(dF3x)[3][1]} on:click = {() => {m = m(Cx)}} /> </div> 
+          <div> <button class={m(dF3x)[3][2]} on:click = {() => {m = m(F)}} /> </div>  
+          <div> <button class={m(dF3x)[3][3]} on:click = {() => {m = m(Cy)}} /> </div> 
+          <div> <button class={m(dF3x)[3][4]} on:click = {() => {m = m(Zro)}} /> </div>
+          <div><button class={m(dF3x)[3][5]} on:click = {() => {m = m(Cyr)}} /> </div> 
+          <div><button class={m(dF3x)[3][6]} on:click = {() => {m = m(Fz)}} /> </div> 
+          <div><button class={m(dF3x)[3][7]} on:click = {() => {m = m(Cxr)}} /> </div> 
+          <div><button class={m(dF3x)[3][8]} on:click = {() => {m = m(F)}} /> </div> 
         </div>
       </div>`;
 
@@ -825,7 +906,7 @@ m(rd)(dF3x);   // 42 `;
     Regarding the value of x (m(dF3x)) retrieved from storage: If m is already defined, you could run <span
     >
       `m(()=>x)(newFunc1)(newFunc2)</span
-    > ... Otherwise, you could define m with "m = M(x)" using the retrieved value of x.
+    > . Defining m with "m = M(x)" is another option.
   </p>
   <pre class="dis">{Mdis}</pre>
   <pre class="play">{Mplay}</pre>
@@ -848,22 +929,31 @@ m(rd)(dF3x);   // 42 `;
   <span class="teaser"
     >***********************************************************************
     <br />
-    Case 1 -- Clicking on the three visible sides of the cube.</span
-  >
-  <p>
-    The visible cube interface gives access to all six sides. Clicking the
-    center of each face causes rotation of the whole cube around the axis
-    perpendicular to that center. Everything moves except for clicked center and
-    its counterpart on the opposite side
-  </p>
+    <p> In the Rubik's cube application, the m-M(x) closure is defined as follows: </p>
+    <pre>{classCode2}</pre>
+    <p> The visual representation in the browser is constructed so that bb, gg, rr, oo, yy, and ww correspond to its right, left, back, front, top, and bottom faces respectively. The fact that x[3] represents the front face of the cube is especially relevant in the discussion that follows. </p>
 
+    Case 1 -- Clicking on the three visible sides of the cube.</span>
+  
   <p>
-    x in the Rubik's cube application is an array of six nine-member arrays of
-    references to the strings "blue, green, red, orange, yellow, and white."
-    These strings correspond to the names of CSS selectors, and the
-    "background-color" properties of each. Here's what I mean:
-  </p>
+    The value held in the m-M(x) closure in the Rubik's cube application, "x", is always an array of six nine-member
+    references to the strings "blue, green, red, orange, yellow, and white." The nine front-facing squares seen in the browser are all colored according to the nine strings referenced in xk[3]. In the starting cube, also known as the "solved cube," x[3] is the array "oo", the array of all nine references to "orange." Here's the first of the six parts of the 54 div representation of the Rubik's cube in the DOM: </p>
+    <pre>{DOMfront}</pre>
+    <p> Here are the definitions of the classes that get reassigned to divs during the course of manipulating it with key presses and mouse clicks:  </p>
   <pre>{css}</pre>
+    <p> The third button down from the top and the final button of the front face (see above) contain the statement "m = m(F)". These correspond to the upper right and lower right corners of the cube representation in the browser. Clicking the upper right or lower right corners of the cube, therefore, mutates x in the m=M(x) closure into the value returned by F(x), which is named "temp". </p>
+    <pre>{Fcode}</pre>
+    <p> Clicking on the cube representation in the browser isn't the only way to call m on F; i.e., run "m(F)" and mutate x into the return value of F(x). Pressing the "F" key and clicking on the "F" button do the same thing. The "m =" part of the statement m = m(F) triggers reactivity in this Sveltekit application, giving users almost instantaneous feedback from their key presses and mouse clicks. </p>
+    <p> Examining the function "F", we see that the front face of the cube, temp[3], remains solid orange after class reassignments that make it appear to rotate. Evidence of rotation can be seen on the top (temp[4]) and on the right (temp[0]) sides of the cube. Here's what the cube looks like in the browser after running "m = m(F)" on the solved cube: </p>
+
+      <img src={Cubeshot} alt="Image of the Rubik's cube " style="width:200px;height:210px;">
+    
+    <p> The changes to the top face, with three classes reassigned from x[4] (previously all white), and the changes to the right face, three classes reassigned from x[1] (previously all green), demonstrated the correspondence between the function "F" and the visual representation in the browser. And, of course, the observed changes are what you get when you turn the front face of a solved cube.   </p>
+
+
+
+    <p>These strings correspond to the names of CSS selectors with corresponding "background-color" elements. Here's what I mean: </p>
+  <p> Clicking the center of each face rearranges x in the m-M(x) closure, thereby automatically rearranging some of the class assignments of the 54 dives in the DOM. In the browser, this creates the appearance of 90 degree clockwise rotation of the entire cube around the axes perpendicular to the clicked centers. Pressing the x, y, OR z Keys has the same effect. Holding down SHIFT while pressing these keys creates the appearance of counterclockwise rotation. There are also buttons (above) for clockwise rotations, and "back" buttons for counterclockwise rotation.</p>
 
   <p>
     The 54 divs that combine to represent the cube in the DOM are shown below.
@@ -871,41 +961,27 @@ m(rd)(dF3x);   // 42 `;
       href="./cube7">Rubik's cube</a
     >
   </p>
-
-  <p>
-    Notice that the front, top, and right side representations contain buttons.
-    Go to <a href="./cube7">Rubik's cube</a>, click the "Start" button or press
-    the 'V' key to restore the cube to it to the "solved" configuration, then
-    click the upper left corner of the right side of the cube. The right face
-    rotates counterclockwise 90 degrees pursuant to the "on:click" instruction
-    seen in the DOM representation (below). "m = m(Rz)" executes. "m(Rz)"
-    updates x in the m-M(x) closure; the "m =" part triggers reactivity, causing
-    the update to immediately appear in the browser."
-  </p>
-  <p>
-    Now click on the top center three times. The right side should be green now.
-    Rotate the right side counterclockwise by clicking on its upper left corner.
-    Now click the top center once to restore the cube to its original
-    orientation.
-  </p>
-  <p> There are other ways to cause the transformations described above. For example, pressing the "R" key or clicking the button labeled "R" rotates whatever face happens to be on the right. There's no need to click on the right upper or lower corners of the cube. Holding down the SHIFT key while pressing "R" rotates the right face of the cube in the counterclockwise direction. 
-    </p>
     <pre>{dom}</pre>
+  <p>
+    If you click on the top center of a solved cube three times, the green side will face you.
+    Clicking the upper right corner and then clicking the top center again to restore the cube to its previous orientation confirms that you have rotated the left side clockwise by by 90 degrees.
+    
+  </p>
 
     <span class="teaser"
       >***********************************************************************
       <br />
-      Case 2 -- Clicking on the buttons.</span
-    >
+      Case 2 -- Clicking on the buttons.</span>
     <p>
       Similar to clicking on parts of the cube, the callback specified in
       buttons that rotate faces, middle sections, and the entire cube do so by
-      calling m(func) for some function "func" that rearranges arrays of six
-      nine-element arrays. This results in x mutating into fu on the same
-      functions that are invoked when the the click is on a section of the cube.
-      For example,
+      calling m(func) for some function "func" that rearranges some of the six nine-element arrays constituting the array "x" in the m-M(x) closure. This causes the automatic reassignment of classes in the DOM representation of the cube and the appearance in the browser that something has rotated. The functions used in the <a href="./cube7#yes">button section</a> are identical to the ones in the top, front, and right divs in the 54-div cube representation in the DOM.
     </p>
-    <pre>{example3}</pre>
+    <p> Pressing the "F" key, clicking the "F" button, or clicking the right upper or lower corners of the forward-facing side all cause the function "m(F)" to execute. When the orange front of a solved cube rotates 90 degrees clockwise, the right column of the green left side migrates to the lower row of the top. on a solved cube, the lower part of the top changes. Here's how this affects the m-M(x) closure and the upper right corner of the right side of the cube:<br>
+
+
+
+      &#160; &#160; &#160;  x mutates to R(x) in the closure, </p>
     <span class="teaser"
       >***********************************************************************
       <br />
@@ -944,6 +1020,7 @@ m(rd)(dF3x);   // 42 `;
       section provides function definitions, and nothing more.
     </p>
     <span class="teaser"
+
       >***********************************************************************</span
     >
     <div class="background">
@@ -1062,9 +1139,16 @@ m(rd)(dF3x);   // 42 `;
         When R returns temp, the transformation of x completes. It's new value
         is temp since x = Func(x) and Func is R in this instance.
       </p>
+      
+
+  
+
+
+
+
 <!--
       <h1>STOP</h1>
-      <p>This is where the revision ends.</p>
+      <p>This is where the revision ends.</p> 
       paypal card denominations
 
       <p>
@@ -1278,10 +1362,17 @@ m(rd)(dF3x);   // 42 `;
     </div> -->
 </div>
 </div>
+
 <a href="#top">Back to the top</a>
 <slot />
 
 <style>
+
+  img {
+    width: 25%;
+    height: auto;
+  }
+
   .blue {
     height: 60px;
     width: 60px;

@@ -2294,20 +2294,19 @@ const Mcode = `function M(x, ar = []) {
   const dF3x = () => {}
   const dF3ar = () => {};`;
 
-const orangeSide = `<div class="face front">
-        <div class="grid">
-          <div class={m(dF3x)[3][8]} />
-          <div class={m(dF3x)[3][7]} />
-          <div class={m(dF3x)[3][6]} />
-          <div class={m(dF3x)[3][5]} />
-          <div class={m(dF3x)[3][4]} />
-          <div class={m(dF3x)[3][3]} />
-          <div class={m(dF3x)[3][2]} />
-          <div class={m(dF3x)[3][1]} />
-          <div class={m(dF3x)[3][0]} />
+const orangeSide = `    <div class="face front">
+        <div class="grid" >
+          <div> <button class={m(dF3x)[3][0]} on:click = {() => {m = m(Fz)}} /> </div> 
+          <div> <button class={m(dF3x)[3][1]} on:click = {() => {m = m(Cx)}} /> </div> 
+          <div> <button class={m(dF3x)[3][2]} on:click = {() => {m = m(F)}} /> </div>  
+          <div> <button class={m(dF3x)[3][3]} on:click = {() => {m = m(Cy)}} /> </div> 
+          <div> <button class={m(dF3x)[3][4]} on:click = {() => {m = m(Zro)}} /> </div>
+          <div><button class={m(dF3x)[3][5]} on:click = {() => {m = m(Cyr)}} /> </div> 
+          <div><button class={m(dF3x)[3][6]} on:click = {() => {m = m(Fz)}} /> </div> 
+          <div><button class={m(dF3x)[3][7]} on:click = {() => {m = m(Cxr)}} /> </div> 
+          <div><button class={m(dF3x)[3][8]} on:click = {() => {m = m(F)}} /> </div> 
         </div>
-      </div>`;
-
+      </div>`
   
 
   var Mdis = `    function M (x) {
@@ -3123,8 +3122,9 @@ const orangeSide = `<div class="face front">
 <p> A closure referred to as "m-M(x)", where m = M( [bb,gg,rr,oo,yy,ww] ) and bb, gg, rr, oo, yy, and ww are nine-member arrays of the strings "blue, green, red, orange, yellow, and white" respectively, encapsulates a representation of the state of a Rubik's cube (definition below, result on the right). The recursive function "m" operates on pure functions that rearrange the strings in x without causing side effects, other than those affecting the DOM and manifested in the browser on the right. </p>
 <p>The representation of the Rubik's cube encapsulated in the m-M(x) closure is embedded in the 54 divs of the DOM representation of the cube in the form m(dF3x)[j][k]. These strings designate CSS class selectors with background-color = m(dF3x)[j][k]. Rearranging the strings in m-M(x) closure automatically changes what is seen in the browser.</p>
       
+
 <pre class = "dis">{Mdis}</pre>
-<pre class = "play">{Mplay}</pre>
+<pre class = "play" id = "yes">{Mplay}</pre>
 <pre class = "dis">{Mend}</pre>
 
     <button on:click={Start}>Start</button>
@@ -3454,7 +3454,7 @@ const orangeSide = `<div class="face front">
  <p> Clicking the "Reverse" button or pressing the Q key does not directly cause m to run; they just cause "reverse()" to run. m is called twice inside of reverse. </p>
  
 <pre>{reverseCode}</pre>
-<p> The function reverse works because m(dF3ar) passes ar by reference, not value. m(dF3ar) in the "reverse" function refers to the same location in memory as ar in the m-M(x) closure. Logging "m(dF3ar) while running this application illustrates this.   </p>
+<p> The function reverse works because m(dF3ar) passes ar by reference, not value. m(dF3ar) in the "reverse" function refers to the same location in memory as ar in the m-M(x) closure. Logging "m(dF3ar === temp) while running this application illustrates this.   </p>
 
 <pre>{test7}</pre>
 
