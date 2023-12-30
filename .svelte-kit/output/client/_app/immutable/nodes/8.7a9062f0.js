@@ -1,0 +1,26 @@
+import{s as _t,h as Ct}from"../chunks/scheduler.41143b43.js";import{S as bt,i as wt,s as r,g as o,m as z,z as It,f as e,c as u,h as f,x as d,j as L,n as B,l as lt,a as s,y as $,o as pt,A as yt}from"../chunks/index.a9e5b95b.js";function Pt(m){let p,E,T,h,D="**************************************************************************",c,a,j=`<br/>
+
+    Asynchronous State Transformations in Monads`,v,y,x,l,i,H="GOAL: Handle both Synchronous and Asynchronous Functions in a Simple Recursive Closure",V,_,it="We've been creating the recursive closures called monads with:",W,R,g,F,C,rt="Here it is again with a small tweak enabling it to handle functions that operate on and/or return promises:",G,q,tt,N,b,ot="AsyncId makes promises out of non-promises and has no effect on promises as shown below.",O,S,et,J,w,ut="Part A (above) shows that m2(ret) == 3. Calling asyncId on m2(ret) in Part B returned a promise whose fulfullment value is 3. The Part B Promise is both the argument and the return value of asyncId in PartC.",K,I,nt,Q,U,k,X,Y,P,ft="The next screenshot demonstrates M1-created monads taking as arguments a series of synchronous mixed with asynchronous functions. The value held in m1 is initially the number 2. The value in m2 is a promise that resolves to the number 2.",Z,A,mt="After m1 and m2 operate on pow(5), both hold promises with fulfillment values of 32. Had they operated on mpow(5) instead, the result would be the same.",M;return{c(){p=r(),E=o("br"),T=r(),h=o("div"),h.textContent=D,c=r(),a=o("div"),a.innerHTML=j,y=r(),x=o("br"),l=r(),i=o("h3"),i.textContent=H,V=r(),_=o("p"),_.textContent=it,W=r(),R=o("pre"),g=z(m[2]),F=r(),C=o("p"),C.textContent=rt,G=r(),q=o("pre"),tt=z(m[1]),N=r(),b=o("p"),b.textContent=ot,O=r(),S=o("pre"),et=z(m[3]),J=r(),w=o("p"),w.textContent=ut,K=r(),I=o("h2"),nt=z("m1(ret).then(v => A = v) A is "),Q=z(m[0]),U=r(),k=o("h2"),X=z(m[0]),Y=r(),P=o("p"),P.textContent=ft,Z=r(),A=o("p"),A.textContent=mt,this.h()},l(t){It("svelte-1d9b83h",document.head).forEach(e),p=u(t),E=f(t,"BR",{}),T=u(t),h=f(t,"DIV",{"data-svelte-h":!0}),d(h)!=="svelte-9ovhf0"&&(h.textContent=D),c=u(t),a=f(t,"DIV",{style:!0,"data-svelte-h":!0}),d(a)!=="svelte-6mtrel"&&(a.innerHTML=j),y=u(t),x=f(t,"BR",{}),l=u(t),i=f(t,"H3",{"data-svelte-h":!0}),d(i)!=="svelte-14quf8o"&&(i.textContent=H),V=u(t),_=f(t,"P",{"data-svelte-h":!0}),d(_)!=="svelte-1bh1p6z"&&(_.textContent=it),W=u(t),R=f(t,"PRE",{});var vt=L(R);g=B(vt,m[2]),vt.forEach(e),F=u(t),C=f(t,"P",{"data-svelte-h":!0}),d(C)!=="svelte-en9ymf"&&(C.textContent=rt),G=u(t),q=f(t,"PRE",{});var ht=L(q);tt=B(ht,m[1]),ht.forEach(e),N=u(t),b=f(t,"P",{"data-svelte-h":!0}),d(b)!=="svelte-r1d7yz"&&(b.textContent=ot),O=u(t),S=f(t,"PRE",{});var dt=L(S);et=B(dt,m[3]),dt.forEach(e),J=u(t),w=f(t,"P",{"data-svelte-h":!0}),d(w)!=="svelte-16qlfgr"&&(w.textContent=ut),K=u(t),I=f(t,"H2",{});var st=L(I);nt=B(st,"m1(ret).then(v => A = v) A is "),Q=B(st,m[0]),st.forEach(e),U=u(t),k=f(t,"H2",{});var ct=L(k);X=B(ct,m[0]),ct.forEach(e),Y=u(t),P=f(t,"P",{"data-svelte-h":!0}),d(P)!=="svelte-1j0obtq"&&(P.textContent=ft),Z=u(t),A=f(t,"P",{"data-svelte-h":!0}),d(A)!=="svelte-1tildub"&&(A.textContent=mt),this.h()},h(){document.title="Asynchronous values in monads",lt(a,"font-family","Times New Roman"),lt(a,"text-align","center"),lt(a,"font-size","32px")},m(t,n){s(t,p,n),s(t,E,n),s(t,T,n),s(t,h,n),s(t,c,n),s(t,a,n),s(t,y,n),s(t,x,n),s(t,l,n),s(t,i,n),s(t,V,n),s(t,_,n),s(t,W,n),s(t,R,n),$(R,g),s(t,F,n),s(t,C,n),s(t,G,n),s(t,q,n),$(q,tt),s(t,N,n),s(t,b,n),s(t,O,n),s(t,S,n),$(S,et),s(t,J,n),s(t,w,n),s(t,K,n),s(t,I,n),$(I,nt),$(I,Q),s(t,U,n),s(t,k,n),$(k,X),s(t,Y,n),s(t,P,n),s(t,Z,n),s(t,A,n),M=!0},p(t,[n]){(!M||n&1)&&pt(Q,t[0]),(!M||n&1)&&pt(X,t[0])},i(t){M||(t&&Ct(()=>{M&&(v||(v=yt(a,fade,{},!0)),v.run(1))}),M=!0)},o(t){t&&(v||(v=yt(a,fade,{},!1)),v.run(0)),M=!1},d(t){t&&(e(p),e(E),e(T),e(h),e(c),e(a),e(y),e(x),e(l),e(i),e(V),e(_),e(W),e(R),e(F),e(C),e(G),e(q),e(N),e(b),e(O),e(S),e(J),e(w),e(K),e(I),e(U),e(k),e(Y),e(P),e(Z),e(A)),t&&v&&v.end()}}}async function xt(m){return m}async function at(m){setTimeout(function(){})}function At(m,p,E){var T=`function M1 (x) {
+  return function go (func) {
+      if (func === ret) return x;
+      x = asyncId(x).then(v => func(v));
+      return go;
+  }
+}
+
+WHERE async function asyncId (x) {return x};`,h=`function M (x) {
+    return function go (func) {
+        if (func === ret) return x
+        x = func(x);
+        return go;
+  }
+}`,D=`async function asyncId (x) {return x};
+
+var m2 = M1(3);
+
+log("m2(ret) is", m2(ret));  // 3
+
+asyncId(m2(ret)).then(v=>log("asyncId(m2(ret)).then(v =>",v));  //3
+
+asyncId(asyncId(asyncId(m2(ret))))
+.then(v=>log("asyncId(asyncId(asyncId(m2(ret))))).then(v =>",v));  //3`,c=M1(2),a=M1(new Promise((l,i)=>{setTimeout(()=>{l(2)},1500)})),j=l=>async i=>xt(i).then(H=>i=H**l),v=l=>i=>xt(i).then(H=>i=H*l),y=l=>async i=>(await at(),i+l);c(j(10))(Math.sqrt)(y(52))(v(2))(l=>l*2)(async l=>(await at(),l/8)),a(j(10))(Math.sqrt)(y(52))(v(2))(l=>l*2)(async l=>(await at(),l/8)),console.log("m1(ret) is",c(ret)),console.log("m2(ret) is",a(ret));let x;return c(ret).then(l=>E(0,x=l)),a(ret).then(l=>l),[x,T,h,D]}class Tt extends bt{constructor(p){super(),wt(this,p,At,Pt,_t,{})}}export{Tt as component};

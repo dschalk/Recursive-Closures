@@ -1,5 +1,6 @@
 <script>
   import Cubeshot from "$lib/Cubeshot.png"
+  import CubeshotR from "$lib/CubeshotR.png"
 
 
 
@@ -301,73 +302,6 @@ m(dF3x);     // 42`;
       return go;
     };
   };`;
-  var Rcode = `  const R = function R(ar) {
-    let temp = [];
-    temp[0] = [
-      ar[0][6],
-      ar[0][3],
-      ar[0][0],
-      ar[0][7],
-      ar[0][4],
-      ar[0][1],
-      ar[0][8],
-      ar[0][5],
-      ar[0][2],
-    ];
-
-    temp[1] = ar[1];
-
-    temp[2] = [
-      ar[4][8],
-      ar[2][1],
-      ar[2][2],
-      ar[4][5],
-      ar[2][4],
-      ar[2][5],
-      ar[4][2],
-      ar[2][7],
-      ar[2][8],
-    ];
-
-    temp[3] = [
-      ar[3][0],
-      ar[3][1],
-      ar[5][2],
-      ar[3][3],
-      ar[3][4],
-      ar[5][5],
-      ar[3][6],
-      ar[3][7],
-      ar[5][8],
-    ];
-
-    temp[4] = [
-      ar[4][0],
-      ar[4][1],
-      ar[3][2],
-      ar[4][3],
-      ar[4][4],
-      ar[3][5],
-      ar[4][6],
-      ar[4][7],
-      ar[3][8],
-    ];
-
-    temp[5] = [
-      ar[5][0],
-      ar[5][1],
-      ar[2][6],
-      ar[5][3],
-      ar[5][4],
-      ar[2][3],
-      ar[5][6],
-      ar[5][7],
-      ar[2][0],
-    ];
-    return temp;
-  }
-
-`;
 
 let Fcode = `  function F(ar) {
     let temp = [];
@@ -648,7 +582,7 @@ m(rd)(dF3x);   // 42 `;
           border-radius: 10px;
       }`;
 
-  var Rcode = ` function R(ar) {
+  var Rcode = `  const R = function R(ar) {
     let temp = [];
     temp[0] = [
       ar[0][6],
@@ -886,7 +820,22 @@ m(rd)(dF3x);   // 42 `;
     // else if (e.keyCode === 116) rotate(); 
     m = m;  // In Svelte, this updates the DOM
   }`;
+
+var Masync = `function M (x) {
+          return function go (func){
+            if (func === dF3x) return x;
+            else x = idP(x).then(v => func(v));
+            return go;
+          }
+        }`;
+// *********************************************************
+// *********************************************************
+// *********************************************************
 </script>
+
+
+
+
 
 <div style="margin-left: 8%; margin-right: 8%" id = "top">
   <h1 style="text-align: center">Recursive Closures</h1>
@@ -912,9 +861,13 @@ m(rd)(dF3x);   // 42 `;
   <pre class="play">{Mplay}</pre>
   <pre class="dis">{Mend}</pre>
 
-  <dist class="light">Anonymous Computation:</dist>
+  <div class="light">Anonymous Closures Performs Anonymous Computations:</div>
   <pre>{v3}</pre>
+  <p> Composing function this way is elegant, transparent, and efficient. Scrambling the Rubik's cube involves calling a random sequence of 40 functions that rotate faces and middle sections of the Simulated Rubik's cube. Running this application on localhost:5173, my desktop computer can scramble the cube 1,000 times in less than 300 milliseconds. <a href = "./cube7#test">Try it here</a>   </p>
+  <p> The statement resolves to 10. No variable points to the transient closure, which is transient because it is not assigned to a variable and is, therefore, ripe for removal by the garbage collector immediately upon resolution to 10. </p>
+  <p> M(3) at the beginning of the above computation returns go. The function go operates on v=>v**3, v=>v*4, v=>v-8, Math.sqrt, and dF3x. Then, being unreachable by any variable assignment, disappears from memory whenever the garbage collector gets around to removing it. </p>
   <br />
+  <p>  </p>
   <div class="light">
     <span>Encapsulated State:</span>
     <pre>{v4}</pre>
@@ -943,17 +896,16 @@ m(rd)(dF3x);   // 42 `;
   <pre>{css}</pre>
     <p> The third button down from the top and the final button of the front face (see above) contain the statement "m = m(F)". These correspond to the upper right and lower right corners of the cube representation in the browser. Clicking the upper right or lower right corners of the cube, therefore, mutates x in the m=M(x) closure into the value returned by F(x), which is named "temp". </p>
     <pre>{Fcode}</pre>
-    <p> Clicking on the cube representation in the browser isn't the only way to call m on F; i.e., run "m(F)" and mutate x into the return value of F(x). Pressing the "F" key and clicking on the "F" button do the same thing. The "m =" part of the statement m = m(F) triggers reactivity in this Sveltekit application, giving users almost instantaneous feedback from their key presses and mouse clicks. </p>
-    <p> Examining the function "F", we see that the front face of the cube, temp[3], remains solid orange after class reassignments that make it appear to rotate. Evidence of rotation can be seen on the top (temp[4]) and on the right (temp[0]) sides of the cube. Here's what the cube looks like in the browser after running "m = m(F)" on the solved cube: </p>
+    <p> Pressing the "F" key and clicking on the "F" button are other ways of rotating the front face clockwise 90 degrees. All three methods rely on the statement, "m = m(F)". The "m =" part of the statement m = m(F) triggers reactivity in this Sveltekit application, giving users almost instantaneous feedback from their key presses and mouse clicks. </p>
+    <p> Examining the function "F", we see that the front face of the cube, temp[3], remains solid orange after class reassignments create the illusion that the front face rotated. Evidence of rotation can be seen on the top (temp[4]) and on the right (temp[0]) sides of the cube. Here's what the cube looks like in the browser after running "m = m(F)" on the solved cube: </p>
 
       <img src={Cubeshot} alt="Image of the Rubik's cube " style="width:200px;height:210px;">
     
-    <p> The changes to the top face, with three classes reassigned from x[4] (previously all white), and the changes to the right face, three classes reassigned from x[1] (previously all green), demonstrated the correspondence between the function "F" and the visual representation in the browser. And, of course, the observed changes are what you get when you turn the front face of a solved cube.   </p>
+    <p> The changes to the top face, with three classes reassigned from x[1] (previously all green), and the changes to the right face, three classes reassigned from x[4] (previously all yellow), demonstrate the correspondence between the function "F" and the visual representation in the browser. And, of course, the observed changes are what you get when you turn the front face of your own solved cube, assuming you have one.   </p>
 
 
 
-    <p>These strings correspond to the names of CSS selectors with corresponding "background-color" elements. Here's what I mean: </p>
-  <p> Clicking the center of each face rearranges x in the m-M(x) closure, thereby automatically rearranging some of the class assignments of the 54 dives in the DOM. In the browser, this creates the appearance of 90 degree clockwise rotation of the entire cube around the axes perpendicular to the clicked centers. Pressing the x, y, OR z Keys has the same effect. Holding down SHIFT while pressing these keys creates the appearance of counterclockwise rotation. There are also buttons (above) for clockwise rotations, and "back" buttons for counterclockwise rotation.</p>
+  <p> Clicking the center of each face rearranges x in the m-M(x) closure, thereby automatically rearranging some of the class assignments of the 54 dives in the DOM. In the browser, this creates the appearance of 90 degree clockwise rotation of the entire cube around the axes perpendicular to the clicked centers. Pressing the x, y, and z Keys has the same effects. Holding down SHIFT while pressing these keys creates the appearance of counterclockwise rotation. There are also buttons for clockwise rotations, and "back" buttons for counterclockwise rotation.</p>
 
   <p>
     The 54 divs that combine to represent the cube in the DOM are shown below.
@@ -975,20 +927,16 @@ m(rd)(dF3x);   // 42 `;
     <p>
       Similar to clicking on parts of the cube, the callback specified in
       buttons that rotate faces, middle sections, and the entire cube do so by
-      calling m(func) for some function "func" that rearranges some of the six nine-element arrays constituting the array "x" in the m-M(x) closure. This causes the automatic reassignment of classes in the DOM representation of the cube and the appearance in the browser that something has rotated. The functions used in the <a href="./cube7#yes">button section</a> are identical to the ones in the top, front, and right divs in the 54-div cube representation in the DOM.
+      calling m(func) for for the same functions "func" involved in clicking on parts of the simulated Rubik's cube.  Each function "func" rearranges some of the six nine-element arrays constituting the array "x" in the m-M(x) closure. This causes the automatic reassignment of classes in the DOM representation of the cube and the illusion in the browser that the cube or some part of it has rotated. You can try out the buttons in the <a href="./cube7#yes">button section</a> of the Rubik's cube page.
     </p>
-    <p> Pressing the "F" key, clicking the "F" button, or clicking the right upper or lower corners of the forward-facing side all cause the function "m(F)" to execute. When the orange front of a solved cube rotates 90 degrees clockwise, the right column of the green left side migrates to the lower row of the top. on a solved cube, the lower part of the top changes. Here's how this affects the m-M(x) closure and the upper right corner of the right side of the cube:<br>
-
-
-
-      &#160; &#160; &#160;  x mutates to R(x) in the closure, </p>
+    <p> Pressing the "F" key, clicking the "F" button, or clicking the right upper or lower corners of the forward-facing side all cause the function "m(F)" to execute. When the orange front of a solved cube rotates 90 degrees clockwise, the right column of the green left side migrates to the lower row of the top and the lowest row of the yellow top to move into the left column of the right side of the cube. </p>
     <span class="teaser"
       >***********************************************************************
       <br />
       Case 3 -- Key presses.
     </span>
     <p>
-      Pressing keys invokes eventHandler(e) where "e" is the key-press event and
+      Pressing keys invokes eventHandler(e) where "e" is the key-press event object and
       eventHandler is defined as follows:
     </p>
     <pre>{handleEventCode}</pre>
@@ -997,7 +945,7 @@ m(rd)(dF3x);   // 42 `;
       event objects to handleEvent.
     </p>
     <p>
-      The <a href="./cube7">Rubik's Cube simulation</a> features a m-M(x)
+      The <a href="./cube7">Rubik's Cube simulation</a> features an m-M(x)
       closure whose x values are always arrays of six nine-member arrays of the
       strings "blue, green, red, orange, yellow, and white". Callbacks stemming
       from mouse clicks have the form "m = m(Foo), where Foo is one of several
@@ -1110,36 +1058,41 @@ m(rd)(dF3x);   // 42 `;
         with a self-reference of m to m, is sufficient to trigger reactivity in Svelte.
         It also shows that the only heavy lifting, such that it is, consists of rearranging
         references to strings. The 54 divs that constitute the DOM representation
-        remain stationary.
+        remain stationary; only their class assignments change.
       </p>
       <p>
-        When you press "r", click the "R" button, or click the upper leift
-        corner of the right side of the cube representation, the function 'R' is
-        called on the array of six arrays of references to strings in the m-M(x)
-        closure. The current configuration of x in the closure is of no concern
-        to 'R'. It rearranges the strings based solely on their positions -- 54
-        positions, ranging from m(dF3x)[0][0] to m(dF3)[5][8].
+        When you press "R", click the "R" button, or click the upper right or lower right
+        corner of the right side of the cube representation, m = m(R) executes. This runs R on x and by the definition of M, x mutates to R(x) = temp as defined in the function R. </p>
+        <pre>{Rcode}</pre>
+
+        <p>
+        The current configuration of x in the closure is of no concern to R. R rearranges the strings based solely on their locations in whatever the configuration of x happens to be. 
       </p>
 
       <p>
-        The function "R" specifies that whatever string reference happens to be in position
-        m(dF3x)[3][2] changes to whatever string reference happens to be in
+        For example, the third line down in temp[3] in the function "R" specifies that whatever string reference happens to be in position m(dF3x)[3][2] changes to whatever string reference happens to be in
         position m(dF3x)[5][2]. If the cube is in its starting configuration
         (solved, prior to scrambling), the upper right front corner will go from
-        orange to white. Beyond that, we know nothing about the color of the
-        front upper right corner before or after m(R) runs. The class will
-        change to the whatever the class of the div in the front upper right
-        corner (m(dF3x)(5)(2)) happens to be, but the background-color of that
-        class might be whatever the background color of m(dF3x)(3)(2) happens to
-        be. Here's the definition of R:
-      </p>
+        orange to white, as shown below. </p>
 
-      <pre>{Rcode}</pre>
-      <p>
-        When R returns temp, the transformation of x completes. It's new value
-        is temp since x = Func(x) and Func is R in this instance.
-      </p>
+      <img src={CubeshotR} alt="Image of the Rubik's cube " style="width:200px;height:210px;">
+
+
+      <h2>Handling Intermittant Promises</h2>
+
+      This slightly modified version of M can handle both ordinary data and promises:
       
+        <pre>{Masync}</pre>
+
+      A real time demonstration of m(dF3x) delivering promises, one by one, along with definitions of the asynchronous functions used, can be found here: <a href = "./async5">Async</a> These are the composite 
+funtions used in the demonstration:
+    <p>m(addP(3)) (squareP) (v => v - 7) (dF3x).then(v => (D = v)) = 42 </p>
+      
+      <p>m(v => v / 42) (multP(6)) (v=>v * 7) (dF3x).then(v => (A = v)) = 42 </p>
+      
+      <p>m(addP(7)) (Math.sqrt) (v => v * 6) (dF3x).then(a => (C = a)) = 42 </p>
+      
+      <p>m(divP(14)) (v => v**3) (addP(5)) (dF3x).then(v => (D = v)) = 42 </p>
 
   
 

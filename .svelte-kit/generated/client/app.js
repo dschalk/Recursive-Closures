@@ -22,7 +22,14 @@ export const nodes = [
 	() => import('./nodes/18'),
 	() => import('./nodes/19'),
 	() => import('./nodes/20'),
-	() => import('./nodes/21')
+	() => import('./nodes/21'),
+	() => import('./nodes/22'),
+	() => import('./nodes/23'),
+	() => import('./nodes/24'),
+	() => import('./nodes/25'),
+	() => import('./nodes/26'),
+	() => import('./nodes/27'),
+	() => import('./nodes/28')
 ];
 
 export const server_loads = [];
@@ -33,21 +40,28 @@ export const dictionary = {
 		"/Pilot-Wave": [4],
 		"/Snippets": [5],
 		"/arrays": [6],
+		"/async2": [8],
+		"/async3": [9],
+		"/async4": [10],
+		"/async5": [11],
 		"/async": [7],
-		"/cube1": [8],
-		"/cube2": [9],
-		"/cube3": [10],
-		"/cube4": [11],
-		"/cube5": [12],
-		"/cube6": [13],
-		"/cube7": [14],
-		"/cube8": [15],
-		"/cube9": [16],
-		"/functional": [17],
-		"/rc1": [18],
-		"/rc2": [19],
-		"/score": [20],
-		"/trash": [21]
+		"/cube1": [12],
+		"/cube2": [13],
+		"/cube3": [14],
+		"/cube4": [15],
+		"/cube5": [16],
+		"/cube6": [17],
+		"/cube7": [18],
+		"/cube8": [19],
+		"/cube9": [20],
+		"/factors": [21],
+		"/functional": [22],
+		"/rc1": [23],
+		"/rc2": [24],
+		"/score": [25],
+		"/sockets": [26],
+		"/trash": [27],
+		"/websocket": [28]
 	};
 
 export const hooks = {

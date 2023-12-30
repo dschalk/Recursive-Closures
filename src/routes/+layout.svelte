@@ -20,8 +20,6 @@ function rotateCube() {
   requestAnimationFrame(rotateCube);
 }
 
-rotateCube();
-
 	})
 </script>
 
@@ -40,11 +38,9 @@ rotateCube();
 
         <a href="./score">Game of Score</a>
 
-        <a href="./async">Async</a>
+        <a href="./async5">Async</a>
 
         <a href="./functional">Functional</a>
-
-        <a href="./Bell-Inequality">Bell's Inequality</a>
 
         <a href="./Pilot-Wave">Pilot-Wave Theory</a>
 

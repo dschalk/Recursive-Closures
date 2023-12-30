@@ -10,7 +10,7 @@ return {
 	assets: new Set(["favicon.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.668f5594.js","app":"_app/immutable/entry/app.36ba4ed3.js","imports":["_app/immutable/entry/start.668f5594.js","_app/immutable/chunks/scheduler.1f6706a1.js","_app/immutable/chunks/singletons.c4fa27b1.js","_app/immutable/chunks/index.b16b216b.js","_app/immutable/entry/app.36ba4ed3.js","_app/immutable/chunks/scheduler.1f6706a1.js","_app/immutable/chunks/index.2d48075f.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.f64d4c44.js","app":"_app/immutable/entry/app.4a7ddda1.js","imports":["_app/immutable/entry/start.f64d4c44.js","_app/immutable/chunks/scheduler.41143b43.js","_app/immutable/chunks/singletons.474fd35b.js","_app/immutable/chunks/index.8a403549.js","_app/immutable/entry/app.4a7ddda1.js","_app/immutable/chunks/scheduler.41143b43.js","_app/immutable/chunks/index.a9e5b95b.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
@@ -33,7 +33,14 @@ return {
 			__memo(() => import('./nodes/18.js')),
 			__memo(() => import('./nodes/19.js')),
 			__memo(() => import('./nodes/20.js')),
-			__memo(() => import('./nodes/21.js'))
+			__memo(() => import('./nodes/21.js')),
+			__memo(() => import('./nodes/22.js')),
+			__memo(() => import('./nodes/23.js')),
+			__memo(() => import('./nodes/24.js')),
+			__memo(() => import('./nodes/25.js')),
+			__memo(() => import('./nodes/26.js')),
+			__memo(() => import('./nodes/27.js')),
+			__memo(() => import('./nodes/28.js'))
 		],
 		routes: [
 			{
@@ -72,6 +79,34 @@ return {
 				endpoint: null
 			},
 			{
+				id: "/async2",
+				pattern: /^\/async2\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 8 },
+				endpoint: null
+			},
+			{
+				id: "/async3",
+				pattern: /^\/async3\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 9 },
+				endpoint: null
+			},
+			{
+				id: "/async4",
+				pattern: /^\/async4\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 10 },
+				endpoint: null
+			},
+			{
+				id: "/async5",
+				pattern: /^\/async5\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 11 },
+				endpoint: null
+			},
+			{
 				id: "/async",
 				pattern: /^\/async\/?$/,
 				params: [],
@@ -82,98 +117,119 @@ return {
 				id: "/cube1",
 				pattern: /^\/cube1\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 8 },
+				page: { layouts: [0,], errors: [1,], leaf: 12 },
 				endpoint: null
 			},
 			{
 				id: "/cube2",
 				pattern: /^\/cube2\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 9 },
+				page: { layouts: [0,], errors: [1,], leaf: 13 },
 				endpoint: null
 			},
 			{
 				id: "/cube3",
 				pattern: /^\/cube3\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 10 },
+				page: { layouts: [0,], errors: [1,], leaf: 14 },
 				endpoint: null
 			},
 			{
 				id: "/cube4",
 				pattern: /^\/cube4\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 11 },
+				page: { layouts: [0,], errors: [1,], leaf: 15 },
 				endpoint: null
 			},
 			{
 				id: "/cube5",
 				pattern: /^\/cube5\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 12 },
+				page: { layouts: [0,], errors: [1,], leaf: 16 },
 				endpoint: null
 			},
 			{
 				id: "/cube6",
 				pattern: /^\/cube6\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 13 },
+				page: { layouts: [0,], errors: [1,], leaf: 17 },
 				endpoint: null
 			},
 			{
 				id: "/cube7",
 				pattern: /^\/cube7\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 14 },
+				page: { layouts: [0,], errors: [1,], leaf: 18 },
 				endpoint: null
 			},
 			{
 				id: "/cube8",
 				pattern: /^\/cube8\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 15 },
+				page: { layouts: [0,], errors: [1,], leaf: 19 },
 				endpoint: null
 			},
 			{
 				id: "/cube9",
 				pattern: /^\/cube9\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 16 },
+				page: { layouts: [0,], errors: [1,], leaf: 20 },
+				endpoint: null
+			},
+			{
+				id: "/factors",
+				pattern: /^\/factors\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 21 },
 				endpoint: null
 			},
 			{
 				id: "/functional",
 				pattern: /^\/functional\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 17 },
+				page: { layouts: [0,], errors: [1,], leaf: 22 },
 				endpoint: null
 			},
 			{
 				id: "/rc1",
 				pattern: /^\/rc1\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 18 },
+				page: { layouts: [0,], errors: [1,], leaf: 23 },
 				endpoint: null
 			},
 			{
 				id: "/rc2",
 				pattern: /^\/rc2\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 19 },
+				page: { layouts: [0,], errors: [1,], leaf: 24 },
 				endpoint: null
 			},
 			{
 				id: "/score",
 				pattern: /^\/score\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 20 },
+				page: { layouts: [0,], errors: [1,], leaf: 25 },
+				endpoint: null
+			},
+			{
+				id: "/sockets",
+				pattern: /^\/sockets\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 26 },
 				endpoint: null
 			},
 			{
 				id: "/trash",
 				pattern: /^\/trash\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 21 },
+				page: { layouts: [0,], errors: [1,], leaf: 27 },
+				endpoint: null
+			},
+			{
+				id: "/websocket",
+				pattern: /^\/websocket\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 28 },
 				endpoint: null
 			}
 		],
