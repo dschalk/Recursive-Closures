@@ -680,15 +680,25 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     var dF3x = () => {}; `;
   var elapsedTime = 0;
   var etCode = `function et () {
-    m(dF3ar).length = 0;
+    m(dF3ar).length = 0;  // Begin with an empty array.
     var start = new Date();  
     for (let k = 0; k < 10000; k++) {
         shu();
-        m(dF3ar).length = 0;
+        m(dF3ar).length = 0;  // empty the array.
     }
     elapsedTime = new Date() - start;
     return elapsedTime;  
 }`;
+  var et2Code = `function et2() {
+    var start = new Date();
+    let k;
+    for (k = 0; k < 10000; k++) {
+      shu();
+    }
+    elapsedTime = new Date() - start;
+    console.log("k is", k);
+    return elapsedTime;
+  }`;
   $$result.css.add(css);
   Sally = m(dF3ar).length;
   return ` <section class="columns svelte-orkkb7"><div style="width: 70%" class="svelte-orkkb7"> <p class="svelte-orkkb7" data-svelte-h="svelte-182awur">A closure referred to as &quot;m-M(x)&quot;, where m = M( [bb,gg,rr,oo,yy,ww] ) and
@@ -778,13 +788,10 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       inside of reverse.</p> <pre class="svelte-orkkb7">${escape(reverseCode)}</pre> <p class="svelte-orkkb7" data-svelte-h="svelte-rgjgca">The function reverse works because m(dF3ar) passes ar by reference, not
       value. m(dF3ar) in the &quot;reverse&quot; function refers to the same location in
       memory as ar in the m-M(x) closure. Logging &quot;m(dF3ar === temp (below)
-      while running this application illustrates this.</p> <pre class="svelte-orkkb7">${escape(test7)}</pre> <p id="test" class="svelte-orkkb7" data-svelte-h="svelte-1nwxjqq">Clicking on the &quot;Scramble&quot; button (or pressing the &quot;W&quot; key)
-      pseudo-randomizes the order of 40 references to function that create the
+      while running this application illustrates this.</p> <pre class="svelte-orkkb7">${escape(test7)}</pre> <p id="test" class="svelte-orkkb7" data-svelte-h="svelte-jlvib5">Clicking on the &quot;Scramble&quot; button (or pressing the &quot;W&quot; key)
+      pseudo-randomizes the order of 40 references to functions that create the
       illusion of turning the faces and middle sections of the simulated Rubik&#39;s
-      cube. The scrambled Rubik&#39;s cube image seems (to me anyway) to appear
-      immediately after clicking the &quot;Scramble&quot; button. Scrambling the cube
-      10,000 times consistently takes around 100 milliseconds, running on my
-      desktop computer at localhost:5173. One million scrambles took between 8,000 milliseconds and 9,000 milliseconds. Multiple runs of 1,000,000 scrambles suggested that the &quot;without limitation&quot; option (below) took slightly longer to complete.</p> <h2 class="svelte-orkkb7">The elapsed time is ${escape(elapsedTime)} milliseconds.</h2> <button class="svelte-orkkb7" data-svelte-h="svelte-1ctmsew">10,000 Scrambles</button> <button class="svelte-orkkb7" data-svelte-h="svelte-19po8ac">10,000 Scrambles without initiation</button> <br class="svelte-orkkb7"> <span style="font-size:25px" class="svelte-orkkb7" data-svelte-h="svelte-csmbef">     Move list length:</span> <span style="font-weight:bold; font-size:30px" class="svelte-orkkb7">${escape(Sally)}</span> <pre class="svelte-orkkb7">${escape(etCode)}</pre> <pre class="svelte-orkkb7"></pre></div> <div class="svelte-orkkb7"></div></section> ${slots.default ? slots.default({}) : ``}`;
+      cube. Transformation of the cube are very efficient. A sequence of one million scrambles runs on my system in around 8.5 seconds. The &quot;with array building&quot; (et2 version) runs only a little slower than the alternative et version.</p> <h2 class="svelte-orkkb7">The elapsed time is ${escape(elapsedTime)} milliseconds.</h2> <button class="svelte-orkkb7" data-svelte-h="svelte-1ctmsew">10,000 Scrambles</button> <button class="svelte-orkkb7" data-svelte-h="svelte-19po8ac">10,000 Scrambles without initiation</button> <br class="svelte-orkkb7"> <span style="font-size:25px" class="svelte-orkkb7" data-svelte-h="svelte-csmbef">     Move list length:</span> <span style="font-weight:bold; font-size:30px" class="svelte-orkkb7">${escape(Sally)}</span> <pre class="svelte-orkkb7">${escape(etCode)}</pre> <pre class="svelte-orkkb7">${escape(et2Code)}</pre> <pre class="svelte-orkkb7"></pre></div> <div class="svelte-orkkb7"></div></section> ${slots.default ? slots.default({}) : ``}`;
 });
 export {
   Page as default

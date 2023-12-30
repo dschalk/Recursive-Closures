@@ -2387,15 +2387,26 @@ console.log("moves.length is", moves.length);
   }
 
   var etCode = `function et () {
-    m(dF3ar).length = 0;
+    m(dF3ar).length = 0;  // Begin with an empty array.
     var start = new Date();  
     for (let k = 0; k < 10000; k++) {
         shu();
-        m(dF3ar).length = 0;
+        m(dF3ar).length = 0;  // empty the array.
     }
     elapsedTime = new Date() - start;
     return elapsedTime;  
 }`;
+
+  var et2Code = `function et2() {
+    var start = new Date();
+    let k;
+    for (k = 0; k < 10000; k++) {
+      shu();
+    }
+    elapsedTime = new Date() - start;
+    console.log("k is", k);
+    return elapsedTime;
+  }`;
 
   // ***********************************************************
   // ***********************************************************
@@ -3081,12 +3092,9 @@ console.log("moves.length is", moves.length);
     <pre>{test7}</pre>
     <p id="test">
       Clicking on the "Scramble" button (or pressing the "W" key)
-      pseudo-randomizes the order of 40 references to function that create the
+      pseudo-randomizes the order of 40 references to functions that create the
       illusion of turning the faces and middle sections of the simulated Rubik's
-      cube. The scrambled Rubik's cube image seems (to me anyway) to appear
-      immediately after clicking the "Scramble" button. Scrambling the cube
-      10,000 times consistently takes around 100 milliseconds, running on my
-      desktop computer at localhost:5173. One million scrambles took between 8,000 milliseconds and 9,000 milliseconds. Multiple runs of 1,000,000 scrambles suggested that the "without limitation" option (below) took slightly longer to complete.
+      cube. Transformation of the cube are very efficient. A sequence of one million scrambles runs on my system in around 8.5 seconds. The "with array building" (et2 version) runs only a little slower than the alternative et version. 
     </p>
     <h2>The elapsed time is {elapsedTime} milliseconds.</h2>
 
@@ -3097,6 +3105,7 @@ console.log("moves.length is", moves.length);
       &nbsp;&nbsp;&nbsp;&nbsp; Move list length:
     </span> <span style="font-weight:bold; font-size:30px">{Sally}</span>
     <pre>{etCode}</pre>
+    <pre>{et2Code}</pre>
 
     <pre></pre>
   </div>
