@@ -42,7 +42,7 @@ function rotateCube() {
 
         <a href="./functional">Functional</a>
 
-        <a href="./Pilot-Wave">Pilot-Wave Theory</a>
+        <a href="./WebSockets">WebSockets</a>
 
   </nav>
 

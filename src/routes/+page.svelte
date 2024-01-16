@@ -11,7 +11,7 @@
     return go;
     }
   }
-  Where dF3x = () => {}; `;
+  dF3x = () => {}; `;
 
   var Mdis = `    function M (x) {
       return function go (func)`;
@@ -21,8 +21,9 @@
         else x = func(x);
         return go;
       }`;
-  var Mend = `    }
-    Where dF3x = () => {}; `; // Triggers return of x;
+  var Mend = `    }`
+    
+    
 
   var MMdisplay =
     "    function M (x) { \
@@ -33,8 +34,6 @@
       } \
     } \
     Where dF3x = () => {}; ";
-
-  var empty = `log("cow is", M()(()=>3)(v=>v**3)(v=>v*4)(v=>v-8)(Math.sqrt)(dF3x)); // 10`;
 
   var dF3x = () => {};
 
@@ -828,6 +827,8 @@ var Masync = `function M (x) {
             return go;
           }
         }`;
+var dF3xCode = `dF3x = () => {}`;
+
 // *********************************************************
 // *********************************************************
 // *********************************************************
@@ -839,28 +840,22 @@ var Masync = `function M (x) {
 
 <div style="margin-left: 8%; margin-right: 8%" id = "top">
   <h1 style="text-align: center">Recursive Closures</h1>
-  <span class="light">
-    <h3>Why "recursive"</h3>
-    Closures defined by letting m = M(x) (M is defined below) for some variable "m" and any value "x"
-    (see below) are recursive in the sense that: <br />
-    (A) the inner function, named "go", repeatedly calls itself, and <br />
-    (B) go repeatedly modifies "x" by means of varying functions "func" which are:<br
-    />
-    &nbsp;&nbsp;&nbsp; (1) currently queued in front of the copy of go named "m",
-    <br />
-    &nbsp;&nbsp;&nbsp; (2) provided later if the current value of "x" is still alive
-    in memory; i.e., if the program in which "m" is defined is still running, or the current value of x is retrieved from permanent storage.
-  </span>
-  <p>
-    Regarding the value of x (m(dF3x)) retrieved from storage: If m is already defined, you could run <span
-    >
-      `m(()=>x)(newFunc1)(newFunc2)</span
-    > . Defining m with "m = M(x)" is another option.
-  </p>
+  
+  <h3>The inner function "m" ( defined as "go" in the outer function ) is recursive</h3>
+  <p>Where m = M(x),</p>
+  <p>x can be any value,</p>
+  <p>M is</p>     
+
   <pre class="dis">{Mdis}</pre>
   <pre class="play">{Mplay}</pre>
   <pre class="dis">{Mend}</pre>
-
+  <p> and the flag dF3x can be any value; including null, an image, or a function. In order to facilitate future type-checking, "func" is defined here as a function; namely, <span style = "color: gold; font-size: 24px; font-weight:bold" >{dF3xCode} </p>
+  <h2>The usefulness of dF3x in the <a style = "font-size: 28px" href = "./cube7">simulated Rubik's cube</a></h2>
+    
+  <p> In the  m-M(x) closure representing the Rubik's cube, x is an array of six nine-member arrays of strings with the names of colors. In the solved cube, the arrays in x are, moving sequentially from x[0] to x[5], entirely "blue, green, red, orange, yellow, and white."  </p>
+  <p> Classes with the names of colors, each specifying corresponding CSS "background-color" designations, are specified in the six groups of nine div elements that constitute the simulated Rubik's cube in the DOM. So, the statement, "class = m(dF3x)[j][k], where a is an integer between 0 and 5, and b is an integer between 0 and 8, determines the color of one of the squares on one of the faces of the Rubik's cube representation in the DOM."</p>
+  <p> Likewise, the statement "style = 'background-color: m(dF3x)[j][k]'" can specify the color of one of the 54 squares that constitute the simulated Rubik's cube in the DOM. Here's a demonstration on the Rubik's cube page: <a href="./cube7#coolcow"><span style="font-weight:bold; color:#ff99dd;"> Demonstration</span></a>. Don't just repeatedly click "Scramble". Also, read the definitions that precede it. Tell me what you think. </p>
+  <h3>End of Chapter One</h3><br>
   <div class="light">Anonymous Closures Performs Anonymous Computations:</div>
   <pre>{v3}</pre>
   <p> Composing function this way is elegant, transparent, and efficient. Scrambling the Rubik's cube involves calling a random sequence of 40 functions that rotate faces and middle sections of the Simulated Rubik's cube. Running this application on localhost:5173, my desktop computer can scramble the cube 1,000 times in less than 300 milliseconds. <a href = "./cube7#test">Try it here</a>   </p>

@@ -1,4 +1,6 @@
 <script>
+  import clickDemo from "$lib/clickDemo.png";
+  import oppH from "$lib/oppH.png";
   // import Image from './Image.svelte'
   var log = console.log;
   var ERROR = "";
@@ -1901,18 +1903,18 @@ var ww = ["w0","w1","w2","w3","w4","w5","w6","w7","w8"]; */
     m(Cx)(Cx)(Uz)(Cx)(Cx)(U)(U)(Cx)(Cx)(Uz)(Cx)(Cx);
     m = m;
   };
-
-  var oppositeHeadlights1 = () => {
+                                                          
+  var oppH1 = () => {
     m(R)(U)(Rz)(U)(R)(Uz)(Rz)(U)(R)(U)(U)(Rz);
     m = m;
   };
 
-  var oppositeHeadlights2 = () => {
+  var oppH2 = () => {
     m(F)(R)(U)(Rz)(Uz)(R)(U)(Rz)(Uz)(R)(U)(Rz)(Uz)(Fz);
     m = m;
   };
 
-  var oppositeHeadlights3 = () => {
+  var oppH3 = () => {
     m(R)(U)(U)(Rz)(Uz)(R)(U)(Rz)(Uz)(R)(U)(Rz)(Uz);
     m = m;
   };
@@ -2100,7 +2102,7 @@ var ww = ["w0","w1","w2","w3","w4","w5","w6","w7","w8"]; */
     U,
   ];
 
-console.log("moves.length is", moves.length);
+  console.log("moves.length is", moves.length);
 
   function shu() {
     index = 1;
@@ -2541,24 +2543,18 @@ console.log("moves.length is", moves.length);
       <button on:click={sledgehammer}>Sledgehammer: R' F R F' </button>
       <br />
 
-      <button on:click={oppositeHeadlights1}
-        >oppositeHeadlights1: R U R' U R U' R' U R U U R'</button
+      <button on:click={oppH1}
+        >oppH1: R U R' U R U' R' U R U U R'</button
       >
       <br />
-      <button on:click={oppositeHeadlights2}>
-        oppositeHeadlights2: R U U R' U' R U R' U' R U U' R'</button
-      >
-      <br />
-      <button on:click={oppositeHeadlights3}
-        >oppositeHeadlights3: F R U R' U' R U R' U' R U R' U' F'</button
+      <button on:click={oppH3}
+        >oppH3: F R U R' U' R U R' U' R U R' U' F'</button
       >
       <br />
       <button on:click={niklas}>Niklas: R U' L' U R' U' L</button>
       <br />
       <button on:click={reverse_niklas}>Reverse Niklas: L' U R U' L U R'</button
       >
-
-      <br />
       <p>
         Press the "v" key or click <button on:click={Start}>Start</button> to
         see each face of the cube with 9 identically colored divs. Click on the
@@ -2971,7 +2967,7 @@ console.log("moves.length is", moves.length);
       </div>
     -->
 
-<section class="columns">
+<section  id = "coolcow" class="columns">
   <div style="width: 70%">
     <p id="cow8">Continued from the <a href="./#cow7"> previous page </a></p>
     <p>
@@ -3036,36 +3032,40 @@ console.log("moves.length is", moves.length);
       and D, respectively. Hold down the SHIFT key for counterclockwise
       rotation.
     </p>
-    <p>METHOD TWO -- Rotate, click, and rotate back:</p>
+    <p>METHOD TWO -- Clicking on the cube</p>
+    <p>
+      Click the top center 3 times to bring the green face forward. <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Click the right top or bottom square.
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Click the top center 3 more times, bringing
+      the red face forward. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Click the
+      right top or bottom square. <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Click the
+      top center two times to re-orient the cube. <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Click the right center to bring up the
+      bottom face. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Click the right top or
+      bottom square. <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Click the right center
+      3 more times to re-orient the cube.
+    </p>
 
     <p>
-      The left face can be rotated by clicking on the top center square three
-      times, clicking on the upper or lower right squares of the white side for
-      a clockwise turn, clicking on the upper and lower left side squares to
-      turn counterclockwise, and finally clicking the top center once if you
-      want to return to the starting orientation.
+      This is the expected result of pressing "LBD" or following the
+      instructions of Method 2 (above): <img
+        src={clickDemo}
+        alt="Click demo"
+        style="width:150px;height:155px;"
+      />
     </p>
-    <p>
-      The back face can be rotated by clicking the right middle square two times
-      and then clicking left or right upper or lower squares, depending on which
-      way you want it to turn.
-    </p>
-    <p>
-      The bottom can be rotated by clicking the right center square once,
-      clicking the right or left upper or lower squares for clockwise or
-      counterclockwise rotation respectively. Clicking the right center square
-      three more times returns the cube to its starting orientation.p.
-    </p>
+
     <h2>The Amazing Reverse Function</h2>
     <p>
       The value held n the closure m-M(x) is transformed whenever a user presses
-      certain keys or mouse-clicks on certain parts of the browser display.
-      These actions call m(func), automatically resulting in the mutation of x
-      into func(x). Such mutations automatically change parts of the DOM where
-      x, exposed as m(dF3x), determines the CSS background-color of elements.
-      This is done directly as "background-color = 'm(dF3x)[j][k]" or indirectly
-      as "class = 'm(dF3x)[j][k]" for integers j and k in the ranges of 0,6 for
-      j and 0,8 for k.
+      certain keys or clicks the mouse over certain parts of the browser
+      display. These actions call m(func), automatically resulting in the
+      mutation of x into func(x). Such mutations automatically change parts of
+      the DOM where x, exposed as m(dF3x), determines the CSS background-color
+      of elements. This is done directly as "background-color = 'm(dF3x)[j][k]"
+      or indirectly as "class = 'm(dF3x)[j][k]" for integers j and k in the
+      ranges of 0,6 for j and 0,8 for k.
     </p>
     <p>
       The definitions of "func" in m(func), as described above, can be found
@@ -3094,13 +3094,16 @@ console.log("moves.length is", moves.length);
       Clicking on the "Scramble" button (or pressing the "W" key)
       pseudo-randomizes the order of 40 references to functions that create the
       illusion of turning the faces and middle sections of the simulated Rubik's
-      cube. Transformation of the cube are very efficient. A sequence of one million scrambles runs on my system in around 8.5 seconds. The "with array building" (et2 version) runs only a little slower than the alternative et version. 
+      cube. Transformation of the cube are very efficient. A sequence of one
+      million scrambles runs on my system in around 8.5 seconds. The "with array
+      building" (et2 version) runs only a little slower than the alternative et
+      version.
     </p>
     <h2>The elapsed time is {elapsedTime} milliseconds.</h2>
 
     <button on:click={et}>10,000 Scrambles</button>
     <button on:click={et2}>10,000 Scrambles without initiation</button>
-    <br>
+    <br />
     <span style="font-size:25px">
       &nbsp;&nbsp;&nbsp;&nbsp; Move list length:
     </span> <span style="font-weight:bold; font-size:30px">{Sally}</span>
@@ -3861,6 +3864,11 @@ console.log("moves.length is", moves.length);
   img {
     width: 44%;
     height: 44%;
+  }
+
+  .img2 {
+    width: 150px;
+    height: 155px;
   }
 
   div {

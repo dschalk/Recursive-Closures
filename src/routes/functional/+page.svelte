@@ -46,14 +46,14 @@
 
 <p>
 	Now that I have abandoned the folly of mindlessly mimicking features of functional programming
-	languages, I can console myself with the thought that I wasn't the first and I wasn't the last
-	JavaScript programmer to got lost in this manner. Strict typing where it serves no useful purpose
-	and insisting on immutability where all it does is polute memory with useless intermediate values
+	languages, I can console myself with the thought that I wasn't the first and I won't be the last
+	JavaScript programmer to get lost in this manner. Strict typing, where it serves no useful purpose
+	and insisting on immutability where all it does is pollute memory with useless intermediate values,
 	is trendy these days.
 </p>
 
 <p>
-	Code where functions might collide over mutable global variables leads programmers to religeously avoid mutable global variables. I'm using the Svelte framework for this project, and I try to keep my modules small. Mutable global variables can't cause problems because I have no modules or hierarchies of nested modules in which clashes might occur. I don't hesitate to mutate variables withing the scope of functions, or within the scope of my reasonably sized svelte modules.
+	Code where functions might collide over mutable global variables leads programmers to religiously avoid mutable global variables. I'm using the Svelte framework for this project, and I try to keep my modules small. Mutable global variables can't cause problems because I have no modules or hierarchies of nested modules in which clashes might occur. I don't hesitate to mutate variables withing the scope of functions, or within the scope of my reasonably sized svelte modules.
 </p>
 
 <h4>References</h4>

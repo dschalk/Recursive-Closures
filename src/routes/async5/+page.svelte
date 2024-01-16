@@ -90,7 +90,6 @@
       return a/b;
     }
     
-    
     let addP =  x => async y => {
       await wait(500)
       return parseInt(x,10) + parseInt(y,10);
@@ -129,16 +128,39 @@
     var D = "D"
     
     function restart () {
-        location.reload();
+      A = "A"
+      B = "B"
+      C = "C"
+      D = "D"
+
+    m(() => 4)(addP(3)) (squareP) (v => v-7)(dF3x).then(v => (A = v));
+      
+    m(v => v/42)(multP(6))(v=>v*7)(dF3x).then(v => (B = v));
+
+    m(addP(7))(Math.sqrt)(v => v*6)(dF3x).then(a => (C = a));
+
+    m(divP(14))(v => v * 3)(addP(5))(v=> v * 3)(dF3x).then(v => (D = v)); 
+
     }
-    
+
+    var restartCode = `    function restart () {
+      A = "A"
+      B = "B"
+      C = "C"
+      D = "D"
+      m(() => 4)(addP(3)) (squareP) (v => v-7)(dF3x).then(v => (A = v));
+      m(v => v/42)(multP(6))(v=>v*7)(dF3x).then(v => (B = v));
+      m(addP(7))(Math.sqrt)(v => v*6)(dF3x).then(a => (C = a));
+      m(divP(14))(v => v * 3)(addP(5))(v=> v * 3)(dF3x).then(v => (D = v)); 
+    }`
+
     m(addP(3)) (squareP) (v => v-7)(dF3x).then(v => (A = v));
       
-          m(v => v/42)(multP(6))(v=>v*7)(dF3x).then(v => (B = v));
+    m(v => v/42)(multP(6))(v=>v*7)(dF3x).then(v => (B = v));
 
-          m(addP(7))(Math.sqrt)(v => v*6)(dF3x).then(a => (C = a));
+    m(addP(7))(Math.sqrt)(v => v*6)(dF3x).then(a => (C = a));
 
-          m(divP(14))(v => v * 3)(addP(5))(v=> v * 3)(dF3x).then(v => (D = v)); 
+    m(divP(14))(v => v * 3)(addP(5))(v=> v * 3)(dF3x).then(v => (D = v)); 
 
 </script>
 <p> This modified version of M can handle both ordinary data and promises together in composite functions: </p>
@@ -158,9 +180,8 @@
 <p> The asynchronous functions used above are in this list:</p>
 <pre>{functionCode}</pre>
 
-
-
-<div id = "six"></div>
+<p> Here's the restart code: </p>
+<pre>{restartCode}</pre>
 
 
 

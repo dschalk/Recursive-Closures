@@ -34,6 +34,7 @@ declare module '$env/static/private' {
 	export const npm_config_cache: string;
 	export const XDG_SESSION_PATH: string;
 	export const XDG_MENU_PREFIX: string;
+	export const no_proxy: string;
 	export const npm_config_always_auth: string;
 	export const NODE: string;
 	export const LC_ADDRESS: string;
@@ -76,6 +77,7 @@ declare module '$env/static/private' {
 	export const npm_package_name: string;
 	export const npm_config_prefix: string;
 	export const USER: string;
+	export const NO_PROXY: string;
 	export const GNOME_TERMINAL_SERVICE: string;
 	export const DISPLAY: string;
 	export const npm_lifecycle_event: string;
@@ -140,6 +142,7 @@ declare module '$env/dynamic/private' {
 		npm_config_cache: string;
 		XDG_SESSION_PATH: string;
 		XDG_MENU_PREFIX: string;
+		no_proxy: string;
 		npm_config_always_auth: string;
 		NODE: string;
 		LC_ADDRESS: string;
@@ -182,6 +185,7 @@ declare module '$env/dynamic/private' {
 		npm_package_name: string;
 		npm_config_prefix: string;
 		USER: string;
+		NO_PROXY: string;
 		GNOME_TERMINAL_SERVICE: string;
 		DISPLAY: string;
 		npm_lifecycle_event: string;
