@@ -1,483 +1,1979 @@
-import { c as create_ssr_component, e as escape, n as null_to_empty, b as add_attribute } from "../../../chunks/ssr.js";
-const _page_svelte_svelte_type_style_lang = "";
+import { c as create_ssr_component, e as escape, b as add_attribute, n as null_to_empty } from "../../../chunks/ssr.js";
+import { c as clickDemo } from "../../../chunks/clickDemo.js";
+import { r as red, g as green, f as func } from "../../../chunks/function.js";
 const css = {
-  code: '.svelte-8fc81s::before,.svelte-8fc81s::after{box-sizing:border-box;margin:0;padding:0}.cell.svelte-8fc81s{justify-content:center;align-items:center;display:flex;font-family:Arial;font-size:3rem;font-weight:bold;background:white}.o0.svelte-8fc81s::before{width:60px;font-size:42px;font-weight:bold;background-color:orange;content:"o0"}.o1.svelte-8fc81s::before{font-size:42px;font-weight:bold;background-color:orange;content:"o1"}.o2.svelte-8fc81s::before{font-size:42px;font-weight:bold;background-color:orange;content:"o2"}.o3.svelte-8fc81s::before{font-size:42px;font-weight:bold;background-color:orange;content:"o3"}.o4.svelte-8fc81s::before{font-size:42px;font-weight:bold;background-color:orange;content:"o4"}.o5.svelte-8fc81s::before{font-size:42px;font-weight:bold;background-color:orange;content:"o5"}.o6.svelte-8fc81s::before{font-size:42px;font-weight:bold;background-color:orange;content:"o6"}.o7.svelte-8fc81s::before{font-size:40px;font-weight:bold;background-color:orange;content:"o7"}.o8.svelte-8fc81s::before{font-size:40px;font-weight:bold;background-color:orange;content:"o8"}.r0.svelte-8fc81s::before{font-size:40px;font-weight:bold;background-color:red;content:"r0"}.r1.svelte-8fc81s::before{font-size:40px;font-weight:bold;background-color:red;content:"r1"}.r2.svelte-8fc81s::before{font-size:40px;font-weight:bold;background-color:red;content:"r2"}.r3.svelte-8fc81s::before{font-size:40px;font-weight:bold;background-color:red;content:"r3"}.r4.svelte-8fc81s::before{font-size:40px;font-weight:bold;background-color:red;content:"r4"}.r5.svelte-8fc81s::before{font-size:40px;font-weight:bold;background-color:red;content:"r5"}.r6.svelte-8fc81s::before{font-size:40px;font-weight:bold;background-color:red;content:"r6"}.r7.svelte-8fc81s::before{font-size:40px;font-weight:bold;background-color:red;content:"r7"}.r8.svelte-8fc81s::before{font-size:40px;font-weight:bold;background-color:red;content:"r8"}.g0.svelte-8fc81s::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g0"}.g1.svelte-8fc81s::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g1"}.g2.svelte-8fc81s::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g2"}.g3.svelte-8fc81s::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g3"}.g4.svelte-8fc81s::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g4"}.g5.svelte-8fc81s::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g5"}.g6.svelte-8fc81s::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g6"}.g7.svelte-8fc81s::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g7"}.g8.svelte-8fc81s::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g8"}.b0.svelte-8fc81s::before{color:yellow;font-size:40px;font-weight:bold;background-color:blue;content:"b0"}.b1.svelte-8fc81s::before{color:yellow;font-size:40px;font-weight:bold;background-color:blue;content:"b1"}.b2.svelte-8fc81s::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b2"}.b3.svelte-8fc81s::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b3"}.b4.svelte-8fc81s::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b4"}.b5.svelte-8fc81s::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b5"}.b6.svelte-8fc81s::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b6"}.b7.svelte-8fc81s::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b7"}.b8.svelte-8fc81s::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b8"}.y0.svelte-8fc81s::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y0"}.y1.svelte-8fc81s::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y1"}.y2.svelte-8fc81s::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y2"}.y3.svelte-8fc81s::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y3"}.y4.svelte-8fc81s::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y4"}.y5.svelte-8fc81s::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y5"}.y6.svelte-8fc81s::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y6"}.y7.svelte-8fc81s::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y7"}.y8.svelte-8fc81s::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y8"}.w0.svelte-8fc81s::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w0"}.w1.svelte-8fc81s::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w1"}.w2.svelte-8fc81s::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w2"}.w3.svelte-8fc81s::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w3"}.w4.svelte-8fc81s::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w4"}.w5.svelte-8fc81s::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w5"}.w6.svelte-8fc81s::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w6"}.w7.svelte-8fc81s::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w7"}.w8.svelte-8fc81s::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w8"}.red.svelte-8fc81s{height:60px;width:60px;background-color:rgb(230, 113, 113);border-radius:10px}.blue.svelte-8fc81s{height:60px;width:60px;background-color:lightblue;display:inline;border-radius:10px}.orange.svelte-8fc81s{height:60px;width:60px;background-color:orange;border-radius:10px}.green.svelte-8fc81s{height:60px;width:60px;background-color:lightgreen;display:inline;border-radius:10px}.white.svelte-8fc81s{height:60px;width:60px;background-color:white;border-radius:10px}.yellow.svelte-8fc81s{height:60px;width:60px;background-color:yellow;display:inline;border-radius:10px}.container.svelte-8fc81s{width:198px;height:198px;perspective:1000px;margin-right:7%;color:aqua}.grid.svelte-8fc81s{display:grid;grid-template-columns:repeat(3, 60px);grid-template-rows:repeat(3, 60px);grid-gap:7px;justify-content:center}.grid2.svelte-8fc81s{display:grid;grid-template-columns:repeat(3, 190px);grid-template-rows:repeat(3, 190px);grid-gap:5px;justify-content:center}.cube2.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-30deg) rotateY(150deg)}.cube4.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-30deg) rotateY(60deg)}.cube3.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-30deg) rotateY(240deg)}.cube1.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-25deg) rotateY(335deg)}.cube5.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-210deg) rotateY(30deg)}.cube6.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-210deg) rotateY(120deg)}.cube7.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-210deg) rotateY(210deg)}.cube8.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-210deg) rotateY(300deg)}#cube9.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(25deg) rotateY(155deg)}#cube92.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(25deg) rotateY(65deg)}#cube93.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(25deg) rotateY(-25deg)}#cube94.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(25deg) rotateY(-115deg)}#cube95.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-25deg) rotateY(-205deg)}#cube96.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-25deg) rotateY(-295deg)}#cube97.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-25deg) rotateY(335deg)}#cube98.svelte-8fc81s{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-25deg) rotateY(245deg)}.face.svelte-8fc81s{position:absolute;width:100%;height:100%;background-color:grey}.top.svelte-8fc81s{transform:rotateX(90deg) translateZ(100px)}.bottom.svelte-8fc81s{transform:rotateX(-90deg) translateZ(100px)}.right.svelte-8fc81s{transform:rotateY(90deg) translateZ(100px)}.left.svelte-8fc81s{transform:rotateY(-90deg) translateZ(100px)}.front.svelte-8fc81s{transform:rotateX(0deg) translateZ(100px)}.back.svelte-8fc81s{transform:rotateX(-180deg) translateZ(100px)}@keyframes svelte-8fc81s-spin{from{transform:rotateX(0deg) rotateY(0deg)}to{transform:rotateX(360deg) rotateY(360deg)}}button.svelte-8fc81s{margin-left:1%;background-color:#ddcccc;border-width:2px;border-color:#e8f7c1;border-radius:10px;color:blue;font-size:26px;box-shadow:0px 0px 15px 0px rgb(255, 215, 0);padding:3px 10px 3px 10px}button.svelte-8fc81s:hover{color:blue;background-color:yellow;border-color:#e8f7c1;border-radius:10px;box-shadow:0px 0px 25px 0px rgb(255, 255, 0)}.rite.svelte-8fc81s{float:right}h1.svelte-8fc81s{text-align:center;color:#dd00ff}#col-1.svelte-8fc81s{position:fixed;width:50%;left:5;height:100%}#col-2.svelte-8fc81s{position:fixed;right:30%;top:400px}.col-3.svelte-8fc81s{position:fixed;right:12%;top:20%;width:35%}#steady.svelte-8fc81s{position:fixed;top:120px;left:45.5%}#steady2.svelte-8fc81s{position:fixed;top:420px;left:45.5%}div.svelte-8fc81s{color:blue}a.svelte-8fc81s{font-size:26;color:#0000ff;font-weight:bold;font-style:underline}a.svelte-8fc81s:hover{font-size:26;color:#ff00ff;font-weight:bold;font-style:underline}span.svelte-8fc81s{color:black;font-size:22px}',
+  code: '.svelte-1iswict::before,.svelte-1iswict::after{box-sizing:border-box;margin:0;padding:0}button.svelte-1iswict{height:60px;border-radius:10px}.less.svelte-1iswict{font-size:14;height:25px;border-radius:4px}.dis.svelte-1iswict{color:#fe0374;font-weight:bold;font-size:28px}.play.svelte-1iswict{color:yellow;font-weight:bold;font-size:28px}.light.svelte-1iswict{color:rgb(172, 231, 243)}.cell.svelte-1iswict{justify-content:center;align-items:center;display:flex;font-family:Arial;font-size:3rem;font-weight:bold;background:white}.o0.svelte-1iswict::before{width:60px;font-size:42px;font-weight:bold;background-color:orange;content:"o0"}.o1.svelte-1iswict::before{font-size:42px;font-weight:bold;background-color:orange;content:"o1"}.o2.svelte-1iswict::before{font-size:42px;font-weight:bold;background-color:orange;content:"o2"}.o3.svelte-1iswict::before{font-size:42px;font-weight:bold;background-color:orange;content:"o3"}.o4.svelte-1iswict::before{font-size:42px;font-weight:bold;background-color:orange;content:"o4"}.o5.svelte-1iswict::before{font-size:42px;font-weight:bold;background-color:orange;content:"o5"}.o6.svelte-1iswict::before{font-size:42px;font-weight:bold;background-color:orange;content:"o6"}.o7.svelte-1iswict::before{font-size:40px;font-weight:bold;background-color:orange;content:"o7"}.o8.svelte-1iswict::before{font-size:40px;font-weight:bold;background-color:orange;content:"o8"}.r0.svelte-1iswict::before{font-size:40px;font-weight:bold;background-color:red;content:"r0"}.r1.svelte-1iswict::before{font-size:40px;font-weight:bold;background-color:red;content:"r1"}.r2.svelte-1iswict::before{font-size:40px;font-weight:bold;background-color:red;content:"r2"}.r3.svelte-1iswict::before{font-size:40px;font-weight:bold;background-color:red;content:"r3"}.r4.svelte-1iswict::before{font-size:40px;font-weight:bold;background-color:red;content:"r4"}.r5.svelte-1iswict::before{font-size:40px;font-weight:bold;background-color:red;content:"r5"}.r6.svelte-1iswict::before{font-size:40px;font-weight:bold;background-color:red;content:"r6"}.r7.svelte-1iswict::before{font-size:40px;font-weight:bold;background-color:red;content:"r7"}.r8.svelte-1iswict::before{font-size:40px;font-weight:bold;background-color:red;content:"r8"}.g0.svelte-1iswict::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g0"}.g1.svelte-1iswict::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g1"}.g2.svelte-1iswict::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g2"}.g3.svelte-1iswict::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g3"}.g4.svelte-1iswict::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g4"}.g5.svelte-1iswict::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g5"}.g6.svelte-1iswict::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g6"}.g7.svelte-1iswict::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g7"}.g8.svelte-1iswict::before{color:yellow;font-size:40px;font-weight:bold;background-color:green;content:"g8"}.b0.svelte-1iswict::before{color:yellow;font-size:40px;font-weight:bold;background-color:blue;content:"b0"}.b1.svelte-1iswict::before{color:yellow;font-size:40px;font-weight:bold;background-color:blue;content:"b1"}.b2.svelte-1iswict::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b2"}.b3.svelte-1iswict::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b3"}.b4.svelte-1iswict::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b4"}.b5.svelte-1iswict::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b5"}.b6.svelte-1iswict::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b6"}.b7.svelte-1iswict::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b7"}.b8.svelte-1iswict::before{color:yellow;font-size:42px;font-weight:bold;background-color:blue;content:"b8"}.y0.svelte-1iswict::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y0"}.y1.svelte-1iswict::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y1"}.y2.svelte-1iswict::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y2"}.y3.svelte-1iswict::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y3"}.y4.svelte-1iswict::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y4"}.y5.svelte-1iswict::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y5"}.y6.svelte-1iswict::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y6"}.y7.svelte-1iswict::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y7"}.y8.svelte-1iswict::before{color:blue;font-size:42px;font-weight:bold;background-color:yellow;content:"y8"}.w0.svelte-1iswict::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w0"}.w1.svelte-1iswict::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w1"}.w2.svelte-1iswict::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w2"}.w3.svelte-1iswict::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w3"}.w4.svelte-1iswict::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w4"}.w5.svelte-1iswict::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w5"}.w6.svelte-1iswict::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w6"}.w7.svelte-1iswict::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w7"}.w8.svelte-1iswict::before{color:black;font-size:42px;font-weight:bold;background-color:white;content:"w8"}.blue.svelte-1iswict{height:60px;width:60px;background-color:rgb(116, 116, 253);border-radius:10px}.green.svelte-1iswict{height:60px;width:60px;background-color:rgb(76, 251, 76);border-radius:10px}.red.svelte-1iswict{height:60px;width:60px;background-color:rgb(252, 97, 97);border-radius:10px}.orange.svelte-1iswict{height:60px;width:60px;background-color:orange;border-radius:10px}.yellow.svelte-1iswict{height:60px;width:60px;background-color:yellow;border-radius:10px}.white.svelte-1iswict{height:60px;width:60px;background-color:white;border-radius:10px}.container.svelte-1iswict{width:198px;height:198px;perspective:800px;margin-right:7%;color:aqua}.grid.svelte-1iswict{display:grid;grid-template-columns:repeat(3, 60px);grid-template-rows:repeat(3, 60px);grid-gap:7px;justify-content:center}.grid2.svelte-1iswict{display:grid;grid-template-columns:repeat(3, 190px);grid-template-rows:repeat(3, 190px);grid-gap:5px;justify-content:center}.cube2.svelte-1iswict{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-30deg) rotateY(150deg)}.cube4.svelte-1iswict{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-30deg) rotateY(60deg)}.cube3.svelte-1iswict{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-30deg) rotateY(240deg)}.cube1.svelte-1iswict{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-25deg) rotateY(335deg)}.cube5.svelte-1iswict{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-210deg) rotateY(30deg)}.cube6.svelte-1iswict{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-210deg) rotateY(120deg)}.cube7.svelte-1iswict{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-210deg) rotateY(210deg)}.cube8.svelte-1iswict{transform-style:preserve-3d;width:100%;height:100%;position:relative;transform:rotateX(-210deg) rotateY(300deg)}.face.svelte-1iswict{position:absolute;width:100%;height:100%;background-color:grey}.top.svelte-1iswict{transform:rotateX(90deg) translateZ(100px)}.bottom.svelte-1iswict{transform:rotateX(-90deg) translateZ(100px)}.right.svelte-1iswict{transform:rotateY(90deg) translateZ(100px)}.left.svelte-1iswict{transform:rotateY(-90deg) translateZ(100px)}.front.svelte-1iswict{transform:rotateX(0deg) translateZ(100px)}.back.svelte-1iswict{transform:rotateX(-180deg) translateZ(100px)}@keyframes svelte-1iswict-spin{from{transform:rotateX(0deg) rotateY(0deg)}to{transform:rotateX(360deg) rotateY(360deg)}}.rite.svelte-1iswict{float:right}h1.svelte-1iswict{text-align:center;color:#f3c95e}.col-3.svelte-1iswict{position:fixed;right:12%;top:20%;width:35%}#steady.svelte-1iswict{position:fixed;top:100px;left:75.5%}h3.svelte-1iswict{color:#ffccff}img.svelte-1iswict{width:44%;height:44%}.img2.svelte-1iswict{width:150px;height:155px}div.svelte-1iswict{color:blue}h2.svelte-1iswict{text-align:center;font-size:40px;color:rgb(255, 134, 198)}',
   map: null
 };
-const b0 = "blue";
-const b1 = "blue";
-const b2 = "blue";
-const b3 = "blue";
-const b4 = "blue";
-const b5 = "blue";
-const b6 = "blue";
-const b7 = "blue";
-const b8 = "blue";
-const g0 = "green";
-const g1 = "green";
-const g2 = "green";
-const g3 = "green";
-const g4 = "green";
-const g5 = "green";
-const g6 = "green";
-const g7 = "green";
-const g8 = "green";
-const r0 = "red";
-const r1 = "red";
-const r2 = "red";
-const r3 = "red";
-const r4 = "red";
-const r5 = "red";
-const r6 = "red";
-const r7 = "red";
-const r8 = "red";
-const o0 = "orange";
-const o1 = "orange";
-const o2 = "orange";
-const o3 = "orange";
-const o4 = "orange";
-const o5 = "orange";
-const o6 = "orange";
-const o7 = "orange";
-const o8 = "orange";
-const y0 = "yellow";
-const y1 = "yellow";
-const y2 = "yellow";
-const y3 = "yellow";
-const y4 = "yellow";
-const y5 = "yellow";
-const y6 = "yellow";
-const y7 = "yellow";
-const y8 = "yellow";
-const w0 = "white";
-const w1 = "white";
-const w2 = "white";
-const w3 = "white";
-const w4 = "white";
-const w5 = "white";
-const w6 = "white";
-const w7 = "white";
-const w8 = "white";
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let Sally;
+  var log = console.log;
   var dF3x = () => {
   };
   var dF3ar = () => {
   };
-  function M(x, ar = []) {
-    return function go(func) {
-      if (func === dF3x)
+  function M(x, ar2 = []) {
+    return function go(func2) {
+      if (func2 === dF3x)
         return x;
-      if (func === dF3ar)
-        return ar;
-      else
-        x = func(x);
-      ar.push(func);
+      else if (func2 === dF3ar)
+        return ar2;
+      x = func2(x);
+      ar2.push(func2.key);
+      console.log("func.key is", func2.key);
       return go;
     };
   }
-  var bb = [b0, b1, b2, b3, b4, b5, b6, b7, b8];
-  var gg = [g0, g1, g2, g3, g4, g5, g6, g7, g8];
-  var rr = [r0, r1, r2, r3, r4, r5, r6, r7, r8];
-  var oo = [o0, o1, o2, o3, o4, o5, o6, o7, o8];
-  var yy = [y0, y1, y2, y3, y4, y5, y6, y7, y8];
-  var ww = [w0, w1, w2, w3, w4, w5, w6, w7, w8];
-  var m = M([bb, gg, rr, oo, yy, ww]);
-  JSON.parse(JSON.stringify([bb, gg, rr, oo, yy, ww]));
-  function reverse() {
-    let fu = m(dF3ar).pop();
-    let foo = (x) => fu(fu(fu(x)));
-    m(foo)(dF3ar).pop();
-    m = m;
-  }
-  var classCode2 = `const b0 = 'blue';
-  const b1 = 'blue';
-  const b2 = 'blue';
-  const b3 = 'blue';
-  const b4 = 'blue';
-  const b5 = 'blue';
-  const b6 = 'blue';
-  const b7 = 'blue';
-  const b8 = "blue";
-
-  const g0 = 'green';
-  const g1 = 'green';
-  const g2 = 'green';
-  const g3 = 'green';
-  const g4 = 'green';
-  const g5 = 'green';
-  const g6 = 'green';
-  const g7 = 'green';
-  const g8 = "green";
-
-  const r0 = 'red';
-  const r1 = 'red';
-  const r2 = 'red';
-  const r3 = 'red';
-  const r4 = 'red';
-  const r5 = 'red';
-  const r6 = 'red';
-  const r7 = 'red';
-  const r8 = "red";
-
-  const o0 = 'orange';
-  const o1 = 'orange';
-  const o2 = 'orange';
-  const o3 = 'orange';
-  const o4 = 'orange';
-  const o5 = 'orange';
-  const o6 = 'orange';
-  const o7 = 'orange';
-  const o8 = "orange";
-
-  const y0 = 'yellow';
-  const y1 = 'yellow';
-  const y2 = 'yellow';
-  const y3 = 'yellow';
-  const y4 = 'yellow';
-  const y5 = 'yellow';
-  const y6 = 'yellow';
-  const y7 = 'yellow';
-  const y8 = "yellow";
-
-  const w0 = 'white';
-  const w1 = 'white';
-  const w2 = 'white';
-  const w3 = 'white';
-  const w4 = 'white';
-  const w5 = 'white';
-  const w6 = 'white';
-  const w7 = 'white';
-  const w8 = 'white';
-
-  var bb = [b0, b1, b2, b3, b4, b5, b6, b7, b8];
-  var gg = [g0, g1, g2, g3, g4, g5, g6, g7, g8];
-  var rr = [r0, r1, r2, r3, r4, r5, r6, r7, r8];
-  var oo = [o0, o1, o2, o3, o4, o5, o6, o7, o8];
-  var yy = [y0, y1, y2, y3, y4, y5, y6, y7, y8];
-  var ww = [w0, w1, w2, w3, w4, w5, w6, w7, w8];
-
-  var m = M([bb, gg, rr, oo, yy, ww]);`;
-  var Rcode = ` function R(ar) {
-    let temp = [];
-    temp[0] = [
-      ar[0][6],
-      ar[0][3],
-      ar[0][0],
-      ar[0][7],
-      ar[0][4],
-      ar[0][1],
-      ar[0][8],
-      ar[0][5],
-      ar[0][2],
-    ];
-
-    temp[1] = ar[1];
-
-    temp[2] = [
-      ar[4][8],
-      ar[2][1],
-      ar[2][2],
-      ar[4][5],
-      ar[2][4],
-      ar[2][5],
-      ar[4][2],
-      ar[2][7],
-      ar[2][8],
-    ];
-
-    temp[3] = [
-      ar[3][0],
-      ar[3][1],
-      ar[5][2],
-      ar[3][3],
-      ar[3][4],
-      ar[5][5],
-      ar[3][6],
-      ar[3][7],
-      ar[5][8],
-    ];
-
-    temp[4] = [
-      ar[4][0],
-      ar[4][1],
-      ar[3][2],
-      ar[4][3],
-      ar[4][4],
-      ar[3][5],
-      ar[4][6],
-      ar[4][7],
-      ar[3][8],
-    ];
-
-    temp[5] = [
-      ar[5][0],
-      ar[5][1],
-      ar[2][6],
-      ar[5][3],
-      ar[5][4],
-      ar[2][3],
-      ar[5][6],
-      ar[5][7],
-      ar[2][0],
-    ];
-    return temp;
-  }`;
-  var Ucode = ` function U(ar) {
-    let temp = [];
-
-    temp[0] = [
-      ar[2][0],
-      ar[2][1],
-      ar[2][2],
-      ar[0][3],
-      ar[0][4],
-      ar[0][5],
-      ar[0][6],
-      ar[0][7],
-      ar[0][8],
-    ];
-
-    temp[1] = [
-      ar[3][0],
-      ar[3][1],
-      ar[3][2],
-      ar[1][3],
-      ar[1][4],
-      ar[1][5],
-      ar[1][6],
-      ar[1][7],
-      ar[1][8],
-    ];
-
-    temp[2] = [
-      ar[1][0],
-      ar[1][1],
-      ar[1][2],
-      ar[2][3],
-      ar[2][4],
-      ar[2][5],
-      ar[2][6],
-      ar[2][7],
-      ar[2][8],
-    ];
-
-    temp[3] = [
-      ar[0][0],
-      ar[0][1],
-      ar[0][2],
-      ar[3][3],
-      ar[3][4],
-      ar[3][5],
-      ar[3][6],
-      ar[3][7],
-      ar[3][8],
-    ];
-
-    temp[4] = [
-      ar[4][6],
-      ar[4][3],
-      ar[4][0],
-      ar[4][7],
-      ar[4][4],
-      ar[4][1],
-      ar[4][8],
-      ar[4][5],
-      ar[4][2],
-    ];
-
-    temp[5] = ar[5];
-    return temp;
-  }`;
-  var UfuncCode = `var Ufunc = () => {
-    m(U);
-    m = m;  // This triggers the DOM update
-  };`;
-  var cu;
-  var cu9;
-  cu = "cube1";
-  cu9 = "cube93";
-  var handleKeyCode = `function handleKey(e) {
-         if (e.keyCode === 85)  m(Uz);
-    else if (e.keyCode === 117) m(U);
-    else if (e.keyCode === 68)  m(Dz);
-    else if (e.keyCode === 100) m(D);
-    else if (e.keyCode === 82)  m(Rz);
-    else if (e.keyCode === 114) m(R);
-    else if (e.keyCode === 76)  m(Lz);
-    else if (e.keyCode === 108) m(L);
-    else if (e.keyCode === 70)  m(Fz);
-    else if (e.keyCode === 102) m(F);
-    else if (e.keyCode === 66)  m(Bz);
-    else if (e.keyCode === 98)  m(B);
-    else if (e.keyCode === 77)  m(Cxr);
-    else if (e.keyCode === 109) m(Cx);
-    else if (e.keyCode === 69)  m(Cyr);
-    else if (e.keyCode === 101) m(Cy);
-    else if (e.keyCode === 83)  m(Czr);
-    else if (e.keyCode === 115) m(Cz);
-    else if (e.keyCode === 120) m(Xro);
-    else if (e.keyCode === 88)  m(Xror);
-    else if (e.keyCode === 121) m(Yro);
-    else if (e.keyCode === 89)  m(Yror);
-    else if (e.keyCode === 122) m(Zro);
-    else if (e.keyCode === 90)  m(Zror);
-    else if (e.keyCode === 119) shu();
-    else if (e.keyCode === 118) Start();
-    else if (e.keyCode === 113) reverse();
-    // else if (e.keyCode === 116) rotate(); 
-    m = m;  // In Svelte, this updates the DOM
-  }`;
-  var orange = `.orange {
-    height: 60px;
-    width: 60px;
-    background-color: orange;
-    border-radius: 10px;
-  }`;
-  var dom = `<div id="steady">
-  <div class="container">
-    <div class={cu}>
-      <div class="face front">
-        <div class="grid">
-          <div class={m(dF3x)[3][0]} />
-          <div class={m(dF3x)[3][1]} />
-          <div class={m(dF3x)[3][2]} />
-          <div class={m(dF3x)[3][3]} />
-          <div class={m(dF3x)[3][4]} />
-          <div class={m(dF3x)[3][5]} />
-          <div class={m(dF3x)[3][6]} />
-          <div class={m(dF3x)[3][7]} />
-          <div class={m(dF3x)[3][8]} />
-        </div>
-      </div>
-
-      <div class="face back">
-        <div class="grid">
-          <div class={m(dF3x)[2][8]} />
-          <div class={m(dF3x)[2][7]} />
-          <div class={m(dF3x)[2][6]} />
-          <div class={m(dF3x)[2][5]} />
-          <div class={m(dF3x)[2][4]} />
-          <div class={m(dF3x)[2][3]} />
-          <div class={m(dF3x)[2][2]} />
-          <div class={m(dF3x)[2][1]} />
-          <div class={m(dF3x)[2][0]} />
-        </div>
-      </div>
-
-      <div class="face right">
-        <div class="grid">
-          <div class={m(dF3x)[0][0]} />
-          <div class={m(dF3x)[0][1]} />
-          <div class={m(dF3x)[0][2]} />
-          <div class={m(dF3x)[0][3]} />
-          <div class={m(dF3x)[0][4]} />
-          <div class={m(dF3x)[0][5]} />
-          <div class={m(dF3x)[0][6]} />
-          <div class={m(dF3x)[0][7]} />
-          <div class={m(dF3x)[0][8]} />
-        </div>
-      </div>
-
-      <div class="face left">
-        <div class="grid">
-          <div class={m(dF3x)[1][0]} />
-          <div class={m(dF3x)[1][1]} />
-          <div class={m(dF3x)[1][2]} />
-          <div class={m(dF3x)[1][3]} />
-          <div class={m(dF3x)[1][4]} />
-          <div class={m(dF3x)[1][5]} />
-          <div class={m(dF3x)[1][6]} />
-          <div class={m(dF3x)[1][7]} />
-          <div class={m(dF3x)[1][8]} />
-        </div>
-      </div>
-
-      <div class="face top">
-        <div class="grid">
-          <div class={m(dF3x)[4][0]} />
-          <div class={m(dF3x)[4][1]} />
-          <div class={m(dF3x)[4][2]} />
-          <div class={m(dF3x)[4][3]} />
-          <div class={m(dF3x)[4][4]} />
-          <div class={m(dF3x)[4][5]} />
-          <div class={m(dF3x)[4][6]} />
-          <div class={m(dF3x)[4][7]} />
-          <div class={m(dF3x)[4][8]} />
-        </div>
-      </div>
-
-      <div class="face bottom">
-        <div class="grid">
-          <div class={m(dF3x)[5][0]} />
-          <div class={m(dF3x)[5][1]} />
-          <div class={m(dF3x)[5][2]} />
-          <div class={m(dF3x)[5][3]} />
-          <div class={m(dF3x)[5][4]} />
-          <div class={m(dF3x)[5][5]} />
-          <div class={m(dF3x)[5][6]} />
-          <div class={m(dF3x)[5][7]} />
-          <div class={m(dF3x)[5][8]} />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>`;
-  var classCode = `classes={m(dF3x)[a][b]}`;
-  const Mcode = `function M(x, ar = []) {
+  var m;
+  m = M([
+    ["blue", "blue", "blue", "blue", "blue", "blue", "blue", "blue", "blue"],
+    [
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green"
+    ],
+    ["red", "red", "red", "red", "red", "red", "red", "red", "red"],
+    [
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange"
+    ],
+    [
+      "yellow",
+      "yellow",
+      "yellow",
+      "yellow",
+      "yellow",
+      "yellow",
+      "yellow",
+      "yellow",
+      "yellow"
+    ],
+    [
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white"
+    ]
+  ]);
+  var test7 = `function M(x, ar =[]) {
     return function go(func) {
       if (func === dF3x) return x;
-      if (func === dF3ar) return ar;
-      else x = func(x);
-      ar.push(func);
+      else if (func === dF3ar) return ar;
+      x = func(x);
+      ar.push(func.key);
       return go;
     };
+  }`;
+  function Start() {
+    m = M([
+      ["blue", "blue", "blue", "blue", "blue", "blue", "blue", "blue", "blue"],
+      [
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green",
+        "green"
+      ],
+      ["red", "red", "red", "red", "red", "red", "red", "red", "red"],
+      [
+        "orange",
+        "orange",
+        "orange",
+        "orange",
+        "orange",
+        "orange",
+        "orange",
+        "orange",
+        "orange"
+      ],
+      [
+        "yellow",
+        "yellow",
+        "yellow",
+        "yellow",
+        "yellow",
+        "yellow",
+        "yellow",
+        "yellow",
+        "yellow"
+      ],
+      [
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white",
+        "white"
+      ]
+    ]);
+  }
+  var Xro = function Xro2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[0][6],
+      ar2[0][3],
+      ar2[0][0],
+      ar2[0][7],
+      ar2[0][4],
+      ar2[0][1],
+      ar2[0][8],
+      ar2[0][5],
+      ar2[0][2]
+    ];
+    temp[1] = [
+      ar2[1][2],
+      ar2[1][5],
+      ar2[1][8],
+      ar2[1][1],
+      ar2[1][4],
+      ar2[1][7],
+      ar2[1][0],
+      ar2[1][3],
+      ar2[1][6]
+    ];
+    temp[2] = [
+      ar2[4][8],
+      ar2[4][7],
+      ar2[4][6],
+      ar2[4][5],
+      ar2[4][4],
+      ar2[4][3],
+      ar2[4][2],
+      ar2[4][1],
+      ar2[4][0]
+    ];
+    temp[3] = ar2[5];
+    temp[4] = ar2[3];
+    temp[5] = [
+      ar2[2][8],
+      ar2[2][7],
+      ar2[2][6],
+      ar2[2][5],
+      ar2[2][4],
+      ar2[2][3],
+      ar2[2][2],
+      ar2[2][1],
+      ar2[2][0]
+    ];
+    return temp;
   };
-    Where const dF3x = () => {}
-          const dF3ar = () => {};`;
-  const orangeSide = `<div class="face front">
-        <div class="grid">
-          <div class={m(dF3x)[3][8]} />
-          <div class={m(dF3x)[3][7]} />
-          <div class={m(dF3x)[3][6]} />
-          <div class={m(dF3x)[3][5]} />
-          <div class={m(dF3x)[3][4]} />
-          <div class={m(dF3x)[3][3]} />
-          <div class={m(dF3x)[3][2]} />
-          <div class={m(dF3x)[3][1]} />
-          <div class={m(dF3x)[3][0]} />
-        </div>
-      </div>`;
+  var Xror = function Xror2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[0][2],
+      ar2[0][5],
+      ar2[0][8],
+      ar2[0][1],
+      ar2[0][4],
+      ar2[0][7],
+      ar2[0][0],
+      ar2[0][3],
+      ar2[0][6]
+    ];
+    temp[1] = [
+      ar2[1][6],
+      ar2[1][3],
+      ar2[1][0],
+      ar2[1][7],
+      ar2[1][4],
+      ar2[1][1],
+      ar2[1][8],
+      ar2[1][5],
+      ar2[1][2]
+    ];
+    temp[2] = [
+      ar2[5][8],
+      ar2[5][7],
+      ar2[5][6],
+      ar2[5][5],
+      ar2[5][4],
+      ar2[5][3],
+      ar2[5][2],
+      ar2[5][1],
+      ar2[5][0]
+    ];
+    temp[3] = ar2[4];
+    temp[4] = [
+      ar2[2][8],
+      ar2[2][7],
+      ar2[2][6],
+      ar2[2][5],
+      ar2[2][4],
+      ar2[2][3],
+      ar2[2][2],
+      ar2[2][1],
+      ar2[2][0]
+    ];
+    temp[5] = ar2[3];
+    return temp;
+  };
+  var Yro = function Yro2(ar2) {
+    let temp = [];
+    temp[0] = ar2[2];
+    temp[1] = ar2[3];
+    temp[2] = ar2[1];
+    temp[3] = ar2[0];
+    temp[4] = [
+      ar2[4][6],
+      ar2[4][3],
+      ar2[4][0],
+      ar2[4][7],
+      ar2[4][4],
+      ar2[4][1],
+      ar2[4][8],
+      ar2[4][5],
+      ar2[4][2]
+    ];
+    temp[5] = [
+      ar2[5][2],
+      ar2[5][5],
+      ar2[5][8],
+      ar2[5][1],
+      ar2[5][4],
+      ar2[5][7],
+      ar2[5][0],
+      ar2[5][3],
+      ar2[5][6]
+    ];
+    return temp;
+  };
+  var Yror = function Yror2(ar2) {
+    let temp = [];
+    temp[0] = ar2[3];
+    temp[1] = ar2[2];
+    temp[2] = ar2[0];
+    temp[3] = ar2[1];
+    temp[4] = [
+      ar2[4][2],
+      ar2[4][5],
+      ar2[4][8],
+      ar2[4][1],
+      ar2[4][4],
+      ar2[4][7],
+      ar2[4][0],
+      ar2[4][3],
+      ar2[4][6]
+    ];
+    temp[5] = [
+      ar2[5][6],
+      ar2[5][3],
+      ar2[5][0],
+      ar2[5][7],
+      ar2[5][4],
+      ar2[5][1],
+      ar2[5][8],
+      ar2[5][5],
+      ar2[5][2]
+    ];
+    return temp;
+  };
+  var Zro = function Zro2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[4][6],
+      ar2[4][3],
+      ar2[4][0],
+      ar2[4][7],
+      ar2[4][4],
+      ar2[4][1],
+      ar2[4][8],
+      ar2[4][5],
+      ar2[4][2]
+    ];
+    temp[1] = [
+      ar2[5][6],
+      ar2[5][3],
+      ar2[5][0],
+      ar2[5][7],
+      ar2[5][4],
+      ar2[5][1],
+      ar2[5][8],
+      ar2[5][5],
+      ar2[5][2]
+    ];
+    temp[2] = [
+      ar2[2][2],
+      ar2[2][5],
+      ar2[2][8],
+      ar2[2][1],
+      ar2[2][4],
+      ar2[2][7],
+      ar2[2][0],
+      ar2[2][3],
+      ar2[2][6]
+    ];
+    temp[3] = [
+      ar2[3][6],
+      ar2[3][3],
+      ar2[3][0],
+      ar2[3][7],
+      ar2[3][4],
+      ar2[3][1],
+      ar2[3][8],
+      ar2[3][5],
+      ar2[3][2]
+    ];
+    temp[4] = [
+      ar2[1][6],
+      ar2[1][3],
+      ar2[1][0],
+      ar2[1][7],
+      ar2[1][4],
+      ar2[1][1],
+      ar2[1][8],
+      ar2[1][5],
+      ar2[1][2]
+    ];
+    temp[5] = [
+      ar2[0][6],
+      ar2[0][3],
+      ar2[0][0],
+      ar2[0][7],
+      ar2[0][4],
+      ar2[0][1],
+      ar2[0][8],
+      ar2[0][5],
+      ar2[0][2]
+    ];
+    return temp;
+  };
+  var Zror = function Zror2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[5][2],
+      ar2[5][5],
+      ar2[5][8],
+      ar2[5][1],
+      ar2[5][4],
+      ar2[5][7],
+      ar2[5][0],
+      ar2[5][3],
+      ar2[5][6]
+    ];
+    temp[1] = [
+      ar2[4][2],
+      ar2[4][5],
+      ar2[4][8],
+      ar2[4][1],
+      ar2[4][4],
+      ar2[4][7],
+      ar2[4][0],
+      ar2[4][3],
+      ar2[4][6]
+    ];
+    temp[2] = [
+      ar2[2][6],
+      ar2[2][3],
+      ar2[2][0],
+      ar2[2][7],
+      ar2[2][4],
+      ar2[2][1],
+      ar2[2][8],
+      ar2[2][5],
+      ar2[2][2]
+    ];
+    temp[3] = [
+      ar2[3][2],
+      ar2[3][5],
+      ar2[3][8],
+      ar2[3][1],
+      ar2[3][4],
+      ar2[3][7],
+      ar2[3][0],
+      ar2[3][3],
+      ar2[3][6]
+    ];
+    temp[4] = [
+      ar2[0][2],
+      ar2[0][5],
+      ar2[0][8],
+      ar2[0][1],
+      ar2[0][4],
+      ar2[0][7],
+      ar2[0][0],
+      ar2[0][3],
+      ar2[0][6]
+    ];
+    temp[5] = [
+      ar2[1][2],
+      ar2[1][5],
+      ar2[1][8],
+      ar2[1][1],
+      ar2[1][4],
+      ar2[1][7],
+      ar2[1][0],
+      ar2[1][3],
+      ar2[1][6]
+    ];
+    return temp;
+  };
+  var Cz = function Cz2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[0][0],
+      ar2[4][3],
+      ar2[0][2],
+      ar2[0][3],
+      ar2[4][4],
+      ar2[0][5],
+      ar2[0][6],
+      ar2[4][5],
+      ar2[0][8]
+    ];
+    temp[1] = [
+      ar2[1][0],
+      ar2[5][3],
+      ar2[1][2],
+      ar2[1][3],
+      ar2[5][4],
+      ar2[1][5],
+      ar2[1][6],
+      ar2[5][5],
+      ar2[1][8]
+    ];
+    temp[2] = ar2[2];
+    temp[3] = ar2[3];
+    temp[4] = [
+      ar2[4][0],
+      ar2[4][1],
+      ar2[4][2],
+      ar2[1][7],
+      ar2[1][4],
+      ar2[1][1],
+      ar2[4][6],
+      ar2[4][7],
+      ar2[4][8]
+    ];
+    temp[5] = [
+      ar2[5][0],
+      ar2[5][1],
+      ar2[5][2],
+      ar2[0][7],
+      ar2[0][4],
+      ar2[0][1],
+      ar2[5][6],
+      ar2[5][7],
+      ar2[5][8]
+    ];
+    return temp;
+  };
+  var Cx = function Cx2(ar2) {
+    let temp = [];
+    temp[0] = ar2[0];
+    temp[1] = ar2[1];
+    temp[2] = [
+      ar2[2][0],
+      ar2[5][7],
+      ar2[2][2],
+      ar2[2][3],
+      ar2[5][4],
+      ar2[2][5],
+      ar2[2][6],
+      ar2[5][1],
+      ar2[2][8]
+    ];
+    temp[3] = [
+      ar2[3][0],
+      ar2[4][1],
+      ar2[3][2],
+      ar2[3][3],
+      ar2[4][4],
+      ar2[3][5],
+      ar2[3][6],
+      ar2[4][7],
+      ar2[3][8]
+    ];
+    temp[4] = [
+      ar2[4][0],
+      ar2[2][7],
+      ar2[4][2],
+      ar2[4][3],
+      ar2[2][4],
+      ar2[4][5],
+      ar2[4][6],
+      ar2[2][1],
+      ar2[4][8]
+    ];
+    temp[5] = [
+      ar2[5][0],
+      ar2[3][1],
+      ar2[5][2],
+      ar2[5][3],
+      ar2[3][4],
+      ar2[5][5],
+      ar2[5][6],
+      ar2[3][7],
+      ar2[5][8]
+    ];
+    return temp;
+  };
+  var Cy = function Cy2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[0][0],
+      ar2[0][1],
+      ar2[0][2],
+      ar2[2][3],
+      ar2[2][4],
+      ar2[2][5],
+      ar2[0][6],
+      ar2[0][7],
+      ar2[0][8]
+    ];
+    temp[1] = [
+      ar2[1][0],
+      ar2[1][1],
+      ar2[1][2],
+      ar2[3][3],
+      ar2[3][4],
+      ar2[3][5],
+      ar2[1][6],
+      ar2[1][7],
+      ar2[1][8]
+    ];
+    temp[2] = [
+      ar2[2][0],
+      ar2[2][1],
+      ar2[2][2],
+      ar2[1][3],
+      ar2[1][4],
+      ar2[1][5],
+      ar2[2][6],
+      ar2[2][7],
+      ar2[2][8]
+    ];
+    temp[3] = [
+      ar2[3][0],
+      ar2[3][1],
+      ar2[3][2],
+      ar2[0][3],
+      ar2[0][4],
+      ar2[0][5],
+      ar2[3][6],
+      ar2[3][7],
+      ar2[3][8]
+    ];
+    temp[4] = ar2[4];
+    temp[5] = ar2[5];
+    return temp;
+  };
+  var Cxr = function Cxr2(ar2) {
+    let temp = [];
+    temp[0] = ar2[0];
+    temp[1] = ar2[1];
+    temp[2] = [
+      ar2[2][0],
+      ar2[4][7],
+      ar2[2][2],
+      ar2[2][3],
+      ar2[4][4],
+      ar2[2][5],
+      ar2[2][6],
+      ar2[4][1],
+      ar2[2][8]
+    ];
+    temp[3] = [
+      ar2[3][0],
+      ar2[5][1],
+      ar2[3][2],
+      ar2[3][3],
+      ar2[5][4],
+      ar2[3][5],
+      ar2[3][6],
+      ar2[5][7],
+      ar2[3][8]
+    ];
+    temp[4] = [
+      ar2[4][0],
+      ar2[3][1],
+      ar2[4][2],
+      ar2[4][3],
+      ar2[3][4],
+      ar2[4][5],
+      ar2[4][6],
+      ar2[3][7],
+      ar2[4][8]
+    ];
+    temp[5] = [
+      ar2[5][0],
+      ar2[2][7],
+      ar2[5][2],
+      ar2[5][3],
+      ar2[2][4],
+      ar2[5][5],
+      ar2[5][6],
+      ar2[2][1],
+      ar2[5][8]
+    ];
+    return temp;
+  };
+  var B = function B2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[0][0],
+      ar2[0][1],
+      ar2[5][8],
+      ar2[0][3],
+      ar2[0][4],
+      ar2[5][7],
+      ar2[0][6],
+      ar2[0][7],
+      ar2[5][6]
+    ];
+    temp[1] = [
+      ar2[4][2],
+      ar2[1][1],
+      ar2[1][2],
+      ar2[4][1],
+      ar2[1][4],
+      ar2[1][5],
+      ar2[4][0],
+      ar2[1][7],
+      ar2[1][8]
+    ];
+    temp[2] = [
+      ar2[2][6],
+      ar2[2][3],
+      ar2[2][0],
+      ar2[2][7],
+      ar2[2][4],
+      ar2[2][1],
+      ar2[2][8],
+      ar2[2][5],
+      ar2[2][2]
+    ];
+    temp[3] = ar2[3];
+    temp[4] = [
+      ar2[0][2],
+      ar2[0][5],
+      ar2[0][8],
+      ar2[4][3],
+      ar2[4][4],
+      ar2[4][5],
+      ar2[4][6],
+      ar2[4][7],
+      ar2[4][8]
+    ];
+    temp[5] = [
+      ar2[5][0],
+      ar2[5][1],
+      ar2[5][2],
+      ar2[5][3],
+      ar2[5][4],
+      ar2[5][5],
+      ar2[1][0],
+      ar2[1][3],
+      ar2[1][6]
+    ];
+    return temp;
+  };
+  var D = function D2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[0][0],
+      ar2[0][1],
+      ar2[0][2],
+      ar2[0][3],
+      ar2[0][4],
+      ar2[0][5],
+      ar2[3][6],
+      ar2[3][7],
+      ar2[3][8]
+    ];
+    temp[1] = [
+      ar2[1][0],
+      ar2[1][1],
+      ar2[1][2],
+      ar2[1][3],
+      ar2[1][4],
+      ar2[1][5],
+      ar2[2][6],
+      ar2[2][7],
+      ar2[2][8]
+    ];
+    temp[2] = [
+      ar2[2][0],
+      ar2[2][1],
+      ar2[2][2],
+      ar2[2][3],
+      ar2[2][4],
+      ar2[2][5],
+      ar2[0][6],
+      ar2[0][7],
+      ar2[0][8]
+    ];
+    temp[3] = [
+      ar2[3][0],
+      ar2[3][1],
+      ar2[3][2],
+      ar2[3][3],
+      ar2[3][4],
+      ar2[3][5],
+      ar2[1][6],
+      ar2[1][7],
+      ar2[1][8]
+    ];
+    temp[4] = ar2[4];
+    temp[5] = [
+      ar2[5][6],
+      ar2[5][3],
+      ar2[5][0],
+      ar2[5][7],
+      ar2[5][4],
+      ar2[5][1],
+      ar2[5][8],
+      ar2[5][5],
+      ar2[5][2]
+    ];
+    return temp;
+  };
+  var Dz = function Dz2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[0][0],
+      ar2[0][1],
+      ar2[0][2],
+      ar2[0][3],
+      ar2[0][4],
+      ar2[0][5],
+      ar2[2][6],
+      ar2[2][7],
+      ar2[2][8]
+    ];
+    temp[1] = [
+      ar2[1][0],
+      ar2[1][1],
+      ar2[1][2],
+      ar2[1][3],
+      ar2[1][4],
+      ar2[1][5],
+      ar2[3][6],
+      ar2[3][7],
+      ar2[3][8]
+    ];
+    temp[2] = [
+      ar2[2][0],
+      ar2[2][1],
+      ar2[2][2],
+      ar2[2][3],
+      ar2[2][4],
+      ar2[2][5],
+      ar2[1][6],
+      ar2[1][7],
+      ar2[1][8]
+    ];
+    temp[3] = [
+      ar2[3][0],
+      ar2[3][1],
+      ar2[3][2],
+      ar2[3][3],
+      ar2[3][4],
+      ar2[3][5],
+      ar2[0][6],
+      ar2[0][7],
+      ar2[0][8]
+    ];
+    temp[4] = ar2[4];
+    temp[5] = [
+      ar2[5][2],
+      ar2[5][5],
+      ar2[5][8],
+      ar2[5][1],
+      ar2[5][4],
+      ar2[5][7],
+      ar2[5][0],
+      ar2[5][3],
+      ar2[5][6]
+    ];
+    return temp;
+  };
+  var L = function L2(ar2) {
+    let temp = [];
+    temp[0] = ar2[0];
+    temp[1] = [
+      ar2[1][6],
+      ar2[1][3],
+      ar2[1][0],
+      ar2[1][7],
+      ar2[1][4],
+      ar2[1][1],
+      ar2[1][8],
+      ar2[1][5],
+      ar2[1][2]
+    ];
+    temp[2] = [
+      ar2[2][0],
+      ar2[2][1],
+      ar2[5][6],
+      ar2[2][3],
+      ar2[2][4],
+      ar2[5][3],
+      ar2[2][6],
+      ar2[2][7],
+      ar2[5][0]
+    ];
+    temp[3] = [
+      ar2[4][0],
+      ar2[3][1],
+      ar2[3][2],
+      ar2[4][3],
+      ar2[3][4],
+      ar2[3][5],
+      ar2[4][6],
+      ar2[3][7],
+      ar2[3][8]
+    ];
+    temp[4] = [
+      ar2[2][8],
+      ar2[4][1],
+      ar2[4][2],
+      ar2[2][5],
+      ar2[4][4],
+      ar2[4][5],
+      ar2[2][2],
+      ar2[4][7],
+      ar2[4][8]
+    ];
+    temp[5] = [
+      ar2[3][0],
+      ar2[5][1],
+      ar2[5][2],
+      ar2[3][3],
+      ar2[5][4],
+      ar2[5][5],
+      ar2[3][6],
+      ar2[5][7],
+      ar2[5][8]
+    ];
+    return temp;
+  };
+  var Lz = function Lz2(ar2) {
+    let temp = [];
+    temp[0] = ar2[0];
+    temp[1] = [
+      ar2[1][2],
+      ar2[1][5],
+      ar2[1][8],
+      ar2[1][1],
+      ar2[1][4],
+      ar2[1][7],
+      ar2[1][0],
+      ar2[1][3],
+      ar2[1][6]
+    ];
+    temp[2] = [
+      ar2[2][0],
+      ar2[2][1],
+      ar2[4][6],
+      ar2[2][3],
+      ar2[2][4],
+      ar2[4][3],
+      ar2[2][6],
+      ar2[2][7],
+      ar2[4][0]
+    ];
+    temp[3] = [
+      ar2[5][0],
+      ar2[3][1],
+      ar2[3][2],
+      ar2[5][3],
+      ar2[3][4],
+      ar2[3][5],
+      ar2[5][6],
+      ar2[3][7],
+      ar2[3][8]
+    ];
+    temp[4] = [
+      ar2[3][0],
+      ar2[4][1],
+      ar2[4][2],
+      ar2[3][3],
+      ar2[4][4],
+      ar2[4][5],
+      ar2[3][6],
+      ar2[4][7],
+      ar2[4][8]
+    ];
+    temp[5] = [
+      ar2[2][8],
+      ar2[5][1],
+      ar2[5][2],
+      ar2[2][5],
+      ar2[5][4],
+      ar2[5][5],
+      ar2[2][2],
+      ar2[5][7],
+      ar2[5][8]
+    ];
+    return temp;
+  };
+  function F(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[4][6],
+      ar2[0][1],
+      ar2[0][2],
+      ar2[4][7],
+      ar2[0][4],
+      ar2[0][5],
+      ar2[4][8],
+      ar2[0][7],
+      ar2[0][8]
+    ];
+    temp[1] = [
+      ar2[1][0],
+      ar2[1][1],
+      ar2[5][0],
+      ar2[1][3],
+      ar2[1][4],
+      ar2[5][1],
+      ar2[1][6],
+      ar2[1][7],
+      ar2[5][2]
+    ];
+    temp[2] = ar2[2];
+    temp[3] = [
+      ar2[3][6],
+      ar2[3][3],
+      ar2[3][0],
+      ar2[3][7],
+      ar2[3][4],
+      ar2[3][1],
+      ar2[3][8],
+      ar2[3][5],
+      ar2[3][2]
+    ];
+    temp[4] = [
+      ar2[4][0],
+      ar2[4][1],
+      ar2[4][2],
+      ar2[4][3],
+      ar2[4][4],
+      ar2[4][5],
+      ar2[1][8],
+      ar2[1][5],
+      ar2[1][2]
+    ];
+    temp[5] = [
+      ar2[0][6],
+      ar2[0][3],
+      ar2[0][0],
+      ar2[5][3],
+      ar2[5][4],
+      ar2[5][5],
+      ar2[5][6],
+      ar2[5][7],
+      ar2[5][8]
+    ];
+    return temp;
+  }
+  var Fz = function Fz2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[5][2],
+      ar2[0][1],
+      ar2[0][2],
+      ar2[5][1],
+      ar2[0][4],
+      ar2[0][5],
+      ar2[5][0],
+      ar2[0][7],
+      ar2[0][8]
+    ];
+    temp[1] = [
+      ar2[1][0],
+      ar2[1][1],
+      ar2[4][8],
+      ar2[1][3],
+      ar2[1][4],
+      ar2[4][7],
+      ar2[1][6],
+      ar2[1][7],
+      ar2[4][6]
+    ];
+    temp[2] = ar2[2];
+    temp[3] = [
+      ar2[3][2],
+      ar2[3][5],
+      ar2[3][8],
+      ar2[3][1],
+      ar2[3][4],
+      ar2[3][7],
+      ar2[3][0],
+      ar2[3][3],
+      ar2[3][6]
+    ];
+    temp[4] = [
+      ar2[4][0],
+      ar2[4][1],
+      ar2[4][2],
+      ar2[4][3],
+      ar2[4][4],
+      ar2[4][5],
+      ar2[0][0],
+      ar2[0][3],
+      ar2[0][6]
+    ];
+    temp[5] = [
+      ar2[1][2],
+      ar2[1][5],
+      ar2[1][8],
+      ar2[5][3],
+      ar2[5][4],
+      ar2[5][5],
+      ar2[5][6],
+      ar2[5][7],
+      ar2[5][8]
+    ];
+    return temp;
+  };
+  var R = function R2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[0][6],
+      ar2[0][3],
+      ar2[0][0],
+      ar2[0][7],
+      ar2[0][4],
+      ar2[0][1],
+      ar2[0][8],
+      ar2[0][5],
+      ar2[0][2]
+    ];
+    temp[1] = ar2[1];
+    temp[2] = [
+      ar2[4][8],
+      ar2[2][1],
+      ar2[2][2],
+      ar2[4][5],
+      ar2[2][4],
+      ar2[2][5],
+      ar2[4][2],
+      ar2[2][7],
+      ar2[2][8]
+    ];
+    temp[3] = [
+      ar2[3][0],
+      ar2[3][1],
+      ar2[5][2],
+      ar2[3][3],
+      ar2[3][4],
+      ar2[5][5],
+      ar2[3][6],
+      ar2[3][7],
+      ar2[5][8]
+    ];
+    temp[4] = [
+      ar2[4][0],
+      ar2[4][1],
+      ar2[3][2],
+      ar2[4][3],
+      ar2[4][4],
+      ar2[3][5],
+      ar2[4][6],
+      ar2[4][7],
+      ar2[3][8]
+    ];
+    temp[5] = [
+      ar2[5][0],
+      ar2[5][1],
+      ar2[2][6],
+      ar2[5][3],
+      ar2[5][4],
+      ar2[2][3],
+      ar2[5][6],
+      ar2[5][7],
+      ar2[2][0]
+    ];
+    return temp;
+  };
+  var Rz = function Rz2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[0][2],
+      ar2[0][5],
+      ar2[0][8],
+      ar2[0][1],
+      ar2[0][4],
+      ar2[0][7],
+      ar2[0][0],
+      ar2[0][3],
+      ar2[0][6]
+    ];
+    temp[1] = ar2[1];
+    temp[2] = [
+      ar2[5][8],
+      ar2[2][1],
+      ar2[2][2],
+      ar2[5][5],
+      ar2[2][4],
+      ar2[2][5],
+      ar2[5][2],
+      ar2[2][7],
+      ar2[2][8]
+    ];
+    temp[3] = [
+      ar2[3][0],
+      ar2[3][1],
+      ar2[4][2],
+      ar2[3][3],
+      ar2[3][4],
+      ar2[4][5],
+      ar2[3][6],
+      ar2[3][7],
+      ar2[4][8]
+    ];
+    temp[4] = [
+      ar2[4][0],
+      ar2[4][1],
+      ar2[2][6],
+      ar2[4][3],
+      ar2[4][4],
+      ar2[2][3],
+      ar2[4][6],
+      ar2[4][7],
+      ar2[2][0]
+    ];
+    temp[5] = [
+      ar2[5][0],
+      ar2[5][1],
+      ar2[3][2],
+      ar2[5][3],
+      ar2[5][4],
+      ar2[3][5],
+      ar2[5][6],
+      ar2[5][7],
+      ar2[3][8]
+    ];
+    return temp;
+  };
+  var U = function U2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[2][0],
+      ar2[2][1],
+      ar2[2][2],
+      ar2[0][3],
+      ar2[0][4],
+      ar2[0][5],
+      ar2[0][6],
+      ar2[0][7],
+      ar2[0][8]
+    ];
+    temp[1] = [
+      ar2[3][0],
+      ar2[3][1],
+      ar2[3][2],
+      ar2[1][3],
+      ar2[1][4],
+      ar2[1][5],
+      ar2[1][6],
+      ar2[1][7],
+      ar2[1][8]
+    ];
+    temp[2] = [
+      ar2[1][0],
+      ar2[1][1],
+      ar2[1][2],
+      ar2[2][3],
+      ar2[2][4],
+      ar2[2][5],
+      ar2[2][6],
+      ar2[2][7],
+      ar2[2][8]
+    ];
+    temp[3] = [
+      ar2[0][0],
+      ar2[0][1],
+      ar2[0][2],
+      ar2[3][3],
+      ar2[3][4],
+      ar2[3][5],
+      ar2[3][6],
+      ar2[3][7],
+      ar2[3][8]
+    ];
+    temp[4] = [
+      ar2[4][6],
+      ar2[4][3],
+      ar2[4][0],
+      ar2[4][7],
+      ar2[4][4],
+      ar2[4][1],
+      ar2[4][8],
+      ar2[4][5],
+      ar2[4][2]
+    ];
+    temp[5] = ar2[5];
+    return temp;
+  };
+  var Uz = function Uz2(ar2) {
+    let temp = [];
+    temp[0] = [
+      ar2[3][0],
+      ar2[3][1],
+      ar2[3][2],
+      ar2[0][3],
+      ar2[0][4],
+      ar2[0][5],
+      ar2[0][6],
+      ar2[0][7],
+      ar2[0][8]
+    ];
+    temp[1] = [
+      ar2[2][0],
+      ar2[2][1],
+      ar2[2][2],
+      ar2[1][3],
+      ar2[1][4],
+      ar2[1][5],
+      ar2[1][6],
+      ar2[1][7],
+      ar2[1][8]
+    ];
+    temp[2] = [
+      ar2[0][0],
+      ar2[0][1],
+      ar2[0][2],
+      ar2[2][3],
+      ar2[2][4],
+      ar2[2][5],
+      ar2[2][6],
+      ar2[2][7],
+      ar2[2][8]
+    ];
+    temp[3] = [
+      ar2[1][0],
+      ar2[1][1],
+      ar2[1][2],
+      ar2[3][3],
+      ar2[3][4],
+      ar2[3][5],
+      ar2[3][6],
+      ar2[3][7],
+      ar2[3][8]
+    ];
+    temp[4] = [
+      ar2[4][2],
+      ar2[4][5],
+      ar2[4][8],
+      ar2[4][1],
+      ar2[4][4],
+      ar2[4][7],
+      ar2[4][0],
+      ar2[4][3],
+      ar2[4][6]
+    ];
+    temp[5] = ar2[5];
+    return temp;
+  };
+  var cu;
+  cu = "cube1";
+  var moves = [
+    Cx,
+    Cz,
+    U,
+    D,
+    F,
+    B,
+    Cx,
+    Cy,
+    U,
+    D,
+    B,
+    R,
+    L,
+    Cx,
+    D,
+    Cz,
+    B,
+    U,
+    R,
+    L,
+    F,
+    Cy,
+    Cz,
+    Cx,
+    Cy,
+    L,
+    F,
+    B,
+    Yro,
+    Xro,
+    Zro,
+    U,
+    D,
+    R,
+    L,
+    F,
+    Cx,
+    D,
+    Cy,
+    U
+  ];
+  console.log("moves.length is", moves.length);
+  var dom = `<div class="face front">
+  <div class="grid">
+    <button style="background-color: {m(dF3x)[3][0]}" on:click={() => {m = m(Fz)}}/>
+    <button style="background-color: {m(dF3x)[3][1]}" on:click={() => {m = m(Cx)}}/>
+     <button style="background-color: {m(dF3x)[3][2]}" on:click={() => {m = m(F)}}/>
+     <button style="background-color: {m(dF3x)[3][3]}" on:click={() => {m = m(Cyr)}}/>
+     <button style="background-color: {m(dF3x)[3][4]}" on:click={() => {m = m(Zro)}}/>
+     <button style="background-color: {m(dF3x)[3][5]}" on:click={() => {m = m(Cy)}}/>
+     <button style="background-color: {m(dF3x)[3][6]}" on:click={() => {m = m(Fz)}}/>
+     <button style="background-color: {m(dF3x)[3][7]}" on:click={() => {m = m(Cxr)}}/>
+     <button style="background-color: {m(dF3x)[3][8]}" on:click={() => {m = m(F)}}/>
+  </div>
+</div>
+
+<div class="face right">
+  <div class="grid">
+    <button style="background-color: {m(dF3x)[0][0]}" on:click={() => {m = m(Rz)}}/>
+    <button style="background-color: {m(dF3x)[0][1]}" on:click={() => {m = m(Cz)}}/>
+    <button style="background-color: {m(dF3x)[0][2]}" on:click={() => {m = m(R)}}/>
+    <button style="background-color: {m(dF3x)[0][3]}" on:click={() => {m = m(Cyr)}}/>
+    <button style="background-color: {m(dF3x)[0][4]}" on:click={() => {m = m(Xro)}}/>
+    <button style="background-color: {m(dF3x)[0][5]}" on:click={() => {m = m(Cy)}}/>
+    <button style="background-color: {m(dF3x)[0][6]}" on:click={() => {m = m(Rz)}}/>
+    <button style="background-color: {m(dF3x)[0][7]}" on:click={() => {m = m(Czr)}}/>
+    <button style="background-color: {m(dF3x)[0][8]}" on:click={() => {m = m(R)}}/>
+  </div>
+</div>
+
+<div class="face top">
+  <div class="grid">
+    <button style="background-color: {m(dF3x)[4][0]}" on:click={() => {m = m(Uz)}}/>
+    <button style="background-color: {m(dF3x)[4][1]}" on:click={() => {m = m(Cx)}}/>
+    <button style="background-color: {m(dF3x)[4][2]}" on:click={() => {m = m(U)}}/>
+    <button style="background-color: {m(dF3x)[4][3]}" on:click={() => {m = m(Cz)}}/>
+    <button style="background-color: {m(dF3x)[4][4]}" on:click={() => {m = m(Yro)}}/>
+    <button style="background-color: {m(dF3x)[4][5]}" on:click={() => {m = m(Czr)}}/>
+    <button style="background-color: {m(dF3x)[4][6]}" on:click={() => {m = m(Uz)}}/>
+    <button style="background-color: {m(dF3x)[4][7]}" on:click={() => {m = m(Cxr)}}/>
+    <button style="background-color: {m(dF3x)[4][8]}" on:click={() => {m = m(U)}}/>
+  </div>        
+</div>`;
+  var elapsedTime = 0;
+  var et2Code = `function et2() {
+    var start = new Date();
+    let k;
+    for (k = 0; k < 10000; k++) {
+      shu();
+    }
+    elapsedTime = new Date() - start;
+    return elapsedTime;
+  }`;
+  Start();
+  Start();
+  const mve = /* @__PURE__ */ new Map();
+  mve.set("R", Rz);
+  mve.set("L", Lz);
+  mve.set("U", Uz);
+  mve.set("D", Dz);
+  mve.set("F", F);
+  mve.set("Xro", Xror);
+  mve.set("Yro", Yror);
+  mve.set("Zro", Zror);
+  const obCode = `const ob = {'R': Rz, 'L': Lz, 'U': Uz, 'D': Dz, 'F': Fz, 'B': Bz, 'Cx': Cxr,
+   'Cy': Cyr, 'Cz': Czr, 'Xro': Xror, 'Yro': Yror, 'Zro': Zror, 'Rz': R,
+   'Lz': L, 'Uz': U, 'Dz': D, 'Fz': F, 'Bz': B, 'Cxr': Cx, 'Cyr': Cy, 'Czr': Cz,
+   'Xror': Xro, 'Yror': Yro, 'Zror': Zro};`;
+  R.key = "R";
+  L.key = "L";
+  U.key = "U";
+  D.key = "D";
+  F.key = "F";
+  B.key = "B";
+  Cx.key = "Cx";
+  Cy.key = "Cy";
+  Cz.key = "Cz";
+  Xro.key = "Xro";
+  Yro.key = "Yro";
+  Zro.key = "Zro";
+  Rz.key = "Rz";
+  Lz.key = "Lz";
+  Uz.key = "Uz";
+  Dz.key = "Dz";
+  Fz.key = "Fz";
+  Cxr.key = "Cxr";
+  Xror.key = "Xror";
+  Yror.key = "Yror";
+  Zror.key = "Zror";
+  const reverseCode = `function reverse () { 
+    m = m(ob[m(dF3ar).pop()]); // Pops the key and runs m on value.   
+    m(dF3ar).pop(); // Discard the function that m just pushed onto ar.
+  }`;
+  var buttonCode = `<button style="background-color: {m(dF3x)[3][3]}" 
+    on:click={() => {m = m(Cyr)}} />`;
+  var F7 = "";
+  var king = {};
+  king.L1s = () => m = m(F)(R)(U)(Rz)(Uz)(R)(U)(Rz)(Uz)(Fz);
+  king.L2s = () => m = m(Fz)(Lz)(Uz)(L)(U)(Lz)(Uz)(L)(U)(F);
+  king.L3s = () => m = m(R)(Cxr)(Uz)(R)(Cxr)(R)(Cxr)(U)(R)(Cxr)(R)(Cxr)(U)(R)(Cxr)(R)(Cxr)(Uz)(R)(Cxr);
+  king.L4s = () => m = m(Rz)(Cx)(U)(R)(Cxr)(R)(Cxr)(Uz)(R)(Cxr)(R)(Cxr)(Uz)(R)(Cxr)(R)(Cxr)(U)(Rz)(Cx);
+  king.L5s = () => m = m(Rz)(Cx)(Uz)(R)(Uz)(Rz)(U)(R)(Uz)(Rz)(U)(U)(R)(Cxr);
+  king.L6s = () => m = m(R)(Cxr)(U)(Rz)(U)(R)(Uz)(Rz)(U)(R)(U)(U)(Rz)(Cx);
+  king.bar1s = () => m = m(F)(U)(R)(Uz)(Rz)(U)(R)(Uz)(Rz)(Fz);
+  king.bar2s = () => m = m(Fz)(Uz)(Lz)(U)(L)(Uz)(Lz)(U)(L)(F);
+  king.bar3s = () => m = m(Rz)(Uz)(R)(Uz)(Rz)(U)(yz)(Rz)(U)(R)(B);
+  king.L6 = [
+    ["yellow", "green", "yellow", "blue", "blue", "blue", "blue", "blue", "blue"],
+    [
+      "yellow",
+      "yellow",
+      "yellow",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green"
+    ],
+    ["blue", "red", "green", "red", "red", "red", "red", "red", "red"],
+    [
+      "green",
+      "yellow",
+      "blue",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange"
+    ],
+    [
+      "red",
+      "yellow",
+      "red",
+      "orange",
+      "yellow",
+      "yellow",
+      "orange",
+      "blue",
+      "orange"
+    ],
+    [
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white"
+    ]
+  ];
+  king.L5 = [
+    ["yellow", "green", "yellow", "blue", "blue", "blue", "blue", "blue", "blue"],
+    [
+      "yellow",
+      "yellow",
+      "yellow",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green"
+    ],
+    ["blue", "yellow", "green", "red", "red", "red", "red", "red", "red"],
+    [
+      "green",
+      "orange",
+      "blue",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange"
+    ],
+    [
+      "red",
+      "blue",
+      "red",
+      "red",
+      "yellow",
+      "yellow",
+      "orange",
+      "yellow",
+      "orange"
+    ],
+    [
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white"
+    ]
+  ];
+  king.L4 = [
+    ["red", "blue", "orange", "blue", "blue", "blue", "blue", "blue", "blue"],
+    [
+      "yellow",
+      "yellow",
+      "yellow",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green"
+    ],
+    ["yellow", "yellow", "blue", "red", "red", "red", "red", "red", "red"],
+    [
+      "blue",
+      "red",
+      "yellow",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange"
+    ],
+    [
+      "orange",
+      "green",
+      "green",
+      "orange",
+      "yellow",
+      "yellow",
+      "red",
+      "yellow",
+      "green"
+    ],
+    [
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white"
+    ]
+  ];
+  king.L3 = [
+    ["red", "blue", "orange", "blue", "blue", "blue", "blue", "blue", "blue"],
+    [
+      "yellow",
+      "yellow",
+      "yellow",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green"
+    ],
+    ["yellow", "orange", "blue", "red", "red", "red", "red", "red", "red"],
+    [
+      "blue",
+      "yellow",
+      "yellow",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange"
+    ],
+    [
+      "orange",
+      "yellow",
+      "green",
+      "red",
+      "yellow",
+      "yellow",
+      "red",
+      "green",
+      "green"
+    ],
+    [
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white"
+    ]
+  ];
+  king.bar2 = [
+    ["orange", "blue", "red", "blue", "blue", "blue", "blue", "blue", "blue"],
+    [
+      "yellow",
+      "red",
+      "yellow",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green"
+    ],
+    ["yellow", "yellow", "green", "red", "red", "red", "red", "red", "red"],
+    [
+      "green",
+      "yellow",
+      "yellow",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange"
+    ],
+    [
+      "red",
+      "orange",
+      "blue",
+      "yellow",
+      "yellow",
+      "yellow",
+      "orange",
+      "green",
+      "blue"
+    ],
+    [
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white"
+    ]
+  ];
+  king.bar1 = [
+    ["yellow", "red", "yellow", "blue", "blue", "blue", "blue", "blue", "blue"],
+    [
+      "red",
+      "green",
+      "orange",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green"
+    ],
+    ["blue", "yellow", "yellow", "red", "red", "red", "red", "red", "red"],
+    [
+      "yellow",
+      "yellow",
+      "blue",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange"
+    ],
+    [
+      "green",
+      "orange",
+      "red",
+      "yellow",
+      "yellow",
+      "yellow",
+      "green",
+      "blue",
+      "orange"
+    ],
+    [
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white"
+    ]
+  ];
+  king.L1 = [
+    ["orange", "yellow", "red", "blue", "blue", "blue", "blue", "blue", "blue"],
+    [
+      "yellow",
+      "green",
+      "yellow",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green"
+    ],
+    ["yellow", "blue", "green", "red", "red", "red", "red", "red", "red"],
+    [
+      "green",
+      "yellow",
+      "yellow",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange"
+    ],
+    [
+      "red",
+      "yellow",
+      "blue",
+      "yellow",
+      "yellow",
+      "orange",
+      "orange",
+      "red",
+      "blue"
+    ],
+    [
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white"
+    ]
+  ];
+  king.L2 = [
+    ["yellow", "blue", "yellow", "blue", "blue", "blue", "blue", "blue", "blue"],
+    [
+      "red",
+      "yellow",
+      "orange",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "green"
+    ],
+    ["blue", "green", "yellow", "red", "red", "red", "red", "red", "red"],
+    [
+      "yellow",
+      "yellow",
+      "blue",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange",
+      "orange"
+    ],
+    [
+      "green",
+      "yellow",
+      "red",
+      "orange",
+      "yellow",
+      "yellow",
+      "green",
+      "red",
+      "orange"
+    ],
+    [
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white",
+      "white"
+    ]
+  ];
+  var arr = [1, 2, 3, 4, 5];
+  var ar = arr.length;
+  king["duck".concat(JSON.stringify(ar))] = 7;
+  log("duck2 is", king.duck2);
   $$result.css.add(css);
   Sally = m(dF3ar).length;
-  return ` <section class="columns svelte-8fc81s"><div style="width: 40%" class="svelte-8fc81s"><button class="svelte-8fc81s" data-svelte-h="svelte-1aqw4ro">Start</button> <button class="svelte-8fc81s" data-svelte-h="svelte-zsy8x0">Scramble</button> <button class="svelte-8fc81s" data-svelte-h="svelte-g27acx">Reverse</button> <br class="svelte-8fc81s">  <span style="font-size:25px" class="svelte-8fc81s" data-svelte-h="svelte-vofde9">     Move list length:</span> <span style="color:purple; font-weight:bold; font-size:30px" class="svelte-8fc81s">${escape(Sally)}</span> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-1n3upfk">X rotate</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1moob2a">Y rotate</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1nd6hvs">Z rotate</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-1j44lgr">X back</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1sl5i7p">Y back</button> <button class="svelte-8fc81s" data-svelte-h="svelte-e6dk0s">Z back</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-nssuic">U</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1q8ezwr">D</button> <button class="svelte-8fc81s" data-svelte-h="svelte-pchhnq">R</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1pcytzf">L</button> <button class="svelte-8fc81s" data-svelte-h="svelte-bn1b">F</button> <button class="svelte-8fc81s" data-svelte-h="svelte-fbh98f">B</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1ve4o45">M</button> <button class="svelte-8fc81s" data-svelte-h="svelte-ns8n9h">E</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1rz0q6g">S</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-2myss3">U&#39;</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1lcr6mr">D&#39;</button> <button class="svelte-8fc81s" data-svelte-h="svelte-ooki09">R&#39;</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1dqdtfk">L&#39;</button> <button class="svelte-8fc81s" data-svelte-h="svelte-4zcco4">F&#39;</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1iqx7sr">B&#39;</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1gap8nu">M&#39;</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1i7ih01">E&#39;</button> <button class="svelte-8fc81s" data-svelte-h="svelte-vq7h2n">S&#39;</button>  <br class="svelte-8fc81s"> <p class="svelte-8fc81s" data-svelte-h="svelte-1wc68am">The simple m-M(x) closure showcased in <a href="./" class="svelte-8fc81s">Home</a> is sufficient to operate the cube, but without the &quot;reverse&quot; feature. For that, an array and a way to fetch it is added to the definition.</p> <pre class="svelte-8fc81s">${escape(Mcode)}</pre> <p class="svelte-8fc81s" data-svelte-h="svelte-1lx2kxr">Prior states of the cube don&#39;t need to be preserved. The array in the m-M(x) closure, which is central to reversing prior rotations, holds only references to the functions responsible for the cube&#39;s current state. The &quot;reverse&quot; function discards the most-recently called function, runs that function three more times to return the cube to its previous configuration, and then removes itself from the array. The length of the array is then one element shorter than it was before reverse() was called. Here&#39;s the definition:</p> <pre class="svelte-8fc81s">${escape(reverse)}</pre>;
-  <p class="svelte-8fc81s" data-svelte-h="svelte-7z1x1n">The main cube and its 54 constituent HTML divs never move. In the m-M(x) closure, &quot;x&quot; is an array of six nine-member arrays of references to the strings &quot;red,&quot; &quot;orange,&quot; &quot;blue,&quot; &quot;green,&quot;, &quot;yellow,&quot; and &quot;white.&quot; These strings specify div classes with corresponding background colors in the DOM.</p> <pre class="svelte-8fc81s">${escape(orangeSide)}</pre> <p class="svelte-8fc81s">Where: ${escape(classCode)} for a = 1,2,...5 and b = 1,2,...8 are defined as:
-</p><pre class="svelte-8fc81s">${escape(classCode2)}</pre> <p class="svelte-8fc81s" data-svelte-h="svelte-hxc0rm">The keyboard and button controls are, by default, oblivious to changes in the cube&#39;s orientation. Pressing the &quot;R&quot; key rotates whichever face happens to be on the right side of the cube 1/4 turn (90 degrees) clockwise. Simulated Rubik&#39;s cubes with controls that, for example, always turn the side with a blue center whenever the &quot;R&quot; key is pressed are much harder to solve.</p> <h1 class="svelte-8fc81s" data-svelte-h="svelte-1ki8418">Increasing Algorithm Repertoires</h1> <p class="svelte-8fc81s">Click <button class="svelte-8fc81s" data-svelte-h="svelte-nguyz0">Reverse Niklas &#39;</button>
-      (L&#39; U R U&#39; L U R) &quot;Reverse Niklas&quot; and observe that (1) the &quot;fish&quot; points
-      toward the lower left and (2) the forward-facing lower-right sticker is
-      yellow. Elementary tutorials say this configuration calls for the sune
-      algorithm; and, indeed, sune turns the entire upper face yellow. Try
-      it. <button class="svelte-8fc81s" data-svelte-h="svelte-1x25ot8">Sune</button>. The cube has a way to go before being solved.</p> <p class="svelte-8fc81s">Now click <button class="svelte-8fc81s" data-svelte-h="svelte-1jnjc72">Start</button> and
-      <button class="svelte-8fc81s" data-svelte-h="svelte-nguyz0">Reverse Niklas &#39;</button>
-      (L&#39; U R U&#39; L U R) again. Note that the upper corners have opposite colors,
-      red and orange in this case (green and blue, and white and yellow are also considered
-      opposite). The lower-right side sticker and the top left upward-facing
-      sticker match (both are red). These observations indicate that the cube
-      can be quickly solved. All you need to do is click <button class="svelte-8fc81s" data-svelte-h="svelte-2myss3">U&#39;</button>
-      and <button class="svelte-8fc81s" data-svelte-h="svelte-yrndgf">Revolve</button>
-      (U R U&#39; L&#39; U R&#39; U&#39; L), or click
-      <button class="svelte-8fc81s" data-svelte-h="svelte-te1eh8">Niklas</button> (R U&#39; L&#39; U R&#39;
-      U&#39; L).</p> <h1 class="svelte-8fc81s" data-svelte-h="svelte-13jp892">The m-M(x) Closure (JS-Monad)</h1> <p style="font-style: italic" class="svelte-8fc81s" data-svelte-h="svelte-4u1fcd">In the British tradition, commas and periods will go outside of quotation marks</p> <pre class="svelte-8fc81s">${escape(`const m = function M(x) {
-  return function go(func) {
-    if (func === dF3x) return x;
-    else x = func(x);
-    return go;
-  };
-} where dF3x = () => {}, and
-    unless a domain for M is specified
-    x can be any JavaScript value.`)}</pre> <p class="svelte-8fc81s" data-svelte-h="svelte-141uaxd">This webpage features the closure that results from the assignment &quot;m = M(x)&quot;, where x is an array of six nine-member arrays. &quot;x&quot; in the m-M(x) closures will always be a six-member array of nine-member arrays. Only pure functions that take arrays of six nine-member arrays and return arrays of six nine-member arrays will be used. As is apparent from the definition of &quot;M&quot;, &quot;m&quot; is a copy of &quot;go&quot;. efficiently, the composition of functions arrays of six nine-member arrays. There are no side effects. The functions are pure, accessing only their arguments (arrays of six nine-member arrays) and doing nothing but return arrays of six nine-member arrays. As is apparent, the domain of M is arrays of six nine-member arrays. The only functions used in this presentation are functions that transform the array in the m-M(x) closure in ways corresponding to moves on Rubik&#39;s cubes. Functionality to lift types into other types can be added to JS-Monads as needed -- and omitted where, as here, it isn&#39;t needed.</p> <p class="svelte-8fc81s" data-svelte-h="svelte-3st504">As mentioned above, the simulated Rubik&#39;s cube is represented by &quot;x&quot; in a m-M(x) closure, where m and x are defined by the following code:</p> <pre class="svelte-8fc81s">${escape(classCode)}</pre> <p class="svelte-8fc81s" data-svelte-h="svelte-169ywas">The correspondence between the array containing the six nine-member arrays of divs held in the m-M(x) closure -- available as m(dF3x) -- and the images of a Rubik&#39;s cube displayed in the DOM, is apparent in the code below.</p> <pre class="svelte-8fc81s">${escape(dom)}</pre></div> <br class="svelte-8fc81s"><br class="svelte-8fc81s"><br class="svelte-8fc81s"> <div style="width: 30%" class="svelte-8fc81s" data-svelte-h="svelte-18zp9kk"><br class="svelte-8fc81s"><br class="svelte-8fc81s"></div> <div style="width: 35%;" class="svelte-8fc81s"> <div style="margin-left: 1px" class="svelte-8fc81s"><span style="display: block; color:blue; font-weight:bold; text-align: center; font-size: 24px" class="svelte-8fc81s" data-svelte-h="svelte-914k29">Using the Keypad</span> <span style="color: blue; font-weight: bold" class="svelte-8fc81s" data-svelte-h="svelte-1s4g9ls">Pressing the u, d, r, l, f, b,  m, e, s, x, y, and z keys has the same effect as clicking the corresponding (capitalized) buttons. Holding down the &quot;Shift&quot; key (or activating &quot;CapsLock&quot;) while pressing the keys causes the reverse effect. Pressing v, w, and q is equivalent to clicking on Start, Scramble, and Reverse, respectively.</span> <br class="svelte-8fc81s"><br class="svelte-8fc81s"> <span style="display: block; color:blue; font-weight:bold; text-align: center; font-size: 24px" class="svelte-8fc81s" data-svelte-h="svelte-hfzgzt">Using the Alternate View Cube</span> <span style="color: blue; font-weight: bold" class="svelte-8fc81s" data-svelte-h="svelte-11lep50">The lower cube image in the center of this page gives eight distinct views of the Rubik&#39;s cube image above it. Alternate clicking on &quot;Rotate A&quot; and &quot;Rotate B&quot; tilts the view back and forth. Each repeat click rotates the view 90 degrees.</span><br class="svelte-8fc81s"><br class="svelte-8fc81s"> <span style="display: block; color:blue; font-weight:bold; text-align: center; font-size: 26px" class="svelte-8fc81s" data-svelte-h="svelte-10rmzfo">Some Algorithm Shortcuts</span><p class="svelte-8fc81s"></p> <button class="svelte-8fc81s" data-svelte-h="svelte-108yb3w">PLL Corners: R&#39; F R&#39; B2 R F&#39; R&#39; B2 R2</button> <button class="svelte-8fc81s" data-svelte-h="svelte-16mrlal">Triangle Clockwise: M2 U&#39; M U2 M&#39; U&#39; M2</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1ympwjf">Triangle CounterClockwise: M2 U M U2 M&#39; U M2</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1jweezu">Edges Opposite: M M Uz M M U U M M Uz M M</button> <button class="svelte-8fc81s" data-svelte-h="svelte-37evo0">Edges Adjacent: M M U M M U M U U M M U U M U U</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-xuw1nc">doubleFish R&#39; F R B&#39; R&#39; F&#39; R B</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-zy6rkl">Sune: R U R&#39; U R U2 R&#39;</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-1t25e7z">Antisune: R U2 R&#39; U&#39; R U&#39; R&#39;</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-131h37e">Sexy: R U R&#39; U&#39;</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-vlyvsh">Reverse Sexy: U R U&#39; R&#39;</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-1ricpm9">Revolve: U R U&#39; L&#39; U R&#39; U&#39; L</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-erya4w">Reverse Revolve: L&#39; U R U&#39; L U R&#39; U&#39;</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-1f9p2o0">Sledgehammer: R&#39; F R F&#39;</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-1iy72hs">oppositeHeadlights1: R U R&#39; U R U&#39; R&#39; U R U U R&#39;</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1ioswlb">oppositeHeadlights2: R U U R&#39; U&#39; R U R&#39; U&#39; R U U&#39; R&#39;</button> <button class="svelte-8fc81s" data-svelte-h="svelte-549j7t">oppositeHeadlights3: F R U R&#39; U&#39; R U R&#39; U&#39; R U R&#39; U&#39; F&#39;</button> <button class="svelte-8fc81s" data-svelte-h="svelte-1sngs1p">Niklas: R U&#39; L&#39; U R&#39; U&#39; L</button> <br class="svelte-8fc81s"> <button class="svelte-8fc81s" data-svelte-h="svelte-173hecp">Reverse Niklas: L&#39; U R U&#39; L U R&#39;</button> <br class="svelte-8fc81s"> <h1 class="svelte-8fc81s" data-svelte-h="svelte-1y6dqlk">Discussion</h1> <p class="svelte-8fc81s" data-svelte-h="svelte-ceyu2r">This webpage is meant to do two things: (1) provide a user-friendly Rubik&#39;s cube simulation and (2) show that even a basic JS-Monad can be useful in developing complex, bug-resistant web applications. Very simple additions can add functionality, such as reverseable caches of prior configurations, queues of yet-to-be-resolved promises, and more. Here&#39;s a link to a more detailed discussion of m-M(x) closures (a/k/a JS-Monads). Here&#39;s the definition of its simplest manifestation:</p> <pre class="svelte-8fc81s">${escape(classCode)}</pre> <p class="svelte-8fc81s" data-svelte-h="svelte-145qqbj">We&#39;ll take a closer look at the JS-Monad soon. First, some information about the cube images shown in the middle column.</p> <p class="svelte-8fc81s" data-svelte-h="svelte-e9ux3o">Rotation of the whole cube, its middle sections, and its faces is accomplished by JavaScript functions that rearrange the classes -- more specifically, the css background-colors -- which are assigned in various configurations to each of 54 divs in the DOM. The array of six nine-element arrays maintained in the m-M(x) closure, are references to the strings &quot;orange&quot;, &quot;blue&quot;, &quot;red&quot;, &quot;green&quot;, &quot;yellow&quot;, or &quot;white&quot;. There are 9 divs with each of these background colors.
-  The six strings are the names of CSS classes and are also the colors of those class&#39;s &quot;background-colors&quot; attributes.</p> <p class="svelte-8fc81s">Press the &quot;v&quot; key or click <button class="svelte-8fc81s" data-svelte-h="svelte-1jnjc72">Start</button> to see each face of the cube with 9 identically colored divs. Click on the <button class="svelte-8fc81s" data-svelte-h="svelte-b8m5uu">X rotate</button>, <button class="svelte-8fc81s" data-svelte-h="svelte-11fxfwk">Y rotate</button>, and <button class="svelte-8fc81s" data-svelte-h="svelte-1fxteei">Z rotate</button> buttons to see the main cube from various angles, or click on the <button class="svelte-8fc81s" data-svelte-h="svelte-tlb7hw">Rotate A</button> and <button class="svelte-8fc81s" data-svelte-h="svelte-2f4srj">Rotate B</button> buttons to turn the alternate-view cube. The alternate-view cube (center bottom) can be returned to its starting orientation only be rotations or re-loading this page. <button class="svelte-8fc81s" data-svelte-h="svelte-1jnjc72">Start</button> will give the sides of the alternate-view cube uniform colors (like the main cube), but its orientation relateve to the main cube doesn&#39;t change. This is by design. Click
-  <button class="svelte-8fc81s" data-svelte-h="svelte-tlb7hw">Rotate A</button>, then <button class="svelte-8fc81s" data-svelte-h="svelte-kmdmj9">Scramble</button>, and finally, <button class="svelte-8fc81s" data-svelte-h="svelte-1jnjc72">Start</button>.</p> <p class="svelte-8fc81s">Functions that update the cube&#39;s configuration are provided to &quot;m&quot; as arguments. For example, clicking <button class="svelte-8fc81s" data-svelte-h="svelte-pchhnq">R</button>, or pressing &quot;r&quot; on the key pad triggers m(R), where R is defined as follows:</p> <pre class="svelte-8fc81s">${escape(Rcode)}</pre> <p class="svelte-8fc81s">Click &quot;<button class="svelte-8fc81s" data-svelte-h="svelte-1jnjc72">Start</button>&quot; or press the &quot;v&quot; key, and you will see that each of the six faces of the cube oppositeHeadlights3 all nine of one of the six colors. When you press &quot;w&quot; or click &quot;<button class="svelte-8fc81s" data-svelte-h="svelte-kmdmj9">Scramble</button>&quot;, 62 sudo random moves are performed. After that, there are still nine of each of the six colors, but their locations are scattered around the cube. Click the &quot;<button class="svelte-8fc81s" data-svelte-h="svelte-1jnjc72">Start</button>&quot; button or press the &quot;v&quot; key to put them back.</p> <p class="svelte-8fc81s" data-svelte-h="svelte-1ggu9gv">Here&#39;s how the &quot;orange&quot; CSS class is defined:</p> <pre class="svelte-8fc81s">${escape(orange)}</pre> <p class="svelte-8fc81s" data-svelte-h="svelte-1phwped">User actions cause m(func) to run for some array-manipulating function &quot;func.&quot; m(func) causes func(x) to execute, updating the array in the m-M(x) closure. The code shown in the left column distributes the updated class names over the 54 divs corresponding to the cube representation displayed at the top of the middle column .</p> <h1 class="svelte-8fc81s" data-svelte-h="svelte-wr35n2">Encapsulation From User Action To Cube Update In the Browser</h1> <p class="svelte-8fc81s">Clicking on <button class="svelte-8fc81s" data-svelte-h="svelte-nssuic">U</button>calls Ufunc, which then calls m(U).</p> <pre class="svelte-8fc81s">${escape(UfuncCode)}</pre> <p class="svelte-8fc81s">Pressing &quot;u&quot; calls HandleKey(e), where &quot;e&quot; is the keypress event. e.keyCode for &quot;u&quot; is 117, so HandleKey(e) calls m(U) directly, rather than going through Ufunc to get there. That is because &quot;m = m&quot; comes after the &quot;if&quot; statements in keyFunc, but &quot;m = m&quot; doesn&#39;t occur until Ufunc() is called after clicking <button class="svelte-8fc81s" data-svelte-h="svelte-nssuic">U</button>. The easy way to cause reactive DOM updates is to assign the code being updated, even if only to itselrf. This is the definition of U:</p> <pre class="svelte-8fc81s">${escape(Ucode)}</pre> <pre class="svelte-8fc81s">${escape(handleKeyCode)}</pre> <p class="svelte-8fc81s">Pressing &quot;u&quot; three times after Clicking <button class="svelte-8fc81s" data-svelte-h="svelte-nssuic">U</button> returns the cube to its starting configuration. You can also restore the cube to its solved configuration by pressing &quot;v&quot; or clicking   <button class="svelte-8fc81s" data-svelte-h="svelte-1jnjc72">Start</button></p> <p class="svelte-8fc81s" data-svelte-h="svelte-e2wwuu">Finally, to see how user clicks and key presses change the browser display, look at the left column. Each of the six colors is the name of a class in the &quot;style&quot; section of this <a href="https://kit.svelte.dev/" class="svelte-8fc81s">SvelteKit</a> webpage.</p> <h1 class="svelte-8fc81s" data-svelte-h="svelte-1ru0xbk">The Round Trip Was Encapsulated</h1> <span class="svelte-8fc81s" data-svelte-h="svelte-11k2ik1">In the DOM, clicking on &quot;U&quot; calls &quot;Ufunc()&quot; which calls m(U). Pressing the &quot;u&quot; key calls &quot;HandleKey(e)&quot; where e.keyCode === 117 likewise results in a call to m(U). m(U) triggers the re-configuration of the simulated Rubik&#39;s cube code in the m-M(x) closure. This re-configuration automatically updates the DOM (see the &quot;class=&quot; code in the left column) resulting in a change in the images of the simulated Rubik&#39;s cube in the browser.</span> <br class="svelte-8fc81s"><br class="svelte-8fc81s"> <span class="svelte-8fc81s">The browser update described above is the result of reassigning the six classes, red, orange, green, blue, yellow, and white, to the 54 stationary divs whose background colors are seen in browsers, and rearranged by user clicks and key presses. The state of the array of six nine-member arrays remains in the m-M(x) closure in the &quot;script&quot; or &quot;style&quot; sections of this <a href="https://kit.svelte.dev" class="svelte-8fc81s" data-svelte-h="svelte-3dmc7m">SvelteKit</a> page&#39;s code. It is only in the DOM code, the <span style="color: purple" class="svelte-8fc81s">${escape(classCode)}</span> statements (left column), that the contents of the m-M(x) closure are used, updating the browser images of the simulated Rubik&#39;s cube.</span></div></div></section> <div id="steady" class="svelte-8fc81s"><div class="container svelte-8fc81s"><div class="${escape(null_to_empty(cu), true) + " svelte-8fc81s"}"><div class="face front svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[3][0]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][8]), true) + " svelte-8fc81s"}"></div></div></div> <div class="face back svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[2][8]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][0]), true) + " svelte-8fc81s"}"></div></div></div> <div class="face right svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[0][0]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][8]), true) + " svelte-8fc81s"}"></div></div></div> <div class="face left svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[1][0]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][8]), true) + " svelte-8fc81s"}"></div></div></div> <div class="face top svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[4][0]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][8]), true) + " svelte-8fc81s"}"></div></div></div> <div class="face bottom svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[5][0]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][8]), true) + " svelte-8fc81s"}"></div></div></div></div></div></div> <div id="steady2" class="svelte-8fc81s"><div style="text-align:center; margin-bottom:14px" class="svelte-8fc81s"><button style="font-size: 17px" class="svelte-8fc81s" data-svelte-h="svelte-1kib0yn">Rotate A</button> <button style="font-size: 17px" class="svelte-8fc81s" data-svelte-h="svelte-1o74so0">Rotate B</button></div> <br class="svelte-8fc81s"><br class="svelte-8fc81s"> <div class="container svelte-8fc81s"><div${add_attribute("id", cu9, 0)} class="svelte-8fc81s"><div class="face front svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[3][0]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[3][8]), true) + " svelte-8fc81s"}"></div></div></div> <div class="face back svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[2][8]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[2][0]), true) + " svelte-8fc81s"}"></div></div></div> <div class="face right svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[0][0]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[0][8]), true) + " svelte-8fc81s"}"></div></div></div> <div class="face left svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[1][0]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[1][8]), true) + " svelte-8fc81s"}"></div></div></div> <div class="face top svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[4][0]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[4][8]), true) + " svelte-8fc81s"}"></div></div></div> <div class="face bottom svelte-8fc81s"><div class="grid svelte-8fc81s"><div class="${escape(null_to_empty(m(dF3x)[5][0]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][1]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][2]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][3]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][4]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][5]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][6]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][7]), true) + " svelte-8fc81s"}"></div> <div class="${escape(null_to_empty(m(dF3x)[5][8]), true) + " svelte-8fc81s"}"></div></div></div></div></div></div> ${slots.default ? slots.default({}) : ``}`;
+  return ` <section class="columns svelte-1iswict"><div style="width: 70%" class="svelte-1iswict"><h1 class="svelte-1iswict" data-svelte-h="svelte-1wgqsc0">A Virtual Rubik&#39;s Cube</h1> <pre class="svelte-1iswict">${escape(test7)}</pre> <p class="svelte-1iswict" data-svelte-h="svelte-zhq07j">The default empty array &quot;ar&quot; was added to the <a href="./" class="svelte-1iswict">basic m-M(x) closure</a> to work with the function reverse(). Modifying &quot;M&quot; wasn&#39;t necessary,
+            but the elegant simplicity of reversing moves with the modified &quot;M&quot; was
+            irresistable.</p> <pre class="svelte-1iswict">${escape(reverseCode)}</pre> <p class="svelte-1iswict" data-svelte-h="svelte-2rql2k">The version of the m-M(x) closure used on this page encapsulates an
+            array of six nine-member arrays of the strings &quot;blue&quot;, &quot;green&quot;,
+            &quot;red&quot;, &quot;orange&quot;, &quot;yellow&quot;, and &quot;white.&quot; Users have at their disposal
+            12 basic functions (top row below) and their inverses (bottom row).</p> <button class="svelte-1iswict" data-svelte-h="svelte-antzp9">U</button> <button class="svelte-1iswict" data-svelte-h="svelte-1by77jn">D</button> <button class="svelte-1iswict" data-svelte-h="svelte-17zom2f">R</button> <button class="svelte-1iswict" data-svelte-h="svelte-u9q5tf">L</button> <button class="svelte-1iswict" data-svelte-h="svelte-1rf5bdr">F</button> <button class="svelte-1iswict" data-svelte-h="svelte-1h0bqgn">B</button> <button class="svelte-1iswict" data-svelte-h="svelte-1iu7unf">M</button> <button class="svelte-1iswict" data-svelte-h="svelte-fa4wp6">E</button> <button class="svelte-1iswict" data-svelte-h="svelte-14631gf">S</button> <button class="svelte-1iswict" data-svelte-h="svelte-1gtmjhk">X</button> <button class="svelte-1iswict" data-svelte-h="svelte-1bteyim">Y</button> <button class="svelte-1iswict" data-svelte-h="svelte-qcin6k">Z</button> <button class="svelte-1iswict" data-svelte-h="svelte-13sd0u3">r</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-ovihlo">U&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1lvqfts">D&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1l2dhm4">R&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1f3gpsw">L&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-18okvh8">F&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-qig1sc">B&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-10xzdks">M&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-x06nwt">E&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1sgwp6k">S&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-i8uaov">X&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1dcoxqf">Y&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1al35mz">Z&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1bfvlve">r&#39;</button> <br class="svelte-1iswict"> <p class="svelte-1iswict" data-svelte-h="svelte-ozuel2">User key presses and button clicks cause the 54 strings in the
+            m-M(x) closure to rearrange. The virtual cube image on the right
+            consists of 27 buttons with statements &quot; style = &#39;background-color =
+            m(dF3x)[ j ][ k ]&#39; &quot; for positive whole numbers j less than 6 and k
+            less than 9. If the string at some position x[ j ][ k ] is replaced
+            by a different string after a key press or button click, that string
+            determines the color of the button containing the statement &quot; style
+            = &#39;background-color = m(dF3x)[ j ][ k ]&#39; .&quot;</p> <h3 style="text-align: center; font-size:36px" class="svelte-1iswict" data-svelte-h="svelte-19dipqq">Four Key-Presses / Four Button-clicks Demonstration</h3> <span class="svelte-1iswict" data-svelte-h="svelte-e09zta">Click </span><button style="height:32px; padding:0" class="svelte-1iswict" data-svelte-h="svelte-1h27kwy">faces</button> <span class="svelte-1iswict" data-svelte-h="svelte-3fnodf">to turn the right, left, top, bottom, front, and back faces with the
+            functions R, L, U (&quot;top&quot;), D (&quot;bottom&quot;), F, and B .</span> <span class="svelte-1iswict" data-svelte-h="svelte-e09zta">Click </span><button style="height:32px; padding:0" class="svelte-1iswict" data-svelte-h="svelte-a9zpbp">middle sections</button> <span class="svelte-1iswict" data-svelte-h="svelte-1acq3lc">to turn the three middle sections.</span> <span class="svelte-1iswict" data-svelte-h="svelte-e09zta">Click </span><button style="height:32px; padding:0" class="svelte-1iswict" data-svelte-h="svelte-kt5zrh">whole cube</button> <span class="svelte-1iswict" data-svelte-h="svelte-sr8wf">to turn the cube 90 degrees on its X, Y, and Z axes. Hold down the
+            &#39;Q&#39; key to rapidly reverse every move in order, starting with the
+            most recent move.</span> <h3 style="text-align: center; font-size:36px" class="svelte-1iswict" data-svelte-h="svelte-17lcs5g">The 27 buttons of the virtual Rubik&#39;s cube never move.</h3> <p class="svelte-1iswict">The positions of the 54 elements of &quot;x&quot; in the closure change in
+            response to user input, but the positions of the 27 buttons of the
+            virtual Rubik&#39;s cube are permanently fixed. The 9 buttons of the
+            outward facing side of the cube image have background colors <span style="${"color:" + escape(m(dF3x)[3][0], true)}" class="svelte-1iswict">m(dF3x)[ 3 ][ 0 ],</span> <span style="${"color:" + escape(m(dF3x)[3][1], true)}" class="svelte-1iswict">m(dF3x)[ 3 ][ 1 ]</span>, ...<span style="${"color:" + escape(m(dF3x)[3][8], true)}" class="svelte-1iswict">m(dF3x)[ 3 ][ 8 ]</span> starting in the upper-left button and ending in the lower-right button.
+            As x[3] changes in the closure, so the front-facing side of the virtual
+            Rubik&#39;s changes.</p> <p class="svelte-1iswict" data-svelte-h="svelte-ajlcua">Pressing &quot;U&quot;, &quot;D&quot;, &quot;R&quot;, &quot;L&quot;, &quot;F&quot;, or &quot;B&quot; keys, or clicking their
+            corresponding buttons (above), rearranges some of the background
+            colors of the 9 buttons that constitute each face of the virtual
+            cube, simulating the result of turning the top, bottom, right, left,
+            front, and back faces, respectively, of a Rubik&#39;s cube 90%. &quot;M&quot;,
+            &quot;E&quot;, and &quot;S&quot; turn the middle sections 90 degrees. X&quot;, &quot;Y&quot;, and &quot;Z&quot;
+            turn the whole cube clockwise 90 degrees around the traditional x,
+            y, and z axes. The single quote marks signify inverses, which can be
+            run on the keyboard by simultaneously holding down the Shift key.</p> <pre class="svelte-1iswict">${escape(buttonCode)}</pre> <p class="svelte-1iswict" data-svelte-h="svelte-1d5wn6m">The elements of the array of six arrays held in the m-M(x) closure
+            are embedded (by means of expressions &quot;m(dF3ar)[j][k]&quot;) in the 27
+            buttons of the visible sides of the virtual Rubik&#39;s cube. If a user
+            presses a key or clicks a button that calls m(func) -- thereby
+            running x =&gt; func(x) in the m-M(x) closure -- each of the 27 copies
+            of m in the method m (dF3ar) in the simulated Rubik&#39;s cube in the
+            DOM immediately updates by returning the func(x). And if, for
+            example, the string to which x[3][3] points in the closure changes
+            from from &#39;green&#39; to &#39;red&#39;, the value of m(dF3ar)[3][3] in the DOM
+            will likewise change, and the color of the left square in the second
+            row of the forward facing of the virtual Rubik&#39;s cube will be
+            observed to change from red to green.</p> <p class="svelte-1iswict" data-svelte-h="svelte-4f7ikb">The nine strings of the array x[3] correspond exactly to the nine
+            buttons constituting the front of virtual Rubik&#39;s cube. These are
+            all orange on the starting and solved cube.</p> <pre class="svelte-1iswict">${escape(reverseCode)}</pre> <p class="svelte-1iswict" data-svelte-h="svelte-1slr92k">The object ob contains 24 key:value pairs of the names and inverses
+            of the functions that exchange and rearrange the elements of the six
+            nine-member arrays of strings that constitute x in the m-M()
+            closure.</p> <pre class="svelte-1iswict">${escape(obCode)}</pre> <h2 class="svelte-1iswict" data-svelte-h="svelte-1vsa32o">Callbacks Rearrange x in the m-M(x) Closure</h2> <p class="svelte-1iswict" data-svelte-h="svelte-1cd4yd4">Clicking the &quot;Start&quot; button (or pressing &quot;V&quot;) refreshes the m-M(x)
+            closure by declaring &quot;m = M(x)&quot; where</p> <pre class="svelte-1iswict"> x = [ [&#39;${escape(m(dF3x)[0][0])}&#39;,&#39;${escape(m(dF3x)[0][1])}&#39;,&#39;${escape(m(dF3x)[0][2])}&#39;,&#39;${escape(m(dF3x)[0][3])}&#39;,&#39;${escape(m(dF3x)[0][4])}&#39;,&#39;${escape(m(dF3x)[0][5])}&#39;,&#39;${escape(m(dF3x)[0][6])}&#39;,&#39;${escape(m(dF3x)[0][7])}&#39;,&#39;${escape(m(dF3x)[0][8])}&#39;],  // <span style="color:red" class="svelte-1iswict" data-svelte-h="svelte-pf8y75">Right side</span>
+[&#39;${escape(m(dF3x)[1][0])}&#39;,&#39;${escape(m(dF3x)[1][1])}&#39;,&#39;${escape(m(dF3x)[1][2])}&#39;,&#39;${escape(m(dF3x)[1][3])}&#39;,&#39;${escape(m(dF3x)[1][4])}&#39;,&#39;${escape(m(dF3x)[1][5])}&#39;,&#39;${escape(m(dF3x)[1][6])}&#39;,&#39;${escape(m(dF3x)[1][7])}&#39;,&#39;${escape(m(dF3x)[1][8])}&#39;],
+[&#39;${escape(m(dF3x)[2][0])}&#39;,&#39;${escape(m(dF3x)[2][1])}&#39;,&#39;${escape(m(dF3x)[2][2])}&#39;,&#39;${escape(m(dF3x)[2][3])}&#39;,&#39;${escape(m(dF3x)[2][4])}&#39;,&#39;${escape(m(dF3x)[2][5])}&#39;,&#39;${escape(m(dF3x)[2][6])}&#39;,&#39;${escape(m(dF3x)[2][7])}&#39;,&#39;${escape(m(dF3x)[2][8])}&#39;],
+[&#39;${escape(m(dF3x)[3][0])}&#39;,&#39;${escape(m(dF3x)[3][1])}&#39;,&#39;${escape(m(dF3x)[3][2])}&#39;,&#39;${escape(m(dF3x)[3][3])}&#39;,&#39;${escape(m(dF3x)[3][4])}&#39;,&#39;${escape(m(dF3x)[3][5])}&#39;,&#39;${escape(m(dF3x)[3][6])}&#39;,&#39;${escape(m(dF3x)[3][7])}&#39;,&#39;${escape(m(dF3x)[3][8])}&#39;],   // <span style="color:red" class="svelte-1iswict" data-svelte-h="svelte-a4yind">Front</span>
+[&#39;${escape(m(dF3x)[4][0])}&#39;,&#39;${escape(m(dF3x)[4][1])}&#39;,&#39;${escape(m(dF3x)[4][2])}&#39;,&#39;${escape(m(dF3x)[4][3])}&#39;,&#39;${escape(m(dF3x)[4][4])}&#39;,&#39;${escape(m(dF3x)[4][5])}&#39;,&#39;${escape(m(dF3x)[4][6])}&#39;,&#39;${escape(m(dF3x)[4][7])}&#39;,&#39;${escape(m(dF3x)[4][8])}&#39;],  // <span style="color:red" class="svelte-1iswict" data-svelte-h="svelte-34fgeh">Top</span>
+[&#39;${escape(m(dF3x)[5][0])}&#39;,&#39;${escape(m(dF3x)[5][1])}&#39;,&#39;${escape(m(dF3x)[5][2])}&#39;,&#39;${escape(m(dF3x)[5][3])}&#39;,&#39;${escape(m(dF3x)[5][4])}&#39;,&#39;${escape(m(dF3x)[5][5])}&#39;,&#39;${escape(m(dF3x)[5][6])}&#39;,&#39;${escape(m(dF3x)[5][7])}&#39;, &#39;${escape(m(dF3x)[5][8])}&#39;] ] </pre> <p class="svelte-1iswict" data-svelte-h="svelte-19kyxg0">x[0], x[3], and x[4] correspond to the right side, front, and top
+            faces of the cube, respectively. Pressing the &quot;F&quot; key calls m(F),
+            causing the value of x (whatever it happens to be at the time) to
+            update to F(x) in the m-M(x) closure. Corresponding to the
+            rearrangement of x (see above), the front face of the cube will seem
+            to have rotated clockwise 90 degrees. Here&#39;s the <a href="./#Fdef" class="svelte-1iswict">definition of &quot;F.&quot;</a></p> <h2 class="svelte-1iswict" data-svelte-h="svelte-1jljswk">The Browser Image</h2> <p class="svelte-1iswict" data-svelte-h="svelte-qnau1s">Here&#39;s the HTML code for the Rubik&#39;s cube image on the right:</p> <pre class="svelte-1iswict">${escape(dom)}</pre> <p class="svelte-1iswict" data-svelte-h="svelte-r7p7p2">Changing x in the m-M(x) JavaScript closure changes m(dF3x) embedded
+            in the HTML code for the cube because they both point to the same
+            place in memory. x === m(dF3x) returns &quot;true.&quot; on in memory.
+            Changing the value of x changes the value of m(dF3x) and vice versa.</p> <p class="svelte-1iswict" data-svelte-h="svelte-yxjw6s">The 27 buttons constituting the visible half of the simulated
+            Rubik&#39;s cube never move. Pressing &quot;Y&quot; when the cube is in the
+            starting configuration rearranges background colors to this
+            configuration:</p> <img${add_attribute("src", red, 0)} alt="Red side demo" style="width:150px;height:155px;" class="svelte-1iswict"> <p class="svelte-1iswict" data-svelte-h="svelte-1anozie">Press &quot;Y&quot; again and see this:</p> <img${add_attribute("src", green, 0)} alt="Green side demo" style="width:150px;height:155px;" class="svelte-1iswict"> <p class="svelte-1iswict" data-svelte-h="svelte-36jygt">x[0] went from all blue (in the starting configuration), to all red
+            (code is below) to all green (a little further down).</p> <pre class="svelte-1iswict" data-svelte-h="svelte-1c604rt">  x = [ [&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;],  // Right side
+  [&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;],
+  [&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;],
+  [&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;],   // Front
+  [&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;],  // Top
+  [&#39;white&#39;,&#39;white&#39;,&#39;white&#39;,&#39;white&#39;,&#39;white&#39;,&#39;white&#39;,&#39;white&#39;,&#39;white&#39;, &#39;white&#39;] ] 
+</pre> <p class="svelte-1iswict" data-svelte-h="svelte-1okwo3y">And then ...</p> <pre class="svelte-1iswict" data-svelte-h="svelte-1lnaqod">  x = [ [&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;,&#39;green&#39;],  // Right side
+  [&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;,&#39;blue&#39;],
+  [&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;,&#39;orange&#39;],
+  [&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;,&#39;red&#39;],   // Front
+  [&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;,&#39;yellow&#39;],  // Top
+  [&#39;white&#39;,&#39;white&#39;,&#39;white&#39;,&#39;white&#39;,&#39;white&#39;,&#39;white&#39;,&#39;white&#39;,&#39;white&#39;, &#39;white&#39;] ] 
+</pre> <p class="svelte-1iswict" data-svelte-h="svelte-erpbd4">x[3]&#39;s background colors went from orange to blue to red. The cube
+            seems to have rotated, but all of the divs and buttons remained
+            stationary. Rearranging strings in the m-M(x) closure by pressing
+            &quot;Y&quot;, thereby rearranging the background colors of some of the
+            simulated Rubik&#39;s cube buttons, created the illusion.</p> <button class="svelte-1iswict" data-svelte-h="svelte-1ay5zeu">Reverse</button> <span style="font-size:25px" class="svelte-1iswict" data-svelte-h="svelte-r6qy0n">     Move list length:</span> <span style="font-weight:bold; font-size:30px" class="svelte-1iswict">${escape(Sally)}</span> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-1gtmjhk">X</button> <button class="svelte-1iswict" data-svelte-h="svelte-1bteyim">Y</button> <button class="svelte-1iswict" data-svelte-h="svelte-qcin6k">Z</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-i8uaov">X&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1dcoxqf">Y&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1al35mz">Z&#39;</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-antzp9">U</button> <button class="svelte-1iswict" data-svelte-h="svelte-1by77jn">D</button> <button class="svelte-1iswict" data-svelte-h="svelte-17zom2f">R</button> <button class="svelte-1iswict" data-svelte-h="svelte-u9q5tf">L</button> <button class="svelte-1iswict" data-svelte-h="svelte-1rf5bdr">F</button> <button class="svelte-1iswict" data-svelte-h="svelte-1h0bqgn">B</button> <button class="svelte-1iswict" data-svelte-h="svelte-1iu7unf">M</button> <button class="svelte-1iswict" data-svelte-h="svelte-fa4wp6">E</button> <button class="svelte-1iswict" data-svelte-h="svelte-14631gf">S</button> <button class="svelte-1iswict" data-svelte-h="svelte-13sd0u3">r</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-ovihlo">U&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1lvqfts">D&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1l2dhm4">R&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1f3gpsw">L&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-18okvh8">F&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-qig1sc">B&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-10xzdks">M&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-x06nwt">E&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1sgwp6k">S&#39;</button> <button class="svelte-1iswict" data-svelte-h="svelte-1bfvlve">r&#39;</button> <div style="margin-left: 1px" class="svelte-1iswict"><p class="svelte-1iswict" data-svelte-h="svelte-1s2spze">Pressing the u, d, r, l, f, b, m, e, s, x, y, and z keys has the
+                same effect as clicking the corresponding (capitalized) buttons.
+                Holding down the &quot;Shift&quot; key (or activating &quot;CapsLock&quot;) while
+                pressing the keys causes the reverse effect. Pressing v, w, and
+                q is equivalent to clicking Start, Scramble, and Reverse,
+                respectively.</p> <p class="svelte-1iswict" data-svelte-h="svelte-164o6pa">clicking either of two left corners of each face of the cube
+                causes that face to seem to rotate counterclockwise 90 degrees.
+                Clicking on either of two right corners of each face of the cube
+                causes that face to rotate clockwise 90 degrees. clicking edges
+                rotates center sections, rather than faces. clicking the centers
+                of the right, top, and front rotates the entire cube clockwise
+                on the X, Y and Z axes, respectively.</p> <p class="svelte-1iswict" data-svelte-h="svelte-sq6bia">Of course, nothing actually rotates. Rearranging strings in the
+                m-M(x) closure, thereby automatically rearranging the background
+                colors of the buttons inside of the divs that constitute the
+                virtual Rubik&#39;s cube, makes it seem that rotation occurred.</p> <h2 style="text-align: center;" class="svelte-1iswict" data-svelte-h="svelte-68flo9">Some Algorithm Shortcuts</h2> <p class="svelte-1iswict"></p> <button class="svelte-1iswict" data-svelte-h="svelte-1lfhu2a">PLL Corners: R&#39; F R&#39; B2 R F&#39; R&#39; B2 R2</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-1aol85f">Triangle Clockwise: M2 U&#39; M U2 M&#39; U&#39; M2</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-276kzp">Triangle CounterClockwise: M2 U M U2 M&#39; U M2</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-1s0d9eq">Edges Opposite: M M Uz M M U U M M Uz M M</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-175oqhe">Edges Adjacent: M M U M M U M U U M M U U M U U</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-1601p4y">doubleFish R&#39; F R B&#39; R&#39; F&#39; R B</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-zy6rkl">Sune: R U R&#39; U R U2 R&#39;</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-1t25e7z">Antisune: R U2 R&#39; U&#39; R U&#39; R&#39;</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-131h37e">Sexy: R U R&#39; U&#39;</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-vlyvsh">Reverse Sexy: U R U&#39; R&#39;</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-1s7s1oh">Revolve: U R U&#39; L&#39; U R&#39; U&#39; L</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-9bmw9c">Reverse Revolve: L&#39; U R U&#39; L U R&#39; U&#39;</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-1f9p2o0">Sledgehammer: R&#39; F R F&#39;</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-tc0gxa">oppH1: R U R&#39; U R U&#39; R&#39; U R U U R&#39;</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-tgf4th">oppH3: F R U R&#39; U&#39; R U R&#39; U&#39; R U R&#39; U&#39; F&#39;</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-1sngs1p">Niklas: R U&#39; L&#39; U R&#39; U&#39; L</button> <br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-101jthv">Reverse Niklas: L&#39; U R U&#39; L U R&#39;</button> <p class="svelte-1iswict">Press the &quot;v&quot; key or click <button class="svelte-1iswict" data-svelte-h="svelte-10lw3kc">Start</button>
+                Then click
+                <button class="svelte-1iswict" data-svelte-h="svelte-b8m5uu">X rotate</button>,
+                <button class="svelte-1iswict" data-svelte-h="svelte-11fxfwk">Y rotate</button>, and
+                <button class="svelte-1iswict" data-svelte-h="svelte-1fxteei">Z rotate</button>
+                buttons to see the main cube from various angles.</p> <br class="svelte-1iswict"><br class="svelte-1iswict"></div></div></section> <div id="steady" class="svelte-1iswict"><h2 class="svelte-1iswict">${escape(F7)}</h2> <br class="svelte-1iswict"> <div class="container svelte-1iswict"><div class="${escape(null_to_empty(cu), true) + " svelte-1iswict"}"><div class="face front svelte-1iswict"><div class="grid svelte-1iswict"><button style="${"background-color: " + escape(m(dF3x)[3][0], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[3][1], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[3][2], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[3][3], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[3][4], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[3][5], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[3][6], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[3][7], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[3][8], true)}" class="svelte-1iswict"></button></div></div> <div class="face right svelte-1iswict"><div class="grid svelte-1iswict"><button style="${"background-color: " + escape(m(dF3x)[0][0], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[0][1], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[0][2], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[0][3], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[0][4], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[0][5], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[0][6], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[0][7], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[0][8], true)}" class="svelte-1iswict"></button></div></div> <div class="face top svelte-1iswict"><div class="grid svelte-1iswict"><button style="${"background-color: " + escape(m(dF3x)[4][0], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[4][1], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[4][2], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[4][3], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[4][4], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[4][5], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[4][6], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[4][7], true)}" class="svelte-1iswict"></button> <button style="${"background-color: " + escape(m(dF3x)[4][8], true)}" class="svelte-1iswict"></button></div></div></div> <br class="svelte-1iswict"><br class="svelte-1iswict"><br class="svelte-1iswict"><br class="svelte-1iswict"> <button style="font-size: 22px; height:90px " class="svelte-1iswict" data-svelte-h="svelte-1pryf0i">Other View<br class="svelte-1iswict"> Click or Press O</button> <br class="svelte-1iswict"><br class="svelte-1iswict"> <button style="font-size: 19px; height:30px;" class="svelte-1iswict" data-svelte-h="svelte-1ax5mld">Scramble W</button> <br class="svelte-1iswict"><br class="svelte-1iswict"> <button style="font-size: 19px; height:30px;" class="svelte-1iswict" data-svelte-h="svelte-8c8o0p">Start V</button></div></div> <section id="coolcow" class="columns svelte-1iswict"><div style="width: 70%" class="svelte-1iswict"><p id="cow8" class="svelte-1iswict" data-svelte-h="svelte-1k83gto">Continued from the <a href="./#cow7" class="svelte-1iswict">previous page</a></p> <div class="svelte-1iswict"><button style="${"background-color:" + escape(m(dF3x)[3][0], true) + "; color: black; font-size:30px"}" class="svelte-1iswict">m(dF3x)[3][0] = ${escape(m(dF3x)[3][0])}</button> <button style="${"background-color:" + escape(m(dF3x)[3][1], true) + "; color: black; font-size:30px"}" class="svelte-1iswict">m(dF3x)[3][1] = ${escape(m(dF3x)[3][1])}</button> <button style="${"background-color:" + escape(m(dF3x)[3][2], true) + "; color: black; font-size:30px"}" class="svelte-1iswict">m(dF3x)[3][2] = ${escape(m(dF3x)[3][2])}</button> <br class="svelte-1iswict"><br class="svelte-1iswict"> <button style="${"background-color:" + escape(m(dF3x)[3][3], true) + "; color: black; font-size:30px"}" class="svelte-1iswict">m(dF3x)[3][3] = ${escape(m(dF3x)[3][3])}</button> <button style="${"background-color:" + escape(m(dF3x)[3][4], true) + "; color: black; font-size:30px"}" class="svelte-1iswict">m(dF3x)[3][4] = ${escape(m(dF3x)[3][4])}</button> <button style="${"background-color:" + escape(m(dF3x)[3][5], true) + "; color: black; font-size:30px"}" class="svelte-1iswict">m(dF3x)[3][5] = ${escape(m(dF3x)[3][5])}</button> <br class="svelte-1iswict"><br class="svelte-1iswict"> <button style="${"background-color:" + escape(m(dF3x)[3][6], true) + "; color: black; font-size:30px"}" class="svelte-1iswict">m(dF3x)[3][6] = ${escape(m(dF3x)[3][6])}</button> <button style="${"background-color:" + escape(m(dF3x)[3][7], true) + "; color: black; font-size:30px"}" class="svelte-1iswict">m(dF3x)[3][7] = ${escape(m(dF3x)[3][7])}</button> <button style="${"background-color:" + escape(m(dF3x)[3][8], true) + "; color: black; font-size:30px"}" class="svelte-1iswict">m(dF3x)[3][8] = ${escape(m(dF3x)[3][2])}</button></div> <h2 class="svelte-1iswict" data-svelte-h="svelte-1c0ucvx">Rotating the Left, Back, and Bottom Faces</h2> <p class="svelte-1iswict" data-svelte-h="svelte-xduot9">METHOD ONE -- The fastest method:</p> <p class="svelte-1iswict" data-svelte-h="svelte-14b8l4u">The left, back, and bottom faces can be turned clockwise by pressing
+            L, B, and D, respectively. Hold down the SHIFT key for
+            counterclockwise rotation.</p> <p class="svelte-1iswict" data-svelte-h="svelte-13hjykf">METHOD TWO -- clicking the cube</p> <p class="svelte-1iswict" data-svelte-h="svelte-112o95a">Click the top center 3 times to bring the green face forward. <br class="svelte-1iswict">
+                  Click the right top or bottom square.
+            <br class="svelte-1iswict">
+                  Click the top center 3 more times, bringing
+            the red face forward. <br class="svelte-1iswict">       Click
+            the right top or bottom square. <br class="svelte-1iswict">     
+            Click the top center two times to re-orient the cube. <br class="svelte-1iswict">
+                  Click the right center to bring up the
+            bottom face. <br class="svelte-1iswict">       Click the right
+            top or bottom square. <br class="svelte-1iswict">       Click the
+            right center 3 more times to re-orient the cube.</p> <p class="svelte-1iswict" data-svelte-h="svelte-kv7zfr">This is the expected result of pressing &quot;LBD&quot; or following the
+            instructions of Method 2 (above): <img${add_attribute("src", clickDemo, 0)} alt="Click demo" style="width:150px;height:155px;" class="svelte-1iswict"></p> <h2 class="svelte-1iswict" data-svelte-h="svelte-1bd037s">The Amazing Reverse Function</h2> <p class="svelte-1iswict" data-svelte-h="svelte-1l7h4l1">Here&#39;s the function &quot;reverse&quot;:</p> <pre class="svelte-1iswict">${escape(reverseCode)}</pre> <p class="svelte-1iswict" data-svelte-h="svelte-19m4qcx">And this is the key-value lookup table:</p> <pre class="svelte-1iswict">${escape(obCode)}</pre> <p class="svelte-1iswict" data-svelte-h="svelte-1ok3tdk">The array of six nine-member arrays of strings held in the m-M(x)
+            closure is transformed whenever a user presses certain keys, or
+            clicks the mouse over buttons or various parts of the displayed cube
+            image. These actions call m(func) for functions &quot;func&quot; that
+            rearrange strings in the m-M(x) closure, making it seem as though
+            the virtual Rubik&#39;s cube, one of its six sides, or one of its three
+            middle sections have rotated 90 degrees. This works because the
+            strings in the m-M(x) closure are exposed in &quot;background-color =
+            m(dF3x)[j][k]&quot; statements for 0 and positive integers j less than 6
+            and k less than nine, in the 27 buttons that constitute the visible
+            faces of the virtual Rubik&#39;s cube seen in the browser.</p> <p class="svelte-1iswict" data-svelte-h="svelte-1rdgode">Note: The attribute &quot;key&quot; added to the functions &quot;func&quot; discussed
+            above are identical to the built-in string attributes &quot;name.&quot; When
+            trying to use &quot;func.name,&quot; it was discovered that running &quot;build&quot;
+            mutated names in the &quot;ar&quot; array in M, but an array of &quot;func.key&quot;
+            emerged unchanged.</p> <p class="svelte-1iswict" data-svelte-h="svelte-svozag">Some of the definitions of &quot;func&quot; in m(func) expressions (described
+            above), can be found at <a href="./" class="svelte-1iswict">Home</a>. All of them are in
+            the
+            <a href="https://github.com/dschalk/Recursive-Closures" class="svelte-1iswict">Github repository</a>. Each time m(func) is called, func&#39;s key is appended to ar in M.
+            Rapidly clicking &quot;10,000 Scrambles&quot; five times and waiting for it to
+            finish indicates that 2,000,000 simulated 90 degree turns were
+            performed and recorded in ar in around 3 seconds.</p> <h3 class="svelte-1iswict" data-svelte-h="svelte-1xh9ok0">*********************************************************</h3> <p class="svelte-1iswict" data-svelte-h="svelte-1t5x92c">I&#39;ll continue using SvelteKit, but I&#39;m perturbed by having to add
+            the attribute &quot;key&quot; to my functions when I would prefer to use the
+            already-present attribute &quot;name.&quot; Notice &quot;func.key&quot; in the
+            definition of M at the top of this page. If &quot;ar&quot; in &quot;M&quot; contains
+            &quot;func.name&quot; for each function that is called, SvelteKet renames many
+            of them, causing the function &quot;reverse&quot; to fail.</p> <p class="svelte-1iswict" data-svelte-h="svelte-d4qkrg">Functions are objects in JavaScript. Here&#39;s a screenshot of simple
+            function&#39;s internals taken in Firefox Developer Tools (accessed by
+            pressing F12).</p> <img${add_attribute("src", func, 0)} alt="Screenshot" style="width:800px;height:600px;" class="svelte-1iswict"> <p class="svelte-1iswict" data-svelte-h="svelte-1d2tthn">Why SvelteKit mangles arrays of func.name but not func.key escapes
+            me. I&#39;m glad that whoever &quot;optimized&quot; SvelteKit this way spared
+            developer-added attributes.</p> <h3 class="svelte-1iswict" data-svelte-h="svelte-1xh9ok0">*********************************************************</h3> <p class="svelte-1iswict" data-svelte-h="svelte-1l8r79a">The efficiency of the &quot;reverse&quot; function can be observed by clicking
+            &quot;Scramble&quot; or pressing the &quot;W&quot; key five times, and then holding down
+            the &quot;Q&quot; key. You can watch the simulated cube perform 200 reverse
+            moves in about five seconds.</p> <pre class="svelte-1iswict">${escape(reverseCode)}</pre> <span id="test" class="svelte-1iswict"></span> <h2 class="svelte-1iswict">The elapsed time is ${escape(elapsedTime)} milliseconds.</h2> <button class="svelte-1iswict" data-svelte-h="svelte-1fyszfe">10,000 Scrambles</button> <br class="svelte-1iswict"> <span style="font-size:25px" class="svelte-1iswict" data-svelte-h="svelte-r6qy0n">     Move list length:</span> <span style="font-weight:bold; font-size:30px" class="svelte-1iswict">${escape(Sally)}</span> <pre class="svelte-1iswict">${escape(et2Code)}</pre> <h2 class="svelte-1iswict" data-svelte-h="svelte-10c7rej">Move List</h2> <h2 class="svelte-1iswict">.${escape(m(dF3ar))}</h2> <h2 class="svelte-1iswict" data-svelte-h="svelte-1chbpnl">END</h2></div> <div class="svelte-1iswict"></div></section> <button class="svelte-1iswict" data-svelte-h="svelte-1woprd7">log x</button> <button class="svelte-1iswict" data-svelte-h="svelte-1llbgt1">log ar</button> <button class="svelte-1iswict" data-svelte-h="svelte-b3z7ws">config</button> <button class="svelte-1iswict" data-svelte-h="svelte-nqx3cw">king.L1s</button> <button class="svelte-1iswict" data-svelte-h="svelte-r04xxw">king.L2s</button> <button class="svelte-1iswict" data-svelte-h="svelte-1g9caqc">king.L3s</button> <button class="svelte-1iswict" data-svelte-h="svelte-97hcr4">king.L4s</button> <button class="svelte-1iswict" data-svelte-h="svelte-1dohezk">king.L5s</button> <button class="svelte-1iswict" data-svelte-h="svelte-1h85nrg">king.L6s</button> <button class="svelte-1iswict" data-svelte-h="svelte-1v3o0qo">king.bar1s</button> <button class="svelte-1iswict" data-svelte-h="svelte-5nodp8">king.bar2s</button> <br class="svelte-1iswict"><br class="svelte-1iswict"> <button class="svelte-1iswict" data-svelte-h="svelte-1vxuzp1">king.L1</button> <button class="svelte-1iswict" data-svelte-h="svelte-1gylb2n">king.L2</button> <button class="svelte-1iswict" data-svelte-h="svelte-1obtryt">king.L3</button> <button class="svelte-1iswict" data-svelte-h="svelte-njilcr">king.L4</button> <button class="svelte-1iswict" data-svelte-h="svelte-1issh4l">king.L5</button> <button class="svelte-1iswict" data-svelte-h="svelte-2ozzg7">king.L6</button> <button class="svelte-1iswict" data-svelte-h="svelte-12h1h83">king.bar1</button> <button class="svelte-1iswict" data-svelte-h="svelte-1e41fhh">king.bar2</button> <button class="svelte-1iswict" data-svelte-h="svelte-1sfbzes">check4</button> <br class="svelte-1iswict"><br class="svelte-1iswict"><br class="svelte-1iswict"> <br class="svelte-1iswict"><br class="svelte-1iswict"><br class="svelte-1iswict"> <br class="svelte-1iswict"><br class="svelte-1iswict"><br class="svelte-1iswict"> ${slots.default ? slots.default({}) : ``}`;
 });
 export {
   Page as default

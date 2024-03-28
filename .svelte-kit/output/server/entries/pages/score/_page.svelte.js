@@ -1,7 +1,6 @@
 import { c as create_ssr_component, e as escape } from "../../../chunks/ssr.js";
 import { B as BROWSER, w as writable } from "../../../chunks/index.js";
 const browser = BROWSER;
-const _page_svelte_svelte_type_style_lang = "";
 const css = {
   code: "pre.svelte-6bq8z1{margin-left:3%}",
   map: null

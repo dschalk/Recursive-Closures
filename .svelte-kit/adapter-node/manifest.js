@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set(["favicon.png"]),
-	mimeTypes: {".png":"image/png"},
+	assets: new Set(["US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents.html","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/US08435570-20130507-D00001.png","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/US08435570-20130507-D00002.png","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/US08435570-20130507-D00003.png","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/US08435570-20130507-D00004.png","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/US08435570-20130507-D00005.png","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/US08435570-20130507-D00006.png","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/US08435570-20130507-P00001.png","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/api.js","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/cb=gapi.js","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/client.js","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/contextmenu.css","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/css.css","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/css2.css","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/css_002.css","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/css_003.css","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/css_004.css","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/lazy.min.js","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/logo16.png","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/null_loader.js","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/proxy.html","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/proxy_002.html","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/proxy_data_002/cb=gapi.js","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/proxy_data_002/googleapis.proxy.js","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/s3downbar.css","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/search-app-vulcanized.js","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/tooltip.css","US8435570B1 - Nitrite formulations and their use as nitric oxide prodrugs - Google Patents_files/webcomponents-lite.min.js","favicon.png"]),
+	mimeTypes: {".html":"text/html",".png":"image/png",".js":"text/javascript",".css":"text/css"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.0979d909.js","app":"_app/immutable/entry/app.ee4816c4.js","imports":["_app/immutable/entry/start.0979d909.js","_app/immutable/chunks/scheduler.41143b43.js","_app/immutable/chunks/singletons.869adf81.js","_app/immutable/chunks/index.8a403549.js","_app/immutable/entry/app.ee4816c4.js","_app/immutable/chunks/scheduler.41143b43.js","_app/immutable/chunks/index.8cc052f2.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.9WSQ9HHz.js","app":"_app/immutable/entry/app.Ey9Yz2Nv.js","imports":["_app/immutable/entry/start.9WSQ9HHz.js","_app/immutable/chunks/entry.40c-4apk.js","_app/immutable/chunks/scheduler.gYNbTIBg.js","_app/immutable/chunks/index.EDhKTW6m.js","_app/immutable/entry/app.Ey9Yz2Nv.js","_app/immutable/chunks/scheduler.gYNbTIBg.js","_app/immutable/chunks/index.pqPhgd5I.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
@@ -26,21 +26,7 @@ return {
 			__memo(() => import('./nodes/11.js')),
 			__memo(() => import('./nodes/12.js')),
 			__memo(() => import('./nodes/13.js')),
-			__memo(() => import('./nodes/14.js')),
-			__memo(() => import('./nodes/15.js')),
-			__memo(() => import('./nodes/16.js')),
-			__memo(() => import('./nodes/17.js')),
-			__memo(() => import('./nodes/18.js')),
-			__memo(() => import('./nodes/19.js')),
-			__memo(() => import('./nodes/20.js')),
-			__memo(() => import('./nodes/21.js')),
-			__memo(() => import('./nodes/22.js')),
-			__memo(() => import('./nodes/23.js')),
-			__memo(() => import('./nodes/24.js')),
-			__memo(() => import('./nodes/25.js')),
-			__memo(() => import('./nodes/26.js')),
-			__memo(() => import('./nodes/27.js')),
-			__memo(() => import('./nodes/28.js'))
+			__memo(() => import('./nodes/14.js'))
 		],
 		routes: [
 			{
@@ -51,192 +37,99 @@ return {
 				endpoint: null
 			},
 			{
-				id: "/Bell-Inequality",
-				pattern: /^\/Bell-Inequality\/?$/,
+				id: "/Intro",
+				pattern: /^\/Intro\/?$/,
 				params: [],
 				page: { layouts: [0,], errors: [1,], leaf: 3 },
-				endpoint: null
-			},
-			{
-				id: "/Pilot-Wave",
-				pattern: /^\/Pilot-Wave\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 4 },
-				endpoint: null
-			},
-			{
-				id: "/Snippets",
-				pattern: /^\/Snippets\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 5 },
-				endpoint: null
-			},
-			{
-				id: "/WebSockets",
-				pattern: /^\/WebSockets\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 6 },
-				endpoint: null
-			},
-			{
-				id: "/arrays",
-				pattern: /^\/arrays\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 7 },
-				endpoint: null
-			},
-			{
-				id: "/async2",
-				pattern: /^\/async2\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 9 },
-				endpoint: null
-			},
-			{
-				id: "/async3",
-				pattern: /^\/async3\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 10 },
-				endpoint: null
-			},
-			{
-				id: "/async4",
-				pattern: /^\/async4\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 11 },
 				endpoint: null
 			},
 			{
 				id: "/async5",
 				pattern: /^\/async5\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 12 },
-				endpoint: null
-			},
-			{
-				id: "/async",
-				pattern: /^\/async\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 8 },
-				endpoint: null
-			},
-			{
-				id: "/cube1",
-				pattern: /^\/cube1\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 13 },
-				endpoint: null
-			},
-			{
-				id: "/cube2",
-				pattern: /^\/cube2\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 14 },
-				endpoint: null
-			},
-			{
-				id: "/cube3",
-				pattern: /^\/cube3\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 15 },
+				page: { layouts: [0,], errors: [1,], leaf: 4 },
 				endpoint: null
 			},
 			{
 				id: "/cube4",
 				pattern: /^\/cube4\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 16 },
-				endpoint: null
-			},
-			{
-				id: "/cube5",
-				pattern: /^\/cube5\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 17 },
+				page: { layouts: [0,], errors: [1,], leaf: 6 },
 				endpoint: null
 			},
 			{
 				id: "/cube6",
 				pattern: /^\/cube6\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 18 },
+				page: { layouts: [0,], errors: [1,], leaf: 7 },
 				endpoint: null
 			},
 			{
 				id: "/cube7",
 				pattern: /^\/cube7\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 19 },
+				page: { layouts: [0,], errors: [1,], leaf: 8 },
 				endpoint: null
 			},
 			{
 				id: "/cube8",
 				pattern: /^\/cube8\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 20 },
+				page: { layouts: [0,], errors: [1,], leaf: 9 },
 				endpoint: null
 			},
 			{
 				id: "/cube9",
 				pattern: /^\/cube9\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 21 },
+				page: { layouts: [0,], errors: [1,], leaf: 10 },
 				endpoint: null
 			},
 			{
-				id: "/factors",
-				pattern: /^\/factors\/?$/,
+				id: "/cube",
+				pattern: /^\/cube\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 22 },
+				page: { layouts: [0,], errors: [1,], leaf: 5 },
 				endpoint: null
 			},
 			{
-				id: "/functional",
-				pattern: /^\/functional\/?$/,
+				id: "/matrix",
+				pattern: /^\/matrix\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 23 },
+				page: { layouts: [0,], errors: [1,], leaf: 11 },
 				endpoint: null
 			},
 			{
-				id: "/rc1",
-				pattern: /^\/rc1\/?$/,
+				id: "/pagejs",
+				pattern: /^\/pagejs\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 24 },
-				endpoint: null
-			},
-			{
-				id: "/rc2",
-				pattern: /^\/rc2\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 25 },
+				page: { layouts: [0,], errors: [1,], leaf: 12 },
 				endpoint: null
 			},
 			{
 				id: "/score",
 				pattern: /^\/score\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 26 },
+				page: { layouts: [0,], errors: [1,], leaf: 13 },
 				endpoint: null
 			},
 			{
-				id: "/sockets",
-				pattern: /^\/sockets\/?$/,
+				id: "/transformations",
+				pattern: /^\/transformations\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 27 },
-				endpoint: null
-			},
-			{
-				id: "/trash",
-				pattern: /^\/trash\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 28 },
+				page: { layouts: [0,], errors: [1,], leaf: 14 },
 				endpoint: null
 			}
 		],
 		matchers: async () => {
 			
 			return {  };
-		}
+		},
+		server_assets: {}
 	}
 }
 })();
+
+export const prerendered = new Set([]);
+
+export const base = "";

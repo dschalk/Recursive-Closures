@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/Bell-Inequality/+page.svelte";
+export { default as component } from "../../../../src/routes/Intro/+page.svelte";

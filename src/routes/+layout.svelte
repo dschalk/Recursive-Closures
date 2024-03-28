@@ -20,6 +20,8 @@ function rotateCube() {
   requestAnimationFrame(rotateCube);
 }
 
+function double (x) {return x + x};
+
 	})
 </script>
 
@@ -34,15 +36,15 @@ function rotateCube() {
 <nav>
         <a href="./">Home</a>
 
-        <a href="./cube7">Rubik's Cube</a>
-
-        <a href="./score">Game of Score</a>
+        <a href="./cube">Rubik's Cube</a>
 
         <a href="./async5">Async</a>
+        
+        <a href="./score">Game of Score</a>
 
-        <a href="./functional">Functional</a>
+        <!--<a href="./functional">Functional</a>
 
-        <a href="./WebSockets">WebSockets</a>
+        <a href="./WebSockets">WebSockets</a> -->
 
   </nav>
 
