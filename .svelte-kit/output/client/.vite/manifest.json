@@ -17,7 +17,7 @@
       ".svelte-kit/generated/client-optimized/nodes/13.js",
       ".svelte-kit/generated/client-optimized/nodes/14.js"
     ],
-    "file": "_app/immutable/entry/app.Ey9Yz2Nv.js",
+    "file": "_app/immutable/entry/app.JSkuPrX8.js",
     "imports": [
       "_scheduler.gYNbTIBg.js",
       "_index.pqPhgd5I.js"
@@ -39,11 +39,11 @@
     "src": ".svelte-kit/generated/client-optimized/nodes/0.js"
   },
   ".svelte-kit/generated/client-optimized/nodes/1.js": {
-    "file": "_app/immutable/nodes/1.Ev-phqou.js",
+    "file": "_app/immutable/nodes/1.yUJzvLU5.js",
     "imports": [
       "_scheduler.gYNbTIBg.js",
       "_index.pqPhgd5I.js",
-      "_entry.40c-4apk.js"
+      "_entry.nFgp1crg.js"
     ],
     "isDynamicEntry": true,
     "isEntry": true,
@@ -157,9 +157,9 @@
   },
   ".svelte-kit/generated/client-optimized/nodes/5.js": {
     "css": [
-      "_app/immutable/assets/5.vQ9HYB_7.css"
+      "_app/immutable/assets/5.tHQ0lizM.css"
     ],
-    "file": "_app/immutable/nodes/5.4wXb9z1p.js",
+    "file": "_app/immutable/nodes/5.q8Olujfz.js",
     "imports": [
       "_scheduler.gYNbTIBg.js",
       "_index.pqPhgd5I.js",
@@ -233,8 +233,8 @@
     ],
     "file": "_app/immutable/chunks/clickDemo.IW8bSF4A.js"
   },
-  "_entry.40c-4apk.js": {
-    "file": "_app/immutable/chunks/entry.40c-4apk.js",
+  "_entry.nFgp1crg.js": {
+    "file": "_app/immutable/chunks/entry.nFgp1crg.js",
     "imports": [
       "_scheduler.gYNbTIBg.js",
       "_index.EDhKTW6m.js"
@@ -264,9 +264,9 @@
     "file": "_app/immutable/chunks/scheduler.gYNbTIBg.js"
   },
   "node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
-    "file": "_app/immutable/entry/start.9WSQ9HHz.js",
+    "file": "_app/immutable/entry/start.BO0mTD0d.js",
     "imports": [
-      "_entry.40c-4apk.js"
+      "_entry.nFgp1crg.js"
     ],
     "isEntry": true,
     "src": "node_modules/@sveltejs/kit/src/runtime/client/entry.js"
@@ -306,6 +306,10 @@
   "src/lib/transformations/BlueL.png": {
     "file": "_app/immutable/assets/BlueL.RIv-8HQ-.png",
     "src": "src/lib/transformations/BlueL.png"
+  },
+  "src/lib/transformations/F12.png": {
+    "file": "_app/immutable/assets/F12.KTLprakh.png",
+    "src": "src/lib/transformations/F12.png"
   },
   "src/lib/transformations/king.L6.png": {
     "file": "_app/immutable/assets/king.L6.LwkNhkq9.png",

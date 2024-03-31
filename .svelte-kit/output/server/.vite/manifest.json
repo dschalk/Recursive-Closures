@@ -94,6 +94,10 @@
     "file": "_app/immutable/assets/BlueL.RIv-8HQ-.png",
     "src": "src/lib/transformations/BlueL.png"
   },
+  "src/lib/transformations/F12.png": {
+    "file": "_app/immutable/assets/F12.KTLprakh.png",
+    "src": "src/lib/transformations/F12.png"
+  },
   "src/lib/transformations/king.L6.png": {
     "file": "_app/immutable/assets/king.L6.LwkNhkq9.png",
     "src": "src/lib/transformations/king.L6.png"
@@ -151,7 +155,7 @@
   },
   "src/routes/cube/+page.svelte": {
     "css": [
-      "_app/immutable/assets/_page.vQ9HYB_7.css"
+      "_app/immutable/assets/_page.tHQ0lizM.css"
     ],
     "file": "entries/pages/cube/_page.svelte.js",
     "imports": [

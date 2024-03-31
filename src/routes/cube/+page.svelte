@@ -5,6 +5,7 @@
     import red from "$lib/red.png";
     import green from "$lib/green.png";
     import func from "$lib/function.png";
+    import F12 from "$lib/transformations/F12.png";
     // import Image from './Image.svelte'
     var log = console.log;
     var ERROR = "";
@@ -24,6 +25,10 @@
     // import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
     var m;
     var index = 1;
+    var t = 300;
+     
+    console.log("t is", t);
+
     function setIndex() {
         index = 1;
     }
@@ -89,7 +94,7 @@
             if (func === dF3x) return x;
             else if (func === dF3ar) return ar;
             x = func(x);
-            if (func.key.length > 0   ) ar.push(func.key);
+            if (func.key) ar.push(func.key);
             console.log("func.key is", func.key);
             return go;
         };
@@ -320,9 +325,9 @@
         return go;
       };
     }; 
-  let m = M(x)`;
+  let m = m(x)`;
 
-    var Xro = function Xro(ar) {
+    var Xro = function xro(ar) {
         let temp = [];
         temp[0] = [
             ar[0][6],
@@ -1955,6 +1960,11 @@
         return x;
     }
 
+    function Tz(x) {
+        x = m(Rz)(Cx)(dF3x);
+        return x;
+    }
+
     var UfuncCode = `var Ufunc = () => {
     m(U);
     m = m;  // This triggers the DOM update
@@ -2202,7 +2212,15 @@
     }
 
     function handleEvent(e) {
-        console.log(e.keyCode);
+        console.log('e.target.id is', e.target.id);
+        console.log("e.target.value is", e.target.value);
+        console.log("typeof e.originalTarget.id is", typeof e.originalTarget.id);
+        if (e.target.id = 'timeID')  {
+            t = e.target.value;
+            console.log('GO FUCK YOURSELF, AND KNOW THAT t is', t);
+        }
+        
+        else console.log("XXXXXXXXXXXXXXXXXXX Fuck you");
         if (e.keyCode === 85) m(Uz);
         else if (e.keyCode === 117) m(U);
         else if (e.keyCode === 97) m(R)(Cxr);
@@ -2220,6 +2238,7 @@
         else if (e.keyCode === 66) m(Bz);
         else if (e.keyCode === 98) m(B);
         else if (e.keyCode === 77) m(Cxr);
+        else if (e.keyCode === 116) m(T);
         else if (e.keyCode === 109) m(Cx);
         else if (e.keyCode === 69) m(Cyr);
         else if (e.keyCode === 101) m(Cy);
@@ -2560,7 +2579,7 @@
     Xror.key = "Xror";
     Yror.key = "Yror";
     Zror.key = "Zror";
-
+    T.key = "T";
     var foo;
 
     function reverse() {
@@ -2694,6 +2713,61 @@ await wait(400);
         f77("");
     }
 
+    var fmovesCode = `async function fmoves (ar, t = 100) { // Pauses for 100 microseconds.
+        m(dF3ar).length = 0;              // Empties ar
+        for (let k = 0; k < ar.length ; k += 1) {
+            await wait(t);
+            m = m(ar[k]);
+        };
+    };`;    
+
+    async function fmoves (ar) { // Pauses for 100 microseconds.
+        m(dF3ar).length = 0;              // Empties ar
+        for (let k = 0; k < ar.length ; k += 1) {
+            await wait(t)
+            m = m(ar[k]);
+        }
+    };
+
+    var sides2 = () => fmoves([T,U,Rz,Uz,Tz,F,R,Fz], 0);
+
+var corners = () => fmoves ([Rz,F,Rz,B,B,R,Fz,Rz,B,B,R,R],75);
+var test8 = () => fmoves([
+  Cx,
+  Cx,
+  Uz,
+  Cx,
+  Cx,
+  U,
+  U,
+  Cx,
+  Cx,
+  Uz,
+  Cx,
+  Cx,
+  Rz,
+  Cx,
+  U,
+  R,
+  Cxr,
+  R,
+  Cxr,
+  Uz,
+  R,
+  Cxr,
+  R,
+  Cxr,
+  Uz,
+  R,
+  Cxr,
+  R,
+  Cxr,
+  U,
+  Rz,
+  Cx
+]);
+    
+
     async function all() {
         f77("X");
         await wait(400);
@@ -2732,15 +2806,19 @@ await wait(400);
         await wait(500);
         f77("");
     }
-    var A = () => (m = m(R)(Cxr));
+    var A = () => (m = m(R)(Cxr));  
     var Az = () => (m = m(Rz)(Cx))
     var configArr = [];
     var king = {};
 
-   king.Lx1st = () => m = m(Cx)(Cx)(U)(Cx)(Cx)(U)(U)(Cx)(Cx)(U)(Cx)(Cx)(U)(F)(R)(U)(Rz)(Uz)(R)(U)(Rz)(Uz)(Fz)
+   king.Lx1st = () => fmoves([(Cx)(Cx)(U)(Cx)(Cx)(U)(U)(Cx)(Cx)(U)(Cx)(Cx)(U)(F)(R)(U)(Rz)(Uz)(R)(U)(Rz)(Uz)(Fz)]);
 
-   king.L1st = () => (m = m(F)(R)(U)(Rz)(Uz)(R)(U)(Rz)(Uz)(Fz));
-    
+   var ZZ = () => fmoves([]);
+
+   
+   // king.L1st = () => (m = m(F)(R)(U)(Rz)(Uz)(R)(U)(Rz)(Uz)(Fz));
+   king.L1st = () => fmoves([F,R,U,Rz,Uz,R,U,Rz,Uz,Fz]);
+   king.L1L2stst = () => fmoves([Rz,Cx,U,R,Cxr,R,Cxr,Uz,R,Cxr,R,Cxr,Uz,R,Cxr,R,Cxr,U,Rz,Cx])  
     king.L1s = async function () {
         m(dF3ar).length = 0;
         m = m(F)
@@ -2767,24 +2845,18 @@ await wait(400);
 
     var L2a = [(Fz),(Lz),(Uz),(L),(U),(Lz),(Uz),(L),(U),(F)];
    // king.L2st = () => (m = m(Fz)(Lz)(Uz)(L)(U)(Lz)(Uz)(L)(U)(F))
-  king.L2st = () => f23(L2a);
-   
+  // king.L2st = () => f23(L2a);
+  // function king.L2st () {m()} 
   // console.log(king.L1st())
   // console.log(king.L2st())
 
+    king.L2st = () => fmoves([Fz,Lz,Uz,L,U,Lz,Uz,L,U,F]);
     
-    king.L2s = async function () {
-        m(dF3ar).length = 0;
-        for (let k = 0; k < L2a.length ; k += 1) {
-        await wait(1000)
-        m = m(L2a[k])
-    }
-} 
-    var L3a = [(R),(Cxr),(Uz),(R),(Cxr),(R),(Cxr),(U),(R),(Cxr),(R),(Cxr),(U),(R),(Cxr),(R),(Cxr),(Uz),(R),(Cxr)]
+     var L3a = [(R),(Cxr),(Uz),(R),(Cxr),(R),(Cxr),(U),(R),(Cxr),(R),(Cxr),(U),(R),(Cxr),(R),(Cxr),(Uz),(R),(Cxr)]
     
     // king.L3st = () => (m = m(R)(Cxr)(Uz)(R)(Cxr)(R)(Cxr)(U)(R)(Cxr)(R)(Cxr)(U)(R)(Cxr)(R)(Cxr)(Uz)(R)(Cxr))
 
-    king.L3st = () => f23(L3a); 
+    king.L3st = () => fmoves(L3a); 
 
     king.L3s = async function () {
         m(dF3ar).length = 0;
@@ -2794,13 +2866,13 @@ await wait(400);
         }
     } 
 
-     var L4a = [(Rz),(Cx),(U),(R),(Cxr),(R),(Cxr),(Uz),(R),(Cxr),(R),(Cxr),(Uz),(R),(Cxr),(R),(Cxr),(U),(Rz),(Cx)]
+  //   var L4a = [(Rz),(Cx),(U),(R),(Cxr),(R),(Cxr),(Uz),(R),(Cxr),(R),(Cxr),(Uz),(R),(Cxr),(R),(Cxr),(U),(Rz),(Cx)]
+  //   r' U r2 U' r2 U' r2 U r'
+var L4a = [Tz,U,T,T,Uz,T,T,Uz,T,T,U,T,T,T]
 
-//     r' U r2 U' r2 U' r2 U r'
+    king.L4st = () => fmoves(L4a);
 
-
-
-    king.L4st = () => m = m(Rz)(Cx)(U)(R)(Cxr)(R)(Cxr)(Uz)(R)(Cxr)(R)(Cxr)(Uz)(R)(Cxr)(R)(Cxr)(U)(Rz)(Cx)
+  // var L4st = () => fmoves([Rz,Cx,U,R,Cxr,R,Cxr,Uz,R,Cxr,R,Cxr,Uz,R,Cxr,R,Cxr,U,Rz,Cx]);
 
     king.L4s = async function () {
         m(dF3ar).length = 0;
@@ -2809,103 +2881,31 @@ await wait(400);
         m = m(L4a[k])
         }
     } 
-
-    var L5a = [(Rz),(Cx),(Uz),(R),(Uz),(Rz),(U),(R),(Uz),(Rz),(U),(U),(R),(Cxr)];
-                                Rz,Cx,Uz,R,Uz,Rz,U,R,Uz,Rz,U,U,R,Cxr
-    king.L5st = () => m = m(Rz)(Cx)(Uz)(R)(Uz)(Rz)(U)(R)(Uz)(Rz)(U)(U)(R)(Cxr)
+    var L5a = [Rz,Cx,Uz,R,Uz,Rz,U,R,Uz,Rz,U,U,R,Cxr];
+    king.L5st = () => fmoves(L5a);
     
-    /*king.L5s = async function () {
-        m(dF3ar).length = 0;
-        for (let k = 0; k < L5a.length; k += 1) {
-        await wait(1000)
-        m = m(L5a[k]);
-        };
-    } */
-     	// [r U R' U] [R U' R' U] [R U2' r']
-    var L6a = [(R),(Cxr),(U),(Rz),(U),(R),(Uz),(Rz),(U),(R),(U),(U),(Rz),(Cx)];
+    var L6a = [R,Cxr,U,Rz,U,R,Uz,Rz,U,R,U,U,Rz,Cx];
+    king.L6st = () => fmoves(L6a);
 
-    king.L6st = () => m = m(R)(Cxr)(U)(Rz)(U)(R)(Uz)(Rz)(U)(R)(U)(U)(Rz)(Cx)
-
-    king.L6s = async function () {
-        m(dF3ar).length = 0;
-        for (let k = 0; k < L6a.length; k += 1) {
-        await wait(1000)
-        m = m(L6a[k])
-        }
-    } 
     var opposite = () => m = m(Cx)(Cx)(Uz)(Cx)(Cx)(U)(U)(Cx)(Cx)(Uz)(Cx)(Cx)(Yro)
 
-    var B1a = [(F),(U),(R),(Uz),(Rz),(U),(R),(Uz),(Rz),(Fz)]
+    var B1a = [F,U,R,Uz,Rz,U,R,Uz,Rz,Fz]
 
-    king.bar1s = async function () {
-        m(dF3ar).length = 0;
-        for (let k = 0; k < B1a.length; k += 1) {
-        await wait(1000)
-        m = m(B1a[k])
-        }
-    } 
+    king.bar1st = () => fmoves(B1a);
 
-    king.bar1st = function () {
-        m(dF3ar).length = 0;
-        for (let k = 0; k < B1a.length; k += 1) {
-            m = m(B1a[k]);
-        }
-    } 
-
-    var B2a = [(F),(R),(U),(Rz),(Uz),(R),(Fz),(R),(Cxr),(U),(Rz),(Uz),(Rz),(Cx)]
-    
-
-    king.bar2st = function () {
-        m(dF3ar).length = 0;
-        for (let k = 0; k < B2a.length; k += 1) {
-            m = m(B2a[k]);
-        }
-    } 
-
-    king.bar2s = async function () {
-        m(dF3ar).length = 0;
-        for (let k = 0; k < B2a.length; k += 1) {
-        await wait(1000)
-        m = m(B2a[k])
-        }
-    } 
-
-    var B3a = [(R),(U),(Rz),(U),(R),(Uz),(B),(Uz),(Bz),(Rz)]
+    var B2a = [F,R,U,Rz,Uz,R,Fz,R,Cxr,U,Rz,Uz,Rz,Cx]
+    king.bar2st = () => fmoves(B2a);
 
 
-    king.bar3st = function () {
-        m(dF3ar).length = 0;
-        for (let k = 0; k < B3a.length; k += 1) {
-            m = m(B3a[k]);
-        }
-    } 
+    var B3a = [R,U,Rz,U,R,Uz,B,Uz,Bz,Rz]
+    king.bar3st = () => fmoves(B3a);
 
-    king.bar3s = async function () {
-        m(dF3ar).length = 0;
-        for (let k = 0; k < B3a.length; k += 1) {
-        await wait(1000)
-        m = m(B3a[k])
-        }
-    } 
-    var B4a = [(R),(U),(U),(R),(R),(Uz),(R),(Uz),(Rz),(U),(U),(F),(R),(Fz)]
-
-// R U2 R2 U' R U' R' U2 F R F'
+    var B4a = [R,U,U,R,R,Uz,R,Uz,Rz,U,U,F,R,Fz]
+    king.bar4st = () => fmoves(B4a);
 
 
-    king.bar4st = function () {
-        m(dF3ar).length = 0;
-        for (let k = 0; k < B4a.length; k += 1) {
-            m = m(B4a[k]);
-        }
-    } 
+   var ZZ = () => fmoves([]);
 
-    king.bar4s = async function () {
-        m(dF3ar).length = 0;
-        for (let k = 0; k < B4a.length; k += 1) {
-        await wait(1000)
-        m = m(B4a[k])
-        }
-    } 
 /*    
 OLL 50
 r' U r2 U' r2 U' r2 U r'
@@ -3865,7 +3865,7 @@ king.bar4 = [
         var b = king.L1x
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.L1s(); return 1} 
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.Lx1st(); return 1} 
         console.log("nn is", nn);
         if (nn < 4) {
             nn = nn;
@@ -3889,7 +3889,7 @@ king.bar4 = [
         var b = king.L1
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.L1s(); return 1} 
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.L1st(); return 1} 
         console.log("nn is", nn);
         if (nn < 4) {
             nn = nn;
@@ -3912,7 +3912,7 @@ king.bar4 = [
         var b = king.L2
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {king.L2s(); return 1} 
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {king.L2st(); return 1} 
         console.log("nn is", nn);
         if (nn < 4) {
             m(U);
@@ -3935,7 +3935,7 @@ king.bar4 = [
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
         if (JSON.stringify(a1) == JSON.stringify(b1)) {
-            king.L3s(); 
+            king.L3st(); 
             console.log("Success in compare3")
             return 1;
         }
@@ -3960,7 +3960,7 @@ king.bar4 = [
         var b = king.L4
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.L4s(); return 1} 
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.L4st(); return 1} 
         console.log("nn is", nn);
         if (nn < 4) {
             m(U);
@@ -3982,7 +3982,7 @@ king.bar4 = [
         var b = king.L5
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.L5s(); return 1} 
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.L5st(); return 1} 
         console.log("nn is", nn);
         if (nn < 4) {
             m(U);
@@ -4004,7 +4004,7 @@ king.bar4 = [
         var b = king.L6
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.L6s(); return 1} 
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.L6st(); return 1} 
         console.log("nn is", nn);
         if (nn < 4) {
             m(U);
@@ -4015,6 +4015,8 @@ king.bar4 = [
     }
 
     function compare7 () {
+        B12 = "In compare7"
+
         nn += 1;
         console.log("In compare7");
         var ar = [];
@@ -4022,7 +4024,7 @@ king.bar4 = [
         var b = king.bar1
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.bar1s(); return 1} 
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.bar1st(); return 1} 
         console.log("nn is", nn);
         if (nn < 4) {
             m(U);
@@ -4036,6 +4038,7 @@ king.bar4 = [
     }
 
     function compare8 () {
+        B12 = "In compare8"
         nn += 1;
         console.log("In compare8");
         var ar = [];
@@ -4043,7 +4046,7 @@ king.bar4 = [
         var b = king.bar2
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {king.bar2s(); return 1} 
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {king.bar2st(); return 1} 
         console.log("nn is", nn);
         if (nn < 4) {
             m(U);
@@ -4057,6 +4060,7 @@ king.bar4 = [
     }
 
     function compare9 () {
+        B12 = "In compare9"
         nn += 1;
         console.log("In compare9");
         var ar = [];
@@ -4065,12 +4069,11 @@ king.bar4 = [
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
         if (JSON.stringify(a1) == JSON.stringify(b1)) {
-            king.bar3s(); 
+            king.bar3st(); 
             console.log("Success in compare3")
             return 1;
         }
         else if (nn < 4) {
-            console.log("In compare3. nn is less than 4", nn);
             m(U);
             compare9();
             }
@@ -4081,6 +4084,7 @@ king.bar4 = [
     }
 
     function compare10 () {
+        B12 = "In compare10"
         nn += 1;
         console.log("In compare10");
         var ar = [];
@@ -4088,15 +4092,21 @@ king.bar4 = [
         var b = king.bar4
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.bar4s(); return 1} 
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.bar4st(); return 1} 
         console.log("nn is", nn);
         if (nn < 4) {
             m(U);
-            compare10();
+            compare10()}
+        else {
+            nn = 0;
+            console.log("FAIL nn is", nn); B12 = "FAIL";
         }
     }
 
       //  console.log("king is", king);
+    console.log("m(dF3x) is", m(dF3x))
+    wait(14000);
+    m = M(cubeStart);
 
 
     // ***********************************************************
@@ -4128,6 +4138,8 @@ king.bar4 = [
             "red", "orange", "yellow", and "white." Users have at their disposal
             12 basic functions (top row below) and their inverses (bottom row).
         </p>
+
+        
 
         <button on:click={() => (m = m(U))}>U</button>
         <button on:click={() => (m = m(D))}>D</button>
@@ -4418,7 +4430,8 @@ king.bar4 = [
             </p>
 
             <h2 style="text-align: center;">Some Algorithm Shortcuts</h2>
-            <p></p>
+            <p>The function "fmoves" uses arrays of functions to incrementally transform the virtual Rubik's cube: </p>
+            <pre>{fmovesCode}</pre>
             <button on:click={corners}
                 >PLL Corners: R' F R' B2 R F' R' B2 R2</button
             >
@@ -4452,6 +4465,10 @@ king.bar4 = [
             <button on:click={sexy}>Sexy: R U R' U'</button>
             <br />
             <button on:click={reverse_sexy}>Reverse Sexy: U R U' R'</button>
+            <br />
+            <button on:click={sides2}>sides2: r, U, R', U', r', F, R, F'</button>
+            <br />
+            <button on:click={corners}>corners: </button>
             <br />
             <button on:click={orient_corners}
                 >Revolve: U R U' L' U R' U' L</button
@@ -4861,7 +4878,6 @@ king.bar4 = [
         <pre>{reverseCode}</pre>
 
         <h3>*********************************************************</h3>
-
     <p> After solving the first two layers, if you happen to have one of the 24 possible 'L' shapes, or one the 16 possible bar shapes on top, you can watch an automated solution go to completion. Here's how:
         (1) Turn the orange two layers toward you by pressing the "Y" key.
         (2) If you have an "L" shape on top, click the "Solve L" button below.  
@@ -4872,14 +4888,41 @@ king.bar4 = [
         (5) If pressing the "F12" key loads a developer-tools screen, you can watch the log of progress unfold in the console. To see the log in Firefox after clicking "King 6" and pressing "U" three times, go to the bottom of this page. </p>
         <p> Clicking "Solve L" causes 
         it will call U(), turning your cube's top 90 degrees, and try again. If there is still no match after trying two more 90 degree turns, it will move on to king_2. It keeps going until it finds a match and shows the solution. If it gets all the way to king_6 and the first three tries fail, it's a sure bet that the 24th attempt will succeed. </p>
-    <p> You can test this by clicking "king_6", the pressing 'U' three times. If pressing F12 makes a console available, you can see the log of 23 test failurs and then then, one by one, the moves that complete the solution.</p>
+    <p> You can test this by clicking "king_6", pressing 'U' three times, the then clicking (Solve L). If pressing F12 makes a console available, you can see the log of 23 test failurs and then then, one by one, the moves that complete the solution.</p>
+<p> Here's another demonstration: click "king.L1" and then "Solve L". "In compare1" is displayed and "F,R,U,Rz,Uz,R,U,Rz,Uz,Fz" appears incrementally while the functioins with those names operate on x in the m-M(x) closure. </p>
+<p> Now click "king.L1" again, followed by "king.L2st" and then "Solve L." This time, "In compare4" displays, indicating king.L4st is solving the (king.L1, king.L2st) configuration. And, that's what happens.</p>
+<p> But wait! Clicking king.L1, king.L2st, then king.L4st (quotation marks were annoying me) doesn't solve the king.L2st(king.L1) configuration. </p>
+<p> Pressing F12 reveals the "Solve L" fails, runs "U", fails, runs "U" again, and then begins calling the king.L4st functions (Rz, Cx, U, ...) that solve the cube.
+<div style = "color:gold; font-size: 30px; padding-left:66px;">  
+In compare4 +page.svelte:4014:16
+    <br>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nn is 2 +page.svelte:4021:16
+    <br>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func.key is U +page.svelte:94:20
+    <br>  
+In compare4 +page.svelte:4014:16
+    <br>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nn is 3 +page.svelte:4021:16
+    <br>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func.key is U +page.svelte:94:20
+    <br> 
+In compare4 +page.svelte:4014:16
+    <br> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func.key is Rz +page.svelte:94:20
+    <br>  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func.key is Cx +page.svelte:94:20
+    <br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func.key is U +page.svelte:94:20 
+</div>
 
 
 
+<p> king.X can't be solved with any of six common "L-shape" algorithms. king.L1 through king.L6 are configurations solvable by the six "L-shape" algorithms. To see this in action, you could, for example, click king.L4 and then press the the "U" key twice. After that, click "Solve L" to watch the step by step solution.    </p>
+<h2>{B12}</h2>
         <span id="test"></span>
         <p style = "text-align: right">{m(dF3ar)}</p>
         
-<h2>{B12}</h2>
 <button on:click={compare1}>Solve L</button>
 <button on:click={compare7}>Solve Bar</button>
 <!--
@@ -4898,10 +4941,7 @@ king.bar4 = [
 <button on:click={king.bar4s}>king.bar4s</button>
 <br /><br /> -->
 
-<br /><br />
-<p> king.X can't be solved with any of six common "L-shape" algorithms. king.L1 through king.L6 are configurations solvable by the six "L-shape" algorithms. To see this in action, you could, for example, click king.L4 and then press the the "U" key twice. After that, click "Solve L" to watch the step by step solution.    </p>
 <br><br> 
-<button on:click={queenL1x}>king.X</button>
 <button on:click={queenL1}>king.L1</button>
 <button on:click={queenL2}>king.L2</button>
 <button on:click={queenL3}>king.L3</button>
@@ -4914,9 +4954,16 @@ king.bar4 = [
 <button on:click={queenbar2}>king.bar2</button>
 <button on:click={queenbar3}>king.bar3</button>
 <button on:click={queenbar4}>king.bar4</button>
-<br /><br /> 
-<p> The buttons below apply the standard "L-shape" OLL (orient the last layer) algorithms. To see them applied one step at a time, click "Solve L" or "Solve Bar"</p>
-<button on:click={king.Lx1st}>king.Xst</button>
+
+<p> The buttons below run the standard OLL algorithms on the current cube configuration. You can ignore them. Just turn the orange side toward yourself (press the "Y" key) and click "Solve L" or "Solve Bar". Each algorithm will be tried, with 0, 1, 2, and 3 90 degree turns of the top layer until a solution is found or "FAIL" is displayed. The default milliseconds between turns is 300. You can change that here:   </p>
+            <div>
+            <span>pause interveral now is</span> 
+            <span style = "color: #ff0000">{t} milliseconds</span>
+            <br>
+            <span>Enter pause milliseconds revision here:</span>
+            <input type="number" id="timeID" name="t" />
+            <br><br>
+
 <button on:click={king.L1st}>king.L1st</button>
 <button on:click={king.L2st}>king.L2st</button>
 <button on:click={king.L3st}>king.L3st</button>
@@ -4929,10 +4976,13 @@ king.bar4 = [
 <button on:click={king.bar3st}>king.bar3st</button>
 <button on:click={king.bar4st}>king.bar4st</button>
 <br><br>
+<p>Special Buttons</p>
 
 <button on:click={console.log(m(dF3x))}>log x</button>
 <button on:click={console.log(m(dF3ar))}>log ar</button>
 <button on:click={console.log("nn is", {nn})}>log nn</button>
+<button on:click={test8}>test8</button>
+
 
 
 <!--<button on:click={compare2}>compare2</button>
@@ -5107,6 +5157,11 @@ It's possible that the 1/57 figure is being used in a more general context, such
         height: 60px;
         border-radius: 10px;
         background: #baefeb;
+    }
+
+    label {
+        color:rgb(252, 97, 97);
+        font-size: 30px;
     }
 
     .less {
