@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/cube9/+page.svelte";
+export { default as component } from "../../../../src/routes/async/+page.svelte";
