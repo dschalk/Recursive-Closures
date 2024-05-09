@@ -108,15 +108,17 @@ log(mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0])( mclone(dF3x)[1][0][1])) ;
 log("m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] )");
 log(m(dF3x)[1][1][0]( m(dF3x)[1][0][0])( m(dF3x)[1][0][1])); `;
 
-var JSCode2 = `mclone = m(() => [ [], [[3,4], [a => b => Math.sqrt(a*a + b*b)], [888] ] ] )
-mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] )  // 5
-m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] ); // 42 `;
+var JSCode2 = `mclone(() => [ [], [[3,4], [a => b => Math.sqrt(a*a + b*b)], [888] ] ] )
+log(mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] ) ) // 5
+log(m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] )); // 42 `;
 
-var JSCode3 = `m = m(() => [ [], [[3,4], [a => b => a + b], [888] ] ] )
-m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] )  // 7
-mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] );  // 5 `;
+var JSCode3 = `m(() => [ [], [[3,4], [a => b => a + b], [888] ] ] )
+log(m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] ) ) // 7
+log(mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] )) // 5 `;
 
-var cloneCode4 = `const dF3x = () => {}
+var cloneCode4 = `const log = console.log;
+const dF3x = () => {};
+
 function M (x) {
     return function go (func)
     {
@@ -125,24 +127,23 @@ function M (x) {
         return go;
     }
 }
-var m = M([ [], [[6,7], [a => b => a * b]], [888]] ); 
-m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] ); // 42 `
+var m = M([ [], [[6,7], [a => b => a * b]], [888]] );` 
 
 var cloneCode5 = `var mclone = m;
+m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] ); // 42 
 mclone === m  // true
 mclone = M(mclone(dF3x)); 
-mclone === m  // false `;
+mclone === m  // false ;
+mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] ); // 42`
 
-var cow = `
-var m = M([ [], [[6,7], [a => b => a * b]], [888]] ); 
-m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] ); // 42 
-`
+
+
 
 </script> 
 
 <h1 style = "text-align: center"> Cloning Recursive Closures</h1>
 
-<p> Neither JSON.parse(JSON.stringify, Object.assign(), spread operators, nor structuredClone can clone m, M, or the whole m-M(x) closure, such as those defined at <a href= "./">Home</a> and <a href = "./cube">Rubik's Cube</a>; or, for that matter, any data structure containing a function. But there is a simple way to clone recursive closures. To illustrate, suppose m is defined as follows:  </p>  
+<p> Neither JSON.parse(JSON.stringify()), Object.assign(), spread operators, nor structuredClone can clone m, M, or the whole m-M(x) closure, such as those defined at <a href= "./">Home</a> and <a href = "./cube">Rubik's Cube</a>; or, for that matter, any data structure containing a function. But there is a simple way to clone recursive closures. To illustrate, suppose m is defined as follows:  </p>  
 <pre>{cloneCode4}</pre>
   
  <p> It suffices to clone 'm', ignoring "M(x)" in the cloning code. This is easily done by copying m, and then placing that copy at a new location in memory.</p>
