@@ -178,8 +178,6 @@
         ],
     ]);
 
-    var mCode = `var m = M([ ["blue", "blue", "blue", "blue", "blue", "blue", "blue", "blue", "blue"], ["green", "green", "green", "green", "green", "green", "green", "green", "green"], ["red", "red", "red", "red", "red", "red", "red", "red", "red"], ["orange", "orange", "orange", "orange", "orange", "orange", "orange", "orange", "orange"], ["yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow", "yellow"], ["white", "white", "white", "white", "white", "white", "white", "white", "white"] ]);`;
-
     var cubeStart = [
         [
             "blue",
@@ -3377,7 +3375,7 @@ function f23 (ar) {
     "white"
   ]
 ]
-
+/*
     king.bar1 = [
         [
             "yellow",
@@ -3435,7 +3433,77 @@ function f23 (ar) {
             "white",
             "white",
         ],
-    ];
+    ];  */
+
+king.bar1 = [
+  [
+    "yellow",
+    "red",
+    "yellow",
+    "blue",
+    "blue",
+    "blue",
+    "blue",
+    "blue",
+    "blue"
+  ],
+  [
+    "red",
+    "green",
+    "orange",
+    "green",
+    "green",
+    "green",
+    "green",
+    "green",
+    "green"
+  ],
+  [
+    "blue",
+    "yellow",
+    "yellow",
+    "red",
+    "red",
+    "red",
+    "red",
+    "red",
+    "red"
+  ],
+  [
+    "yellow",
+    "yellow",
+    "blue",
+    "orange",
+    "orange",
+    "orange",
+    "orange",
+    "orange",
+    "orange"
+  ],
+  [
+    "green",
+    "orange",
+    "red",
+    "yellow",
+    "yellow",
+    "yellow",
+    "green",
+    "blue",
+    "orange"
+  ],
+  [
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white"
+  ]
+]
+
 
     king.bar3 = [
   [
@@ -4031,14 +4099,31 @@ king.bar4 = [
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
         if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.L6st(); return 1} 
-        console.log("nn is", nn);
-        if (nn < 4) {
+        else if (nn < 4) {
+            m(U);
+            compare6();
+            }
+        else {
+            nn = 0;
+            m(U);
+            compare7();
+        }
+    }
+
+    /*    if (nn < 4) {
             m(U);
             console.log("In compare6. nn is", nn);
             compare6();
-        }
+        }        var a = m(dF3x);
+        var b = king.bar4
+        var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
+        var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.bar4st(); return 1} 
+        console.log("nn is", nn);
         else {console.log("FAIL nn is", nn); B12 = "FAIL"};
     }
+    */
+
 
     function compare7 () {
         B12 = "In compare7"
@@ -4050,7 +4135,12 @@ king.bar4 = [
         var b = king.bar1
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.bar1st(); return 1} 
+        console.log("In compare7. a1 and b1 are", a1, b1);
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {
+            nn = 0; 
+            fmoves([F,U,R,Uz,Rz,U,R,Uz,Rz,Fz])    
+            return 1;
+        } 
         console.log("nn is", nn);
         if (nn < 4) {
             m(U);
@@ -4072,18 +4162,86 @@ king.bar4 = [
         var b = king.bar2
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {king.bar2st(); return 1} 
-        console.log("nn is", nn);
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; fOLL52(); return 1} 
+        console.log("nn is", nn);+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         if (nn < 4) {
             m(U);
             compare8();
             }
         else {
             nn = 0;
-            m(U);
+            m(U);        
             compare9();
         }
     }
+var obLL55 = [
+  [
+    "yellow",
+    "yellow",
+    "yellow",
+    "blue",
+    "blue",
+    "blue",
+    "blue",
+    "blue",
+    "blue"
+  ],
+  [
+    "yellow",
+    "yellow",
+    "yellow",
+    "green",
+    "green",
+    "green",
+    "green",
+    "green",
+    "green"
+  ],
+  [
+    "blue",
+    "green",
+    "blue",
+    "red",
+    "red",
+    "red",
+    "red",
+    "red",
+    "red"
+  ],
+  [
+    "red",
+    "red",
+    "orange",
+    "orange",
+    "orange",
+    "orange",
+    "orange",
+    "orange",
+    "orange"
+  ],
+  [
+    "orange",
+    "yellow",
+    "red",
+    "orange",
+    "yellow",
+    "blue",
+    "green",
+    "yellow",
+    "green"
+  ],
+  [
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white"
+  ]
+]
 
     function compare9 () {
         B12 = "In compare9"
@@ -4091,23 +4249,89 @@ king.bar4 = [
         console.log("In compare9");
         var ar = [];
         var a = m(dF3x);
-        var b = king.bar3
+        var b = obLL55 //king.bar3
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {
-            king.bar3st(); 
-            console.log("Success in compare3")
-            return 1;
-        }
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; fOLL55(); return 1} 
         else if (nn < 4) {
             m(U);
-            compare9();
-            }
+            compare9();        var a = m(dF3x);
+        }
         else {
             nn = 0;
-            compare10();
+            M(U);
+            compare10()
         }
     }
+
+    var obLL56 = [
+  [
+    "yellow",
+    "yellow",
+    "yellow",
+    "blue",
+    "blue",
+    "blue",
+    "blue",
+    "blue",
+    "blue"
+  ],
+  [
+    "blue",
+    "yellow",
+    "blue",
+    "green",
+    "green",
+    "green",
+    "green",
+    "green",
+    "green"
+  ],
+  [
+    "red",
+    "red",
+    "yellow",
+    "red",
+    "red",
+    "red",
+    "red",
+    "red",
+    "red"
+  ],
+  [
+    "yellow",
+    "orange",
+    "orange",
+    "orange",
+    "orange",
+    "orange",
+    "orange",
+    "orange",
+    "orange"
+  ],
+  [
+    "red",
+    "yellow",
+    "green",
+    "green",
+    "yellow",
+    "blue",
+    "orange",
+    "yellow",
+    "green"
+  ],
+  [
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white"
+  ]
+]
 
     function compare10 () {
         B12 = "In compare10"
@@ -4115,23 +4339,38 @@ king.bar4 = [
         console.log("In compare10");
         var ar = [];
         var a = m(dF3x);
-        var b = king.bar4
+        var b = obLL56
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; king.bar4st(); return 1} 
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {nn = 0; fOLL56(); return 1} 
         console.log("nn is", nn);
         if (nn < 4) {
             m(U);
             compare10()}
         else {
             nn = 0;
-            console.log("FAIL nn is", nn); B12 = "FAIL";
+            M(U);
+          //  compare11
         }
     }
 
+    /*
+    count = 0;
+    function comp (b) {
+        var a = m(dF3x);
+        var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
+        var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {
+            count = 0; king.bar4st(); return 1} 
+        console.log("nn is", nn);
+        
+    }
+
+    */
+
       //  console.log("king is", king);
     console.log("m(dF3x) is", m(dF3x))
-    wait(14000);
+    wait(1400);
     m = M(cubeStart);
 
     function fOLL47 () {
@@ -4265,6 +4504,7 @@ king.bar4 = [
 
     function fOLL55 () {
         fmoves([R, U, U, R, R, Uz, R, Uz, Rz, U, U, F, R, Fz]);    
+        log("fmoves([R, U, U, R, R, Uz, R, Uz, Rz, U, U, F, R, Fz]);")    
     }
     function LL55 () {   
         Start();
@@ -4379,18 +4619,144 @@ king.bar4 = [
         fmoves([T, Uz, Uz, Rz, Uz, R, U, Rz, Uz, R, Uz, Tz])
     }
 
-   
+ // log('fOLL55()', fOLL55()); 
+ // log('fOLL56()', fOLL56()); 
+
+
+var m3 = M();
+
+m3 = m3(() => m(dF3x))
+console.log("HELLO")
+console.log("m3(dF3x) === m(dF3x)", m3(dF3x) === m(dF3x))
+m3(R)
+console.log("m3(dF3x) === m(dF3x)", m3(dF3x) === m(dF3x))
+m(R);
+console.log("m3(dF3x)[4] === m(dF3x)[4]", m3(dF3x)[4] === m(dF3x)[4])   // false
+console.log("m3(dF3x)[4][0] === m(dF3x)[4][0]", m3(dF3x)[4][0] === m(dF3x)[4][0])   // true
+console.log("m3(dF3x)[4][8] === m(dF3x)[4][8]", m3(dF3x)[4][1] === m(dF3x)[4][1])   // true
+console.log("m3(dF3x)[4][8] === m(dF3x)[4][8]", m3(dF3x)[4][2] === m(dF3x)[4][2])   // true
+console.log("m3(dF3x)[4][8] === m(dF3x)[4][8]", m3(dF3x)[4][3] === m(dF3x)[4][3])   // true
+console.log("m3(dF3x)[4][8] === m(dF3x)[4][8]", m3(dF3x)[4][4] === m(dF3x)[4][4])   // true
+console.log("m3(dF3x)[4][8] === m(dF3x)[4][8]", m3(dF3x)[4][5] === m(dF3x)[4][5])   // true
+console.log("m3(dF3x)[4][8] === m(dF3x)[4][8]", m3(dF3x)[4][6] === m(dF3x)[4][6])   // true
+console.log("m3(dF3x)[4][8] === m(dF3x)[4][8]", m3(dF3x)[4][7] === m(dF3x)[4][7])   // true
+console.log("m3(dF3x)[4][8] === m(dF3x)[4][8]", m3(dF3x)[4][8] === m(dF3x)[4][8])   // true
+
+m(Rz)
+console.log(m(dF3x))
+console.log(m3(dF3x))
+
+
+
 
     // ***********************************************************
     // ***********************************************************
     // ***********************************************************
     
-    
+    var LX1 = [
+  [
+    "yellow",
+    "yellow",
+    "yellow",
+    "blue",
+    "blue",
+    "blue",
+    "blue",
+    "blue",
+    "blue"
+  ],
+  [
+    "yellow",
+    "yellow",
+    "yellow",
+    "green",
+    "green",
+    "green",
+    "green",
+    "green",
+    "green"
+  ],
+  [
+    "green",
+    "yellow",
+    "green",
+    "red",
+    "red",
+    "red",
+    "red",
+    "red",
+    "red"
+  ],
+  [
+    "orange",
+    "yellow",
+    "red",
+    "orange",
+    "orange",
+    "orange",
+    "orange",
+    "orange",
+    "orange"
+  ],
+  [
+    "red",
+    "green",
+    "orange",
+    "red",
+    "yellow",
+    "orange",
+    "blue",
+    "blue",
+    "blue"
+  ],
+  [
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white",
+    "white"
+  ]
+]
+
+    var zz = 0;
+
+    function compare (b, f) {
+        zz += 1;
+        var a = m(dF3x);
+        var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
+        var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
+        
+        if (JSON.stringify(a1) == JSON.stringify(b1)) {
+            nn = 0; 
+            f(); 
+            console.log("nn is", nn);
+            return 1
+        } 
+        else if (zz < 4) {
+            m(U);
+            compare();
+            }
+        else {
+            zz = 0;
+            m(U);
+            return 0;
+        }
+    }
+
+
+
 
 
 
 
 </script>
+
+
+
 
 <svelte:window on:keypress={handleEvent} />
 <section class="columns">
@@ -5228,7 +5594,7 @@ In compare4 +page.svelte:4014:16
             <span>You can enter a different number of milliseconds here:</span>
             <input type="number" id="timeID" name="t" />
             <br><br>
-
+            
 <button on:click={compare1}>Solve L</button>
 <button on:click={compare7}>Solve Bar</button>
             <h2>{B12}</h2>
@@ -5274,11 +5640,7 @@ In compare4 +page.svelte:4014:16
 <button on:click={fOLL55}>fOLL55</button>
 <button on:click={fOLL56}>fOLL56</button>
 
-
-
-
-
-<br><br>
+        <p style = "text-align: right">{m(dF3ar)}</p>
 
       <h2> Dot Patterns</h2>      
 <button on:click={LL1}>LL1</button>
@@ -5465,6 +5827,7 @@ The probability of a specific algorithm configuration depends on a variety of fa
 It's possible that the 1/57 figure is being used in a more general context, such as to represent the likelihood of encountering a specific OLL case in a random solve. However, it's important to approach such statistics with a critical eye and consider the specific context in which they are being presented.
 </p>
 
+
 <br /><br /><br />
 <br /><br /><br />
 </div>
@@ -5485,6 +5848,9 @@ It's possible that the 1/57 figure is being used in a more general context, such
 
 
 
+var m3 = M(m(dF3x))
+console.log("HELLO")
+console.log("m3(dF3x) === m(dF3x)", m3(dF3x) === m(dF3x))
 
 <style>
     ::before,
@@ -6277,4 +6643,8 @@ It's possible that the 1/57 figure is being used in a more general context, such
     /* *********************************************************** */
     /* *************************************************************** */
     /* *************************************************************** */
+
+
+
+
 </style>

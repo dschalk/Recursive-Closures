@@ -1,33 +1,69 @@
-var Rf78d3s5 = () => {};
-var Rf7ar3s5 = () => {};
-var Rf7back3s5 = () => {};
-
 var log = console.log;
+var dF3x = () => { }
 
-var M = function M2(x,index) {
-  let ar = [index, x];	
-  return function go(func) {
-	if (func === Rf7ar3s5) return ar;
-	else if (func === Rf78d3s5) return ar[ar[0]+1];
-	else if (func === Rf7back3s5) {
-		ar[0] -= 1;
-		return ar[ar[0]+1]
-	}
-	else {
-		x = ar.push(func(ar[ar.length -1]));
-		ar[0] += 1;
-		console.log("ar[0] in M is", ar[0]);
-	}
-	return go;
-  };
+function M(x) {
+    return function go(func) {
+        if (func === dF3x) return x;
+        else x = func(x);
+        return go;
+    }
 }
 
-var m = M(3,0);
-m(x=>x**3)(x=>x+x)(x=>x-12)(v=>v+58)(Math.sqrt)
-console.log("m(Rf78d3s5)", m(Rf78d3s5));
-console.log(m(Rf7ar3s5));
-console.log("m(Rf7back3s5)",(m(Rf7back3s5)));
-console.log("m(Rf7back3s5)",(m(Rf7back3s5)));
-console.log("m(Rf7back3s5)",(m(Rf7back3s5)));
-console.log("m(Rf7back3s5)",(m(Rf7back3s5)));
-console.log("m(Rf7back3s5)",(m(Rf7back3s5)));
+
+var ar = [[], [[], [[], [function mult(a, b) { return a * b }]]]]
+log('1 ar[1][1][1][0](6,7)', ar[1][1][1][0](6, 7))
+var m = M(ar);
+log(m(dF3x) === ar)
+ar = [[], [[], [[], [function mult(a, b) { return a * b }]]]]
+log(m(dF3x) === ar)
+log('2 ar[1][1][1][0](6,7)', ar[1][1][1][0](6, 7))
+// var arzi = [ [ ], [ [ ], [ [ ], [ function (a) {return a(dF3x)} ]]]]
+// ar2 = arzi[1][1][1][0](m);
+var ar2 = m(dF3x);
+
+
+ar[1][1][1].splice(-1)
+ar[1][1][1].push(function concat(a, b) { return "" + a + b });
+log('3 ar[1][1][1][0](6,7)', ar[1][1][1][0](6, 7))
+log('ar2[1][1][1][9](6,7) is', ar2[1][1][1][0](6, 7))
+ar[1][1][1].splice(-1)
+ar[1][1][1].push(function add(a, b) { return a + b });
+log('4 ar[1][1][1][0](6,7)', ar[1][1][1][0](6, 7))
+log('ar2[1][1][1][0](6,7)', ar2[1][1][1][0](6, 7))
+ar2[1][1][1].splice(-1)
+ar2[1][1][1].push(function concat(a, b) { return "" + a + b });
+log('ar2[1][1][1][0](6,7)', ar2[1][1][1][0](6, 7))
+log('5 ar[1][1][1][0](6,7)', ar[1][1][1][0](6, 7))
+ar2 = [{ x: 'yz' }]
+log('ar2 is', ar2)
+log('6 ar[1][1][1][0](6,7)', ar[1][1][1][0](6, 7))
+
+var cloning = `var ar = [ [ ], [ [ ], [ [ ], [ function mult (a, b) {return a * b} ]]]]
+log('1 ar[1][1][1][0](6,7)', ar[1][1][1][0](6,7)) // 42
+var m = M(ar);
+log (m(dF3x) === ar)  // true
+ar = [ [ ], [ [ ], [ [ ], [ function mult (a, b) {return a * b} ]]]]
+log (m(dF3x) === ar)  // false
+
+log('2 ar[1][1][1][0](6,7)', ar[1][1][1][0](6,7))  // 42
+var ar2 = m(dF3x);
+
+ar[1][1][1].splice(-1)
+ar[1][1][1].push(function concat (a,b) {return "" + a + b});
+log('3 ar[1][1][1][0](6,7)', ar[1][1][1][0](6,7))  // 67
+log('ar2[1][1][1][9](6,7) is', ar2[1][1][1][0](6,7))  // 42
+ar[1][1][1].splice(-1)
+ar[1][1][1].push(function add (a,b) {return a + b});
+log('4 ar[1][1][1][0](6,7)', ar[1][1][1][0](6,7))  // 13
+log('ar2[1][1][1][0](6,7)', ar2[1][1][1][0](6,7)) // 42
+ar2[1][1][1].splice(-1)
+ar2[1][1][1].push(function concat (a,b) {return "" + a + b});
+log('ar2[1][1][1][0](6,7)', ar2[1][1][1][0](6,7))  // 67
+    log("Fuck")
+log('5 ar[1][1][1][0](6,7)', ar[1][1][1][0](6,7))  // 13
+ar2 = [{x:'yz'}]
+log('ar2[0] is', ar2[0])  // [{x: 'yz'}]
+log('6 ar[1][1][1][0](6,7)', ar[1][1][1][0](6,7)) // 13`
+log("// ******************************************************")
+log(cloning);
+
