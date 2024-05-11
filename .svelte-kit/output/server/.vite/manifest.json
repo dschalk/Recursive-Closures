@@ -126,7 +126,7 @@
   },
   "src/routes/+page.svelte": {
     "css": [
-      "_app/immutable/assets/_page.I9nePEkH.css"
+      "_app/immutable/assets/_page.dpxdjekA.css"
     ],
     "file": "entries/pages/_page.svelte.js",
     "imports": [
@@ -166,6 +166,17 @@
     ],
     "isEntry": true,
     "src": "src/routes/Cube2LL/+page.svelte"
+  },
+  "src/routes/FormTest/+page.svelte": {
+    "css": [
+      "_app/immutable/assets/_page.lUn6Cukj.css"
+    ],
+    "file": "entries/pages/FormTest/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/FormTest/+page.svelte"
   },
   "src/routes/Intro/+page.svelte": {
     "assets": [

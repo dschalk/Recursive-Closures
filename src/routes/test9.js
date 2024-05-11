@@ -9,6 +9,7 @@ function M (x) {
         return go;
     }
 }
+/*
 var m = M([ [], [[6,7], [a => b => a * b]], [888]] );
 
 var mclone = m;
@@ -25,4 +26,7 @@ log(m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] ) ); // 42
 m(() => [ [], [[3,4], [a => b => a + b], [888] ] ] )
 log(m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] ) ) // 7
 log(mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] ) )  // 5 
+*/
+M(3)(v=>v**3)(v=>v*2)(v=>v-5)(Math.sqrt)(v=>v*6)(dF3x) 
+
 

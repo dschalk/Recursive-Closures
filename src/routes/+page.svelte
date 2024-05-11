@@ -495,45 +495,46 @@ console.log('m(dF3x) is', m(dF3x));`
   }`;
 
   var domCube = `<div class="face front">
-                <div class="grid">
-                    <button style="background-color: {m(dF3x)[3][0]}" on:click={() => {m = m(Fz)}}/>
-                    <button style="background-color: {m(dF3x)[3][1]}" on:click={() => {m = m(Cx)}}/>
-                    <button style="background-color: {m(dF3x)[3][2]}" on:click={() => {m = m(F)}}/>
-                    <button style="background-color: {m(dF3x)[3][3]}" on:click={() => {m = m(Cyr)}}/>
-                    <button style="background-color: {m(dF3x)[3][4]}" on:click={() => {m = m(Zro)}}/>
-                    <button style="background-color: {m(dF3x)[3][5]}" on:click={() => {m = m(Cy)}}/>
-                    <button style="background-color: {m(dF3x)[3][6]}" on:click={() => {m = m(Fz)}}/>
-                    <button style="background-color: {m(dF3x)[3][7]}" on:click={() => {m = m(Cxr)}}/>
-                    <button style="background-color: {m(dF3x)[3][8]}" on:click={() => {m = m(F)}}/>
-                </div>
-            </div>
+  <div class="grid">
+    <button style="background-color: {m(dF3x)[3][0]}" on:click={() => {m = m(Fz)}}/>
+    <button style="background-color: {m(dF3x)[3][1]}" on:click={() => {m = m(Cx)}}/>
+    <button style="background-color: {m(dF3x)[3][2]}" on:click={() => {m = m(F)}}/>
+    <button style="background-color: {m(dF3x)[3][3]}" on:click={() => {m = m(Cyr)}}/>
+    <button style="background-color: {m(dF3x)[3][4]}" on:click={() => {m = m(Zro)}}/>
+    <button style="background-color: {m(dF3x)[3][5]}" on:click={() => {m = m(Cy)}}/>
+    <button style="background-color: {m(dF3x)[3][6]}" on:click={() => {m = m(Fz)}}/>
+    <button style="background-color: {m(dF3x)[3][7]}" on:click={() => {m = m(Cxr)}}/>
+    <button style="background-color: {m(dF3x)[3][8]}" on:click={() => {m = m(F)}}/>
+  </div>
+</div>
 
-            <div class="face right">
-                <div class="grid">
-                    <button style="background-color: {m(dF3x)[0][0]}" on:click={() => {m = m(Rz)}}/>
-                    <button style="background-color: {m(dF3x)[0][1]}" on:click={() => {m = m(Cz)}}/>
-                    <button style="background-color: {m(dF3x)[0][2]}" on:click={() => {m = m(R)}}/>
-                    <button style="background-color: {m(dF3x)[0][3]}" on:click={() => {m = m(Cyr)}}/>
-                    <button style="background-color: {m(dF3x)[0][4]}" on:click={() => {m = m(Xro)}}/>
-                    <button style="background-color: {m(dF3x)[0][5]}" on:click={() => {m = m(Cy)}}/>
-                    <button style="background-color: {m(dF3x)[0][6]}" on:click={() => {m = m(Rz)}}/>
-                    <button style="background-color: {m(dF3x)[0][7]}" on:click={() => {m = m(Czr)}}/>
-                    <button style="background-color: {m(dF3x)[0][8]}" on:click={() => {m = m(R)}}/>
-                </div>
-            </div>
-            <div class="face top">
-                <div class="grid">
-                    <button style="background-color: {m(dF3x)[4][0]}" on:click={() => {m = m(Uz)}}/>
-                    <button style="background-color: {m(dF3x)[4][1]}" on:click={() => {m = m(Cx)}}/>
-                    <button style="background-color: {m(dF3x)[4][2]}" on:click={() => {m = m(U)}}/>
-                    <button style="background-color: {m(dF3x)[4][3]}" on:click={() => {m = m(Cz)}}/>
-                    <button style="background-color: {m(dF3x)[4][4]}" on:click={() => {m = m(Yro)}}/>
-                    <button style="background-color: {m(dF3x)[4][5]}" on:click={() => {m = m(Czr)}}/>
-                    <button style="background-color: {m(dF3x)[4][6]}" on:click={() => {m = m(Uz)}}/>
-                    <button style="background-color: {m(dF3x)[4][7]}" on:click={() => {m = m(Cxr)}}/>
-                    <button style="background-color: {m(dF3x)[4][8]}" on:click={() => {m = m(U)}}/>
-                </div>        
-            </div>`;
+<div class="face right">
+  <div class="grid">
+    <button style="background-color: {m(dF3x)[0][0]}" on:click={() => {m = m(Rz)}}/>
+    <button style="background-color: {m(dF3x)[0][1]}" on:click={() => {m = m(Cz)}}/>
+    <button style="background-color: {m(dF3x)[0][2]}" on:click={() => {m = m(R)}}/>
+    <button style="background-color: {m(dF3x)[0][3]}" on:click={() => {m = m(Cyr)}}/>
+    <button style="background-color: {m(dF3x)[0][4]}" on:click={() => {m = m(Xro)}}/>
+    <button style="background-color: {m(dF3x)[0][5]}" on:click={() => {m = m(Cy)}}/>
+    <button style="background-color: {m(dF3x)[0][6]}" on:click={() => {m = m(Rz)}}/>
+    <button style="background-color: {m(dF3x)[0][7]}" on:click={() => {m = m(Czr)}}/>
+    <button style="background-color: {m(dF3x)[0][8]}" on:click={() => {m = m(R)}}/>
+  </div>
+</div>
+
+<div class="face top">
+  <div class="grid">
+    <button style="background-color: {m(dF3x)[4][0]}" on:click={() => {m = m(Uz)}}/>
+    <button style="background-color: {m(dF3x)[4][1]}" on:click={() => {m = m(Cx)}}/>
+    <button style="background-color: {m(dF3x)[4][2]}" on:click={() => {m = m(U)}}/>
+    <button style="background-color: {m(dF3x)[4][3]}" on:click={() => {m = m(Cz)}}/>
+    <button style="background-color: {m(dF3x)[4][4]}" on:click={() => {m = m(Yro)}}/>
+    <button style="background-color: {m(dF3x)[4][5]}" on:click={() => {m = m(Czr)}}/>
+    <button style="background-color: {m(dF3x)[4][6]}" on:click={() => {m = m(Uz)}}/>
+    <button style="background-color: {m(dF3x)[4][7]}" on:click={() => {m = m(Cxr)}}/>
+    <button style="background-color: {m(dF3x)[4][8]}" on:click={() => {m = m(U)}}/>
+  </div>        
+</div>`;
 
   var m = M(3);
 
@@ -892,6 +893,17 @@ var result2 = `Array(8) [ 0, 1, 1, 2, 3, 5, 8, 13 ]`;
 var another2 = `fib(2);
 console.log(m(dF3ar)) // [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 ] `;
 
+var MCode = `    const dF3x = () => {}
+
+    function M (x) {
+      return function go (func)
+        {
+            if (func === dF3x) return x;
+            else x = func(x);
+            return go;
+        }
+    }`
+var k = 397421;
 
 
 </script>
@@ -900,82 +912,58 @@ console.log(m(dF3ar)) // [ 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 ] `;
 <svelte:window on:keypress={handleEvent} />
 
 <div style="margin-left: 8%; margin-right: 8%" id = "top">
-  <h1 style="text-align: center; color: #f5ee9f; font-size:65;">Recursive Closures</h1>
+  <h1 class="middle">Recursive Closures</h1>
   
-<p style="text-indent:3% ">The function 'M' (below) returns the recursive function go. Used anonymously, it facilitates efficient and transparent function composition, as in "M(value)(func1)(func2)(func3)(dF3x)" where "dF3x" in the definition of "M" triggers the return of func3(func2(func1(value))). </p> 
-
-<p>Named, for example "m" in the statement "m = M(x)," "go" (now "m") provides a   way to modify an encapsulated value "x" insulated from the space holding the m-M(x) closure.     <span style="color:orange;  font-weight:bold;"> m( func )</span> causes <span style="color:orange;  font-weight:bold;"> x => func(x) </span>, pursuant to the definition of M:
+<p style="text-indent:3% ">The function 'M' (below) returns the recursive function go. Used anonymously, it facilitates efficient and transparent function composition as in, for example, "M(3)(v=>v**3)(v=>v*2)(v=>v-5)(Math.sqrt)(v=>v*6)(dF3x) = 42" where "dF3x" in the definition of the function returned by "M(3)" triggers the return of what 3 becames after being cubed, doubled, diminished by 5, etc. </p> 
+<pre>{MCode}</pre>
+<p> The statement "m = M(x)" creates an m-M(x) closure, where "x" can be any value. Encapsulated in the m-M(x) closure, "x" is insulated away from other functions that might accidentally clobber it, and safe from being garbage-collected. If the <span style = "word-break:keep-all">m-M(x)</span> closure is maintained in a database, x is preserved until such time as m(func) is called for some function "func" causing the value held in the closure to become "func(x)". The definition of M can be modified to avoid mutation. To see how M can be modified to handle asynchronous functions, go to <a href="./async5#yes">Async</a>.</p>
+  
+ <!--
   <div style="<color:#880000; font-size:32">
   <pre>{x3}</pre>
   <pre>{Mdis}</pre>
   <pre>{I}</pre>
   <pre>{H}</pre>
   <pre>{G}</pre>
-  </div>
+  </div> -->
   
+<h1 class = "middle2"> Maintaining State in Named Closures</h1>
+
+
+<p> At <a href="./cube">Rubik's cube</a> and <a href="./score">Game of Score</a>, x in the m-M(x) closures is the a JavaScript representation of the current configuration of a Rubik's cube and the current state of game play, respectively. These can be ignored for a time; then later, the Rubik's cube can be solved and the game of Score finished. JavaScript garbage collectors don't destroy closures. </p>
+
   
-  <h1 class = "middle"> Anonymous Closures</h1> 
-  
-  
-  <span> &nbsp;&nbsp;&nbsp; Anonymous closures can perform computations without leaving persistent closures in memory. The results might be assigned to variables, placed in persistent objects, memorialized in log files, and so forth; but the closures that produced those results are subject to immediate garbage collection. Here's an example of an anonymous closure:
-  <br><br>
-</span><span style = "color: #f5ee9f; text-align:center; width: 100%; font-size:30px">  M( 3 )( v=>v**3 )( v=>v+v )( v=>v-5 )( Math.sqrt )( dF3x ) &nbsp;&nbsp; // 7
- </span>
-<br><br>
 
 
-<h1 class = "middle"> Maintaining State in Named Closures</h1>
 
+<h1 class = middle2> Defining Clones</h1>
 
-<p> Instead of returning a number, we could return a re-named copy of go. </p>
-<span   style = "color: #f5ee9f; text-align:center; width: 100%; font-size:30px" > var m = M( 3 )( v=>v**3 )( v=>v+v )( v=>v-5 )( Math.sqrt )
-   <br><br>
-m(dF3x);  &nbsp;&nbsp; // 7  </span>
-<p> The value of x encapsulated in the m-M(x) closure is 7. m(func) for any function 'func' results in x = func(x). </p>
-<span   style = "color: #f5ee9f; text-align:center; width: 100%; font-size:30px"  > m( v => v*6 );
-   <br><br>
-m(dF3x)); &nbsp;&nbsp // 42
-</span>
+<p> Neither JSON.parse(JSON.stringify()), Object.assign(), spread operators, nor structuredClone can clone m, M, or m-M(x) closures, such as those defined at <a href= "./">here</a> and <a href = "./cube">Rubik's Cube</a>. None of them can clone data structures that contain functions. The <a href="./Clones">Clones page</a> demonstrates how, for any m-M(x) closure, "mclone = m" followed by "mclone = M(mclone(dF3x))" creates a deep clone named "mclone."  </p>  
 
-<p>  To see how m-M(x) closures handle asynchronous functions, go to <a href="./async5#yes">Async</a>.</p>
+<h1 class = "middle2">Fibonacci Series Using a Recursive Closure</h1>
 
-
-<h1 class = middle> Defining Clones</h1>
-
-<p> Neither JSON.parse(JSON.stringify()), Object.assign(), spread operators, nor structuredClone can clone m, M, or the whole m-M(x) closure, such as those defined at <a href= "./">here</a> and <a href = "./cube">Rubik's Cube</a>; or, for that matter, any data structure containing a function. The <a href="./Clones">Clones page</a> demonstrates how, for any m-M(x) closure, "mclone = m" followed by "mclone = M(mclone(dF3x))" creates a deep clone named "mclone."  </p>  
-
-<h1 class = "middle">Avoiding Side Effects</h1>
-
-<p> An array can be sequestered from everything else in a program, module, or application by encapsulating it in a recursive closure defined inside of a function. Here we use a slightly modified definition of 'M' named 'M2' to define a recursive x-M2(x) closure in the function 'fib':</p>
+<p> Here we use a slightly modified definition of 'M' named 'M2' to define a recursive x-M2(x) closure in the function 'fib':</p>
 <pre>{fibCode}</pre>
 <p> The Firefox developer console (loaded by pressing the F12 key) displays this result:</p>
 <pre>{result2}</pre>
 <p> Calling "fib(2)" adds two more numbers to the Fibonacci numbers encapsulated in the m-M2(x) closure. </p>
 <pre>{another2}</pre>
 
-<h1 style = "text-align: center; color: #f5ee9f"> A Fast and Efficient Virtual Rubik's Cube </h1> <p> Here's the HTML code:</p>
+<h1 class="middle2"> A Fast and Efficient Virtual Rubik's Cube </h1> 
+
+<p> Some of the code responsible for the <a href="./cube">virtual Rubik's cube</a> is shown below. Here's the HTML code:</p>  
 
 <pre>{domCube}</pre>
-<p> And here's the JavaScript representation of the virtual Rubik's cube:</p>
+<p> A JavaScript representation of a solved virtual Rubik's cube is shown below. 'x' in the m-M(x) closure is an array of six nine-member arrays of strings. x[0] contains nine copies of "blue". The code that determines the colors of the initial right side of the virtual cube displayed in the broswer is shown in the middle block of HTML buttons above. Each of the nine lines specifies background-colors which are elements of x[0], all of which are "blue" when the m-M(x) closure is defined.   </p>
 <pre>{mCode}</pre>
-<p> After pressing "F", clicking the "F" button, or clicking the upper or lower right side of the front of the virtual cube, x in the m-M(x) rearranges to this configuration:
+<p> After pressing "F", clicking the "F" button, or clicking the upper or lower right side of the front of the virtual cube, x in the m-M(x) closure rearranges to this configuration:
 <pre>{Fcode2}</pre>
 <p> And the cube looks like this:</p>example:
 
 <img src={Cubeshot  } alt="Right side turned" style="width:150px;height:155px;" />
-
-
+<p> Here's the definition of F:</p>
 <pre>{functionF}</pre>
-<p> F populates a temporary array "temp" with values taken from locations on x specified by the definition of F. It begins with 
-  <pre>{Fbeginning}</pre> 
-  <p> F ends with:</p>
-  <pre>{Fend}</pre> 
-  <p>R replaces the first three elements of temp[5] with whatever strings happen to be at x[0][6], x[0][3]Then F returns temp, causing it to replace the current value of x. The values of the strings F places in temp are not relevant.   locations without regard to whetheexampler the strings happen to be "blue", "green", "red", "orange", "yellow", or "white".
-<p> Looking at x after the transformation (above), we see that the first thing F(x) does is move the string that happens to be at x[4][6] to x[0][0], Near the bottom of F, we see that x[0][0] goes to x[5][2]. Whatever happened to be at x[5][2] ends up at x[1][8].</p>
-<p> x remains an array of six nine-member arrays of strings, maintaining its one-to-one correspondence with the six, nine-cubit sides of the virtual Rubik's cube. None of the functions available to users change the structure of x, just as solving a real Rubik's does not change the number of cubits on each side of the cube.
-
-
-
+<p> F populates a temporary array "temp" with values taken from locations on the current configuration of x. It populates temp[0][0], temp[0][3], temp[0][6], with whatever strings happen to be at x[4][2], x[4][5], and x[4][8]. When m(F) returns temp, temp becomes the value of x in the m-M(x) closure. </p>
 
 <h1 style = "text-align: center; color: #f5ee9f"> The Game of Score </h1>
     <p>
@@ -991,29 +979,10 @@ m(dF3x)); &nbsp;&nbsp // 42
 ]);</pre>
 
 </div> 
-/*
 
-<div style = "color: #FFCC00; margin-left:12% ">
-var m = M(3)
-<br>
-var m2 = m(() => m(dF3x))
-<br>
-var m3 = M(m(dF3x))
-<br>
-<br>
-log(m === m2)  // true
-<br>
-log(m === m3)  // false
-<br>
-log(m2 === m3) // false 
-<br>
-<br>
-log( m(v => v * 2),  m2(v => v * 3))
-<br>
-log(m(dF3x),m2(dF3x),m3(dF3x)); // 18, 18, 3 ;
-<br>
-</div>
-<br><br><br>
+
+
+
 <a href="#top">Back to the top</a>
 
 <br><br><br>
@@ -1037,6 +1006,12 @@ log(m(dF3x),m2(dF3x),m3(dF3x)); // 18, 18, 3 ;
 .middle {
   text-align: center;
   width: 100%;
+}
+
+.middle2 {
+  text-align: center;
+  width: 100%;
+  font-size: 26px;
 }
 
 h2 {
