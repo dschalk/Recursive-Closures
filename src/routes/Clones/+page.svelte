@@ -116,8 +116,7 @@ var JSCode3 = `m(() => [ [], [[3,4], [a => b => a + b], [888] ] ] )
 log(m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] ) ) // 7
 log(mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] )) // 5 `;
 
-var cloneCode4 = `const log = console.log;
-const dF3x = () => {};
+var cloneCode4 = `var m = M( [ [], [ [6,7], [a => b => a * b] ], [888]] );
 
 function M (x) {
     return function go (func)
@@ -127,7 +126,8 @@ function M (x) {
         return go;
     }
 }
-var m = M([ [], [[6,7], [a => b => a * b]], [888]] );` 
+const log = console.log;
+const dF3x = () => {}; `; 
 
 var cloneCode5 = `var mclone = m;
 m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] ); // 42 
@@ -136,14 +136,64 @@ mclone = M(mclone(dF3x));
 mclone === m  // false ;
 mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] ); // 42`
 
+var VSCode = `function clone (v) {
+   return M(v)(dF3x);
+}
 
+var bclone;
+var b = [ [ [2], [3], [4] ], [ [ [7], ['alpha'], ['beta'] ],  [ ["clown"], [v=>v**3] ] ], 888];
+log("b is", b);
+bclone = clone(b);
+log("bclone = clone(b)");
+log("bclone is", bclone);
+log("b and bclone are the same as one another,");
+log(" though not necessarily referring to the same memory address");
+log("b === bclone", b === bclone);
+log("Despite the above, when bclone and clone are used,");
+log("they turn out to be independent, as shown below:")
+log("bclone = 'Hello World')'", bclone = "Hello World" );  
+log("b === bclone", b == bclone)
+log("b is", b);
+log("bclone is", bclone);
+log("b = 'Cow'", b = "Cow");
+log("b is", b);
+log("bclone is", bclone);
+`
 
+var test4 = `jj% node test4.js
+b is [
+  [ [ 2 ], [ 3 ], [ 4 ] ],
+  [ [ [Array], [Array], [Array] ], [ [Array], [Array] ] ],
+  888
+]
+bclone = clone(b)
+bclone is [
+  [ [ 2 ], [ 3 ], [ 4 ] ],
+  [ [ [Array], [Array], [Array] ], [ [Array], [Array] ] ],
+  888
+]
+b and bclone are the same as one another,
+ though not necessarily referring to the same memory address
+b === bclone true
+Despite the above, when bclone and clone are used,
+they turn out to be independent, as shown below:
+bclone = 'Hello World')' Hello World
+b === bclone false
+b is [
+  [ [ 2 ], [ 3 ], [ 4 ] ],
+  [ [ [Array], [Array], [Array] ], [ [Array], [Array] ] ],
+  888
+]
+bclone is Hello World
+b = 'Cow' Cow
+b is Cow
+bclone is Hello World `;
 
 </script> 
 
 <h1 style = "text-align: center"> Cloning Recursive Closures</h1>
 
-<p> Neither JSON.parse(JSON.stringify()), Object.assign(), spread operators, nor structuredClone can clone m, M, or the whole m-M(x) closure, such as those defined at <a href= "./">Home</a> and <a href = "./cube">Rubik's Cube</a>; or, for that matter, any data structure containing a function. But there is a simple way to clone recursive closures. To illustrate, suppose m is defined as follows:  </p>  
+<p> Neither JSON.parse(JSON.stringify()), Object.assign(), spread operators, nor structuredClone can clone m, M, or the whole m-M(x) closure, such as those defined at <a href= "./">Home</a> and <a href = "./cube">Rubik's Cube</a>; or, for that matter, any data structure containing a function. But there is a simple way to clone complex data structures. We'll start with recursive closures. Let m be defined as:  </p>  
 <pre>{cloneCode4}</pre>
   
  <p> It suffices to clone 'm', ignoring "M(x)" in the cloning code. This is easily done by copying m, and then placing that copy at a new location in memory.</p>
@@ -155,5 +205,17 @@ mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] ); // 42`
 <pre>{JSCode2}</pre>
 <p> This confirms that modifying m doesn't change mclone;</p>
 <pre>{JSCode3}</pre>
+<div style="font-size:32px; text-align:center; color:gold"> Cloning a Deeply Nested Array Containing a Function</div>
+<p>Does cloning data structures such as "var b = [ [ [2], [3], [4] ], [ [ [7], ['alpha'], ['beta'] ],  [ ["clown"], [v=>v**3] ] ], 888]" have to be as complicated as most people make it? The little function named "clone", defined below, is all you need.</p>
+<p>"Here's the result of calling "node test4.js" in Virtual Studio Code. Running test4.js in the Firefox Developer console (F12). Note the slight lag in reporting that "b === bclone" is false. </p>
+
+<pre>{test4}</pre>
+
+<pre>{VSCode}</pre>
+
+<div style="font-size:32px; text-align:center; color:gold"> Cloning an Object With Deeply Nested Attributes And Functions</div>
+
+
+
 
 <br><br><br><br>

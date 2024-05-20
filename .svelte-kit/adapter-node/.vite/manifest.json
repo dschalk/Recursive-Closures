@@ -204,6 +204,14 @@
     "isEntry": true,
     "src": "src/routes/Pilot-Wave/+page.svelte"
   },
+  "src/routes/Quantum/+page.svelte": {
+    "file": "entries/pages/Quantum/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/Quantum/+page.svelte"
+  },
   "src/routes/Snippets/+page.svelte": {
     "file": "entries/pages/Snippets/_page.svelte.js",
     "imports": [

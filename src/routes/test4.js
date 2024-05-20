@@ -1,38 +1,43 @@
 
-
+    var dF3x = () => {};
     var log = console.log;
-    var dF3x = () => {}
 
-    function M (x) {
-      return function go (func)
-        {
-            if (func === dF3x) return x;
-            else x = func(x);
-            return go;
+        function M (x) {
+        return function go (func) {
+                if (func === dF3x) return x;
+                else x = func(x);
+                return go;
         }
+            
     }
-    
-    var m1, m2
-    var ar = [ [ ], [ [ ], [ [ ], [ M(3) ]]]]
-    m1 = ar[1][1][1][0];
-    
-    m2 = M(m1(dF3x));
-    log("ar[1][1][1][0](dF3x)", ar[1][1][1][0](dF3x))
-    log('m1(dF3x))', m1(dF3x));  // 3
-    log('m2(dF3x))', m2(dF3x));  // 3
-    m1(v=>v**3); 
-    log("ar[1][1][1][0](dF3x)", ar[1][1][1][0](dF3x))
-    log('m1(dF3x))', m1(dF3x));  // 27
-    log('m2(dF3x))', m2(dF3x));  // 3
-    m1(v => v + 22)(Math.sqrt) 
-    log("ar[1][1][1][0](dF3x)", ar[1][1][1][0](dF3x))
-    log('m1(dF3x))', m1(dF3x));  // 7
-    log('m2(dF3x))', m2(dF3x));  // 3
-    m2(v => v+v)(v => v * m1(dF3x));
-    log("ar[1][1][1][0](dF3x)", ar[1][1][1][0](dF3x))
-    log('m1(dF3x))', m1(dF3x)); // 7
-    log('m2(dF3x))', m2(dF3x));  // 42
 
-    log("ar[1][1][1][0](dF3x)", ar[1][1][1][0](dF3x))
-    log('m1(dF3x))', m1(dF3x)); // 7
-    log('m3(dF3x))', m2(dF3x));  // 42
+function clone (v) {
+   var save = M(v)(dF3x);
+   v = "This is temporary";
+   v = save;
+   return v;
+}
+log("clone is", `function clone (v) {
+   var save = M(v)(dF3x);
+   v = "This is temporary";
+   v = save;
+   return v;
+}`);
+var bclone;
+var b = {arr: [ [ [2], [3], [4] ], [ [ [7], ['alpha'], ['beta'] ],  [ ["clown"], [v=>v**3] ] ], 888 ], ob: { z: "skyblue" } };
+log("b is", b);
+log("bclone = clone(b)");
+bclone=clone(b);
+log("bclone is", bclone);
+// bclone hasn't changed, except for its memory address.
+log("b and bclone are identical");
+log(" though not necessarily referring to the same memory address");
+log("b === bclone", b === bclone);
+log("Despite the above, when bclone changes, b stays the same.");
+log("bclone = 'Hello World')'", bclone = "Hello World" );  
+log("b === bclone", b === bclone)
+log("b is", b);
+log("bclone is", bclone);
+log("b = 'Cow'", b = "Cow");
+log("b is", b);
+log("bclone is", bclone);

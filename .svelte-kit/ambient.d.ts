@@ -56,6 +56,7 @@ declare module '$env/static/private' {
 	export const _: string;
 	export const XAUTHORITY: string;
 	export const GJS_DEBUG_TOPICS: string;
+	export const WINDOWPATH: string;
 	export const MOTD_SHOWN: string;
 	export const GDM_LANG: string;
 	export const HOME: string;
@@ -66,14 +67,12 @@ declare module '$env/static/private' {
 	export const npm_package_version: string;
 	export const MEMORY_PRESSURE_WATCH: string;
 	export const VTE_VERSION: string;
-	export const WAYLAND_DISPLAY: string;
 	export const PROMPT_COMMAND: string;
 	export const INVOCATION_ID: string;
 	export const MANAGERPID: string;
 	export const INIT_CWD: string;
 	export const npm_lifecycle_script: string;
 	export const GJS_DEBUG_OUTPUT: string;
-	export const GNOME_SETUP_DISPLAY: string;
 	export const XDG_ACTIVATION_TOKEN: string;
 	export const npm_config_npm_version: string;
 	export const XDG_SESSION_CLASS: string;
@@ -96,6 +95,7 @@ declare module '$env/static/private' {
 	export const LC_TIME: string;
 	export const QT_AUTO_SCREEN_SCALE_FACTOR: string;
 	export const JOURNAL_STREAM: string;
+	export const GTK3_MODULES: string;
 	export const XDG_DATA_DIRS: string;
 	export const npm_config_noproxy: string;
 	export const PATH: string;
@@ -172,6 +172,7 @@ declare module '$env/dynamic/private' {
 		_: string;
 		XAUTHORITY: string;
 		GJS_DEBUG_TOPICS: string;
+		WINDOWPATH: string;
 		MOTD_SHOWN: string;
 		GDM_LANG: string;
 		HOME: string;
@@ -182,14 +183,12 @@ declare module '$env/dynamic/private' {
 		npm_package_version: string;
 		MEMORY_PRESSURE_WATCH: string;
 		VTE_VERSION: string;
-		WAYLAND_DISPLAY: string;
 		PROMPT_COMMAND: string;
 		INVOCATION_ID: string;
 		MANAGERPID: string;
 		INIT_CWD: string;
 		npm_lifecycle_script: string;
 		GJS_DEBUG_OUTPUT: string;
-		GNOME_SETUP_DISPLAY: string;
 		XDG_ACTIVATION_TOKEN: string;
 		npm_config_npm_version: string;
 		XDG_SESSION_CLASS: string;
@@ -212,6 +211,7 @@ declare module '$env/dynamic/private' {
 		LC_TIME: string;
 		QT_AUTO_SCREEN_SCALE_FACTOR: string;
 		JOURNAL_STREAM: string;
+		GTK3_MODULES: string;
 		XDG_DATA_DIRS: string;
 		npm_config_noproxy: string;
 		PATH: string;

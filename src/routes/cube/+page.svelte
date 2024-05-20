@@ -44,7 +44,7 @@
     // import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
     var m;
     var index = 1;
-    var t = 30;
+    var t = 300;
      
     console.log("t is", t);
 
@@ -447,6 +447,9 @@
         return temp;
     };
 
+    var x = Xro;
+    var xz = Xror;
+
     // var Xror = x => Xro(Xro(Xro(x)));
 
     var Yro = function Yro(ar) {
@@ -511,6 +514,8 @@
         return temp;
     };
 
+    var y = Yro;
+    var yz = Yror
     //  var Yror = x => Yro(Yro(Yro(x)));
 
     var Zro = function Zro(ar) {
@@ -654,6 +659,9 @@
         ];
         return temp;
     };
+
+    var z = Zro;
+    var zz = Zror;
 
     // var Zror = x => Zro(Zro(Zro(x)));
 
@@ -803,6 +811,8 @@
         return temp;
     };
 
+    var G = Cz;
+    var Gz = Czr
     var Cx = function Cx(ar) {
         let temp = [];
 
@@ -1700,6 +1710,7 @@
     ];
     return temp;
   }`;
+
 
     var Rz = function Rz(ar) {
         // Verified
@@ -2738,7 +2749,7 @@ await wait(400);
         };
     };`;    
 
-    async function fmoves (ar) { 
+/*    async function fmoves (ar) { 
         m(dF3ar).length = 0;              // Empties ar
         for (let k = 0; k < ar.length ; k += 1) {
             await wait(t)
@@ -2754,7 +2765,7 @@ await wait(400);
             m = m(ar[k]);
         }
     };
-
+*/
     var sides2 = () => fmoves([T,U,Rz,Uz,Tz,F,R,Fz], 0);
 
 var corners = () => fmoves ([Rz,F,Rz,B,B,R,Fz,Rz,B,B,R,R],75);
@@ -4729,7 +4740,6 @@ console.log(m3(dF3x))
         var a = m(dF3x);
         var a1 = a[0][0]+a[0][1]+a[0][2]+a[1][0]+a[1][1]+a[1][2]+a[2][0]+a[2][1]+a[2][2]
         var b1 = b[0][0]+b[0][1]+b[0][2]+b[1][0]+b[1][1]+b[1][2]+b[2][0]+b[2][1]+b[2][2]
-        
         if (JSON.stringify(a1) == JSON.stringify(b1)) {
             nn = 0; 
             f(); 
@@ -4747,8 +4757,267 @@ console.log(m3(dF3x))
         }
     }
 
+    function fastmoves (ar) { 
+        m(dF3ar).length = 0;            
+        for (let k = 0; k < ar.length ; k += 1) {
+            m = m(ar[k]);
+        }
+    };
+
+    function reversemoves (ar) { 
+        m(dF3ar).length = 0;            
+        for (let k = ar.length - 1; k >= 0; k -= 1) {
+            m = m(ar[k]);
+        }
+    };
+
+    async function fmovesR (ar) { // Pauses for 100 microseconds.
+        m(dF3ar).length = 0;              // Empties ar
+        var len = ar.length - 1;
+        for (let k = len; k > -1; k -= 1) {
+            await wait(t)
+            m = m(ar[k]);
+        }
+    };
 
 
+
+var P1z = [U, R, Uz, Rz, F, R, Uz, Rz, U, R, U, Rz, Fz]
+var sz = [F, R, U, Rz, Uz, Fz];
+
+var tio = P1;
+
+    async function fmoves (ar) { 
+        m(dF3ar).length = 0;              // Empties ar
+        for (let k = 0; k < ar.length ; k += 1) {
+            await wait(t)
+            m = m(ar[k]);
+        }
+    };
+
+    async function fmo (ar) { 
+        m(dF3ar).length = 0;              // Empties ar
+        for (let k = 0; k < ar.length ; k += 1) {
+            await wait(600)
+            m = m(ar[k]);
+        }
+    };
+
+// fmoves([R,U]);
+
+// fmo([R,U])
+// goback ();
+
+
+async function goback () { if (m(dF3ar).length > 0) 
+    {
+    reverse()
+    await wait(t);
+    console.log(m(dF3ar));
+    goback();
+    }
+    else return;
+};
+
+var algs;
+async function backforth () {
+    console.log("backforth JUST GOT CALLED. <s><s><s><s><s><s><s><s> JUST GOT CALLED!")
+    let end = algs.pop();
+    console.log("end is", end);
+    await fmoves(end)
+    console.log("m(dF3ar).length)", m(dF3ar).length)
+    if (m(dF3x)[1][0] === "green" &&  m(dF3x)[1][1] === "green" && m(dF3x)[1][2] === "green" && m(dF3x)[1][3] === "green" && m(dF3x)[0][0] === "blue" &&  m(dF3x)[0][1] === "blue" && m(dF3x)[0][2] === "blue" && m(dF3x)[0][3] === "red" && m(dF3x)[2][0] === "red" &&  m(dF3x)[2][1] === "red" && m(dF3x)[2][2] === "red" && m(dF3x)[3][0] === "orange" &&  m(dF3x)[3][1] === "orange" &&  m(dF3x)[3][2] === "orange" && m(dF3x)[3][3] === "orange") {return}   
+    else {
+        clone.pop();
+        goback();
+        if (clone.length > 0) backforth();
+    }
+}
+    
+// backforth(P1);
+
+// reversemoves(PI)
+
+
+algs = [ [Rz,U,R,Uz,Rz,Fz,R,U,Rz,Uz,Rz,F,R],
+ [x,z,R,Uz,Rz,D,R,U,Rz,Dz,R,U,Rz,D,R,Uz,Rz,Dz],
+ [M,M,U,M,M,U,U,M,M,U,M,M],
+ [U,R,U,Rz,Uz,Rz,Uz,Rz,U,R,Uz,Rz,Uz,Rz,U,R, U,U,Rz],
+ [R,U,Rz,Uz,Rz,F,R,R,Uz,Rz,Uz,R,U,Rz,Fz],
+ [F,R,Uz,Rz,Uz,R,U,Rz,Fz,R,U,Rz,Uz,Rz,F,R,Fz],
+ [R,U,Rz,Fz,R,U,Rz,Uz,Rz,F,R,R,Uz,Rz,Uz],
+ [R,Uz,R,U,R,U,R,Uz,Rz,Uz,R,R],
+ [R,U,Rz,Uz,R,U,Rz,Uz,R,U,Rz,Uz,R,U,Rz,Uz,R,U,Rz,Uz],
+ [R,U,Rz,Uz,R,U,Rz,Uz,R,Uz,Rz,U,R,U,R,R,Uz,Rz],
+ [ U,U,Rz,Uz,R,R,U,Rz,U,R, U,U,R,R,Uz],
+ [R, U,U,Rz,Uz,R,Uz,Rz],
+ [R,U,Rz,U,R,Uz,Rz,Uz,Rz, U,U,R,U,Rz,U,R],
+ [Rz, U,U,R,Uz,Rz,Uz,R,Uz,Rz,U,R,U,Rz,U,R,Uz,Rz,R,Cx,U,Rz,U,R,Uz,Rz,U,R,U,U,Rz,Czr],
+ [M,M,U,M, U,U,M,M,M,U,M,M],
+ [F,R,Uz,Rz,Uz,R,U,Rz,Fz],
+ [R,Uz,Rz,U,R,Uz,Rz,Fz,R,U,Rz,Uz,Rz,F,R,R,Uz,Rz],
+ [R,R,Uz,Rz,Uz,R,U,R,U,R,Uz,R],
+ [R,U,Rz, U,U,R,Uz,Rz,U,U,R,U,U,U,Rz],
+ [M,M,M,U,M,M,M,U,M, U,U,M,M,M,U,M,M,M, U,U,M, U,U],
+ [R,R,U,R,U,Rz,Uz,Rz,Uz,U,Rz],
+ [Rz,Uz,Rz,U,R,U,Rz,Fz,R,U,Rz,Uz,Rz,F,R],
+ [U,R,U,Rz,Uz,Rz,Uz,Rz,U,R,Uz,Rz,Uz,Rz,U,R, U,U,Rz],
+ [R,U,Rz,U,R,Uz,Rz,U,R, U,U,Rz],
+ [R,Uz,B,Uz,Bz,R,R, U,U,R,Bz,U,B,Rz],
+ [Fz,U,F,Uz,Fz,U,F,R,U,Rz,Uz,Rz,F,R],
+ [R,U,Rz,U,R,Uz,Rz,Fz,U,F,Uz,Fz,U,F],
+ [F,U,R,Uz,Rz,Fz,Uz,F,R,U,Rz,Uz,Fz],
+ [R,U,Rz,Fz,U,F,R, U,U,Rz,Uz,F,Uz,Fz],
+ // [R,U,Rz,U,R,Uz,Rz,Uz,R,Uz,Rz, U,U,R,U,Rz,N,(89),J,Perm,Rz,U,Lz, U,U,R,Uz,Rz, U,U,L],
+ [R, U,U,Rz,Uz,R, U,U,Lz,U,Rz,Uz,L],
+ [Lz, U,U,L,U,Lz, U,U,R,Uz,L,U,Rz],
+ [R,Uz,Rz,Uz,R,U,Rz,F,R,U,Rz,Uz,Rz,F,R,R,Uz,Rz],
+ [F,R,Uz,Rz,Uz,R,U,Rz,Fz,R,U,Rz,Uz,Rz,F,R,Fz],
+ [Rz,F,R,Fz, U,U,Rz,F,R,Fz],
+ [F,R,U,Rz,Uz,R,U,Rz,Uz,Fz],
+ [R,U,Rz,Uz,Rz,F,R,R,Uz,Rz,Uz,R,U,Rz,Fz],
+ [R,Uz,R,U,R,U,R,Uz,Rz,Uz,R,R],
+ [Rz, U,U,R,Uz,Rz,Uz,R,Uz,Rz,U,R,U,Rz],
+ [R,U,Rz,U,R,Uz,Rz,U,R, U,U,Rz],
+ [R, U,U,R, U,U,R,R,U,R,R,U,R],
+ [R,U,Rz,U,R, U,U,Rz],
+ [U,x,Uz,R,U,Rz,D,R,Uz,Rz,Dz],
+ [y,U,Rz,U,R,R, U,U,R,Uz,R,R,U,R,U,Rz],
+ [R,Uz,Lz,U,R,Uz,L,U],
+ [M,M,M,U,(R,U,Rz,Uz),M],
+ [(M,M,M,U),(R,Uz,Rz,U,R, U,U,Rz,U,M)],
+ [M,M,U,M,M,M, U,U,M,U,M,M],
+ [y,Rz,Uz,Rz,Uz,Rz,U,R,U,R,Uz,R,R,U,Rz,U,R,Uz,B,Uz,Bz,Rz,Rz],
+ [x,D,D,R,U,Rz,D,D,R,Uz,Rz],
+ [F,U,R, U,U,Rz,Uz,R,U,Rz,U,Fz],
+ [R,U,Rz,Uz,Rz,F,R,R,U,Rz,Uz,Fz],
+ [Uz,R,U,Rz,U,R,Uz,Rz,U,R,Uz,Rz, U,U,R],
+ [F,U,R,Uz,Rz,F,Uz,F,U,R,Uz,Rz,Fz],
+ [Gz,R,G,Rz,U,z,Rz,U,R,Gz],
+ [F,R,Uz,Rz,Uz,R,U,Rz,Fz,M,M,Uz,M,U,U,M,M,M,Uz,M,M] ]  
+
+
+
+
+
+var P1 = [F, R, Uz, Rz, Uz, R, U, Rz, Fz, R, U, Rz, Uz]; 
+/*
+` AbPerm = [Rz,U,R,Uz,Rz,Fz,R,U,Rz,Uz,Rz,F,R]
+ E Perm: xz,R,Uz,Rz,D,R,U,Rz,Dz,R,U,Rz,D,R,Uz,Rz,Dz
+ H,Perm:, M,M,U, M,M,U2, M,M,U, M,M
+ Z,Perm:,U,R,U,Rz,Uz,Rz,Uz,Rz,U,R,Uz,Rz,Uz,Rz,U,R,U2,Rz
+ T,Perm:,R,U,Rz,Uz,Rz,F,R2,Uz,Rz,Uz,R,U,Rz,Fz
+ Y,Perm:,F,R,Uz,Rz,Uz,R,U,Rz,Fz,R,U,Rz,Uz,Rz,F,R,Fz
+ J,Perm:,R,U,Rz,Fz,R,U,Rz,Uz,Rz,F,R2,Uz,Rz,Uz
+ R,Perm:,R,Uz,R,U,R,U,R,Uz,Rz,Uz,R2
+ F,Perm:,R,U,Rz,Uz,R,U,Rz,Uz,R,U,Rz,Uz,R,U,Rz,Uz,R,U,Rz,Uz
+ V,Perm:,R,U,Rz,Uz,R,U,Rz,Uz,R,Uz,Rz,U,R,U,R2,Uz,Rz
+ N,Perm:,U2,Rz,Uz,R2,U,Rz,U,R,U2,R2,Uz
+ G,Perm:,R,U2,Rz,Uz,R,Uz,Rz
+ S,Perm:,R,U,Rz,U,R,Uz,Rz,Uz,Rz,U2,R,U,Rz,U,R
+ E,Perm:,Rz,U2,R,Uz,Rz,Uz,R,Uz,Rz,U,R,U,Rz,U,R,Uz,RzR,,Cx,,U,,Rz,,U,,R,,Uz,,Rz,,U,,R,,U,,U,,Rz,,Czr)
+ M,Perm:, M,M,U,M,U2,Mz,U, M,M
+ Conjugate:,F,R,Uz,Rz,Uz,R,U,Rz,Fz
+ Double,J,Perm:,R,Uz,Rz,U,R,Uz,Rz,Fz,R,U,Rz,Uz,Rz,F,R2,Uz,Rz
+ Double,R,Perm:,R2,Uz,Rz,Uz,R,U,R,U,R,Uz,R
+ F,Perm:,R,U,Rz,U2,R,Uz,Rz,U2,R,U3,Rz
+ Funky,H,Perm:,Mz,U,Mz,U,M,U2,Mz,U,Mz,U2,M,U2
+ Inverse,Sexy,Move:,R2,U,R,U,Rz,Uz,Rz,Uz,U,Rz
+ Perfect,Match:,Rz,Uz,Rz,U,R,U,Rz,Fz,R,U,Rz,Uz,Rz,F,R
+ Super,Flip:,U,R,U,Rz,Uz,Rz,Uz,Rz,U,R,Uz,Rz,Uz,Rz,U,R,U2,Rz
+ Triple,Sune:,R,U,Rz,U,R,Uz,Rz,U,R,U2,Rz
+ Zeroing:,R,Uz,B,Uz,Bz,R2,U2,R,Bz,U,B,Rz
+ Chameleon:,Fz,U,F,Uz,Fz,U,F,R,U,Rz,Uz,Rz,F,R
+ Reverse,Chameleon:,R,U,Rz,U,R,Uz,Rz,Fz,U,F,Uz,Fz,U,F
+ Sleek,Dog:,F,U,R,Uz,Rz,Fz,Uz,F,R,U,Rz,Uz,Fz
+ Smooth,Cat:,R,U,Rz,Fz,U,F,R,U2,Rz,Uz,F,Uz,Fz
+ J,Perm:,R,U,Rz,U,R,Uz,Rz,Uz,R,Uz,Rz,U2,R,U,Rz,N,(89),J,Perm,Rz,U,Lz,U2,R,Uz,Rz,U2,L
+ Niklas:,R,U2,Rz,Uz,R,U2,Lz,U,Rz,Uz,L
+ Anti-Niklas:,Lz,U2,L,U,Lz,U2,R,Uz,L,U,Rz
+ Reverse,Sexy,Move:,R,Uz,Rz,Uz,R,U,Rz,F,R,U,Rz,Uz,Rz,F,R2,Uz,Rz
+ Rubikzs,Move:,F,R,Uz,Rz,Uz,R,U,Rz,Fz,R,U,Rz,Uz,Rz,F,R,Fz
+ Sledgehammer:,Rz,F,R,Fz,U2,Rz,F,R,Fz
+ Soon:,F,R,U,Rz,Uz,R,U,Rz,Uz,Fz
+ Turbo:,R,U,Rz,Uz,Rz,F,R2,Uz,Rz,Uz,R,U,Rz,Fz
+ Diag:,R,Uz,R,U,R,U,R,Uz,Rz,Uz,R2
+ AS,Perm:,Rz,U2,R,Uz,Rz,Uz,R,Uz,Rz,U,R,U,Rz
+ Triple,Sune:,R,U,Rz,U,R,Uz,Rz,U,R,U2,Rz
+ Double,Sune:,R,U2,R,U2,R2,U,R2,U,R
+ Single,U:,R,U,Rz,U,R,U2,Rz
+ CLL,E,Perm:,U,x,Uz,R,U,Rz,D,R,Uz,Rz,Dz
+ CLL,G,Perm:,y,U,Rz,U,R2,U2,R,Uz,R2,U,R,U,Rz
+ CLL,L,Perm:,R,Uz,Lz,U,R,Uz,L,U
+ CLL,N,Perm:,Mz,U,(R,U,Rz,Uz),M
+ CLL,R,Perm:,F,(Mz,U),(R,Uz,Rz,U,R,U2,Rz,U,M)
+ CLL,S,Perm:, M,M,U,Mz,U2,M,U, M,M
+ CLL,U,Perm:,y,Rz,Uz,Rz,Uz,Rz,U,R,U,R,Uz,RR,U,Rz,U,R,Uz,B,Uz,Bz,Rz2
+ CLL,V,Perm:,x,D2,R,U,Rz,D2,R,Uz,Rz
+ CLL,W,Perm:,F,U,R,U2,Rz,Uz,R,U,Rz,U,Fz
+ CLL,Y,Perm:,R,U,Rz,Uz,Rz,F,R2,U,Rz,Uz,Fz
+ CLL,Z,Perm:,Uz,R,U,Rz,U,R,Uz,Rz,U,R,Uz,Rz,U2,R
+ CLL,ZZ,Perm:,F,U,R,Uz,Rz,F,Uz,F,U,R,Uz,Rz,Fz
+ Livid,last,layer,Gz,RG,,Rz,U,z,Rz,U,R,Gz
+ Y-premutation:,F,R,Uz,Rz,Uz,R,U,Rz,Fz, M,M,Uz,M,U2,M,M,M,Uz, M,M  `
+
+
+
+`    Ab Perm: Rz U R Uz Rz Fz R U Rz Uz Rz F R
+     E Perm: xz R Uz Rz D R U Rz Dz R U Rz D R Uz Rz Dz
+     H Perm: M2 U M2 U2 M2 U M2
+     Z Perm: U R U Rz Uz Rz Uz Rz U R Uz Rz Uz Rz U R U2 Rz
+     T Perm: R U Rz Uz Rz F R2 Uz Rz Uz R U Rz Fz
+     Y Perm: F R Uz Rz Uz R U Rz Fz R U Rz Uz Rz F R Fz
+     J Perm: R U Rz Fz R U Rz Uz Rz F R2 Uz Rz Uz
+     R Perm: R Uz R U R U R Uz Rz Uz R2
+     F Perm: R U Rz Uz R U Rz Uz R U Rz Uz R U Rz Uz R U Rz Uz
+     V Perm: R U Rz Uz R U Rz Uz R Uz Rz U R U R2 Uz Rz
+     N Perm: U2 Rz Uz R2 U Rz U R U2 R2 Uz
+     G Perm: R U2 Rz Uz R Uz Rz
+     S Perm: R U Rz U R Uz Rz Uz Rz U2 R U Rz U R
+     E Perm: Rz U2 R Uz Rz Uz R Uz Rz U R U Rz U R Uz RzR, Cx, U, Rz, U, R, Uz, Rz, U, R, U, U, Rz, Czr)
+     M Perm: M2 U M U2 M,M,M U M2
+     Conjugate: F R Uz Rz Uz R U Rz Fz
+     Double J Perm: R Uz Rz U R Uz Rz Fz R U Rz Uz Rz F R2 Uz Rz
+     Double R Perm: R2 Uz Rz Uz R U R U R Uz R
+     F Perm: R U Rz U2 R Uz Rz U2 R U3 Rz
+     Funky H Perm: M,M,M U M,M,M U M U2 M,M,M U M,M,M U2 M U2
+     Inverse Sexy Move: R2 U R U Rz Uz Rz Uz U Rz
+     Perfect Match: Rz Uz Rz U R U Rz Fz R U Rz Uz Rz F R
+     Super Flip: U R U Rz Uz Rz Uz Rz U R Uz Rz Uz Rz U R U2 Rz
+     Triple Sune: R U Rz U R Uz Rz U R U2 Rz
+     Zeroing: R Uz B Uz Bz R2 U2 R Bz U B Rz
+     Chameleon: Fz U F Uz Fz U F R U Rz Uz Rz F R
+     Reverse Chameleon: R U Rz U R Uz Rz Fz U F Uz Fz U F
+     Sleek Dog: F U R Uz Rz Fz Uz F R U Rz Uz Fz
+     Smooth Cat: R U Rz Fz U F R U2 Rz Uz F Uz Fz
+     J Perm: R U Rz U R Uz Rz Uz R Uz Rz U2 R U Rz N (89) J Perm Rz U Lz U2 R Uz Rz U2 L
+     Niklas: R U2 Rz Uz R U2 Lz U Rz Uz L
+     Anti-Niklas: Lz U2 L U Lz U2 R Uz L U Rz
+     Reverse Sexy Move: R Uz Rz Uz R U Rz F R U Rz Uz Rz F R2 Uz Rz
+     Rubikzs Move: F R Uz Rz Uz R U Rz Fz R U Rz Uz Rz F R Fz
+     Sledgehammer: Rz F R Fz U2 Rz F R Fz
+     Soon: F R U Rz Uz R U Rz Uz Fz
+     Turbo: R U Rz Uz Rz F R2 Uz Rz Uz R U Rz Fz
+     Diag: R Uz R U R U R Uz Rz Uz R2
+     AS Perm: Rz U2 R Uz Rz Uz R Uz Rz U R U Rz
+     Triple Sune: R U Rz U R Uz Rz U R U2 Rz
+     Double Sune: R U2 R U2 R2 U R2 U R
+     Single U: R U Rz U R U2 Rz
+    CLL E Perm: U x Uz R U Rz D R Uz Rz Dz
+    CLL G Perm: y U Rz U R2 U2 R Uz R2 U R U Rz
+    CLL L Perm: R Uz Lz U R Uz L U
+    CLL N Perm: M,M,M U (R U Rz Uz) M
+    CLL R Perm: F (M,M,M U) (R Uz Rz U R U2 Rz U M)
+    CLL S Perm: M2 U M,M,M U2 M U M2
+    CLL U Perm: y Rz Uz Rz Uz Rz U R U R Uz RR,U,Rz,U,R,Uz,B,Uz,Bz,Rz2
+    CLL V Perm: x D2 R U Rz D2 R Uz Rz
+    CLL W Perm: F U R U2 Rz Uz R U Rz U Fz
+    CLL Y Perm: R U Rz Uz Rz F R2 U Rz Uz Fz
+    CLL Z Perm: Uz R U Rz U R Uz Rz U R Uz Rz U2 R
+    CLL ZZ Perm: F U R Uz Rz F Uz F U R Uz Rz Fz
+    Livid last layer Gz RG, Rz U zRz U RGz
+    Y-premutation: F R Uz Rz Uz R U Rz Fz M2 Uz M U2 M,M,M Uz M2 ` 
+*/
 
 
 
@@ -5587,14 +5856,17 @@ In compare4 +page.svelte:4014:16
 <button on:click={queenbar4}>king.bar4</button> -->
 
 <p> The buttons below run the standard OLL algorithms on the current cube configuration. You can ignore them. Just turn the orange side toward yourself (press the "Y" key) and click "Solve L" or "Solve Bar". Each algorithm will be tried, with 0, 1, 2, and 3 90 degree turns of the top layer until a solution is found or "FAIL" is displayed. The default milliseconds between turns is 30. You can change that here:   </p>
-            <div>
-            <span>pause interveral now is</span> 
-            <span style = "color: #ff0000">{t} milliseconds</span>
-            <br>
-            <span>You can enter a different number of milliseconds here:</span>
-            <input type="number" id="timeID" name="t" />
-            <br><br>
-            
+        <div>
+        <span>pause interveral now is</span> 
+        <span style = "color: #ff0000">{t} milliseconds</span>
+        <br>
+        <span>You can enter a different number of milliseconds here:</span>
+        <input type="number" id="timeID" name="t" />
+        <br><br>
+
+<button on:click={() => backforth(P1)}>backforth</button>      
+
+        
 <button on:click={compare1}>Solve L</button>
 <button on:click={compare7}>Solve Bar</button>
             <h2>{B12}</h2>
@@ -5746,51 +6018,51 @@ Lunabot's comment: That's great to hear! It sounds like you've found a solution 
         <pre>{et2Code}</pre>
 <br /><br /><br />
 <p><br>
-    What are the 57 common last-layer Rubik's cube algorithms </p>
+ <!--   What are the 57 common last-layer Rubik's cube algorithms </p>
 
-   <pre>`PLL OLL Aa Perm: F R U' R' U' R U R' F' R U R' U'
-    PLL OLL Ab Perm: R' U R U' R' F' R U R' U' R' F R
-    PLL OLL E Perm: x' R U' R' D R U R' D' R U R' D R U' R' D'
-    PLL OLL H Perm: M2 U M2 U2 M2 U M2
-    PLL OLL Z Perm: U R U R' U' R' U' R' U R U' R' U' R' U R U2 R'
-    PLL OLL T Perm: R U R' U' R' F R2 U' R' U' R U R' F'
-    PLL OLL Y Perm: F R U' R' U' R U R' F' R U R' U' R' F R F'
-    PLL OLL J Perm: R U R' F' R U R' U' R' F R2 U' R' U'
-    PLL OLL R Perm: R U' R U R U R U' R' U' R2
-    PLL OLL F Perm: R U R' U' R U R' U' R U R' U' R U R' U' R U R' U'
-    PLL OLL V Perm: R U R' U' R U R' U' R U' R' U R U R2 U' R'
-    PLL OLL N Perm: U2 R' U' R2 U R' U R U2 R2 U'
-    PLL OLL G Perm: R U2 R' U' R U' R'
-    PLL OLL S Perm: R U R' U R U' R' U' R' U2 R U R' U R
-    PLL OLL E Perm: R' U2 R U' R' U' R U' R' U R U R' U R U' R'R, Cx, U, Rz, U, R, Uz, Rz, U, R, U, U, Rz, Czr)
-    PLL OLL M Perm: M2 U M U2 M' U M2
-    PLL OLL Conjugate: F R U' R' U' R U R' F'
-    PLL OLL Double J Perm: R U' R' U R U' R' F' R U R' U' R' F R2 U' R'
-    PLL OLL Double R Perm: R2 U' R' U' R U R U R U' R
-    PLL OLL F Perm: R U R' U2 R U' R' U2 R U3 R'
-    PLL OLL Funky H Perm: M' U M' U M U2 M' U M' U2 M U2
-    PLL OLL Inverse Sexy Move: R2 U R U R' U' R' U' U R'
-    PLL OLL Perfect Match: R' U' R' U R U R' F' R U R' U' R' F R
-    PLL OLL Super Flip: U R U R' U' R' U' R' U R U' R' U' R' U R U2 R'
-    PLL OLL Triple Sune: R U R' U R U' R' U R U2 R'
-    PLL OLL Zeroing: R U' B U' B' R2 U2 R B' U B R'
-    PLL OLL Chameleon: F' U F U' F' U F R U R' U' R' F R
-    PLL OLL Reverse Chameleon: R U R' U R U' R' F' U F U' F' U F
-    PLL OLL Sleek Dog: F U R U' R' F' U' F R U R' U' F'
-    PLL OLL Smooth Cat: R U R' F' U F R U2 R' U' F U' F'
-    PLL OLL J Perm: R U R' U R U' R' U' R U' R' U2 R U R' N (89) J Perm R' U L' U2 R U' R' U2 L
-    PLL OLL Niklas: R U2 R' U' R U2 L' U R' U' L
-    PLL OLL Anti-Niklas: L' U2 L U L' U2 R U' L U R'
-    PLL OLL Reverse Sexy Move: R U' R' U' R U R' F R U R' U' R' F R2 U' R'
-    PLL OLL Rubik's Move: F R U' R' U' R U R' F' R U R' U' R' F R F'
-    PLL OLL Sledgehammer: R' F R F' U2 R' F R F'
-    PLL OLL Soon: F R U R' U' R U R' U' F'
-    PLL OLL Turbo: R U R' U' R' F R2 U' R' U' R U R' F'
-    PLL OLL Diag: R U' R U R U R U' R' U' R2
-    PLL OLL AS Perm: R' U2 R U' R' U' R U' R' U R U R'
-    PLL OLL Triple Sune: R U R' U R U' R' U R U2 R'
-    PLL OLL Double Sune: R U2 R U2 R2 U R2 U R
-    PLL OLL Single U: R U R' U R U2 R'
+   <pre>{` Aa Perm: F R U' R' U' R U R' F' R U R' U'
+     Ab Perm: R' U R U' R' F' R U R' U' R' F R
+     E Perm: x' R U' R' D R U R' D' R U R' D R U' R' D'
+     H Perm: M2 U M2 U2 M2 U M2
+     Z Perm: U R U R' U' R' U' R' U R U' R' U' R' U R U2 R'
+     T Perm: R U R' U' R' F R2 U' R' U' R U R' F'
+     Y Perm: F R U' R' U' R U R' F' R U R' U' R' F R F'
+     J Perm: R U R' F' R U R' U' R' F R2 U' R' U'
+     R Perm: R U' R U R U R U' R' U' R2
+     F Perm: R U R' U' R U R' U' R U R' U' R U R' U' R U R' U'
+     V Perm: R U R' U' R U R' U' R U' R' U R U R2 U' R'
+     N Perm: U2 R' U' R2 U R' U R U2 R2 U'
+     G Perm: R U2 R' U' R U' R'
+     S Perm: R U R' U R U' R' U' R' U2 R U R' U R
+     E Perm: R' U2 R U' R' U' R U' R' U R U R' U R U' R'R, Cx, U, Rz, U, R, Uz, Rz, U, R, U, U, Rz, Czr)
+     M Perm: M2 U M U2 M' U M2
+     Conjugate: F R U' R' U' R U R' F'
+     Double J Perm: R U' R' U R U' R' F' R U R' U' R' F R2 U' R'
+     Double R Perm: R2 U' R' U' R U R U R U' R
+     F Perm: R U R' U2 R U' R' U2 R U3 R'
+     Funky H Perm: M' U M' U M U2 M' U M' U2 M U2
+     Inverse Sexy Move: R2 U R U R' U' R' U' U R'
+     Perfect Match: R' U' R' U R U R' F' R U R' U' R' F R
+     Super Flip: U R U R' U' R' U' R' U R U' R' U' R' U R U2 R'
+     Triple Sune: R U R' U R U' R' U R U2 R'
+     Zeroing: R U' B U' B' R2 U2 R B' U B R'
+     Chameleon: F' U F U' F' U F R U R' U' R' F R
+     Reverse Chameleon: R U R' U R U' R' F' U F U' F' U F
+     Sleek Dog: F U R U' R' F' U' F R U R' U' F'
+     Smooth Cat: R U R' F' U F R U2 R' U' F U' F'
+     J Perm: R U R' U R U' R' U' R U' R' U2 R U R' N (89) J Perm R' U L' U2 R U' R' U2 L
+     Niklas: R U2 R' U' R U2 L' U R' U' L
+     Anti-Niklas: L' U2 L U L' U2 R U' L U R'
+     Reverse Sexy Move: R U' R' U' R U R' F R U R' U' R' F R2 U' R'
+     Rubik's Move: F R U' R' U' R U R' F' R U R' U' R' F R F'
+     Sledgehammer: R' F R F' U2 R' F R F'
+     Soon: F R U R' U' R U R' U' F'
+     Turbo: R U R' U' R' F R2 U' R' U' R U R' F'
+     Diag: R U' R U R U R U' R' U' R2
+     AS Perm: R' U2 R U' R' U' R U' R' U R U R'
+     Triple Sune: R U R' U R U' R' U R U2 R'
+     Double Sune: R U2 R U2 R2 U R2 U R
+     Single U: R U R' U R U2 R'
     CLL E Perm: U x U' R U R' D R U' R' D'
     CLL G Perm: y U R' U R2 U2 R U' R2 U R U R'
     CLL L Perm: R U' L' U R U' L U
@@ -5804,7 +6076,7 @@ Lunabot's comment: That's great to hear! It sounds like you've found a solution 
     CLL Z Perm: U' R U R' U R U' R' U R U' R' U2 R
     CLL ZZ Perm: F U R U' R' F U' F U R U' R' F'
     Livid last layer G' RG, R' U 'R' U RG'
-    Y-premutation: F R U' R' U' R U R' F' M2 U' M U2 M' U' M2 ` </pre> 
+    Y-premutation: F R U' R' U' R U R' F' M2 U' M U2 M' U' M2 ` }</pre>  -->
 
 <br /><br /><br />
    <p>  <br>  GPT 3.5   <br>
