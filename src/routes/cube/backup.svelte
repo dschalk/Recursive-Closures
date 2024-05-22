@@ -1,4 +1,3 @@
-
 <script>
     import clickDemo from "$lib/clickDemo.png";
     import oppH from "$lib/oppH.png";
@@ -2245,10 +2244,10 @@
         console.log("typeof e.originalTarget.id is", typeof e.originalTarget.id);
         if (e.target.id = 'timeID')  {
             t = e.target.value;
-            console.log('YOURSELF, AND KNOW SOMETHING', t);
+            console.log('GO FUCK YOURSELF, AND KNOW THAT t is', t);
         }
         
-        else console.log("XXXXXXXXXXXXXXXXXX FUBAR");
+        else console.log("XXXXXXXXXXXXXXXXXXX Fuck you");
         if (e.keyCode === 85) m(Uz);
         else if (e.keyCode === 117) m(U);
         else if (e.keyCode === 97) m(R)(Cxr);
@@ -2749,7 +2748,24 @@ await wait(400);
         };
     };`;    
 
-var sides2 = () => fmoves([T,U,Rz,Uz,Tz,F,R,Fz], 0);
+/*    async function fmoves (ar) { 
+        m(dF3ar).length = 0;              // Empties ar
+        for (let k = 0; k < ar.length ; k += 1) {
+            await wait(t)
+            m = m(ar[k]);
+        }
+    };
+
+    async function fmovesR (ar) { // Pauses for 100 microseconds.
+        m(dF3ar).length = 0;              // Empties ar
+        var len = ar.length - 1;
+        for (let k = len; k > -1; k -= 1) {
+            await wait(t)
+            m = m(ar[k]);
+        }
+    };
+*/
+    var sides2 = () => fmoves([T,U,Rz,Uz,Tz,F,R,Fz], 0);
 
 var corners = () => fmoves ([Rz,F,Rz,B,B,R,Fz,Rz,B,B,R,R],75);
 var test8 = () => fmoves([
@@ -2864,11 +2880,18 @@ var test8 = () => fmoves([
     }
 
     var L2a = [(Fz),(Lz),(Uz),(L),(U),(Lz),(Uz),(L),(U),(F)];
- 
+   // king.L2st = () => (m = m(Fz)(Lz)(Uz)(L)(U)(Lz)(Uz)(L)(U)(F))
+  // king.L2st = () => f23(L2a);
+  // function king.L2st () {m()} 
+  // console.log(king.L1st())
+  // console.log(king.L2st())
+
     king.L2st = () => fmoves([Fz,Lz,Uz,L,U,Lz,Uz,L,U,F]);
     
      var L3a = [(R),(Cxr),(Uz),(R),(Cxr),(R),(Cxr),(U),(R),(Cxr),(R),(Cxr),(U),(R),(Cxr),(R),(Cxr),(Uz),(R),(Cxr)]
     
+    // king.L3st = () => (m = m(R)(Cxr)(Uz)(R)(Cxr)(R)(Cxr)(U)(R)(Cxr)(R)(Cxr)(U)(R)(Cxr)(R)(Cxr)(Uz)(R)(Cxr))
+
     king.L3st = () => fmoves(L3a); 
 
     king.L3s = async function () {
@@ -2879,9 +2902,13 @@ var test8 = () => fmoves([
         }
     } 
 
+  //   var L4a = [(Rz),(Cx),(U),(R),(Cxr),(R),(Cxr),(Uz),(R),(Cxr),(R),(Cxr),(Uz),(R),(Cxr),(R),(Cxr),(U),(Rz),(Cx)]
+  //   r' U r2 U' r2 U' r2 U r'
 var L4a = [Tz,U,T,T,Uz,T,T,Uz,T,T,U,T,T,T]
 
     king.L4st = () => fmoves(L4a);
+
+  // var L4st = () => fmoves([Rz,Cx,U,R,Cxr,R,Cxr,Uz,R,Cxr,R,Cxr,Uz,R,Cxr,R,Cxr,U,Rz,Cx]);
 
     king.L4s = async function () {
         m(dF3ar).length = 0;
@@ -2898,7 +2925,18 @@ var L4a = [Tz,U,T,T,Uz,T,T,Uz,T,T,U,T,T,T]
 
     var opposite = () => m = m(Cx)(Cx)(Uz)(Cx)(Cx)(U)(U)(Cx)(Cx)(Uz)(Cx)(Cx)(Yro)
 
+
    var ZZ = () => fmoves([]);
+
+/*    
+OLL 50
+r' U r2 U' r2 U' r2 U r'
+​or
+L’ B L2 F’ L2 B’ L2 F L’
+​Mirror of 49
+*/
+
+
 
 function f23 (ar) {
     for (let k = 0; k < ar.length; k += 1)

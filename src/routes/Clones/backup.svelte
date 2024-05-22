@@ -1,6 +1,8 @@
-<script>
 
+<script>
+var log = console.log;
 var cloneCode = `var log = console.log;
+
 var ar1 = M([ [ ], [ [ ], [ [ ], [ function mult (a, b) {return a*b} ]]]])  
 var clone = ar1;
 log('ar1(dF3x)[1][1][1][0](6,7) is', ar1(dF3x)[1][1][1][0](6,7)) // 42
@@ -19,6 +21,8 @@ log('ar1(dF3x)[1][1][1][0](6,7) is', ar1(dF3x)[1][1][1][0](6,7)) // 42
 var ar1 = ar1(() => [ [ ], [ [ ], [ [ ], [ function concat (a, b) {return "" + a + b} ]]]]);
 log('ar1(dF3x)[1][1][1][0](6,7)', ar1(dF3x)[1][1][1][0](6,7));  // 67
 log('clone(dF3x)[1][1][1][0](6,7)', clone(dF3x)[1][1][1][0](6,7));  // 13 `
+
+
 
 var obj = `var O = {add: (a,b) => a + b, mult: (a,b) => a * b}
 var Z = O;
