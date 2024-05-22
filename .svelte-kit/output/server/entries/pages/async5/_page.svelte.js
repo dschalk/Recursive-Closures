@@ -41,16 +41,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         };
     };
     
-    const m = M(3); 
-    
-    async function idP (x) {
-      await wait(5)
-      return x;
-    } ;
-
-    function wait(ms) {
-        return new Promise(r => setTimeout(r, ms));
-    }`;
+    const m = M(3); `;
   var A;
   let pause = (t) => async (x) => {
     await wait(t);
