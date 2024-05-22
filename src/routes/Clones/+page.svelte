@@ -204,14 +204,12 @@ bclone is Hello World `;
 <pre>{JSCode3}</pre>
 <div style="font-size:32px; text-align:center; color:gold"> Cloning a Deeply Nested Array Containing a Function</div>
 <p>Does cloning data structures such as "var b = [ [ [2], [3], [4] ], [ [ [7], ['alpha'], ['beta'] ],  [ ["clown"], [v=>v**3] ] ], 888]" have to be as complicated as most people make it? The little function named "clone", defined below, is all you need.</p>
-<p>"Here's the result of calling "node test4.js" in Virtual Studio Code. Running test4.js in the Firefox Developer console (F12). Note the slight lag in reporting that "b === bclone" is false. </p>
+
+<p>"Here's the result of calling "node test4.js" in Virtual Studio Code. Running test4.js in the Firefox Developer Console (F12) returns the same result. Note the slight lag in reporting that "b === bclone" is false. </p>
 
 <pre>{test4}</pre>
-
+<p> This is the code that returns the above result in VS Code and the Firefox Developer Console (F12). </p>
 <pre>{VSCode}</pre>
-
-<div style="font-size:32px; text-align:center; color:gold"> Cloning an Object With Deeply Nested Attributes And Functions</div>
-
 
 
 
