@@ -55,7 +55,6 @@ declare module '$env/static/private' {
 	export const SYSTEMD_EXEC_PID: string;
 	export const _: string;
 	export const XAUTHORITY: string;
-	export const GJS_DEBUG_TOPICS: string;
 	export const WINDOWPATH: string;
 	export const MOTD_SHOWN: string;
 	export const GDM_LANG: string;
@@ -72,8 +71,6 @@ declare module '$env/static/private' {
 	export const MANAGERPID: string;
 	export const INIT_CWD: string;
 	export const npm_lifecycle_script: string;
-	export const GJS_DEBUG_OUTPUT: string;
-	export const XDG_ACTIVATION_TOKEN: string;
 	export const npm_config_npm_version: string;
 	export const XDG_SESSION_CLASS: string;
 	export const TERM: string;
@@ -93,7 +90,9 @@ declare module '$env/static/private' {
 	export const DEBUGINFOD_URLS: string;
 	export const npm_package_json: string;
 	export const LC_TIME: string;
+	export const PARENT_WINDOW_ID: string;
 	export const QT_AUTO_SCREEN_SCALE_FACTOR: string;
+	export const GIO_USE_VFS: string;
 	export const JOURNAL_STREAM: string;
 	export const GTK3_MODULES: string;
 	export const XDG_DATA_DIRS: string;
@@ -171,7 +170,6 @@ declare module '$env/dynamic/private' {
 		SYSTEMD_EXEC_PID: string;
 		_: string;
 		XAUTHORITY: string;
-		GJS_DEBUG_TOPICS: string;
 		WINDOWPATH: string;
 		MOTD_SHOWN: string;
 		GDM_LANG: string;
@@ -188,8 +186,6 @@ declare module '$env/dynamic/private' {
 		MANAGERPID: string;
 		INIT_CWD: string;
 		npm_lifecycle_script: string;
-		GJS_DEBUG_OUTPUT: string;
-		XDG_ACTIVATION_TOKEN: string;
 		npm_config_npm_version: string;
 		XDG_SESSION_CLASS: string;
 		TERM: string;
@@ -209,7 +205,9 @@ declare module '$env/dynamic/private' {
 		DEBUGINFOD_URLS: string;
 		npm_package_json: string;
 		LC_TIME: string;
+		PARENT_WINDOW_ID: string;
 		QT_AUTO_SCREEN_SCALE_FACTOR: string;
+		GIO_USE_VFS: string;
 		JOURNAL_STREAM: string;
 		GTK3_MODULES: string;
 		XDG_DATA_DIRS: string;

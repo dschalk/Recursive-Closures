@@ -20,7 +20,7 @@ var ar1 = ar1(() => [ [ ], [ [ ], [ [ ], [ function concat (a, b) {return "" + a
 log('ar1(dF3x)[1][1][1][0](6,7)', ar1(dF3x)[1][1][1][0](6,7));  // 67
 log('clone(dF3x)[1][1][1][0](6,7)', clone(dF3x)[1][1][1][0](6,7));  // 13 `
 
-var obj = `var O = {add: (a,b) => a + b, mult: (a,b) => a * b}
+/*var obj = `var O = {add: (a,b) => a + b, mult: (a,b) => a * b}
 var Z = O;
 O = {add: (a,b) => a + b, mult: (a,b) => a * b}
 O.concat = (a,b) => "" + a + b;    
@@ -28,7 +28,7 @@ log(O); // { add: add(a, b), mult: mult(a, b), concat: concat(a, b) }
 log(Z); // { add: add(a, b), mult: mult(a, b) }   
 Z.subtract = (a,b) => a - b;
 log(Z); // { add: add(a, b), mult: mult(a, b), subtract: subtract(a) }
-log(O); // { add: add(a, b), mult: mult(a, b), concat: concat(a, b) }`
+log(O); // { add: add(a, b), mult: mult(a, b), concat: concat(a, b) }` */
 
 var cloneCode2 = `log("var ar = [[], [[], [[], [function mult(a, b) { return a * b }]]]]");
 var ar = [[], [[], [[], [function mult(a, b) { return a * b }]]]]
@@ -126,10 +126,8 @@ function M (x) {
 const log = console.log;
 const dF3x = () => {}; `; 
 
-var cloneCode5 = `var mclone = m;
-m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] ); // 42 
-mclone === m  // true
-mclone = M(mclone(dF3x)); 
+/*
+var cloneCode5 = `mclone = M(mclone(dF3x)); 
 mclone === m  // false ;
 mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] ); // 42`
 
@@ -154,54 +152,108 @@ log("b is", b);
 log("bclone is", bclone);
 log("b = 'Cow'", b = "Cow");
 log("b is", b);
-log("bclone is", bclone);
-`
+log("bclone is", bclone);`  */
 
-var test4 = `jj% node test4.js
-b is [
-  [ [ 2 ], [ 3 ], [ 4 ] ],
-  [ [ [Array], [Array], [Array] ], [ [Array], [Array] ] ],
-  888
-]
-bclone = clone(b)
-bclone is [
-  [ [ 2 ], [ 3 ], [ 4 ] ],
-  [ [ [Array], [Array], [Array] ], [ [Array], [Array] ] ],
-  888
-]
-b and bclone are the same as one another,
- though not necessarily referring to the same memory address
-b === bclone true
-Despite the above, when bclone and clone are used,
-they turn out to be independent, as shown below:
-bclone = 'Hello World')' Hello World
-b === bclone false
-b is [
-  [ [ 2 ], [ 3 ], [ 4 ] ],
-  [ [ [Array], [Array], [Array] ], [ [Array], [Array] ] ],
-  888
-]
-bclone is Hello World
-b = 'Cow' Cow
-b is Cow
-bclone is Hello World `;
+var test4aa = `var m = M({arr: [ [ [2], [3], [4] ], [ [ [7], ['alpha'], ['beta'] ],  [ ['clown'], [v=>v**3] ] ], 888 ], ob: { z: 'skyblue' } }`;
+
+var test4a = `mclone = clone(m)
+mclone is [Function: go]
+mclone === m false`;
+
+var test4b = `mclone(dF3x) === m(dF3x) true`;
+
+var test4c = `mclone = ['Hello World')]'
+mclone(dF3x) === m(dF3x false
+m(dF3x) is {
+  arr: [ [ [Array], [Array], [Array] ], [ [Array], [Array] ], 888 ],
+  ob: { z: 'skyblue' }
+}
+mclone(dF3x) is [ 'Hello World' ] `;
+
+var test4d = `m = 'Cow'
+m(dF3x) is {
+  arr: [ [ [Array], [Array], [Array] ], [ [Array], [Array] ], 888 ],
+  ob: { z: 'skyblue' }
+}
+mclone(dF3x) is [ 'Hello World' ]`;
+
+var VSCode = `var mult, add, hyp;
+var log = console.log;
+var dF3x = () => {};
+
+function M (x) {
+    return function go (func)
+    {
+        if (func === dF3x) return x;
+        else x = func(x);
+        return go;
+    }
+}
+
+function clone (v) {
+   return M((v)(dF3x));
+}
+
+var aa = [ [], [[6,7], [mult = a => b => a * b]], [888]];
+var m = M(aa);
+log("m(dF3x) is", m(dF3x));
+
+var mclone = clone(m);
+log("mclone === m)",mclone === m);  
+log("mclone(dF3x) === m(dF3x))",mclone(dF3x) === m(dF3x));  
+
+log("m(() => [ [], [[6,7], [add = a => b => a + b], ['You bet!'] ] ]" ); 
+m(() => [ [], [[6,7], [add = a => b => a + b], ["You bet!"] ] ] );
+log("m(dF3x) is", m(dF3x));
+log("mclone(dF3x) is", mclone(dF3x));
+
+mclone(() => [ [], [ [3,4], [hyp = a => b => Math.sqrt(a*a + b*b) ] ] ] );
+log("m(dF3x) is", m(dF3x));
+log("mclone(dF3x) is", mclone(dF3x));
+log("mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] )"); 
+log(mclone(dF3x)[1][1][0]( mclone(dF3x)[1][0][0] )( mclone(dF3x)[1][0][1] ));
+log("m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] )"); 
+log(m(dF3x)[1][1][0]( m(dF3x)[1][0][0] )( m(dF3x)[1][0][1] )); `
+
+var test4 = `var m = M({arr: [ [ [2], [3], [4] ], [ [ [7], ['alpha'], ['beta'] ],  [ ['clown'], [v=>v**3] ] ], 888 ], ob: { z: 'skyblue' } }
+mclone = clone(m)
+mclone is [Function: go]
+mclone === m false
+mclone(dF3x) === m(dF3x) true
+mclone = ['Hello World')]'
+mclone(dF3x) === m(dF3x false
+m(dF3x) is {
+  arr: [ [ [Array], [Array], [Array] ], [ [Array], [Array] ], 888 ],
+  ob: { z: 'skyblue' }
+}
+mclone(dF3x) is [ 'Hello World' ]
+m = 'Cow'
+m(dF3x) is {
+  arr: [ [ [Array], [Array], [Array] ], [ [Array], [Array] ], 888 ],
+  ob: { z: 'skyblue' }
+}
+mclone(dF3x) is [ 'Hello World' ]`
+
 
 </script> 
 
 <h1 style = "text-align: center"> Cloning Recursive Closures</h1>
 
 <p> Neither JSON.parse(JSON.stringify()), Object.assign(), spread operators, nor structuredClone can clone m, M, or the whole m-M(x) closure, such as those defined at <a href= "./">Home</a> and <a href = "./cube">Rubik's Cube</a>; or, for that matter, any data structure containing a function. But there is a simple way to clone complex data structures. We'll start with recursive closures. Let m be defined as:  </p>  
-<pre>{cloneCode4}</pre>
+<pre>{test4aa}</pre>
   
- <p> It suffices to clone 'm', ignoring "M(x)" in the cloning code. This is easily done by copying m, and then placing that copy at a new location in memory.</p>
+ <p> 
 <div style="font-size:32px; text-align:center; color:gold">Cloning a Recursive Closure Over a Deeply Nested Data Structure</div>
-<pre>{cloneCode5}</pre>
+<pre>{test4a}</pre>
 <p> The definition "var mclone = m" created a variable named "mclone" that pointed to an address in memory shared with 'm'. Changes in m would be reflected in mclone and vice versa. Redefining mclone as "mclone = M(mclone(dF3x))" didn't change mclone, it's still the same as it was and still identical with m. Only its memory address changed. Causing mclone to point to a new address in memory made it independent from m. In the code above, "mclone === m" returned "false" after "mclone = M(mclone(dF3x))". This is sufficient to establish that mclone is a deep clone of m. The state of x in the m-M(x) closure when mclone is created will be available to retrieve with mclone(dF3x) or modify with mclone(func) until the computer powers down.   </p>
 
 <p> This confirms that modifying mclone doesn't change m:</p>
 <pre>{JSCode2}</pre>
 <p> This confirms that modifying m doesn't change mclone;</p>
 <pre>{JSCode3}</pre>
+
+
+
 <div style="font-size:32px; text-align:center; color:gold"> Cloning a Deeply Nested Array Containing a Function</div>
 <p>Does cloning data structures such as "var b = [ [ [2], [3], [4] ], [ [ [7], ['alpha'], ['beta'] ],  [ ["clown"], [v=>v**3] ] ], 888]" have to be as complicated as most people make it? The little function named "clone", defined below, is all you need.</p>
 

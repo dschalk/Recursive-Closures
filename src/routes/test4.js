@@ -1,4 +1,4 @@
-
+    var m, mclone;
     var dF3x = () => {};
     var log = console.log;
 
@@ -10,34 +10,24 @@
         }
             
     }
-
 function clone (v) {
-   var save = M(v)(dF3x);
-   v = "This is temporary";
-   v = save;
-   return v;
+    var z = v(dF3x);
+   return M(z);
 }
-log("clone is", `function clone (v) {
-   var save = M(v)(dF3x);
-   v = "This is temporary";
-   v = save;
-   return v;
-}`);
-var bclone;
-var b = {arr: [ [ [2], [3], [4] ], [ [ [7], ['alpha'], ['beta'] ],  [ ["clown"], [v=>v**3] ] ], 888 ], ob: { z: "skyblue" } };
-log("b is", b);
-log("bclone = clone(b)");
-bclone=clone(b);
-log("bclone is", bclone);
-// bclone hasn't changed, except for its memory address.
-log("b and bclone are identical");
-log(" though not necessarily referring to the same memory address");
-log("b === bclone", b === bclone);
-log("Despite the above, when bclone changes, b stays the same.");
-log("bclone = 'Hello World')'", bclone = "Hello World" );  
-log("b === bclone", b === bclone)
-log("b is", b);
-log("bclone is", bclone);
-log("b = 'Cow'", b = "Cow");
-log("b is", b);
-log("bclone is", bclone);
+
+var m = M({arr: [ [ [2], [3], [4] ], [ [ [7], ['alpha'], ['beta'] ],  [ ["clown"], [v=>v**3] ] ], 888 ], ob: { z: "skyblue" } } );
+log("var m = M({arr: [ [ [2], [3], [4] ], [ [ [7], ['alpha'], ['beta'] ],  [ ['clown'], [v=>v**3] ] ], 888 ], ob: { z: 'skyblue' } }" ) ;
+log("mclone = clone(m)");
+mclone = clone(m);
+log("mclone is", mclone);
+log("mclone === m", mclone === m);
+log("mclone(dF3x) === m(dF3x)", mclone(dF3x) === m(dF3x));
+
+log("mclone = ['Hello World')]'");
+mclone = M(["Hello World"]);  
+log("mclone(dF3x) === m(dF3x", mclone(dF3x) === m(dF3x));
+log("m(dF3x) is", m(dF3x));
+log("mclone(dF3x) is", mclone(dF3x));
+log("m = 'Cow'");
+log("m(dF3x) is", m(dF3x));
+log("mclone(dF3x) is", mclone(dF3x));

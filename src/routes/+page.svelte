@@ -913,7 +913,7 @@ var k = 397421;
 
 <div style="margin-left: 8%; margin-right: 8%" id = "top">
   <h1 class="middle">Recursive Closures</h1>
-  
+ <p> Recursive closures ...</p> 
 <p style="text-indent:3% ">The function 'M' (below) returns the recursive function go. Used anonymously, it facilitates efficient and transparent function composition as in, for example, "M(3)(v=>v**3)(v=>v*2)(v=>v-5)(Math.sqrt)(v=>v*6)(dF3x) = 42" where "dF3x" in the definition of the function returned by "M(3)" triggers the return of what 3 becames after being cubed, doubled, diminished by 5, etc. </p> 
 <pre>{MCode}</pre>
 <p> The statement "m = M(x)" creates an m-M(x) closure, where "x" can be any value. Encapsulated in the m-M(x) closure, "x" is insulated away from other functions that might accidentally clobber it, and safe from being garbage-collected. If the <span style = "word-break:keep-all">m-M(x)</span> closure is maintained in a database, x is preserved until such time as m(func) is called for some function "func" causing the value held in the closure to become "func(x)". The definition of M can be modified to avoid mutation. To see how M can be modified to handle asynchronous functions, go to <a href="./async5#yes">Async</a>.</p>
